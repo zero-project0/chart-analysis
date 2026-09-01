@@ -92,7 +92,8 @@ body{margin:0;color:var(--ink);font-family:Arial,"Hiragino Kaku Gothic ProN","Yu
 .lead{margin:24px 0 0;font-size:clamp(.96rem,1.5vw,1.15rem);max-width:760px;margin-top:20px;color:#e1e1dc;font-weight:650}
 .control-group{margin-top:20px}
 .control-heading{display:flex;align-items:baseline;gap:10px;margin-bottom:7px}
-.chart-tabs{display:inline-flex;flex-wrap:wrap;gap:5px;padding:5px;border:1px solid #666;margin-top:0;border-radius:16px;border-color:#555;background:#1b1b19}
+.scope-tabs,.chart-tabs{display:inline-flex;flex-wrap:wrap;gap:5px;margin-top:0;padding:5px;border:1px solid #555;border-radius:16px;background:#1b1b19}
+.scope-tab,.chart-tab{min-height:42px;padding:9px 15px;border:0;border-radius:11px;background:transparent;color:#fff;font-size:.68rem;font-weight:1000;letter-spacing:.08em}
 .scope-tab:hover,.chart-tab:hover{background:#32322f}
 .section{padding:54px 0;background:transparent}
 .section:nth-of-type(even){background:transparent}
@@ -181,8 +182,9 @@ td{font-size:.81rem}
 .control-group{margin-top:11px}
 .control-heading{display:block;margin-bottom:5px}
 .control-help{margin-top:2px;display:none}
-.chart-tabs{display:flex;width:100%;grid-template-columns:none;flex-wrap:nowrap;gap:4px;padding:4px;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none}
+.scope-tabs,.chart-tabs{display:flex;width:100%;grid-template-columns:none;flex-wrap:nowrap;gap:4px;padding:4px;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none}
 .scope-tabs::-webkit-scrollbar,.chart-tabs::-webkit-scrollbar{display:none}
+.scope-tab,.chart-tab{flex:0 0 auto;width:auto;min-height:36px;padding:7px 10px;border-radius:11px;font-size:.65rem;white-space:nowrap}
 .latest-viewport::-webkit-scrollbar{display:none}
 .latest-carousel{grid-template-columns:minmax(0,1fr)}
 .carousel-button{display:none}
