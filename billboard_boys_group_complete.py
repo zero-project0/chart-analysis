@@ -38,6 +38,7 @@ CHART_NAMES = {
 }
 
 BASE_URL = "https://www.billboard-japan.com/charts/detail"
+PROJECT_DIRECTORY = Path(__file__).resolve().parent
 
 # 収集対象は将来の分析に備えて2017年以降を保存します。
 # 現在のサイト・比較CSVでは従来どおり2024〜2026年だけを使います。
@@ -61,6 +62,11 @@ FIXED_YEARS = {
     2023,
     2024,
     2025,
+}
+
+# 更新中の年は保存済みCSVを土台にし、未取得週だけを追加します。
+INCREMENTAL_YEARS = {
+    2026,
 }
 
 PAST_YEAR_WEEKS = {
@@ -111,15 +117,15 @@ USE_CACHE = True
 # 誤った集計サイトを作らず停止します。
 REQUIRE_COMPLETE_PAST_YEARS = True
 
-CACHE_DIRECTORY = Path(
+CACHE_DIRECTORY = PROJECT_DIRECTORY / (
     "billboard_cache_wednesday_v3"
 )
 
-STREAMING_CACHE_DIRECTORY = Path(
+STREAMING_CACHE_DIRECTORY = PROJECT_DIRECTORY / (
     "billboard_cache_streaming_wednesday_v1"
 )
 
-DOWNLOAD_CACHE_DIRECTORY = Path(
+DOWNLOAD_CACHE_DIRECTORY = PROJECT_DIRECTORY / (
     "billboard_cache_download_wednesday_v1"
 )
 
@@ -129,11 +135,11 @@ CACHE_DIRECTORIES = {
     DOWNLOAD_CHART_CODE: DOWNLOAD_CACHE_DIRECTORY,
 }
 
-DEBUG_DIRECTORY = Path(
+DEBUG_DIRECTORY = PROJECT_DIRECTORY / (
     "billboard_debug_wednesday_v3"
 )
 
-OUTPUT_DIRECTORY = Path(
+OUTPUT_DIRECTORY = PROJECT_DIRECTORY / (
     "billboard_output"
 )
 
@@ -153,7 +159,6 @@ SITE_FILE = OUTPUT_DIRECTORY / (
     "boys_group_power_map_2024_2025_2026.html"
 )
 
-PROJECT_DIRECTORY = Path(__file__).resolve().parent
 PREVIEW_FILE = PROJECT_DIRECTORY / "preview.html"
 
 
@@ -676,7 +681,7 @@ def fixed_year_file(year, chart_code=CHART_CODE):
     )
 
 
-def load_fixed_year(year, chart_code=CHART_CODE):
+def read_year_entries(year, chart_code=CHART_CODE):
     input_file = fixed_year_file(year, chart_code)
 
     if not input_file.exists():
@@ -704,6 +709,43 @@ def load_fixed_year(year, chart_code=CHART_CODE):
                     "source_url": row["source_url"],
                 }
             )
+
+    return entries
+
+
+def load_incremental_entries(year, chart_code=CHART_CODE):
+    entries = read_year_entries(year, chart_code)
+    if entries is None:
+        return {}
+
+    requested_date_strings = {
+        chart_date.isoformat()
+        for chart_date in generate_chart_dates(year, chart_code)
+    }
+    entries_by_date = {}
+    for entry in entries:
+        chart_date = entry["chart_date"]
+        if chart_date not in requested_date_strings:
+            continue
+        entries_by_date.setdefault(chart_date, []).append(entry)
+
+    complete_entries_by_date = {
+        chart_date: date_entries
+        for chart_date, date_entries in entries_by_date.items()
+        if len(date_entries) >= MAX_RANK
+    }
+    print(
+        f"  保存済みCSVから{len(complete_entries_by_date)}週を再利用し、"
+        "未取得週だけを確認します。"
+    )
+    return complete_entries_by_date
+
+
+def load_fixed_year(year, chart_code=CHART_CODE):
+    entries = read_year_entries(year, chart_code)
+
+    if entries is None:
+        return None
 
     dates = sorted(
         {
@@ -815,6 +857,12 @@ def collect_year(
     reports = []
 
     signatures = {}
+    incremental_entries_by_date = {}
+    if year in INCREMENTAL_YEARS:
+        incremental_entries_by_date = load_incremental_entries(
+            year,
+            chart_code,
+        )
 
     for index, chart_date in enumerate(
         requested_dates,
@@ -825,6 +873,26 @@ def collect_year(
             f"[{index}/{len(requested_dates)}] "
             f"{chart_date.isoformat()}"
         )
+
+        saved_entries = incremental_entries_by_date.get(
+            chart_date.isoformat()
+        )
+        if saved_entries:
+            signatures[make_chart_signature(saved_entries)] = chart_date
+            successful_dates.append(chart_date)
+            all_entries.extend(saved_entries)
+            reports.append(
+                {
+                    "year": year,
+                    "requested_date": chart_date.isoformat(),
+                    "status": "保存済みデータ使用",
+                    "entry_count": len(saved_entries),
+                    "method": "差分CSV",
+                    "duplicate_of": "",
+                }
+            )
+            print(f"  CSV再利用: {len(saved_entries)}件")
+            continue
 
         html_text, method = fetch_chart_html(
             opener,
@@ -2220,8 +2288,8 @@ def main():
     print()
     print("2017〜2025年：各年の全公開週")
     print(
-        "2026年：実行日以前の"
-        "最新水曜日まで"
+        "2026年：保存済みCSVを再利用し、実行日以前の"
+        "最新水曜日までを差分取得"
     )
     print("2017〜2023年は収集・保存のみで、現在の分析には使用しません。")
     print()
