@@ -19,4 +19,4 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 
 ## 公開URL
 
-https://zero-project0.github.io/chart-trends/
+https://zero-project0.github.io/chart-analysis/
