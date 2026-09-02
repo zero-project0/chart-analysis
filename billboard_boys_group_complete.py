@@ -1824,6 +1824,16 @@ def build_dashboard_data(matched_entries, collections, chart_code, artist_names=
 HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8KZ52B03D"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+if(location.hostname==="zero-project0.github.io"&&location.pathname.startsWith("/chart-analysis/")){
+  gtag('js', new Date());
+  gtag('config', 'G-Q8KZ52B03D');
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Music Chart Analysis</title>
