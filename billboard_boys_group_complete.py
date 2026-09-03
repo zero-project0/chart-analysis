@@ -1984,7 +1984,9 @@ td{border-bottom:1px solid var(--soft);text-align:right;padding:13px 10px;font-s
 .trend-panel{margin:22px 0;padding:16px;border:1px solid var(--line);background:#fff;border-radius:18px;box-shadow:0 4px 16px rgba(17,17,15,.035)}
 .share-action:hover,.share-x:hover,.song-artist-button:hover{background:var(--cyan-soft)}
 .latest-carousel{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;align-items:center;gap:10px}
-.latest-viewport{overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:none;overscroll-behavior-inline:contain;scrollbar-width:none;-ms-overflow-style:none}
+#latestPrev{grid-column:1;grid-row:1}
+.latest-viewport{grid-column:2;grid-row:1;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:none;overscroll-behavior-inline:contain;scrollbar-width:none;-ms-overflow-style:none}
+#latestNext{grid-column:3;grid-row:1}
 .latest-viewport::-webkit-scrollbar{display:none}
 .carousel-button{display:grid;width:42px;height:42px;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;font-size:1.25rem;font-weight:1000}
 .carousel-button:hover{background:var(--acid)}
@@ -2053,7 +2055,7 @@ td{font-size:.81rem}
 .carousel-button{display:none}
 .latest-carousel .latest-song{width:100%;min-height:68px;padding:10px;grid-template-columns:42px minmax(0,1fr)}
 .latest-carousel .latest-rank{width:38px;height:38px;font-size:.88rem}
-.latest-viewport{scrollbar-width:none;margin-right:-10px;padding-right:10px}
+.latest-viewport{grid-column:1;scrollbar-width:none;margin-right:-10px;padding-right:10px}
 .list-more{align-items:stretch;flex-direction:column;text-align:center}
 .more-button{width:100%}
 .search-shell{grid-template-columns:1fr}
