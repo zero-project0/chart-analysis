@@ -1,4 +1,4 @@
-# Chart Trends
+# Chart Analysis
 
 Billboard JAPANのチャートデータを可視化する静的サイトです。
 
