@@ -167,6 +167,8 @@ PREVIEW_FILE = PROJECT_DIRECTORY / "preview.html"
 # ============================================================
 
 TARGET_ARTISTS = [
+    "純烈",
+    "モナキ",
     "BE:FIRST",
     "M!LK",
     "Snow Man",
