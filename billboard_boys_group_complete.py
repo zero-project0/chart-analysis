@@ -15,6 +15,7 @@ from urllib.parse import urlencode
 from urllib.request import HTTPCookieProcessor, Request, build_opener
 
 from bs4 import BeautifulSoup
+import chart_integrity
 
 
 # ============================================================
@@ -40,9 +41,9 @@ CHART_NAMES = {
 BASE_URL = "https://www.billboard-japan.com/charts/detail"
 PROJECT_DIRECTORY = Path(__file__).resolve().parent
 
-# 収集対象は将来の分析に備えて2017年以降を保存します。
-# 現在のサイト・比較CSVでは従来どおり2024〜2026年だけを使います。
-COLLECTION_YEARS = list(range(2017, 2027))
+# Hot 100は2008年、Streaming/Downloadは2017年の公開開始から保存します。
+# サイトは全収録期間、3年間比較CSVは2024〜2026年を使います。
+COLLECTION_YEARS = list(range(2008, 2027))
 
 ANALYSIS_YEARS = (
     2024,
@@ -52,17 +53,7 @@ ANALYSIS_YEARS = (
 
 # 完成済みの年は出力CSVを確定データとして再利用します。
 # CSVがない場合だけ公式ページから再収集します。
-FIXED_YEARS = {
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025,
-}
+FIXED_YEARS = set(range(2008, 2026))
 
 # 更新中の年は保存済みCSVを土台にし、未取得週だけを追加します。
 INCREMENTAL_YEARS = {
@@ -83,7 +74,7 @@ PAST_YEAR_WEEKS = {
 
 # Streaming SongsとDownload Songsは2017-10-04公開分から開始。
 CHART_START_DATES = {
-    CHART_CODE: date(2017, 1, 4),
+    CHART_CODE: date(2008, 1, 16),
     STREAMING_CHART_CODE: date(2017, 10, 4),
     DOWNLOAD_CHART_CODE: date(2017, 10, 4),
 }
@@ -152,7 +143,7 @@ MATCH_DETAILS_FILE = OUTPUT_DIRECTORY / (
 )
 
 COLLECTION_REPORT_FILE = OUTPUT_DIRECTORY / (
-    "collection_report_2017_2026.csv"
+    "collection_report_2008_2026.csv"
 )
 
 SITE_FILE = OUTPUT_DIRECTORY / (
@@ -409,7 +400,7 @@ def generate_chart_dates(year, chart_code=CHART_CODE):
     current = start_date
 
     while current <= end_date:
-        dates.append(current)
+        dates.append(date(2013, 11, 26) if chart_code == CHART_CODE and current == date(2013, 11, 27) else current)
         current += timedelta(weeks=1)
 
     return dates
@@ -458,6 +449,7 @@ def parse_chart(html_text):
     )
 
     entries = []
+    seen = {}
 
     # Download Songsには同順位が複数曲ある週があります。
     # 順位番号を1つずつ探さず、表示されている全行を順番に読み取ります。
@@ -499,6 +491,17 @@ def parse_chart(html_text):
         if not title or not artist:
             continue
 
+        artist_link = artist_element.select_one("a[href]") if artist_element else None
+        identity = (expected_rank, chart_integrity.normalize(title), artist_link["href"] if artist_link else chart_integrity.normalize(artist))
+        text_identity = (expected_rank, chart_integrity.normalize(title), chart_integrity.normalize(artist))
+        if identity in seen or text_identity in seen:
+            index = seen[identity] if identity in seen else seen[text_identity]
+            seen[identity] = seen[text_identity] = index
+            previous = entries[index]
+            if len(artist) < len(previous["artist"]):
+                previous["artist"] = artist
+            continue
+        seen[identity] = seen[text_identity] = len(entries)
         entries.append(
             {
                 "rank": expected_rank,
@@ -512,6 +515,9 @@ def parse_chart(html_text):
 
 def chart_is_complete(entries):
     if len(entries) < MAX_RANK:
+        return False
+    keys = [(int(e["rank"]), chart_integrity.normalize(e["artist"]), chart_integrity.normalize(e["title"])) for e in entries]
+    if len(set(keys)) != len(entries) or any(not e["artist"].strip() or not e["title"].strip() for e in entries):
         return False
 
     actual_ranks = [
@@ -728,6 +734,7 @@ def read_year_entries(year, chart_code=CHART_CODE):
                 }
             )
 
+    chart_integrity.validate_saved_rows(entries, year, chart_code, PROJECT_DIRECTORY)
     return entries
 
 
@@ -750,7 +757,7 @@ def load_incremental_entries(year, chart_code=CHART_CODE):
     complete_entries_by_date = {
         chart_date: date_entries
         for chart_date, date_entries in entries_by_date.items()
-        if len(date_entries) >= MAX_RANK
+        if chart_is_complete(date_entries)
     }
     print(
         f"  保存済みCSVから{len(complete_entries_by_date)}週を再利用し、"
@@ -760,85 +767,8 @@ def load_incremental_entries(year, chart_code=CHART_CODE):
 
 
 def load_fixed_year(year, chart_code=CHART_CODE):
-    entries = read_year_entries(year, chart_code)
-
-    if entries is None:
-        return None
-
-    dates = sorted(
-        {
-            date.fromisoformat(entry["chart_date"])
-            for entry in entries
-        }
-    )
-    expected_weeks = EXPECTED_WEEKS_BY_CHART[chart_code].get(year)
-    requested_dates = generate_chart_dates(year, chart_code)
-    missing_dates = sorted(set(requested_dates) - set(dates))
-
-    entry_counts_by_date = Counter(
-        entry["chart_date"]
-        for entry in entries
-    )
-    entries_are_complete = all(
-        entry_counts_by_date[chart_date.isoformat()] >= MAX_RANK
-        for chart_date in dates
-    )
-
-    if (
-        expected_weeks is None
-        or (
-            len(dates) != expected_weeks
-            and year in ANALYSIS_YEARS
-        )
-        or not entries_are_complete
-    ):
-        print(
-            f"{year}年の確定CSVが不完全なため、"
-            "公式ページから再収集します。"
-        )
-        return None
-
-    print()
-    print("=" * 72)
-    print(
-        f"{year}年は確定CSVを使用します。"
-        f"（{len(dates)}週・{len(entries)}件）"
-    )
-    print("=" * 72)
-
-    reports = [
-        {
-            "year": year,
-            "requested_date": chart_date.isoformat(),
-            "status": "確定データ使用",
-            "entry_count": MAX_RANK,
-            "method": "確定CSV",
-            "duplicate_of": "",
-        }
-        for chart_date in dates
-    ]
-    reports.extend(
-        {
-            "year": year,
-            "requested_date": chart_date.isoformat(),
-            "status": "公式アーカイブ欠損",
-            "entry_count": 0,
-            "method": "確定CSV",
-            "duplicate_of": "",
-        }
-        for chart_date in missing_dates
-    )
-
-    return {
-        "year": year,
-        "chart_code": chart_code,
-        "requested_dates": requested_dates,
-        "dates": dates,
-        "entries": entries,
-        "failed_dates": missing_dates,
-        "duplicate_dates": [],
-        "reports": reports,
-    }
+    import sys
+    return chart_integrity.collection_from_csv(sys.modules[__name__], year, chart_code)
 
 # ============================================================
 # 年別データ収集
@@ -1109,7 +1039,8 @@ def validate_collection(collection):
         for entry in collection["entries"]
     )
     entries_are_complete = all(
-        entry_counts_by_date[chart_date.isoformat()] >= MAX_RANK
+        (entry_counts_by_date[chart_date.isoformat()] >= MAX_RANK
+         or chart_integrity.allowed_partial(PROJECT_DIRECTORY, collection["chart_code"], chart_date.isoformat(), entry_counts_by_date[chart_date.isoformat()]))
         for chart_date in collection["dates"]
     )
 
@@ -2591,6 +2522,11 @@ def save_site(matched_by_chart, collections_by_chart):
         }
         for scope, (entries_by_chart, artist_names) in scope_sources.items()
     }
+    data_quality = chart_integrity.quality(PROJECT_DIRECTORY)
+    for charts in dashboards.values():
+        for code, dashboard in charts.items():
+            dashboard["dataQuality"] = data_quality["charts"].get(code, {})
+            dashboard["publicationDates"] = {str(c["year"]): [d.isoformat() for d in c["dates"]] for c in collections_by_chart[code]}
     assets = build_dashboard_assets(dashboards)
     write_dashboard_assets(SITE_FILE.parent / "data", assets)
     write_dashboard_assets(PREVIEW_FILE.parent / "data", assets)
@@ -2600,6 +2536,9 @@ def save_site(matched_by_chart, collections_by_chart):
         "__LATEST_DATE__": hot_dashboard["latestDate"],
     }
     document = HTML_TEMPLATE
+    initial_details = sorted((name for name in assets if name.startswith("boys-hot100-details-")), key=lambda name: int(name.rsplit("-", 1)[1].split(".")[0]))
+    initial_tag = '<script src="data/boys-hot100.js"></script>'
+    document = document.replace(initial_tag, initial_tag + ''.join(f'\n<script src="data/{name}"></script>' for name in initial_details))
     for placeholder, value in replacements.items():
         document = document.replace(placeholder, html.escape(value))
     document = document.replace("延べ登場", "累積登場数")
@@ -2609,13 +2548,26 @@ def save_site(matched_by_chart, collections_by_chart):
     document = document.replace('label:"楽曲"', 'label:"楽曲数"')
     document = document.replace('data-label="楽曲"', 'data-label="楽曲数"')
     document = document.replace("<th>楽曲</th>", "<th>楽曲数</th>")
+    document = chart_integrity.quality_script(document)
+    for destination in {SITE_FILE.parent, PREVIEW_FILE.parent}:
+        chart_integrity.write_quality_assets(PROJECT_DIRECTORY, destination)
     encoded_document = document.encode("utf-8")
     SITE_FILE.write_bytes(encoded_document)
     PREVIEW_FILE.write_bytes(encoded_document)
+    write_cumulative_comparison_pages()
 
 # ============================================================
 # ターミナル表示
 # ============================================================
+
+
+def write_cumulative_comparison_pages():
+    """Generate the separate totals page without altering the existing comparison UI."""
+    template = PROJECT_DIRECTORY / "templates" / "cumulative-comparison.html"
+    document = template.read_bytes()
+    for directory in {PREVIEW_FILE.parent, SITE_FILE.parent}:
+        (directory / "cumulative-comparison.html").write_bytes(document)
+
 
 def terminal_number(value):
     return "-" if value == 0 else str(value)
@@ -2685,6 +2637,8 @@ def main():
         print("#" * 72)
 
         for year in COLLECTION_YEARS:
+            if year < CHART_START_DATES[chart_code].year:
+                continue
             collection = None
             if year in FIXED_YEARS:
                 collection = load_fixed_year(year, chart_code)
