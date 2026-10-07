@@ -1,7 +1,7 @@
 {
   "hot100": {
     "width": 1800,
-    "height": 2250,
+    "height": 2266,
     "rows": 20,
     "minimum_title_font": 32,
     "ongoing": [
@@ -10,18 +10,17 @@
   },
   "stsongs": {
     "width": 1800,
-    "height": 2250,
+    "height": 2266,
     "rows": 20,
     "minimum_title_font": 35,
     "ongoing": [
-      "ライラック",
       "IRIS OUT",
       "好きすぎて滅!"
     ]
   },
   "dlsongs": {
     "width": 1800,
-    "height": 2250,
+    "height": 2258,
     "rows": 22,
     "minimum_title_font": 32,
     "ongoing": []

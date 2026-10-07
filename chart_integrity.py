@@ -62,6 +62,21 @@ def collection_from_csv(site,year,code):
     reports += [{'year':year,'requested_date':d.isoformat(),'status':'公式アーカイブに掲載なし・未確定','entry_count':0,'method':'公式前後リンクを確認','duplicate_of':''} for d in missing]
     return dict(year=year,chart_code=code,requested_dates=requested,dates=dates,entries=rows,failed_dates=missing,duplicate_dates=[],reports=reports)
 
+def update_quality(root,collections_by_chart):
+    """Refresh coverage from validated collections while retaining evidence notes."""
+    q=quality(root)
+    q['updated_at']=date.today().isoformat()
+    ends=[]
+    for code,collections in collections_by_chart.items():
+        dates=sorted({d.isoformat() for c in collections for d in c['dates']})
+        if not dates:raise ValueError(f'No publication dates: {code}')
+        info=q.setdefault('charts',{}).setdefault(code,{})
+        info.update(start=dates[0],end=dates[-1],published_weeks=len(dates),rows=sum(len(c['entries']) for c in collections))
+        ends.append(dates[-1])
+    q['through']=min(ends)
+    (Path(root)/'data-quality.json').write_text(json.dumps(q,ensure_ascii=False,indent=2),encoding='utf-8')
+    return q
+
 def write_quality_assets(root,destination):
     q=quality(root);dst=Path(destination);dst.mkdir(parents=True,exist_ok=True)
     (dst/'data-quality.json').write_text(json.dumps(q,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -69,9 +84,18 @@ def write_quality_assets(root,destination):
     js='window.CHART_DATA_QUALITY='+json.dumps(q,ensure_ascii=False)+';\n'
     js+='document.addEventListener("DOMContentLoaded",()=>{if(document.getElementById("chartDataQuality"))return;const n=document.createElement("aside");n.id="chartDataQuality";n.style.cssText="max-width:1240px;margin:24px auto;padding:12px 24px;font:12px/1.7 sans-serif;color:inherit;opacity:.8;border-top:1px solid #8885";n.setAttribute("aria-label","データの収録状況");n.innerHTML='+json.dumps(html.escape(notice)+' <a href="data-quality.html" style="color:inherit;text-decoration:underline">確認状況・修正内容</a>',ensure_ascii=False)+';document.body.appendChild(n)});\n'
     (dst/'data-quality.js').write_text(js,encoding='utf-8')
-    detail='''<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>収録データの確認状況</title><style>body{font:16px/1.9 system-ui,sans-serif;max-width:850px;margin:56px auto;padding:0 24px;color:#222;background:#faf9f6}h1{font-size:30px}h2{font-size:20px;margin-top:32px}a{color:#235f99}li{margin:8px 0}table{border-collapse:collapse;width:100%}td,th{padding:9px;text-align:left;border-bottom:1px solid #ddd}</style><a href="index.html">サイトに戻る</a><h1>収録データの確認状況</h1><p>2026/10/1検証。2026/9/30公開分まで収録。</p><h2>修正内容</h2><ul><li>3指標の2024〜2025年、各105週の公開日を7日前へ修正。</li><li>2023/12/27公開分の二重収録を各100行削除し、本来の2025/12/31公開分を各100行追加。</li><li>Hot 100の2013/11/26公開分100曲を追加。2008〜2016年も全サイトへ反映。</li><li>Downloadの完全重複300行と、同一曲のアーティスト表記違い2行を除外。異なる曲の同順位は保持。</li><li>Download 2019/7/31の61位「会いたいよ」手塚翔太を翌週の公式前回順位から補完。</li></ul><h2>未確認の範囲</h2><p>Download 2020/3/18は、翌週の前回順位67曲と当週記事1曲から68曲を復元。TOP10は全曲確認済みですが、全100曲以上の完全な順位表は未取得です。この週を含む累積登場数は確認できた曲だけの合計です。</p><p>Hot 100の2009/1/7、2010/1/6、2011/1/5、2012/1/4、2013/1/2、2014/1/1、2014/12/31は、公式アーカイブと前後リンクに掲載がありません。休載か未保存かは未確定です。未確認週を推測で追加していません。</p><h2>連続記録</h2><p>同一曲・同一公開週は1回。TOP10圏外、または公開間隔が8日を超えて連続性を確認できない箇所で区切ります。11/26の火曜日公開のような日付変更を含む連続週は維持します。上位20位の記録は、未確認の年末年始7週をまたいでいません。</p><h2>補完の出典</h2><ul><li><a href="https://www.billboard-japan.com/charts/detail?a=hot100&year=2013&month=12&day=1">Hot 100 2013/11/26</a></li><li><a href="https://www.billboard-japan.com/charts/detail?a=dlsongs&year=2019&month=08&day=12">Download 2019/8/7（前回順位から7/31を補完）</a></li><li><a href="https://www.billboard-japan.com/charts/detail?a=dlsongs&year=2020&month=03&day=30">Download 2020/3/25（前回順位から3/18を補完）</a></li><li><a href="https://www.billboard-japan.com/d_news/detail/86101/2">Download 2020/3/18の公式記事</a></li></ul></html>'''
+    detail='''<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>収録データの確認状況</title><style>body{font:16px/1.9 system-ui,sans-serif;max-width:850px;margin:56px auto;padding:0 24px;color:#222;background:#faf9f6}h1{font-size:30px}h2{font-size:20px;margin-top:32px}a{color:#235f99}li{margin:8px 0}table{border-collapse:collapse;width:100%}td,th{padding:9px;text-align:left;border-bottom:1px solid #ddd}</style><a href="index.html">サイトに戻る</a><h1>収録データの確認状況</h1><p>__COVERAGE__</p><h2>修正内容</h2><ul><li>3指標の2024〜2025年、各105週の公開日を7日前へ修正。</li><li>2023/12/27公開分の二重収録を各100行削除し、本来の2025/12/31公開分を各100行追加。</li><li>Hot 100の2013/11/26公開分100曲を追加。2008〜2016年も全サイトへ反映。</li><li>Downloadの完全重複300行と、同一曲のアーティスト表記違い2行を除外。異なる曲の同順位は保持。</li><li>Download 2019/7/31の61位「会いたいよ」手塚翔太を翌週の公式前回順位から補完。</li></ul><h2>未確認の範囲</h2><p>Download 2020/3/18は、翌週の前回順位67曲と当週記事1曲から68曲を復元。TOP10は全曲確認済みですが、全100曲以上の完全な順位表は未取得です。この週を含む累積登場数は確認できた曲だけの合計です。</p><p>Hot 100の2009/1/7、2010/1/6、2011/1/5、2012/1/4、2013/1/2、2014/1/1、2014/12/31は、公式アーカイブと前後リンクに掲載がありません。休載か未保存かは未確定です。未確認週を推測で追加していません。</p><h2>連続記録</h2><p>同一曲・同一公開週は1回。TOP10圏外、または公開間隔が8日を超えて連続性を確認できない箇所で区切ります。11/26の火曜日公開のような日付変更を含む連続週は維持します。上位20位の記録は、未確認の年末年始7週をまたいでいません。</p><h2>補完の出典</h2><ul><li><a href="https://www.billboard-japan.com/charts/detail?a=hot100&year=2013&month=12&day=1">Hot 100 2013/11/26</a></li><li><a href="https://www.billboard-japan.com/charts/detail?a=dlsongs&year=2019&month=08&day=12">Download 2019/8/7（前回順位から7/31を補完）</a></li><li><a href="https://www.billboard-japan.com/charts/detail?a=dlsongs&year=2020&month=03&day=30">Download 2020/3/25（前回順位から3/18を補完）</a></li><li><a href="https://www.billboard-japan.com/d_news/detail/86101/2">Download 2020/3/18の公式記事</a></li></ul></html>'''
+    def display_date(value):
+        day=date.fromisoformat(value)
+        return f'{day.year}/{day.month}/{day.day}'
+    through=q.get('through')
+    updated=q.get('updated_at',q.get('checked_at'))
+    coverage=(f'最終更新：{display_date(updated)}。{display_date(through)}公開分まで収録。' if updated and through else '収録期間はデータの確認状況を参照。')
+    if q.get('checked_at'):coverage+=f' 過去データの修正・検証：{display_date(q["checked_at"])}。'
+    detail=detail.replace('__COVERAGE__',html.escape(coverage))
+    record_stamps={code:info.get('end',q.get('through','')).replace('-','') for code,info in q.get('charts',{}).items()}
     prefix='../records/' if dst.name=='billboard_output' else 'records/'
-    links='<h2>修正後のTOP10連続記録</h2><ul>'+''.join(f'<li>{name}：<a href="{prefix}{code}-top10-consecutive-20260930.png">画像</a> / <a href="{prefix}{code}_top10_consecutive.csv">全順位CSV</a></li>' for code,name in [('hot100','Hot 100'),('stsongs','Streaming'),('dlsongs','Download')])+'</ul>'
+    links='<h2>最新のTOP10連続記録</h2><ul>'+''.join(f'<li>{name}：<a href="{prefix}{code}-top10-consecutive-{record_stamps[code]}.png">画像</a> / <a href="{prefix}{code}_top10_consecutive.csv">全順位CSV</a></li>' for code,name in [('hot100','Hot 100'),('stsongs','Streaming'),('dlsongs','Download')])+'</ul>'
     back='index.html' if (dst/'index.html').exists() else ('boys_group_power_map_2024_2025_2026.html' if dst.name=='billboard_output' else 'preview.html')
     detail=detail.replace('href="index.html"',f'href="{back}"').replace('</html>',links+'</html>')
     (dst/'data-quality.html').write_text(detail,encoding='utf-8')

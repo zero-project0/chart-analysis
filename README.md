@@ -6,7 +6,7 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 
 - Hot 100：2008/1/16公開分から。
 - Streaming Songs / Download Songs：2017/10/4公開分から。
-- 2026/9/30公開分まで収録。2026/10/1に公開日・重複・欠損を再検証しました。
+- 2026/10/7公開分まで収録（2026年は各指標40週）。2026/10/1に公開日・重複・欠損を再検証しました。
 - Download 2020/3/18は公式資料で確認できた68曲を収録。TOP10は全曲確認済みですが、全順位は未完了です。
 - Hot 100の年末年始7週は公式アーカイブに掲載がなく、休載か欠損か未確定です。
 - 詳細と出典は `data-quality.html`、機械可読な収録状況は `data-quality.json`、補完行の出典は `verified-recoveries.json` に記録しています。
@@ -22,10 +22,11 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 - `billboard_boys_group_complete.py`：差分取得と再集計。確定CSVも検証してから再利用します。
 - `rebuild-data.py`：保存済みCSVから全期間のサイト用データを再生成します。
 - `calculate-top10-streaks.py`：同じCSVから3指標のTOP10連続記録を再計算します。
+- `render-top10-posters.py`：再計算した記録から、公開日に対応するPNG画像を生成します（Windowsのメイリオを使用）。
 
 ## 更新方法
 
-Pythonと `requirements.txt` の依存パッケージを用意し、`python billboard_boys_group_complete.py` を実行します。最新年は未取得週だけ取得し、過去年は検証済みCSVを再利用します。取得を伴わない再集計は `python rebuild-data.py`、連続記録は `python calculate-top10-streaks.py` です。
+Pythonと `requirements.txt` の依存パッケージを用意し、`python billboard_boys_group_complete.py` を実行します。最新年は未取得週だけ取得し、過去年は検証済みCSVを再利用します。取得を伴わない再集計は `python rebuild-data.py`、連続記録は `python calculate-top10-streaks.py`、記録画像はその後に `python render-top10-posters.py` で更新します。収録期間の表示と画像リンクは公開日に追従します。
 
 日付はチャートページに記載された公開日です。通常のアーカイブURLには公開日の5日後を指定し、2013/11/26の火曜日公開も実日付を保持します。同順位の別曲を削除せず、同一曲の二重掲載を除外します。補完行は `verified-recoveries.json` の出典と照合します。
 

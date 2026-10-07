@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "checked_at": "2026-10-01",
-  "through": "2026-09-30",
+  "through": "2026-10-07",
   "charts": {
     "hot100": {
       "start": "2008-01-16",
-      "end": "2026-09-30",
-      "published_weeks": 970,
-      "rows": 97005,
+      "end": "2026-10-07",
+      "published_weeks": 971,
+      "rows": 97105,
       "partial_weeks": [],
       "unavailable_calendar_dates": [
         {
@@ -49,17 +49,17 @@
     },
     "stsongs": {
       "start": "2017-10-04",
-      "end": "2026-09-30",
-      "published_weeks": 470,
-      "rows": 47001,
+      "end": "2026-10-07",
+      "published_weeks": 471,
+      "rows": 47101,
       "partial_weeks": [],
       "unavailable_calendar_dates": []
     },
     "dlsongs": {
       "start": "2017-10-04",
-      "end": "2026-09-30",
-      "published_weeks": 470,
-      "rows": 46994,
+      "end": "2026-10-07",
+      "published_weeks": 471,
+      "rows": 47094,
       "partial_weeks": [
         {
           "date": "2020-03-18",
@@ -75,5 +75,6 @@
       ],
       "unavailable_calendar_dates": []
     }
-  }
+  },
+  "updated_at": "2026-10-07"
 }

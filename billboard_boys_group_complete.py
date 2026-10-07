@@ -2522,7 +2522,7 @@ def save_site(matched_by_chart, collections_by_chart):
         }
         for scope, (entries_by_chart, artist_names) in scope_sources.items()
     }
-    data_quality = chart_integrity.quality(PROJECT_DIRECTORY)
+    data_quality = chart_integrity.update_quality(PROJECT_DIRECTORY, collections_by_chart)
     for charts in dashboards.values():
         for code, dashboard in charts.items():
             dashboard["dataQuality"] = data_quality["charts"].get(code, {})
