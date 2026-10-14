@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-10-07",
-    "issues": 971,
-    "songs": 4380,
+    "last": "2026-10-14",
+    "issues": 972,
+    "songs": 4385,
     "displayed": [
       {
         "title": "Lemon",
@@ -98,6 +98,19 @@
         "rank": 7
       },
       {
+        "title": "好きすぎて滅!",
+        "artist": "M!LK",
+        "weeks": 43,
+        "start": "2025-12-24",
+        "end": "2026-10-14",
+        "ongoing": true,
+        "begins_at_chart_start": false,
+        "total_top10_weeks": 45,
+        "best_rank_in_streak": 3,
+        "runs": 2,
+        "rank": 8
+      },
+      {
         "title": "怪獣の花唄",
         "artist": "Vaundy",
         "weeks": 42,
@@ -108,20 +121,7 @@
         "total_top10_weeks": 58,
         "best_rank_in_streak": 2,
         "runs": 7,
-        "rank": 8
-      },
-      {
-        "title": "好きすぎて滅!",
-        "artist": "M!LK",
-        "weeks": 42,
-        "start": "2025-12-24",
-        "end": "2026-10-07",
-        "ongoing": true,
-        "begins_at_chart_start": false,
-        "total_top10_weeks": 44,
-        "best_rank_in_streak": 3,
-        "runs": 2,
-        "rank": 8
+        "rank": 9
       },
       {
         "title": "Bling-Bang-Bang-Born",
@@ -272,9 +272,9 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-10-07",
-    "issues": 471,
-    "songs": 473,
+    "last": "2026-10-14",
+    "issues": 472,
+    "songs": 475,
     "displayed": [
       {
         "title": "ライラック",
@@ -409,12 +409,12 @@
       {
         "title": "IRIS OUT",
         "artist": "米津玄師",
-        "weeks": 55,
+        "weeks": 56,
         "start": "2025-09-24",
-        "end": "2026-10-07",
+        "end": "2026-10-14",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 55,
+        "total_top10_weeks": 56,
         "best_rank_in_streak": 1,
         "runs": 1,
         "rank": 11
@@ -487,15 +487,15 @@
       {
         "title": "好きすぎて滅!",
         "artist": "M!LK",
-        "weeks": 42,
+        "weeks": 43,
         "start": "2025-12-24",
-        "end": "2026-10-07",
+        "end": "2026-10-14",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 45,
+        "total_top10_weeks": 46,
         "best_rank_in_streak": 2,
         "runs": 3,
-        "rank": 17
+        "rank": 16
       },
       {
         "title": "Subtitle",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-10-07",
-    "issues": 471,
-    "songs": 1893,
+    "last": "2026-10-14",
+    "issues": 472,
+    "songs": 1899,
     "displayed": [
       {
         "title": "Lemon",

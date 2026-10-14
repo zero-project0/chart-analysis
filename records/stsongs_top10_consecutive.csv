@@ -9,13 +9,13 @@
 8,Tani Yuuki,W / X / Y,61,2022-03-02,2023-04-26,False,61,1,1,False
 9,DAOKO × 米津玄師,打上花火,60,2017-10-04,2018-11-21,False,63,1,2,True
 10,YOASOBI,アイドル,59,2023-04-19,2024-05-29,False,59,1,1,False
-11,米津玄師,IRIS OUT,55,2025-09-24,2026-10-07,True,55,1,1,False
+11,米津玄師,IRIS OUT,56,2025-09-24,2026-10-14,True,56,1,1,False
 12,Creepy Nuts,Bling-Bang-Bang-Born,51,2024-01-24,2025-01-08,False,51,1,1,False
 13,Official髭男dism,宿命,48,2019-07-17,2020-06-10,False,48,2,1,False
 14,HANA,Blue Jeans,46,2025-07-23,2026-06-03,False,47,1,2,False
 15,Vaundy,怪獣の花唄,44,2023-01-11,2023-11-08,False,68,2,4,False
 16,菅田将暉,まちがいさがし,43,2019-06-12,2020-04-01,False,43,2,1,False
-17,M!LK,好きすぎて滅!,42,2025-12-24,2026-10-07,True,45,2,3,False
+16,M!LK,好きすぎて滅!,43,2025-12-24,2026-10-14,True,46,2,3,False
 18,Official髭男dism,Subtitle,41,2022-10-19,2023-07-26,False,50,1,4,False
 19,tuki.,晩餐歌,39,2023-11-15,2024-08-07,False,40,1,2,False
 20,あいみょん,君はロックを聴かない,38,2018-10-17,2019-07-03,False,41,3,4,False
@@ -60,7 +60,7 @@
 59,SEKAI NO OWARI,Habit,20,2022-05-18,2022-09-28,False,23,2,2,False
 59,スピッツ,美しい鰭,20,2023-04-19,2023-08-30,False,20,2,1,False
 59,King Gnu,AIZO,20,2026-01-21,2026-06-03,False,20,2,1,False
-59,Mrs.GREEN APPLE,lulu.,20,2026-01-21,2026-06-03,False,24,1,3,False
+59,Mrs.GREEN APPLE,lulu.,20,2026-01-21,2026-06-03,False,25,1,3,False
 63,YOASOBI,勇者,19,2023-10-11,2024-02-14,False,19,4,1,False
 63,Creepy Nuts,オトノケ,19,2024-10-16,2025-02-19,False,19,1,1,False
 65,YOASOBI,群青,18,2021-01-20,2021-05-19,False,24,7,4,False
@@ -83,27 +83,27 @@
 80,TWICE,What is Love?,15,2018-04-18,2018-07-25,False,16,1,2,False
 80,Eve,廻廻奇譚,15,2020-12-30,2021-04-07,False,18,6,3,False
 80,Mrs.GREEN APPLE,青と夏,15,2025-06-25,2025-10-01,False,58,5,9,False
-85,MISIA,アイノカタチ feat.HIDE(GReeeeN),14,2018-08-29,2018-11-28,False,21,2,2,False
-85,米津玄師,感電,14,2020-08-12,2020-11-11,False,14,2,1,False
-85,10-FEET,第ゼロ感,14,2023-01-18,2023-04-19,False,14,4,1,False
-85,Vaundy,タイムパラドックス,14,2024-03-13,2024-06-12,False,14,4,1,False
-85,Mrs.GREEN APPLE,familie,14,2024-08-21,2024-11-20,False,17,2,2,False
-85,"米津玄師, 宇多田ヒカル",JANE DOE,14,2025-10-01,2025-12-31,False,14,2,1,False
-85,EBiDAN,"Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)",14,2026-07-08,2026-10-07,True,14,1,1,False
+80,EBiDAN,"Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)",15,2026-07-08,2026-10-14,True,15,1,1,False
+86,MISIA,アイノカタチ feat.HIDE(GReeeeN),14,2018-08-29,2018-11-28,False,21,2,2,False
+86,米津玄師,感電,14,2020-08-12,2020-11-11,False,14,2,1,False
+86,10-FEET,第ゼロ感,14,2023-01-18,2023-04-19,False,14,4,1,False
+86,Vaundy,タイムパラドックス,14,2024-03-13,2024-06-12,False,14,4,1,False
+86,Mrs.GREEN APPLE,familie,14,2024-08-21,2024-11-20,False,17,2,2,False
+86,"米津玄師, 宇多田ヒカル",JANE DOE,14,2025-10-01,2025-12-31,False,14,2,1,False
 92,安室奈美恵,Hero,13,2017-12-06,2018-02-28,False,14,1,2,False
 92,菅田将暉,虹,13,2020-11-25,2021-02-17,False,13,4,1,False
 92,King Gnu,一途,13,2021-12-22,2022-03-16,False,13,1,1,False
 92,back number,新しい恋人達に,13,2024-07-24,2024-10-16,False,13,2,1,False
 92,アイナ・ジ・エンド,革命道中,13,2025-08-27,2025-11-19,False,22,3,3,False
-97,荻野目洋子,ダンシング・ヒーロー,12,2017-12-06,2018-02-21,False,12,3,1,False
-97,藤井風,きらり,12,2021-08-11,2021-10-27,False,23,7,4,False
-97,King Gnu,逆夢,12,2022-01-05,2022-03-23,False,12,1,1,False
-97,MAN WITH A MISSION×milet,絆ノ奇跡,12,2023-04-26,2023-07-12,False,12,5,1,False
-97,Official髭男dism,TATTOO,12,2023-05-03,2023-07-19,False,12,4,1,False
-97,Mrs.GREEN APPLE,Magic,12,2023-06-28,2023-09-13,False,14,4,2,False
-97,AKASAKI,Bunny Girl,12,2024-10-16,2025-01-01,False,12,4,1,False
-97,Mrs.GREEN APPLE,breakfast,12,2025-06-11,2025-08-27,False,12,1,1,False
-97,Mrs.GREEN APPLE,Brand New,12,2026-07-22,2026-10-07,True,12,1,1,False
+92,Mrs.GREEN APPLE,Brand New,13,2026-07-22,2026-10-14,True,13,1,1,False
+98,荻野目洋子,ダンシング・ヒーロー,12,2017-12-06,2018-02-21,False,12,3,1,False
+98,藤井風,きらり,12,2021-08-11,2021-10-27,False,23,7,4,False
+98,King Gnu,逆夢,12,2022-01-05,2022-03-23,False,12,1,1,False
+98,MAN WITH A MISSION×milet,絆ノ奇跡,12,2023-04-26,2023-07-12,False,12,5,1,False
+98,Official髭男dism,TATTOO,12,2023-05-03,2023-07-19,False,12,4,1,False
+98,Mrs.GREEN APPLE,Magic,12,2023-06-28,2023-09-13,False,14,4,2,False
+98,AKASAKI,Bunny Girl,12,2024-10-16,2025-01-01,False,12,4,1,False
+98,Mrs.GREEN APPLE,breakfast,12,2025-06-11,2025-08-27,False,12,1,1,False
 106,TWICE,YES or YES,11,2018-11-14,2019-01-23,False,15,2,2,False
 106,クイーン,ボヘミアン・ラプソディ,11,2018-11-28,2019-02-06,False,11,4,1,False
 106,Ado,踊,11,2021-05-12,2021-07-21,False,12,7,2,False
@@ -191,39 +191,39 @@
 164,米津玄師,1991,5,2025-10-22,2025-11-19,False,5,3,1,False
 164,BTS,SWIM,5,2026-04-01,2026-04-29,False,5,8,1,False
 164,スピッツ,見知らぬ糸,5,2026-08-26,2026-09-23,False,5,7,1,False
-193,テイラー・スウィフト,ルック・ホワット・ユー・メイド・ミー・ドゥ〜私にこんなマネ、させるなんて,4,2017-10-04,2017-10-25,False,4,5,1,True
-193,クリス・ハート,I LOVE YOU,4,2017-12-13,2018-01-03,False,7,1,3,False
-193,欅坂46,不協和音,4,2018-01-10,2018-01-31,False,4,4,1,False
-193,星野源,ドラえもん,4,2018-03-07,2018-03-28,False,4,1,1,False
-193,ヒュー・ジャックマン、キアラ・セトル、ザック・エフロン、ゼンデイヤ & ザ・グレイテスト・ショーマン・アンサンブル,ザ・グレイテスト・ショー,4,2018-03-21,2018-04-11,False,4,8,1,False
-193,欅坂46,アンビバレント,4,2018-08-22,2018-09-12,False,4,3,1,False
-193,BTS (防弾少年団),IDOL,4,2018-09-05,2018-09-26,False,4,2,1,False
-193,西野カナ,Bedtime Story,4,2018-10-03,2018-10-24,False,4,5,1,False
-193,乃木坂46,帰り道は遠回りしたくなる,4,2018-11-14,2018-12-05,False,8,4,2,False
-193,back number,ハッピーエンド,4,2019-03-27,2019-04-17,False,4,5,1,False
-193,BLACKPINK,Kill This Love,4,2019-04-10,2019-05-01,False,4,2,1,False
-193,サカナクション,忘れられないの,4,2019-06-26,2019-07-17,False,4,5,1,False
-193,Uru,あなたがいることで,4,2020-04-01,2020-04-22,False,4,6,1,False
-193,Official髭男dism,パラボラ,4,2020-04-22,2020-05-13,False,4,5,1,False
-193,Tani Yuuki,Myra,4,2020-07-15,2020-08-05,False,4,5,1,False
-193,TWICE,I CAN'T STOP ME,4,2020-11-04,2020-11-25,False,4,5,1,False
-193,BE:FIRST,Gifted.,4,2021-11-10,2021-12-01,False,4,1,1,False
-193,Kep1er,WA DA DA,4,2022-01-19,2022-02-09,False,4,8,1,False
-193,BE:FIRST,Bye-Good-Bye,4,2022-03-16,2022-04-06,False,6,1,2,False
-193,IVE,LOVE DIVE,4,2022-04-20,2022-05-11,False,4,2,1,False
-193,米津玄師,M八七,4,2022-05-25,2022-06-15,False,4,4,1,False
-193,BTS,Yet To Come (The Most Beautiful Moment),4,2022-06-15,2022-07-06,False,4,1,1,False
-193,宇多田ヒカル,First Love,4,2022-12-14,2023-01-04,False,5,3,2,False
-193,NewJeans,OMG,4,2023-02-22,2023-03-15,False,7,7,2,False
-193,NewJeans,Super Shy,4,2023-07-19,2023-08-09,False,4,7,1,False
-193,Mrs.GREEN APPLE,ナハトムジーク,4,2024-01-31,2024-02-21,False,4,6,1,False
-193,aiko,相思相愛,4,2024-05-01,2024-05-22,False,4,7,1,False
-193,櫻坂46,自業自得,4,2024-06-12,2024-07-03,False,4,5,1,False
-193,米津玄師,がらくた,4,2024-09-04,2024-09-25,False,4,5,1,False
-193,Mrs.GREEN APPLE,Carrying Happiness,4,2025-07-30,2025-08-20,False,4,5,1,False
-193,Mrs.GREEN APPLE,風と町,4,2026-04-22,2026-05-13,False,4,3,1,False
-193,SixTONES,マイオンリー,4,2026-09-16,2026-10-07,True,4,6,1,False
-193,YAO,"ありふれた世界の果てに (feat. Awich, CHICO CARLITO, ONE OK ROCK & Paledusk)",4,2026-09-16,2026-10-07,True,4,1,1,False
+164,YAO,"ありふれた世界の果てに (feat. Awich, CHICO CARLITO, ONE OK ROCK & Paledusk)",5,2026-09-16,2026-10-14,True,5,1,1,False
+194,テイラー・スウィフト,ルック・ホワット・ユー・メイド・ミー・ドゥ〜私にこんなマネ、させるなんて,4,2017-10-04,2017-10-25,False,4,5,1,True
+194,クリス・ハート,I LOVE YOU,4,2017-12-13,2018-01-03,False,7,1,3,False
+194,欅坂46,不協和音,4,2018-01-10,2018-01-31,False,4,4,1,False
+194,星野源,ドラえもん,4,2018-03-07,2018-03-28,False,4,1,1,False
+194,ヒュー・ジャックマン、キアラ・セトル、ザック・エフロン、ゼンデイヤ & ザ・グレイテスト・ショーマン・アンサンブル,ザ・グレイテスト・ショー,4,2018-03-21,2018-04-11,False,4,8,1,False
+194,欅坂46,アンビバレント,4,2018-08-22,2018-09-12,False,4,3,1,False
+194,BTS (防弾少年団),IDOL,4,2018-09-05,2018-09-26,False,4,2,1,False
+194,西野カナ,Bedtime Story,4,2018-10-03,2018-10-24,False,4,5,1,False
+194,乃木坂46,帰り道は遠回りしたくなる,4,2018-11-14,2018-12-05,False,8,4,2,False
+194,back number,ハッピーエンド,4,2019-03-27,2019-04-17,False,4,5,1,False
+194,BLACKPINK,Kill This Love,4,2019-04-10,2019-05-01,False,4,2,1,False
+194,サカナクション,忘れられないの,4,2019-06-26,2019-07-17,False,4,5,1,False
+194,Uru,あなたがいることで,4,2020-04-01,2020-04-22,False,4,6,1,False
+194,Official髭男dism,パラボラ,4,2020-04-22,2020-05-13,False,4,5,1,False
+194,Tani Yuuki,Myra,4,2020-07-15,2020-08-05,False,4,5,1,False
+194,TWICE,I CAN'T STOP ME,4,2020-11-04,2020-11-25,False,4,5,1,False
+194,BE:FIRST,Gifted.,4,2021-11-10,2021-12-01,False,4,1,1,False
+194,Kep1er,WA DA DA,4,2022-01-19,2022-02-09,False,4,8,1,False
+194,BE:FIRST,Bye-Good-Bye,4,2022-03-16,2022-04-06,False,6,1,2,False
+194,IVE,LOVE DIVE,4,2022-04-20,2022-05-11,False,4,2,1,False
+194,米津玄師,M八七,4,2022-05-25,2022-06-15,False,4,4,1,False
+194,BTS,Yet To Come (The Most Beautiful Moment),4,2022-06-15,2022-07-06,False,4,1,1,False
+194,宇多田ヒカル,First Love,4,2022-12-14,2023-01-04,False,5,3,2,False
+194,NewJeans,OMG,4,2023-02-22,2023-03-15,False,7,7,2,False
+194,NewJeans,Super Shy,4,2023-07-19,2023-08-09,False,4,7,1,False
+194,Mrs.GREEN APPLE,ナハトムジーク,4,2024-01-31,2024-02-21,False,4,6,1,False
+194,aiko,相思相愛,4,2024-05-01,2024-05-22,False,4,7,1,False
+194,櫻坂46,自業自得,4,2024-06-12,2024-07-03,False,4,5,1,False
+194,米津玄師,がらくた,4,2024-09-04,2024-09-25,False,4,5,1,False
+194,Mrs.GREEN APPLE,Carrying Happiness,4,2025-07-30,2025-08-20,False,4,5,1,False
+194,Mrs.GREEN APPLE,風と町,4,2026-04-22,2026-05-13,False,4,3,1,False
+194,SixTONES,マイオンリー,4,2026-09-16,2026-10-07,False,4,6,1,False
 226,BTS (防弾少年団),DNA,3,2017-10-04,2017-10-18,False,3,4,1,True
 226,SEKAI NO OWARI,RAIN,3,2017-10-04,2017-10-18,False,4,4,2,True
 226,ルイス・フォンシ & ダディー・ヤンキー,デスパシート feat.ジャスティン・ビーバー,3,2017-10-04,2017-10-18,False,3,6,1,True
@@ -338,137 +338,139 @@
 275,BE:FIRST,街灯,2,2025-12-17,2025-12-24,False,2,6,1,False
 275,嵐,Happiness,2,2026-06-10,2026-06-17,False,2,4,1,False
 275,嵐,Love so sweet,2,2026-06-10,2026-06-17,False,3,3,2,False
-340,カーリー・レイ・ジェプセン,カット・トゥ・ザ・フィーリング,1,2017-10-04,2017-10-04,False,1,10,1,True
-340,アリアナ・グランデ,ブレイク・フリー feat.ゼッド,1,2017-10-11,2017-10-11,False,1,10,1,False
-340,ジャスティン・ビーバー,ホワット・ドゥ・ユー・ミーン?,1,2017-10-18,2017-10-18,False,1,10,1,False
-340,Aimer(エメ),花の唄,1,2017-10-25,2017-10-25,False,1,8,1,False
-340,HIROOMI TOSAKA,DIAMOND SUNSET,1,2017-10-25,2017-10-25,False,1,6,1,False
-340,MISIA,Never Gonna Cry! Strings Overture,1,2017-11-01,2017-11-01,False,1,10,1,False
-340,DOBERMAN INFINITY,あの日のキミと今の僕に,1,2017-11-29,2017-11-29,False,1,7,1,False
-340,Uru,奇蹟,1,2017-12-06,2017-12-06,False,1,10,1,False
-340,宇多田ヒカル,Flavor Of Life,1,2017-12-20,2017-12-20,False,1,5,1,False
-340,BoA,メリクリ,1,2017-12-27,2017-12-27,False,1,5,1,False
-340,山下達郎,クリスマス・イブ,1,2017-12-27,2017-12-27,False,1,10,1,False
-340,三浦大知,EXCITE,1,2018-01-10,2018-01-10,False,1,9,1,False
-340,手嶌葵,明日への手紙,1,2018-02-21,2018-02-21,False,1,7,1,False
-340,レミオロメン,3月9日,1,2018-03-14,2018-03-14,False,1,7,1,False
-340,Little Glee Monster,ギュッと,1,2018-03-28,2018-03-28,False,1,10,1,False
-340,ケツメイシ,さくら,1,2018-04-04,2018-04-04,False,1,7,1,False
-340,アリアナ・グランデ,ノー・ティアーズ・レフト・トゥ・クライ,1,2018-05-02,2018-05-02,False,1,10,1,False
-340,アヴィーチー,ウェイク・ミー・アップ!,1,2018-05-02,2018-05-02,False,1,8,1,False
-340,MONGOL800,小さな恋のうた,1,2018-05-09,2018-05-09,False,1,10,1,False
-340,Mr.Children,Tomorrow Never Knows,1,2018-05-23,2018-05-23,False,1,10,1,False
-340,TWICE,Wake Me Up,1,2018-06-06,2018-06-06,False,1,7,1,False
-340,椎名林檎,長く短い祭,1,2018-06-06,2018-06-06,False,1,10,1,False
-340,三代目 J Soul Brothers from EXILE TRIBE,RAINBOW,1,2018-06-13,2018-06-13,False,1,2,1,False
-340,三代目 J Soul Brothers from EXILE TRIBE feat.イエロー・クロウ,RAINBOW,1,2018-06-20,2018-06-20,False,1,6,1,False
-340,BLACKPINK,FOREVER YOUNG,1,2018-06-27,2018-06-27,False,1,10,1,False
-340,MOMOLAND,Baam,1,2018-07-11,2018-07-11,False,1,7,1,False
-340,AAA,Tomorrow,1,2018-08-01,2018-08-01,False,1,7,1,False
-340,DJキャレド,"ノー・ブレイナー feat.ジャスティン・ビーバー,チャンス・ザ・ラッパー & クエヴォ",1,2018-08-08,2018-08-08,False,1,7,1,False
-340,Nissy(西島隆弘),Relax & Chill,1,2018-08-15,2018-08-15,False,1,10,1,False
-340,星野源,アイデア,1,2018-08-29,2018-08-29,False,1,7,1,False
-340,androp,Hikari,1,2018-09-19,2018-09-19,False,1,10,1,False
-340,IZ*ONE,La Vie en Rose,1,2018-12-19,2018-12-19,False,1,9,1,False
-340,Mrs.GREEN APPLE,僕のこと,1,2019-01-23,2019-01-23,False,1,8,1,False
-340,平井大,THE GIFT,1,2019-03-20,2019-03-20,False,1,10,1,False
-340,back number,高嶺の花子さん,1,2019-04-03,2019-04-03,False,2,8,2,False
-340,HIROOMI TOSAKA,BLUE SAPPHIRE,1,2019-04-24,2019-04-24,False,1,8,1,False
-340,テイラー・スウィフト,ME! feat. ブレンドン・ユーリー・オブ・パニック!アット・ザ・ディスコ,1,2019-05-08,2019-05-08,False,1,10,1,False
-340,FANTASTICS from EXILE TRIBE vs BALLISTIK BOYZ from EXILE TRIBE,SHOCK THE WORLD,1,2019-06-12,2019-06-12,False,1,7,1,False
-340,GENERATIONS from EXILE TRIBE vs THE RAMPAGE from EXILE TRIBE,SHOOT IT OUT,1,2019-06-12,2019-06-12,False,1,5,1,False
-340,THE RAMPAGE from EXILE TRIBE vs FANTASTICS from EXILE TRIBE,MIX IT UP,1,2019-06-19,2019-06-19,False,1,5,1,False
-340,WANIMA,シグナル,1,2019-07-03,2019-07-03,False,1,10,1,False
-340,菅田将暉,キスだけで feat. あいみょん,1,2019-07-10,2019-07-10,False,1,6,1,False
-340,TWICE,HAPPY HAPPY,1,2019-07-24,2019-07-24,False,1,8,1,False
-340,TWICE,Breakthrough,1,2019-07-31,2019-07-31,False,1,6,1,False
-340,三代目 J SOUL BROTHERS from EXILE TRIBE,SCARLET feat.Afrojack,1,2019-08-14,2019-08-14,False,1,10,1,False
-340,GENERATIONS from EXILE TRIBE,DREAMERS,1,2019-09-11,2019-09-11,False,1,10,1,False
-340,miwa,リブート,1,2019-09-11,2019-09-11,False,1,9,1,False
-340,三代目 J SOUL BROTHERS from EXILE TRIBE,Rat-tat-tat,1,2019-10-02,2019-10-02,False,1,9,1,False
-340,Official髭男dism,Stand By You,1,2019-11-27,2019-11-27,False,1,10,1,False
-340,Rin音,snow jam,1,2020-04-29,2020-04-29,False,1,10,1,False
-340,DISH//,猫 〜THE FIRST TAKE ver.〜,1,2020-06-17,2020-06-17,False,2,9,2,False
-340,BTS,Stay Gold,1,2020-07-01,2020-07-01,False,1,10,1,False
-340,BLACKPINK,How You Like That,1,2020-07-08,2020-07-08,False,1,5,1,False
-340,NiziU,Baby I'm a star,1,2020-07-08,2020-07-08,False,1,4,1,False
-340,NiziU,Boom Boom Boom,1,2020-07-08,2020-07-08,False,1,6,1,False
-340,NiziU,虹の向こうへ,1,2020-07-08,2020-07-08,False,1,9,1,False
-340,YOASOBI,たぶん,1,2020-07-29,2020-07-29,False,1,10,1,False
-340,三浦春馬,Night Diver,1,2020-08-05,2020-08-05,False,1,4,1,False
-340,米津玄師,PLACEBO + 野田洋次郎,1,2020-08-12,2020-08-12,False,1,9,1,False
-340,BLACKPINK,Lovesick Girls,1,2020-10-14,2020-10-14,False,1,9,1,False
-340,BTS,Life Goes On,1,2020-12-02,2020-12-02,False,1,9,1,False
-340,NiziU,Poppin' Shakin',1,2021-03-03,2021-03-03,False,1,6,1,False
-340,BLOOM VASE,Bluma to Lunch,1,2021-03-31,2021-03-31,False,3,10,3,False
-340,Kis-My-Ft2,A10TION,1,2021-08-18,2021-08-18,False,1,10,1,False
-340,BE:FIRST,Shining One,1,2021-08-25,2021-08-25,False,1,2,1,False
-340,YOASOBI,大正浪漫,1,2021-09-29,2021-09-29,False,1,8,1,False
-340,超特急,カチカジャ,1,2021-09-29,2021-09-29,False,1,7,1,False
-340,back number,黄色,1,2021-10-13,2021-10-13,False,1,9,1,False
-340,超特急,Yodelic Fire,1,2021-11-10,2021-11-10,False,1,4,1,False
-340,JO1,僕らの季節,1,2021-12-22,2021-12-22,False,1,9,1,False
-340,Da-iCE,CITRUS,1,2022-01-12,2022-01-12,False,1,9,1,False
-340,優里,シャッター,1,2022-02-16,2022-02-16,False,1,10,1,False
-340,優里,レオ,1,2022-02-23,2022-02-23,False,1,10,1,False
-340,ENHYPEN,Always,1,2022-03-02,2022-03-02,False,1,6,1,False
-340,原因は自分にある。,青、その他,1,2022-03-23,2022-03-23,False,1,5,1,False
-340,原因は自分にある。,結末は次のトラフィックライト,1,2022-03-30,2022-03-30,False,1,5,1,False
-340,JO1,Move The Soul,1,2022-04-13,2022-04-13,False,1,10,1,False
-340,SEVENTEEN,Darl+ing,1,2022-04-27,2022-04-27,False,1,10,1,False
-340,BE:FIRST,Betrayal Game,1,2022-05-04,2022-05-04,False,1,4,1,False
-340,LE SSERAFIM,FEARLESS,1,2022-05-18,2022-05-18,False,1,6,1,False
-340,SEVENTEEN,HOT,1,2022-06-08,2022-06-08,False,1,10,1,False
-340,BE:FIRST,Scream,1,2022-08-03,2022-08-03,False,1,2,1,False
-340,めいちゃん,Bouquet,1,2022-08-10,2022-08-10,False,1,5,1,False
-340,INI,Password,1,2022-08-17,2022-08-17,False,1,9,1,False
-340,Ado,世界のつづき (ウタ from ONE PIECE FILM RED),1,2022-08-24,2022-08-24,False,1,10,1,False
-340,IVE,After LIKE,1,2022-09-07,2022-09-07,False,1,9,1,False
-340,Vaundy,CHAINSAW BLOOD,1,2022-10-26,2022-10-26,False,1,9,1,False
-340,RADWIMPS,カナタハルカ,1,2022-12-07,2022-12-07,False,1,10,1,False
-340,TWICE,MOONLIGHT SUNRISE,1,2023-02-01,2023-02-01,False,1,5,1,False
-340,INI,New Day,1,2023-02-08,2023-02-08,False,1,8,1,False
-340,TREASURE,Here I Stand,1,2023-02-08,2023-02-08,False,1,5,1,False
-340,めいちゃん,スクワッド!,1,2023-02-15,2023-02-15,False,1,7,1,False
-340,BE:FIRST,Boom Boom Back,1,2023-02-22,2023-02-22,False,1,2,1,False
-340,IVE,I AM,1,2023-04-26,2023-04-26,False,1,8,1,False
-340,SEVENTEEN,Super,1,2023-05-03,2023-05-03,False,1,4,1,False
-340,悠馬,カーテン,1,2023-05-10,2023-05-10,False,1,10,1,False
-340,BUDDiiS,Magic,1,2023-05-24,2023-05-24,False,1,4,1,False
-340,超特急,Call My Name,1,2023-06-07,2023-06-07,False,1,8,1,False
-340,BTS,Take Two,1,2023-06-21,2023-06-21,False,1,8,1,False
-340,超特急,Lesson II,1,2023-10-11,2023-10-11,False,1,9,1,False
-340,藤井風,花,1,2023-11-15,2023-11-15,False,1,9,1,False
-340,Stray Kids,LALALALA,1,2023-11-22,2023-11-22,False,1,6,1,False
-340,ヨルシカ,晴る,1,2024-03-20,2024-03-20,False,1,10,1,False
-340,Stray Kids,Chk Chk Boom,1,2024-07-31,2024-07-31,False,1,8,1,False
-340,LE SSERAFIM,CRAZY,1,2024-09-11,2024-09-11,False,1,8,1,False
-340,ROSE & ブルーノ・マーズ,APT.,1,2024-10-30,2024-10-30,False,1,3,1,False
-340,櫻坂46,I want tomorrow to come,1,2024-10-30,2024-10-30,False,1,5,1,False
-340,CUTIE STREET,かわいいだけじゃだめですか?,1,2024-11-27,2024-11-27,False,2,10,2,False
-340,King Gnu,ねっこ,1,2025-01-01,2025-01-01,False,1,8,1,False
-340,BE:FIRST,Spacecraft,1,2025-02-12,2025-02-12,False,1,9,1,False
-340,ILLIT,Almond Chocolate,1,2025-04-09,2025-04-09,False,1,10,1,False
-340,BE:FIRST,GRIT,1,2025-06-04,2025-06-04,False,1,5,1,False
-340,藤井風,Prema,1,2025-09-17,2025-09-17,False,1,8,1,False
-340,BE:FIRST,Stare In Wonder,1,2025-10-15,2025-10-15,False,1,9,1,False
-340,櫻坂46,Unhappy birthday構文,1,2025-10-29,2025-10-29,False,1,10,1,False
-340,SEKAI NO OWARI,最大公約数,1,2025-11-26,2025-11-26,False,1,8,1,False
-340,ヨルシカ,DARMA GRAND PRIX,1,2025-11-26,2025-11-26,False,1,10,1,False
-340,米津玄師,トレモロ,1,2025-11-26,2025-11-26,False,1,7,1,False
-340,King & Prince,Theater,1,2025-12-31,2025-12-31,False,1,5,1,False
-340,back number,ヒロイン,1,2025-12-31,2025-12-31,False,1,9,1,False
-340,HANA,Cold Night,1,2026-02-11,2026-02-11,False,2,8,2,False
-340,HANA,ALL IN,1,2026-03-11,2026-03-11,False,1,10,1,False
-340,BE:FIRST,BE:FIRST ALL DAY,1,2026-03-25,2026-03-25,False,1,6,1,False
-340,櫻坂46,Lonesome rabbit,1,2026-05-27,2026-05-27,False,1,10,1,False
-340,嵐,A・RA・SHI,1,2026-06-10,2026-06-10,False,1,10,1,False
-340,嵐,Monster,1,2026-06-10,2026-06-10,False,1,8,1,False
-340,嵐,One Love,1,2026-06-10,2026-06-10,False,1,5,1,False
-340,back number,花束,1,2026-07-01,2026-07-01,False,1,10,1,False
-340,Snow Man,グッタイム,1,2026-07-15,2026-07-15,False,1,5,1,False
-340,米津玄師,夜鷹,1,2026-07-22,2026-07-22,False,1,3,1,False
-340,M!LK,罪と罰と雨とキス (佐野勇斗&吉田仁人),1,2026-08-12,2026-08-12,False,1,10,1,False
-340,=LOVE,恋、はじめました。,1,2026-09-09,2026-09-09,False,1,10,1,False
-340,Mrs.GREEN APPLE,共犯,1,2026-10-07,2026-10-07,True,1,4,1,False
-340,マカロニえんぴつ,運命さがし,1,2026-10-07,2026-10-07,True,1,8,1,False
+275,Mrs.GREEN APPLE,共犯,2,2026-10-07,2026-10-14,True,2,4,1,False
+275,マカロニえんぴつ,運命さがし,2,2026-10-07,2026-10-14,True,2,8,1,False
+342,カーリー・レイ・ジェプセン,カット・トゥ・ザ・フィーリング,1,2017-10-04,2017-10-04,False,1,10,1,True
+342,アリアナ・グランデ,ブレイク・フリー feat.ゼッド,1,2017-10-11,2017-10-11,False,1,10,1,False
+342,ジャスティン・ビーバー,ホワット・ドゥ・ユー・ミーン?,1,2017-10-18,2017-10-18,False,1,10,1,False
+342,Aimer(エメ),花の唄,1,2017-10-25,2017-10-25,False,1,8,1,False
+342,HIROOMI TOSAKA,DIAMOND SUNSET,1,2017-10-25,2017-10-25,False,1,6,1,False
+342,MISIA,Never Gonna Cry! Strings Overture,1,2017-11-01,2017-11-01,False,1,10,1,False
+342,DOBERMAN INFINITY,あの日のキミと今の僕に,1,2017-11-29,2017-11-29,False,1,7,1,False
+342,Uru,奇蹟,1,2017-12-06,2017-12-06,False,1,10,1,False
+342,宇多田ヒカル,Flavor Of Life,1,2017-12-20,2017-12-20,False,1,5,1,False
+342,BoA,メリクリ,1,2017-12-27,2017-12-27,False,1,5,1,False
+342,山下達郎,クリスマス・イブ,1,2017-12-27,2017-12-27,False,1,10,1,False
+342,三浦大知,EXCITE,1,2018-01-10,2018-01-10,False,1,9,1,False
+342,手嶌葵,明日への手紙,1,2018-02-21,2018-02-21,False,1,7,1,False
+342,レミオロメン,3月9日,1,2018-03-14,2018-03-14,False,1,7,1,False
+342,Little Glee Monster,ギュッと,1,2018-03-28,2018-03-28,False,1,10,1,False
+342,ケツメイシ,さくら,1,2018-04-04,2018-04-04,False,1,7,1,False
+342,アリアナ・グランデ,ノー・ティアーズ・レフト・トゥ・クライ,1,2018-05-02,2018-05-02,False,1,10,1,False
+342,アヴィーチー,ウェイク・ミー・アップ!,1,2018-05-02,2018-05-02,False,1,8,1,False
+342,MONGOL800,小さな恋のうた,1,2018-05-09,2018-05-09,False,1,10,1,False
+342,Mr.Children,Tomorrow Never Knows,1,2018-05-23,2018-05-23,False,1,10,1,False
+342,TWICE,Wake Me Up,1,2018-06-06,2018-06-06,False,1,7,1,False
+342,椎名林檎,長く短い祭,1,2018-06-06,2018-06-06,False,1,10,1,False
+342,三代目 J Soul Brothers from EXILE TRIBE,RAINBOW,1,2018-06-13,2018-06-13,False,1,2,1,False
+342,三代目 J Soul Brothers from EXILE TRIBE feat.イエロー・クロウ,RAINBOW,1,2018-06-20,2018-06-20,False,1,6,1,False
+342,BLACKPINK,FOREVER YOUNG,1,2018-06-27,2018-06-27,False,1,10,1,False
+342,MOMOLAND,Baam,1,2018-07-11,2018-07-11,False,1,7,1,False
+342,AAA,Tomorrow,1,2018-08-01,2018-08-01,False,1,7,1,False
+342,DJキャレド,"ノー・ブレイナー feat.ジャスティン・ビーバー,チャンス・ザ・ラッパー & クエヴォ",1,2018-08-08,2018-08-08,False,1,7,1,False
+342,Nissy(西島隆弘),Relax & Chill,1,2018-08-15,2018-08-15,False,1,10,1,False
+342,星野源,アイデア,1,2018-08-29,2018-08-29,False,1,7,1,False
+342,androp,Hikari,1,2018-09-19,2018-09-19,False,1,10,1,False
+342,IZ*ONE,La Vie en Rose,1,2018-12-19,2018-12-19,False,1,9,1,False
+342,Mrs.GREEN APPLE,僕のこと,1,2019-01-23,2019-01-23,False,1,8,1,False
+342,平井大,THE GIFT,1,2019-03-20,2019-03-20,False,1,10,1,False
+342,back number,高嶺の花子さん,1,2019-04-03,2019-04-03,False,2,8,2,False
+342,HIROOMI TOSAKA,BLUE SAPPHIRE,1,2019-04-24,2019-04-24,False,1,8,1,False
+342,テイラー・スウィフト,ME! feat. ブレンドン・ユーリー・オブ・パニック!アット・ザ・ディスコ,1,2019-05-08,2019-05-08,False,1,10,1,False
+342,FANTASTICS from EXILE TRIBE vs BALLISTIK BOYZ from EXILE TRIBE,SHOCK THE WORLD,1,2019-06-12,2019-06-12,False,1,7,1,False
+342,GENERATIONS from EXILE TRIBE vs THE RAMPAGE from EXILE TRIBE,SHOOT IT OUT,1,2019-06-12,2019-06-12,False,1,5,1,False
+342,THE RAMPAGE from EXILE TRIBE vs FANTASTICS from EXILE TRIBE,MIX IT UP,1,2019-06-19,2019-06-19,False,1,5,1,False
+342,WANIMA,シグナル,1,2019-07-03,2019-07-03,False,1,10,1,False
+342,菅田将暉,キスだけで feat. あいみょん,1,2019-07-10,2019-07-10,False,1,6,1,False
+342,TWICE,HAPPY HAPPY,1,2019-07-24,2019-07-24,False,1,8,1,False
+342,TWICE,Breakthrough,1,2019-07-31,2019-07-31,False,1,6,1,False
+342,三代目 J SOUL BROTHERS from EXILE TRIBE,SCARLET feat.Afrojack,1,2019-08-14,2019-08-14,False,1,10,1,False
+342,GENERATIONS from EXILE TRIBE,DREAMERS,1,2019-09-11,2019-09-11,False,1,10,1,False
+342,miwa,リブート,1,2019-09-11,2019-09-11,False,1,9,1,False
+342,三代目 J SOUL BROTHERS from EXILE TRIBE,Rat-tat-tat,1,2019-10-02,2019-10-02,False,1,9,1,False
+342,Official髭男dism,Stand By You,1,2019-11-27,2019-11-27,False,1,10,1,False
+342,Rin音,snow jam,1,2020-04-29,2020-04-29,False,1,10,1,False
+342,DISH//,猫 〜THE FIRST TAKE ver.〜,1,2020-06-17,2020-06-17,False,2,9,2,False
+342,BTS,Stay Gold,1,2020-07-01,2020-07-01,False,1,10,1,False
+342,BLACKPINK,How You Like That,1,2020-07-08,2020-07-08,False,1,5,1,False
+342,NiziU,Baby I'm a star,1,2020-07-08,2020-07-08,False,1,4,1,False
+342,NiziU,Boom Boom Boom,1,2020-07-08,2020-07-08,False,1,6,1,False
+342,NiziU,虹の向こうへ,1,2020-07-08,2020-07-08,False,1,9,1,False
+342,YOASOBI,たぶん,1,2020-07-29,2020-07-29,False,1,10,1,False
+342,三浦春馬,Night Diver,1,2020-08-05,2020-08-05,False,1,4,1,False
+342,米津玄師,PLACEBO + 野田洋次郎,1,2020-08-12,2020-08-12,False,1,9,1,False
+342,BLACKPINK,Lovesick Girls,1,2020-10-14,2020-10-14,False,1,9,1,False
+342,BTS,Life Goes On,1,2020-12-02,2020-12-02,False,1,9,1,False
+342,NiziU,Poppin' Shakin',1,2021-03-03,2021-03-03,False,1,6,1,False
+342,BLOOM VASE,Bluma to Lunch,1,2021-03-31,2021-03-31,False,3,10,3,False
+342,Kis-My-Ft2,A10TION,1,2021-08-18,2021-08-18,False,1,10,1,False
+342,BE:FIRST,Shining One,1,2021-08-25,2021-08-25,False,1,2,1,False
+342,YOASOBI,大正浪漫,1,2021-09-29,2021-09-29,False,1,8,1,False
+342,超特急,カチカジャ,1,2021-09-29,2021-09-29,False,1,7,1,False
+342,back number,黄色,1,2021-10-13,2021-10-13,False,1,9,1,False
+342,超特急,Yodelic Fire,1,2021-11-10,2021-11-10,False,1,4,1,False
+342,JO1,僕らの季節,1,2021-12-22,2021-12-22,False,1,9,1,False
+342,Da-iCE,CITRUS,1,2022-01-12,2022-01-12,False,1,9,1,False
+342,優里,シャッター,1,2022-02-16,2022-02-16,False,1,10,1,False
+342,優里,レオ,1,2022-02-23,2022-02-23,False,1,10,1,False
+342,ENHYPEN,Always,1,2022-03-02,2022-03-02,False,1,6,1,False
+342,原因は自分にある。,青、その他,1,2022-03-23,2022-03-23,False,1,5,1,False
+342,原因は自分にある。,結末は次のトラフィックライト,1,2022-03-30,2022-03-30,False,1,5,1,False
+342,JO1,Move The Soul,1,2022-04-13,2022-04-13,False,1,10,1,False
+342,SEVENTEEN,Darl+ing,1,2022-04-27,2022-04-27,False,1,10,1,False
+342,BE:FIRST,Betrayal Game,1,2022-05-04,2022-05-04,False,1,4,1,False
+342,LE SSERAFIM,FEARLESS,1,2022-05-18,2022-05-18,False,1,6,1,False
+342,SEVENTEEN,HOT,1,2022-06-08,2022-06-08,False,1,10,1,False
+342,BE:FIRST,Scream,1,2022-08-03,2022-08-03,False,1,2,1,False
+342,めいちゃん,Bouquet,1,2022-08-10,2022-08-10,False,1,5,1,False
+342,INI,Password,1,2022-08-17,2022-08-17,False,1,9,1,False
+342,Ado,世界のつづき (ウタ from ONE PIECE FILM RED),1,2022-08-24,2022-08-24,False,1,10,1,False
+342,IVE,After LIKE,1,2022-09-07,2022-09-07,False,1,9,1,False
+342,Vaundy,CHAINSAW BLOOD,1,2022-10-26,2022-10-26,False,1,9,1,False
+342,RADWIMPS,カナタハルカ,1,2022-12-07,2022-12-07,False,1,10,1,False
+342,TWICE,MOONLIGHT SUNRISE,1,2023-02-01,2023-02-01,False,1,5,1,False
+342,INI,New Day,1,2023-02-08,2023-02-08,False,1,8,1,False
+342,TREASURE,Here I Stand,1,2023-02-08,2023-02-08,False,1,5,1,False
+342,めいちゃん,スクワッド!,1,2023-02-15,2023-02-15,False,1,7,1,False
+342,BE:FIRST,Boom Boom Back,1,2023-02-22,2023-02-22,False,1,2,1,False
+342,IVE,I AM,1,2023-04-26,2023-04-26,False,1,8,1,False
+342,SEVENTEEN,Super,1,2023-05-03,2023-05-03,False,1,4,1,False
+342,悠馬,カーテン,1,2023-05-10,2023-05-10,False,1,10,1,False
+342,BUDDiiS,Magic,1,2023-05-24,2023-05-24,False,1,4,1,False
+342,超特急,Call My Name,1,2023-06-07,2023-06-07,False,1,8,1,False
+342,BTS,Take Two,1,2023-06-21,2023-06-21,False,1,8,1,False
+342,超特急,Lesson II,1,2023-10-11,2023-10-11,False,1,9,1,False
+342,藤井風,花,1,2023-11-15,2023-11-15,False,1,9,1,False
+342,Stray Kids,LALALALA,1,2023-11-22,2023-11-22,False,1,6,1,False
+342,ヨルシカ,晴る,1,2024-03-20,2024-03-20,False,1,10,1,False
+342,Stray Kids,Chk Chk Boom,1,2024-07-31,2024-07-31,False,1,8,1,False
+342,LE SSERAFIM,CRAZY,1,2024-09-11,2024-09-11,False,1,8,1,False
+342,ROSE & ブルーノ・マーズ,APT.,1,2024-10-30,2024-10-30,False,1,3,1,False
+342,櫻坂46,I want tomorrow to come,1,2024-10-30,2024-10-30,False,1,5,1,False
+342,CUTIE STREET,かわいいだけじゃだめですか?,1,2024-11-27,2024-11-27,False,2,10,2,False
+342,King Gnu,ねっこ,1,2025-01-01,2025-01-01,False,1,8,1,False
+342,BE:FIRST,Spacecraft,1,2025-02-12,2025-02-12,False,1,9,1,False
+342,ILLIT,Almond Chocolate,1,2025-04-09,2025-04-09,False,1,10,1,False
+342,BE:FIRST,GRIT,1,2025-06-04,2025-06-04,False,1,5,1,False
+342,藤井風,Prema,1,2025-09-17,2025-09-17,False,1,8,1,False
+342,BE:FIRST,Stare In Wonder,1,2025-10-15,2025-10-15,False,1,9,1,False
+342,櫻坂46,Unhappy birthday構文,1,2025-10-29,2025-10-29,False,1,10,1,False
+342,SEKAI NO OWARI,最大公約数,1,2025-11-26,2025-11-26,False,1,8,1,False
+342,ヨルシカ,DARMA GRAND PRIX,1,2025-11-26,2025-11-26,False,1,10,1,False
+342,米津玄師,トレモロ,1,2025-11-26,2025-11-26,False,1,7,1,False
+342,King & Prince,Theater,1,2025-12-31,2025-12-31,False,1,5,1,False
+342,back number,ヒロイン,1,2025-12-31,2025-12-31,False,1,9,1,False
+342,HANA,Cold Night,1,2026-02-11,2026-02-11,False,2,8,2,False
+342,HANA,ALL IN,1,2026-03-11,2026-03-11,False,1,10,1,False
+342,BE:FIRST,BE:FIRST ALL DAY,1,2026-03-25,2026-03-25,False,1,6,1,False
+342,櫻坂46,Lonesome rabbit,1,2026-05-27,2026-05-27,False,1,10,1,False
+342,嵐,A・RA・SHI,1,2026-06-10,2026-06-10,False,1,10,1,False
+342,嵐,Monster,1,2026-06-10,2026-06-10,False,1,8,1,False
+342,嵐,One Love,1,2026-06-10,2026-06-10,False,1,5,1,False
+342,back number,花束,1,2026-07-01,2026-07-01,False,1,10,1,False
+342,Snow Man,グッタイム,1,2026-07-15,2026-07-15,False,1,5,1,False
+342,米津玄師,夜鷹,1,2026-07-22,2026-07-22,False,1,3,1,False
+342,M!LK,罪と罰と雨とキス (佐野勇斗&吉田仁人),1,2026-08-12,2026-08-12,False,1,10,1,False
+342,=LOVE,恋、はじめました。,1,2026-09-09,2026-09-09,False,1,10,1,False
+342,Ayumu Imazu,結び,1,2026-10-14,2026-10-14,True,1,1,1,False
+342,Vaundy,しわあわせ,1,2026-10-14,2026-10-14,True,1,4,1,False

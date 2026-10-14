@@ -1,28 +1,29 @@
 {
   "hot100": {
     "width": 1800,
-    "height": 2266,
+    "height": 2400,
+    "aspect_ratio": "3:4",
     "rows": 20,
     "minimum_title_font": 32,
-    "ongoing": [
-      "好きすぎて滅!"
-    ]
+    "style": "macOS-inspired / HIG fallback",
+    "all_rows_have_bars": true
   },
   "stsongs": {
     "width": 1800,
-    "height": 2266,
+    "height": 2400,
+    "aspect_ratio": "3:4",
     "rows": 20,
-    "minimum_title_font": 35,
-    "ongoing": [
-      "IRIS OUT",
-      "好きすぎて滅!"
-    ]
+    "minimum_title_font": 32,
+    "style": "macOS-inspired / HIG fallback",
+    "all_rows_have_bars": true
   },
   "dlsongs": {
     "width": 1800,
-    "height": 2258,
+    "height": 2400,
+    "aspect_ratio": "3:4",
     "rows": 22,
     "minimum_title_font": 32,
-    "ongoing": []
+    "style": "macOS-inspired / HIG fallback",
+    "all_rows_have_bars": true
   }
 }
