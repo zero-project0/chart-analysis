@@ -5,7 +5,7 @@ sharePeriodPicker.id = "sharePeriodPicker";
 sharePeriodPicker.className = "share-chart-picker";
 sharePeriodPicker.setAttribute("role", "group");
 sharePeriodPicker.setAttribute("aria-label", "共有する集計期間");
-sharePeriodPicker.innerHTML = '<button class="share-chart-button" type="button" data-share-period="all">全期間</button><button class="share-chart-button" type="button" data-share-period="current">今年</button>';
+sharePeriodPicker.innerHTML = '<button class="share-chart-button" type="button" data-share-period="recent" hidden>直近3年</button><button class="share-chart-button" type="button" data-share-period="all">全期間</button><button class="share-chart-button" type="button" data-share-period="current">今年</button>';
 document.getElementById("shareViewPicker").after(sharePeriodPicker);
 const periodStyle = document.createElement("style");
 periodStyle.textContent = '.comparison-share #sharePeriodPicker{display:none}#sharePeriodPicker button:focus-visible{outline:3px solid #0072b2;outline-offset:3px}';
@@ -13,10 +13,10 @@ document.head.append(periodStyle);
 
 function shareDashboard() { return dashboards[shareDetailScope]?.[artistShareChartCode]; }
 function shareYear() { return String(shareDashboard()?.latestDate || dashboard.latestDate).slice(0, 4); }
-function sharePeriodLabel() { return sharePeriod === "all" ? "全期間" : shareYear() + "年"; }
+function sharePeriodLabel() { return sharePeriod === "recent" ? (Number(shareYear())-2)+"〜"+shareYear()+"年" : sharePeriod === "all" ? "全期間" : shareYear() + "年"; }
 function shareHistory(song) {
     return [...(song.allTimeHistory || song.history || [])]
-        .filter(point => sharePeriod === "all" || String(point.date).startsWith(shareYear()))
+        .filter(point => sharePeriod === "all" || (sharePeriod === "recent" ? Number(String(point.date).slice(0,4)) >= Number(shareYear())-2 && Number(String(point.date).slice(0,4)) <= Number(shareYear()) : String(point.date).startsWith(shareYear())))
         .sort((a, b) => a.date.localeCompare(b.date));
 }
 function shareSongMetrics(song) {
@@ -36,6 +36,7 @@ function shareArtistMetrics(artist) {
 }
 function syncSharePeriods() {
     sharePeriodPicker.querySelectorAll("[data-share-period]").forEach(button => {
+        button.hidden = button.dataset.sharePeriod === "recent" && currentShareTarget?.type !== "artist";
         const active = button.dataset.sharePeriod === sharePeriod;
         button.classList.toggle("active", active);
         button.setAttribute("aria-pressed", String(active));
@@ -53,8 +54,8 @@ function beginPeriodShare(type) {
     if (!dialog.open) {
         shareDetailScope = type === "artist" ? detailScopeCode : songDetailScopeCode;
         artistShareChartCode = type === "artist" ? detailChartCode : songDetailChartCode;
-        sharePeriod = "current";
-        shareViewMode = "summary";
+        sharePeriod = type === "artist" ? "recent" : "current";
+        shareViewMode = type === "artist" ? "graph" : "summary";
     }
     document.getElementById("shareChartPicker").hidden = false;
     document.querySelector("#shareDialog .share-copy").textContent = "全期間・今年を選ぶと、概要の数値とグラフの集計期間が切り替わります。対象チャートも変更できます。";
@@ -109,10 +110,15 @@ drawArtistShareCard = artist => {
     beginPeriodShare("artist");
     const source = shareDashboard(), selected = source.artistDetails.find(item => item.artist === artist.artist) || emptyArtistDetail(artist.artist);
     currentShareTarget = {type: "artist", data: selected};
+    syncSharePeriods();
+    document.querySelector("#shareDialog .share-copy").textContent = "直近3年は年ごとの累積推移を重ねて表示します。全期間・今年にも切り替えられます。";
     document.getElementById("shareTitle").textContent = selected.artist + "を共有・" + sharePeriodLabel();
     const context = document.getElementById("shareCard").getContext("2d"), metrics = shareArtistMetrics(selected);
     drawShareFrame(context, shareViewMode === "graph" ? "ARTIST GRAPH" : "ARTIST PROFILE");
-    if (shareViewMode === "graph") drawPeriodCumulative(context, metrics);
+    if (shareViewMode === "graph") {
+        if (sharePeriod === "recent") drawArtistGraphShare(context, selected, source);
+        else drawPeriodCumulative(context, metrics);
+    }
     else drawArtistShareSummary(context, metrics, source);
     sharePeriodFooter(context);
 };
@@ -122,6 +128,7 @@ drawSongShareCard = song => {
     const selected = (artist?.allSongs || artist?.songs || []).find(item => item.title === song.title) || {title: song.title, history: [], allTimeHistory: []};
     const metrics = shareSongMetrics({...selected, artist: song.artist});
     currentShareTarget = {type: "song", data: {...selected, artist: song.artist}};
+    syncSharePeriods();
     document.getElementById("shareTitle").textContent = song.title + "を共有・" + sharePeriodLabel();
     const context = document.getElementById("shareCard").getContext("2d");
     drawShareFrame(context, shareViewMode === "graph" ? "SONG GRAPH" : "SONG PROFILE");
@@ -173,9 +180,10 @@ sharePayload = () => {
 };
 async function restorePeriodShare() {
     const params = new URLSearchParams(location.hash.slice(1));
-    if (!["all", "current"].includes(params.get("sharePeriod"))) return;
+    if (!["all", "current", "recent"].includes(params.get("sharePeriod"))) return;
     const scope = params.get("scope"), code = params.get("chart"), artist = params.get("songArtist") || params.get("artist"), title = params.get("song");
     if (!artist || !dashboardManifest[dashboardKey(scope, code)]) return;
+    if (title && params.get("sharePeriod") === "recent") return;
     try {
         await loadDashboard(scope, code);
         const selectedArtist = dashboards[scope][code].artistDetails.find(item => item.artist === artist);

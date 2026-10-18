@@ -129,6 +129,7 @@ document.getElementById("compareCanvas").addEventListener("pointerdown",showAllA
 
 function syncComparisonSharePeriod() {
     sharePeriodPicker.querySelectorAll("[data-share-period]").forEach(button => {
+        button.hidden=button.dataset.sharePeriod==="recent";
         const active=button.dataset.sharePeriod===comparisonPeriodValue();
         button.classList.toggle("active",active); button.setAttribute("aria-pressed",String(active));
         if (button.dataset.sharePeriod==="current") button.textContent="今年（"+compareCurrentYear()+"年）";
