@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-10-14",
-    "issues": 972,
-    "songs": 4385,
+    "last": "2026-10-21",
+    "issues": 973,
+    "songs": 4389,
     "displayed": [
       {
         "title": "Lemon",
@@ -100,12 +100,12 @@
       {
         "title": "好きすぎて滅!",
         "artist": "M!LK",
-        "weeks": 43,
+        "weeks": 44,
         "start": "2025-12-24",
-        "end": "2026-10-14",
+        "end": "2026-10-21",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 45,
+        "total_top10_weeks": 46,
         "best_rank_in_streak": 3,
         "runs": 2,
         "rank": 8
@@ -272,8 +272,8 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-10-14",
-    "issues": 472,
+    "last": "2026-10-21",
+    "issues": 473,
     "songs": 475,
     "displayed": [
       {
@@ -409,12 +409,12 @@
       {
         "title": "IRIS OUT",
         "artist": "米津玄師",
-        "weeks": 56,
+        "weeks": 57,
         "start": "2025-09-24",
-        "end": "2026-10-14",
+        "end": "2026-10-21",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 56,
+        "total_top10_weeks": 57,
         "best_rank_in_streak": 1,
         "runs": 1,
         "rank": 11
@@ -472,6 +472,19 @@
         "rank": 15
       },
       {
+        "title": "好きすぎて滅!",
+        "artist": "M!LK",
+        "weeks": 44,
+        "start": "2025-12-24",
+        "end": "2026-10-21",
+        "ongoing": true,
+        "begins_at_chart_start": false,
+        "total_top10_weeks": 47,
+        "best_rank_in_streak": 2,
+        "runs": 3,
+        "rank": 15
+      },
+      {
         "title": "まちがいさがし",
         "artist": "菅田将暉",
         "weeks": 43,
@@ -482,20 +495,7 @@
         "total_top10_weeks": 43,
         "best_rank_in_streak": 2,
         "runs": 1,
-        "rank": 16
-      },
-      {
-        "title": "好きすぎて滅!",
-        "artist": "M!LK",
-        "weeks": 43,
-        "start": "2025-12-24",
-        "end": "2026-10-14",
-        "ongoing": true,
-        "begins_at_chart_start": false,
-        "total_top10_weeks": 46,
-        "best_rank_in_streak": 2,
-        "runs": 3,
-        "rank": 16
+        "rank": 17
       },
       {
         "title": "Subtitle",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-10-14",
-    "issues": 472,
-    "songs": 1899,
+    "last": "2026-10-21",
+    "issues": 473,
+    "songs": 1909,
     "displayed": [
       {
         "title": "Lemon",

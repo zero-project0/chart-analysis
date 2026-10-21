@@ -583,8 +583,8 @@
 280,安田章大,9,2,2026-09-16,2026-09-23,False,2,5,1,False
 280,安田章大,まだらびより,2,2026-09-16,2026-09-23,False,2,4,1,False
 280,BE:FIRST,WATCH ME feat. BIA,2,2026-09-23,2026-09-30,False,2,1,1,False
-280,JO1,ANIMAL,2,2026-10-07,2026-10-14,True,2,5,1,False
-280,RADWIMPS,夕星-ゆうづつ-,2,2026-10-07,2026-10-14,True,2,7,1,False
+280,JO1,ANIMAL,2,2026-10-07,2026-10-14,False,2,5,1,False
+280,RADWIMPS,夕星-ゆうづつ-,2,2026-10-07,2026-10-14,False,2,7,1,False
 587,Mr.Children,HANABI,1,2017-10-04,2017-10-04,False,2,9,2,True
 587,SPICY CHOCOLATE,"君のことが好きだったんだ feat.BENI,Shuta Sueyoshi(AAA) & HAN-KUN",1,2017-10-04,2017-10-04,False,1,5,1,True
 587,THE ORAL CIGARETTES,BLACK MEMORY,1,2017-10-04,2017-10-04,False,1,10,1,True
@@ -1892,9 +1892,19 @@
 587,MAZZEL × STARGLOW,Nameless MythS,1,2026-10-07,2026-10-07,False,1,7,1,False
 587,Sexy Zone,ぎゅっと,1,2026-10-07,2026-10-07,False,1,3,1,False
 587,熊田茜音&増井優花,いつかわかる☆きっとあえる,1,2026-10-07,2026-10-07,False,1,8,1,False
-587,KAITO,swim?,1,2026-10-14,2026-10-14,True,1,1,1,False
-587,L'Arc〜en〜Ciel,総天然色,1,2026-10-14,2026-10-14,True,1,6,1,False
-587,ROIROM,MISTIA,1,2026-10-14,2026-10-14,True,1,3,1,False
-587,Vaundy,しわあわせ,1,2026-10-14,2026-10-14,True,1,9,1,False
-587,ずっと真夜中でいいのに。,あかねさす頃,1,2026-10-14,2026-10-14,True,1,2,1,False
-587,田村直美,ゆずれない願い,1,2026-10-14,2026-10-14,True,1,8,1,False
+587,KAITO,swim?,1,2026-10-14,2026-10-14,False,1,1,1,False
+587,L'Arc〜en〜Ciel,総天然色,1,2026-10-14,2026-10-14,False,1,6,1,False
+587,ROIROM,MISTIA,1,2026-10-14,2026-10-14,False,1,3,1,False
+587,Vaundy,しわあわせ,1,2026-10-14,2026-10-14,False,1,9,1,False
+587,ずっと真夜中でいいのに。,あかねさす頃,1,2026-10-14,2026-10-14,False,1,2,1,False
+587,田村直美,ゆずれない願い,1,2026-10-14,2026-10-14,False,1,8,1,False
+587,Ado,Raven Sky,1,2026-10-21,2026-10-21,True,1,9,1,False
+587,BE:FIRST,It's not a bad life,1,2026-10-21,2026-10-21,True,1,3,1,False
+587,DREAMS COME TRUE,サヨナラとバトン,1,2026-10-21,2026-10-21,True,1,5,1,False
+587,Da-iCE,うららか,1,2026-10-21,2026-10-21,True,1,6,1,False
+587,ELLEGARDEN,Everything I Need,1,2026-10-21,2026-10-21,True,1,7,1,False
+587,Travis Japan,EGO,1,2026-10-21,2026-10-21,True,1,1,1,False
+587,YOASOBI,咲き誇れ,1,2026-10-21,2026-10-21,True,1,2,1,False
+587,あいみょん,さながらロンリー,1,2026-10-21,2026-10-21,True,1,8,1,False
+587,ヨルシカ,雲を抜け風下へ私だけ,1,2026-10-21,2026-10-21,True,1,4,1,False
+587,櫻坂46,愛MUST BE,1,2026-10-21,2026-10-21,True,1,10,1,False
