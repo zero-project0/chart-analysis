@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-10-21",
-    "issues": 973,
-    "songs": 4389,
+    "last": "2026-10-28",
+    "issues": 974,
+    "songs": 4394,
     "displayed": [
       {
         "title": "Lemon",
@@ -100,12 +100,12 @@
       {
         "title": "好きすぎて滅!",
         "artist": "M!LK",
-        "weeks": 44,
+        "weeks": 45,
         "start": "2025-12-24",
-        "end": "2026-10-21",
+        "end": "2026-10-28",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 46,
+        "total_top10_weeks": 47,
         "best_rank_in_streak": 3,
         "runs": 2,
         "rank": 8
@@ -272,9 +272,9 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-10-21",
-    "issues": 473,
-    "songs": 475,
+    "last": "2026-10-28",
+    "issues": 474,
+    "songs": 477,
     "displayed": [
       {
         "title": "ライラック",
@@ -412,7 +412,7 @@
         "weeks": 57,
         "start": "2025-09-24",
         "end": "2026-10-21",
-        "ongoing": true,
+        "ongoing": false,
         "begins_at_chart_start": false,
         "total_top10_weeks": 57,
         "best_rank_in_streak": 1,
@@ -459,6 +459,19 @@
         "rank": 14
       },
       {
+        "title": "好きすぎて滅!",
+        "artist": "M!LK",
+        "weeks": 45,
+        "start": "2025-12-24",
+        "end": "2026-10-28",
+        "ongoing": true,
+        "begins_at_chart_start": false,
+        "total_top10_weeks": 48,
+        "best_rank_in_streak": 2,
+        "runs": 3,
+        "rank": 15
+      },
+      {
         "title": "怪獣の花唄",
         "artist": "Vaundy",
         "weeks": 44,
@@ -469,20 +482,7 @@
         "total_top10_weeks": 68,
         "best_rank_in_streak": 2,
         "runs": 4,
-        "rank": 15
-      },
-      {
-        "title": "好きすぎて滅!",
-        "artist": "M!LK",
-        "weeks": 44,
-        "start": "2025-12-24",
-        "end": "2026-10-21",
-        "ongoing": true,
-        "begins_at_chart_start": false,
-        "total_top10_weeks": 47,
-        "best_rank_in_streak": 2,
-        "runs": 3,
-        "rank": 15
+        "rank": 16
       },
       {
         "title": "まちがいさがし",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-10-21",
-    "issues": 473,
-    "songs": 1909,
+    "last": "2026-10-28",
+    "issues": 474,
+    "songs": 1914,
     "displayed": [
       {
         "title": "Lemon",
