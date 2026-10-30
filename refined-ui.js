@@ -8,7 +8,7 @@
   const paths={'#search':'<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>','#latest':'<path d="M4 7h16M4 12h10M4 17h13"/>','#ranking':'<path d="M5 20v-7h4v7M10 20V5h4v15M15 20v-11h4v11"/>','#songs':'<path d="M9 17V5l11-2v12M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/>'};
   qa('.top nav a').forEach(a=>{a.insertAdjacentHTML('afterbegin',svg(paths[a.getAttribute('href')]||''));});
   q('#openComparePage')?.insertAdjacentHTML('afterbegin',svg('<path d="M6 5v14M18 5v14M3 8h6M15 16h6"/>'));
-  [['boys','国内ボーイズ'],['girls','国内ガールズ'],['korean','K-POP'],['all','すべて']].forEach(([code,label])=>{const b=q(`[data-scope="${code}"]`);b.title=b.textContent;b.setAttribute('aria-label',b.textContent);b.textContent=label;});
+  [['boys','ボーイズ'],['girls','ガールズ'],['korean','K-POP'],['all','すべて']].forEach(([code,label])=>{const b=q(`[data-scope="${code}"]`);b.title=b.textContent;b.setAttribute('aria-label',b.textContent);b.textContent=label;});
   q('.hero h1').textContent='チャートを見渡す';
   q('#search label').textContent='アーティスト・楽曲を検索';
   q('#globalSearch').insertAdjacentHTML('beforebegin',svg('<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>').replace('<svg ','<svg class="search-symbol" '));

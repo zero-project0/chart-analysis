@@ -6,3 +6,5 @@ html[data-page=records] .statistics-section>.wrap>.section-head{display:none}
 .top nav a[aria-current=page]{background:var(--acid)!important;color:var(--ink)!important}
 .scope-combined-note{font-size:11px;color:#77777f;line-height:1.8;margin:8px 0 0;grid-column:1/-1}
 @media(max-width:700px){.scope-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:4px}.scope-tab{min-width:0;white-space:normal;font-size:11px;padding:8px 5px}.scope-tab[data-scope=combined]{grid-column:span 2}html[data-page=records] .top nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.kpop-filter{margin:16px 0 0;padding:14px 10px 0;border-top:1px solid #e5e5ea}.kpop-filter label{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;min-height:44px;color:#3a3a3c}.kpop-filter input{width:18px;height:18px;accent-color:#0088ff;flex-shrink:0}.kpop-filter p{font-size:11px;line-height:1.7;color:#77777f;margin:5px 0 0}.kpop-filter.is-disabled{opacity:.5}@media(max-width:700px){.kpop-filter{margin-top:10px;padding:8px 10px}.kpop-filter label{font-size:13px}.kpop-filter p{font-size:11px}}
