@@ -1,0 +1,8 @@
+html[data-page=records] main>section:not(.hero):not(#statistics){display:none!important}
+html[data-page=records] #chartDataQuality{display:none!important}
+html[data-page=records] .hero{padding-bottom:12px}
+html[data-page=records] .statistics-section{padding-top:6px}
+html[data-page=records] .statistics-section>.wrap>.section-head{display:none}
+.top nav a[aria-current=page]{background:var(--acid)!important;color:var(--ink)!important}
+.scope-combined-note{font-size:11px;color:#77777f;line-height:1.8;margin:8px 0 0;grid-column:1/-1}
+@media(max-width:700px){.scope-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:4px}.scope-tab{min-width:0;white-space:normal;font-size:11px;padding:8px 5px}.scope-tab[data-scope=combined]{grid-column:span 2}html[data-page=records] .top nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
