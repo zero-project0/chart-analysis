@@ -55,7 +55,7 @@ function beginPeriodShare(type) {
         shareDetailScope = type === "artist" ? detailScopeCode : songDetailScopeCode;
         artistShareChartCode = type === "artist" ? detailChartCode : songDetailChartCode;
         sharePeriod = type === "artist" ? "recent" : "current";
-        shareViewMode = type === "artist" ? "graph" : "summary";
+        shareViewMode = "graph";
     }
     document.getElementById("shareChartPicker").hidden = false;
     document.querySelector("#shareDialog .share-copy").textContent = "全期間・今年を選ぶと、概要の数値とグラフの集計期間が切り替わります。対象チャートも変更できます。";
@@ -113,14 +113,8 @@ drawArtistShareCard = artist => {
     syncSharePeriods();
     document.querySelector("#shareDialog .share-copy").textContent = "直近3年は年ごとの累積推移を重ねて表示します。全期間・今年にも切り替えられます。";
     document.getElementById("shareTitle").textContent = selected.artist + "を共有・" + sharePeriodLabel();
-    const context = document.getElementById("shareCard").getContext("2d"), metrics = shareArtistMetrics(selected);
-    drawShareFrame(context, shareViewMode === "graph" ? "ARTIST GRAPH" : "ARTIST PROFILE");
-    if (shareViewMode === "graph") {
-        if (sharePeriod === "recent") drawArtistGraphShare(context, selected, source);
-        else drawPeriodCumulative(context, metrics);
-    }
-    else drawArtistShareSummary(context, metrics, source);
-    sharePeriodFooter(context);
+    const metrics = shareArtistMetrics(selected);
+    window.paintChosenArtistShare(document.getElementById("shareCard"), selected, metrics, source, sharePeriod, shareViewMode);
 };
 drawSongShareCard = song => {
     beginPeriodShare("song");
@@ -130,16 +124,7 @@ drawSongShareCard = song => {
     currentShareTarget = {type: "song", data: {...selected, artist: song.artist}};
     syncSharePeriods();
     document.getElementById("shareTitle").textContent = song.title + "を共有・" + sharePeriodLabel();
-    const context = document.getElementById("shareCard").getContext("2d");
-    drawShareFrame(context, shareViewMode === "graph" ? "SONG GRAPH" : "SONG PROFILE");
-    if (shareViewMode === "graph") drawSongGraphShare(context, metrics);
-    else drawSongShareSummary(context, metrics);
-    // Existing song renderers read the main-page chart; replace their caption here.
-    context.fillStyle = "#fffdf8"; context.fillRect(48, 164, 1104, 36);
-    context.fillStyle = "#70685f"; context.font = `800 ${shareViewMode === "graph" ? 17 : 19}px ${shareCanvasFont}`;
-    context.textAlign = "left";
-    context.fillText(clipCanvasText(context, (shareViewMode === "graph" ? song.artist + "  /  " : "") + source.chartName + "  /  " + sharePeriodLabel(), 1072), 64, shareViewMode === "graph" ? 184 : 190);
-    sharePeriodFooter(context);
+    window.paintChosenSongShare(document.getElementById("shareCard"), metrics, source, sharePeriod, shareViewMode);
 };
 function redrawPeriodShare() {
     if (currentShareTarget?.type === "artist") drawArtistShareCard(currentShareTarget.data);
@@ -170,7 +155,7 @@ const sharePayloadPeriodBase = sharePayload;
 sharePayload = () => {
     if (!["artist", "song"].includes(currentShareTarget?.type)) return sharePayloadPeriodBase();
     const item = currentShareTarget.data, isSong = currentShareTarget.type === "song";
-    const params = new URLSearchParams({scope: shareDetailScope, chart: artistShareChartCode, sharePeriod, shareView: shareViewMode});
+    const params = new URLSearchParams({scope: shareDetailScope, chart: artistShareChartCode, sharePeriod, shareView: shareViewMode, kpop: window.chartIncludeKpop?.() ? "1" : "0"});
     if (isSong) { params.set("song", item.title); params.set("songArtist", item.artist); }
     else params.set("artist", item.artist);
     return {url: location.href.split("#")[0] + "#" + params.toString(),
