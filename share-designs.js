@@ -1,7 +1,7 @@
-/* Selected share layouts: artist A, song B. Uses the selected chart and period. */
+/* Selected share layouts: artist A, song C. Uses the selected chart and period. */
 (()=>{
   'use strict';
-  const font='Meiryo,"Yu Gothic UI",sans-serif',ink='#24211d',muted='#777168',blue='#0088ff',seriesColors=['#98969a','#af52de',blue];
+  const font='Meiryo,"Yu Gothic UI",sans-serif',ink='#24211d',muted='#777168',blue='#0088ff',seriesColors=['#8e8e93','#af52de',blue];
   function setup(canvas,source,kind){
     canvas.width=1200;canvas.height=675;const ctx=canvas.getContext('2d');ctx.textBaseline='top';
     function text(value,x,y,size=22,color=ink,bold=false,max=1072,align='left'){
@@ -16,17 +16,18 @@
     return{ctx,text,line,rect};
   }
   function footer(draw,period,source,dates){const {line,text}=draw;line(64,592,1136,592,'#d9d3c9');const range=dates.length?dates[0]+'〜'+dates.at(-1):'対象期間に記録なし';text(period+'集計 / '+range+' 公開分',64,604,16,muted,true);text('出典：Billboard JAPAN',64,630,15,muted);text('1曲×1週＝1回',1136,630,15,muted,false,280,'right');}
-  function chart(draw,series,area,{rank=false,axis=100,calendar=false}={}){
-    const {ctx,text,line,rect}=draw;rect(area.x,area.y,area.w,area.h,'#f7f4ed');
+  function chart(draw,series,area,{rank=false,axis=100,calendar=false,surface='#f7f4ed',tickSize=16,sparseDates=false}={}){
+    const {ctx,text,line,rect}=draw;rect(area.x,area.y,area.w,area.h,surface);
     const yFor=value=>area.y+(rank?(value-1)/(axis-1):1-value/axis)*area.h;
     const ticks=rank?(axis===10?[1,5,10]:[1,25,50,75,100]):[...new Set(Array.from({length:5},(_,i)=>Math.round(axis*i/4)))];
-    ticks.forEach(v=>{const y=yFor(v);line(area.x,y,area.x+area.w,y);text(String(v),area.x-15,y-9,16,muted,false,65,'right');});
+    ticks.forEach(v=>{const y=yFor(v);line(area.x,y,area.x+area.w,y);text(String(v),area.x-15,y-tickSize/2,tickSize,muted,false,65,'right');});
     const all=series.flatMap(s=>s.points);if(!all.length){text('この期間の記録はありません',area.x+30,area.y+90,24,muted);return;}
     const min=Math.min(...all.map(p=>Date.parse(p.date))),max=Math.max(...all.map(p=>Date.parse(p.date))),span=Math.max(1,max-min);
     const singleWeek=min===max;
     const xFor=p=>singleWeek?area.x+area.w/2:calendar?area.x+(Date.parse(p.date)-Date.UTC(Number(p.date.slice(0,4)),0,1))/(Date.UTC(Number(p.date.slice(0,4))+1,0,1)-Date.UTC(Number(p.date.slice(0,4)),0,1))*area.w:area.x+(Date.parse(p.date)-min)/span*area.w;
     series.forEach(s=>{const ps=s.points;if(!ps.length)return;ctx.beginPath();ps.forEach((p,i)=>{const x=xFor(p),y=yFor(p.value),gap=i?Date.parse(p.date)-Date.parse(ps[i-1].date):0;if(!i||rank&&gap>9*86400000)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.strokeStyle=s.color;ctx.lineWidth=s.color===blue?4:3;ctx.lineJoin='round';ctx.stroke();const end=ps.at(-1);ctx.fillStyle=s.color;ctx.beginPath();ctx.arc(xFor(end),yFor(end.value),4,0,Math.PI*2);ctx.fill();});
-    if(singleWeek){const date=new Date(min);text((date.getUTCMonth()+1)+'/'+date.getUTCDate(),area.x+area.w/2,area.y+area.h+15,16,muted,false,100,'center');}
+    if(singleWeek){const date=new Date(min);text((date.getUTCMonth()+1)+'/'+date.getUTCDate(),area.x+area.w/2,area.y+area.h+15,tickSize,muted,false,100,'center');}
+    else if(sparseDates){const dates=[...new Set(all.map(p=>p.date))].sort(),indices=[...new Set([0,Math.floor((dates.length-1)/2),dates.length-1])];indices.forEach(i=>{const date=new Date(dates[i]),x=xFor({date:dates[i]});text((date.getUTCMonth()+1)+'/'+date.getUTCDate(),x,area.y+area.h+15,tickSize,muted,false,110,'center');});}
     else if(calendar)[1,4,7,10,12].forEach(month=>text(month+'月',area.x+(month-1)/12*area.w,area.y+area.h+15,16,muted));
     else{const totalMonths=(new Date(max).getUTCFullYear()-new Date(min).getUTCFullYear())*12+new Date(max).getUTCMonth()-new Date(min).getUTCMonth();if(totalMonths<15){const ticks=[];let date=new Date(min);date=new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,1));while(+date<max){ticks.push(+date);date=new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,1));}const every=Math.max(1,Math.ceil(ticks.length/3));text(new Date(min).getUTCMonth()+1+'月',area.x,area.y+area.h+15,16,muted);ticks.filter((_,i)=>i%every===every-1).forEach(v=>{const x=area.x+(v-min)/span*area.w;if(x<area.x+area.w-45)text(new Date(v).getUTCMonth()+1+'月',x,area.y+area.h+15,16,muted);});}else{for(let i=0;i<4;i++){const date=new Date(min+span*i/3);text(date.getUTCFullYear()+'/'+(date.getUTCMonth()+1),area.x+area.w*i/3,area.y+area.h+15,15,muted,false,100,i===3?'right':'left');}}}
   }
@@ -44,10 +45,21 @@
     canvas.dataset.shareDesign='artist-A';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:selected.appearances,series:series.map(s=>({year:s.year,total:s.points.at(-1)?.value||0}))});footer(draw,label,source,selectedDates);
   };
   window.paintChosenSongShare=(canvas,song,source,period,view)=>{
-    const draw=setup(canvas,source,view==='graph'?'SONG GRAPH':'SONG PROFILE'),year=String(source.latestDate).slice(0,4),label=period==='all'?'全期間':year+'年';draw.text(source.chartName+' / '+label+' 週間順位推移',64,165,19,muted,true);draw.text(song.title,64,202,39,ink,true,760);draw.text(song.artist,836,211,22,muted,true,260,'right');
-    [['最新順位',song.latestRank==null?'—':song.latestRank+'位'],['最高順位',song.best==null?'—':song.best+'位'],['TOP10入り',song.top10+'回']].forEach(([label,value],i)=>{draw.rect(888,260+i*99,248,87,'#f3f0e9',9);draw.text(label,907,271+i*99,17,muted,true,210);draw.text(value,907,301+i*99,34,i?ink:blue,true,210);});draw.text(label+' · 登場 '+song.appearances+'回',64,268,23,ink,true,765);
-    const history=song.history||[];if(view==='graph'){const axis=Math.max(1,...history.map(p=>p.rank))<=10?10:100;draw.text('縦軸：1〜'+axis+'位',831,294,15,muted,false,220,'right');chart(draw,[{color:blue,points:history.map(p=>({date:p.date,value:p.rank}))}],{x:96,y:318,w:735,h:230},{rank:true,axis});}
-    else{draw.text(song.latestRank==null?'最新週のランクインなし':'最新 '+song.latestRank+'位',80,345,48,blue,true,735);draw.text('登場 '+song.weeks+'週',80,425,30,ink,true);draw.text('最終登場 '+(history.at(-1)?.date||'—'),80,493,22,muted);}
-    canvas.dataset.shareDesign='song-B';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:song.appearances,latest:song.latestRank,best:song.best,top10:song.top10});footer(draw,label,source,history.map(p=>p.date));
+    const draw=setup(canvas,source,''),{ctx,text,line,rect}=draw,year=String(source.latestDate).slice(0,4),label=period==='all'?'全期間':year+'年',history=[...(song.history||[])].sort((a,b)=>a.date.localeCompare(b.date));
+    rect(0,0,1200,675,'#fafafa');rect(24,18,1152,639,'#fff',20);rect(60,18,1080,7,'#b8ff25');
+    text('MUSIC CHART ANALYSIS',60,38,19,'#64665f',true);text(source.latestDate.replaceAll('-','.')+' 公開分',1140,38,20,'#64665f',false,320,'right');
+    text(song.title,60,100,51,'#171915',true,520);text(song.artist+' / '+source.chartName+' / '+label,60,170,25,'#64665f',false,520);
+    rect(614,96,168,100,'#efffcf',14);
+    [['最新',song.latestRank==null?'—':song.latestRank+'位'],['最高',song.best==null?'—':song.best+'位'],['登場',(song.weeks??new Set(history.map(p=>p.date)).size)+'週']].forEach(([name,value],i)=>{const x=630+i*180;text(name,x,109,21,'#64665f');text(value,x,146,38,i?'#171915':'#425b16',true,150);});
+    if(view==='graph'){
+      const axis=Math.max(1,...history.map(p=>p.rank))<=10?10:100,area={x:105,y:269,w:930,h:240};
+      chart(draw,[{color:blue,points:history.map(p=>({date:p.date,value:p.rank}))}],area,{rank:true,axis,surface:'#fff',tickSize:22,sparseDates:true});
+      if(history.length){const last=history.at(-1),single=history[0].date===last.date,x=single?area.x+area.w/2:area.x+area.w,y=area.y+(last.rank-1)/(axis-1)*area.h;text(last.rank+'位',x+18,y-14,27,blue,true,90);}
+    }else{
+      text(song.latestRank==null?'最新週のランクインなし':'最新 '+song.latestRank+'位',60,285,55,blue,true,1060);
+      text('TOP10入り '+song.top10+'回',60,390,30,'#171915',true);text('最終登場 '+(history.at(-1)?.date||'—'),60,455,25,'#64665f');
+    }
+    line(60,597,1140,597,'#e5e5e8');const range=history.length?history[0].date.replaceAll('-','.')+' — '+history.at(-1).date.replaceAll('-','.'):'対象期間に記録なし';text(source.chartName+' / '+label+' / '+range,60,620,19,'#64665f',false,780);text('出典：Billboard JAPAN',1140,620,19,'#64665f',false,280,'right');
+    canvas.dataset.shareDesign='song-C';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:song.appearances,latest:song.latestRank,best:song.best,top10:song.top10});
   };
 })();
