@@ -74,7 +74,6 @@
       [['最新',song.latestRank==null?'—':song.latestRank+'位'],['最高',song.best==null?'—':song.best+'位'],['登場',(song.weeks??new Set(history.map(p=>p.date)).size)+'週']].forEach(([name,value],i)=>{const x=630+i*180;text(name,x,109,21,'#64665f');text(value,x,146,38,i?'#171915':'#425b16',true,150);});
       const axis=Math.max(1,...history.map(p=>p.rank))<=10?10:100,area={x:105,y:269,w:930,h:240};
       chart(draw,[{color:blue,points:history.map(p=>({date:p.date,value:p.rank}))}],area,{rank:true,axis,surface:'#fff',tickSize:22,sparseDates:true});
-      if(history.length){const last=history.at(-1),single=history[0].date===last.date,x=single?area.x+area.w/2:area.x+area.w,y=area.y+(last.rank-1)/(axis-1)*area.h;text(last.rank+'位',x+18,y-14,27,blue,true,90);}
     }else{
       compactHeader(draw,source,song.title,song.artist+' / 楽曲概要 / '+source.chartName+' / '+label);
       [['最新順位',song.latestRank==null?'—':song.latestRank+'位'],['最高順位',song.best==null?'—':song.best+'位'],['登場週数',(song.weeks??new Set(history.map(p=>p.date)).size)+'週'],['TOP10入り',song.top10+'回']].forEach(([name,value],i)=>{const x=60+i*280;if(i===0)rect(x-16,247,262,151,'#efffcf',14);text(name,x,265,23,'#64665f');summaryValue(draw,value,x,315,64,i===0?'#425b16':'#171915',240);});
