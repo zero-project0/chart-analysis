@@ -59,3 +59,8 @@ dialog,.compare-sidebar{background:#fafafa}
 .compare-series-text,.compare-summary-table td{color:#3a3a3c}
 .compare-series-text small,.compare-instructions,.compare-summary-table th{color:#77777f!important}
 .compare-summary-table th:first-child,.compare-summary-table td:first-child{text-align:left}
+
+/* Search uses light surfaces; override the legacy dark search text colors. */
+.search-section,.search-result,.search-result-name{color:var(--ink)}
+.search-result-sub{color:var(--muted)}
+.search-result:focus-visible{background:var(--acid-soft);color:var(--ink)}
