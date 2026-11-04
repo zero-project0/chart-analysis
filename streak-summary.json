@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-10-28",
-    "issues": 974,
-    "songs": 4394,
+    "last": "2026-11-04",
+    "issues": 975,
+    "songs": 4399,
     "displayed": [
       {
         "title": "Lemon",
@@ -103,7 +103,7 @@
         "weeks": 45,
         "start": "2025-12-24",
         "end": "2026-10-28",
-        "ongoing": true,
+        "ongoing": false,
         "begins_at_chart_start": false,
         "total_top10_weeks": 47,
         "best_rank_in_streak": 3,
@@ -272,9 +272,9 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-10-28",
-    "issues": 474,
-    "songs": 477,
+    "last": "2026-11-04",
+    "issues": 475,
+    "songs": 478,
     "displayed": [
       {
         "title": "ライラック",
@@ -284,9 +284,9 @@
         "end": "2026-09-30",
         "ongoing": false,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 128,
+        "total_top10_weeks": 129,
         "best_rank_in_streak": 1,
-        "runs": 1,
+        "runs": 2,
         "rank": 1
       },
       {
@@ -461,15 +461,15 @@
       {
         "title": "好きすぎて滅!",
         "artist": "M!LK",
-        "weeks": 45,
+        "weeks": 46,
         "start": "2025-12-24",
-        "end": "2026-10-28",
+        "end": "2026-11-04",
         "ongoing": true,
         "begins_at_chart_start": false,
-        "total_top10_weeks": 48,
+        "total_top10_weeks": 49,
         "best_rank_in_streak": 2,
         "runs": 3,
-        "rank": 15
+        "rank": 14
       },
       {
         "title": "怪獣の花唄",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-10-28",
-    "issues": 474,
-    "songs": 1914,
+    "last": "2026-11-04",
+    "issues": 475,
+    "songs": 1921,
     "displayed": [
       {
         "title": "Lemon",
