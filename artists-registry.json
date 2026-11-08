@@ -1,0 +1,5439 @@
+{
+  "schema_version": 1,
+  "site": {
+    "boys": {
+      "artists": [
+        "スリーファンキーズ",
+        "ジャニーズ",
+        "ザ・スパイダース",
+        "ザ・タイガース",
+        "ザ・テンプターズ",
+        "オックス",
+        "フォーリーブス",
+        "ジューク・ボックス",
+        "ハイソサエティー",
+        "ハイ・スパンキー",
+        "チャコとヘルスエンジェル",
+        "ずうとるび",
+        "アンデルセン",
+        "JOHNNYS' ジュニア・スペシャル",
+        "リトル・ギャング",
+        "ルイ&マーク",
+        "メッツ",
+        "クエッション",
+        "ドルフィン",
+        "狩人",
+        "レイジー",
+        "ジャニーズ少年団",
+        "クリッパー",
+        "風来坊",
+        "ザ・ハンダース",
+        "フラッシュ",
+        "DUO",
+        "ジャッカル",
+        "たのきんトリオ",
+        "ANKH",
+        "ロミオ",
+        "イモ欽トリオ",
+        "とんねるず",
+        "紅麗威甦",
+        "シブがき隊",
+        "St.ヴァレンタイン",
+        "エアー",
+        "DASH'",
+        "チャンプ",
+        "東京JAP",
+        "ネバーランド",
+        "イーグルス",
+        "C-C-B",
+        "いいとも青年隊",
+        "THE GOOD-BYE",
+        "チェッカーズ",
+        "一世風靡セピア",
+        "SALLY",
+        "JR-III",
+        "JACブラザース",
+        "リフラフ",
+        "ザ・モータースポーツ・ミュージック",
+        "RA$H",
+        "少年隊",
+        "息っ子クラブ",
+        "たけし軍団COUNT DOWN",
+        "おぼっちゃま（水島新太郎・サード長嶋）",
+        "A-JARI",
+        "おめで隊",
+        "光GENJI",
+        "圭修",
+        "男闘呼組",
+        "CHA-CHA",
+        "THE PEPPER BOYS",
+        "幕末塾",
+        "K・Chaps!",
+        "摩訶不思議",
+        "JA-JA",
+        "SHINE'S",
+        "マーケット・クラブ",
+        "忍者",
+        "レッドドルフィンズ",
+        "SMAP",
+        "LL BROTHERS",
+        "IMPERIAL JB's",
+        "音松くん",
+        "SAY・S",
+        "三橋クンと中倉クン",
+        "TOKIO",
+        "光GENJI SUPER 5",
+        "AKIRA & KOHJI（赤坂晃・内海光司）",
+        "B☆KOOL",
+        "グレートチキンパワーズ",
+        "H.A.N.D.",
+        "V6",
+        "LAZY KNACK",
+        "E.M.U",
+        "ノンキーズ",
+        "猿岩石",
+        "DA PUMP",
+        "DOMOTO",
+        "pool bit boys",
+        "J-FRIENDS",
+        "野猿",
+        "Coming Century",
+        "嵐",
+        "20th Century",
+        "DOGGY BAG",
+        "Secret Agent",
+        "HEADS",
+        "Kids Alive",
+        "w-inds.",
+        "RUN&GUN",
+        "MiMyCEN",
+        "FLAME",
+        "INSPi",
+        "RAG FAIR",
+        "Ya-Ya-yah",
+        "Lead",
+        "チン☆パラ",
+        "The NaB's",
+        "タッキー&翼",
+        "ORANGE RANGE",
+        "NEWS",
+        "TEAM★NACS",
+        "SUPER EIGHT",
+        "微熱DANJI",
+        "トラジ・ハイジ",
+        "WaT",
+        "修二と彰",
+        "KAT-TUN",
+        "sprout",
+        "GYM",
+        "AcQuA-E.P.",
+        "木更津キャッツアイ feat.MCU",
+        "テゴマス",
+        "CLUB PRINCE",
+        "トリオ・ザ・シャキーン",
+        "GOLF&MIKE",
+        "Hey! Say! 7",
+        "HotchPotchi",
+        "AGE-OF-EP",
+        "PureBoys",
+        "Hey! Say! JUMP",
+        "QUESTION?",
+        "ゴールデンボンバー",
+        "羞恥心",
+        "SHIPS",
+        "The SHIGOTONIN",
+        "紫SHIKIBU",
+        "中山優馬 w/B.I.Shadow",
+        "フレンズ",
+        "新選組リアン",
+        "MM3",
+        "スノープリンス合唱団",
+        "Playz",
+        "イケメン3",
+        "サーターアンダギー",
+        "NYC",
+        "ココア男。",
+        "純烈",
+        "D☆DATE",
+        "Kis-My-Ft2",
+        "timelesz",
+        "A.B.C-Z",
+        "BOYS AND MEN",
+        "DISH//",
+        "超特急",
+        "Vimclip",
+        "PrizmaX",
+        "MeseMoa.",
+        "Da-iCE",
+        "ブレイク☆スルー“5D",
+        "CHaCK-UP",
+        "RUSH300",
+        "SOLIDEMO",
+        "WEST.",
+        "10神ACTOR",
+        "カスタマイZ",
+        "アルスマグナ",
+        "Sakurashimeji",
+        "MAGiC BOYZ",
+        "RADIO FISH",
+        "*ChocoLate Bomb!!",
+        "M!LK",
+        "BMK",
+        "X4",
+        "XOX",
+        "MAG!C☆PRINCE",
+        "スタメンKiDS",
+        "SUPER★DRAGON",
+        "#HASHTAG",
+        "NORD",
+        "スター☆コンチェルト",
+        "BuZZ",
+        "祭nine.",
+        "UNIVERSAL BOYS",
+        "九星隊",
+        "新世紀えぴっくすたぁネ申",
+        "BATTLE BOYS",
+        "Super Break Dawn",
+        "King & Prince",
+        "ONE N' ONLY",
+        "Hi☆Five",
+        "CUBERS",
+        "ボイメンエリア研究生",
+        "甘党男子",
+        "パンダドラゴン",
+        "AlbaNox",
+        "cosmic!!",
+        "9bic",
+        "楽遊BOYS編集部 MEID",
+        "原因は自分にある。",
+        "bunting_kiss",
+        "Snow Man",
+        "SixTONES",
+        "JO1",
+        "VOYZ BOY",
+        "PSYCHIC FEVER from EXILE TRIBE",
+        "OWV",
+        "ORβIT",
+        "ENJIN",
+        "SHARE LOCK HOMES",
+        "BXW",
+        "BUDDiiS",
+        "WATWING",
+        "INI",
+        "BE:FIRST",
+        "なにわ男子",
+        "BLVCKBERRY",
+        "VECTALL",
+        "OCTPATH",
+        "夢喰NEON",
+        "ベアードアード",
+        "THE SUPER FRUIT",
+        "Travis Japan",
+        "&TEAM",
+        "Place Order",
+        "LIL LEAGUE from EXILE TRIBE",
+        "Maison B",
+        "Lienel",
+        "DXTEEN",
+        "MAZZEL",
+        "ICEx",
+        "IMP.",
+        "TOZ",
+        "Number_i",
+        "NCT WISH",
+        "UNiFY",
+        "Aぇ! group",
+        "NEXZ",
+        "WILD BLUE",
+        "aoen",
+        "CLASS SEVEN",
+        "STARGLOW",
+        "VOKSY DAYS",
+        "ROIROM",
+        "VIBY",
+        "TAGRIGHT",
+        "AEN",
+        "RUNIDRE",
+        "KO1KEYZ",
+        "iiONDO",
+        "KEY TO LIT",
+        "モナキ",
+        "ONE OR EIGHT",
+        "EXILE",
+        "三代目 J SOUL BROTHERS from EXILE TRIBE",
+        "GENERATIONS from EXILE TRIBE",
+        "FANTASTICS from EXILE TRIBE",
+        "THE RAMPAGE from EXILE TRIBE",
+        "龍宮城",
+        "KID PHENOMENON from EXILE TRIBE",
+        "THE JET BOY BANGERZ from EXILE TRIBE",
+        "BALLISTIK BOYZ from EXILE TRIBE",
+        "WOLF HOWL HARMONY from EXILE TRIBE",
+        "EXILE THE SECOND",
+        "7ORDER",
+        "Cloud ten",
+        "ふぉ～ゆ～",
+        "ACEes",
+        "B&ZAI",
+        "EBiDAN",
+        "JI BLUE",
+        "SHOW-WA",
+        "MATSURI",
+        "風輪",
+        "SAD originals.",
+        "Crimson Crat Clan",
+        "Last Prince",
+        "Seven Deuce",
+        "Def Class",
+        "NEWTREND",
+        "D.O.L",
+        "BLACK IRIS",
+        "MADKID"
+      ],
+      "aliases": {
+        "スリーファンキーズ": [
+          "スリーファンキーズ"
+        ],
+        "ジャニーズ": [
+          "ジャニーズ"
+        ],
+        "ザ・スパイダース": [
+          "ザ・スパイダース"
+        ],
+        "ザ・タイガース": [
+          "ザ・タイガース"
+        ],
+        "ザ・テンプターズ": [
+          "ザ・テンプターズ"
+        ],
+        "オックス": [
+          "オックス"
+        ],
+        "フォーリーブス": [
+          "フォーリーブス"
+        ],
+        "ジューク・ボックス": [
+          "ジューク・ボックス"
+        ],
+        "ハイソサエティー": [
+          "ハイソサエティー"
+        ],
+        "ハイ・スパンキー": [
+          "ハイ・スパンキー"
+        ],
+        "チャコとヘルスエンジェル": [
+          "チャコとヘルスエンジェル"
+        ],
+        "ずうとるび": [
+          "ずうとるび"
+        ],
+        "アンデルセン": [
+          "アンデルセン"
+        ],
+        "JOHNNYS' ジュニア・スペシャル": [
+          "JOHNNYS' ジュニア・スペシャル"
+        ],
+        "リトル・ギャング": [
+          "リトル・ギャング"
+        ],
+        "ルイ&マーク": [
+          "ルイ&マーク"
+        ],
+        "メッツ": [
+          "メッツ"
+        ],
+        "クエッション": [
+          "クエッション"
+        ],
+        "ドルフィン": [
+          "ドルフィン"
+        ],
+        "狩人": [
+          "狩人"
+        ],
+        "レイジー": [
+          "レイジー"
+        ],
+        "ジャニーズ少年団": [
+          "ジャニーズ少年団"
+        ],
+        "クリッパー": [
+          "クリッパー"
+        ],
+        "風来坊": [
+          "風来坊"
+        ],
+        "ザ・ハンダース": [
+          "ザ・ハンダース"
+        ],
+        "フラッシュ": [
+          "フラッシュ"
+        ],
+        "DUO": [
+          "DUO"
+        ],
+        "ジャッカル": [
+          "ジャッカル"
+        ],
+        "たのきんトリオ": [
+          "たのきんトリオ"
+        ],
+        "ANKH": [
+          "ANKH"
+        ],
+        "ロミオ": [
+          "ロミオ"
+        ],
+        "イモ欽トリオ": [
+          "イモ欽トリオ"
+        ],
+        "とんねるず": [
+          "とんねるず"
+        ],
+        "紅麗威甦": [
+          "紅麗威甦"
+        ],
+        "シブがき隊": [
+          "シブがき隊"
+        ],
+        "St.ヴァレンタイン": [
+          "St.ヴァレンタイン"
+        ],
+        "エアー": [
+          "エアー"
+        ],
+        "DASH'": [
+          "DASH'"
+        ],
+        "チャンプ": [
+          "チャンプ"
+        ],
+        "東京JAP": [
+          "東京JAP"
+        ],
+        "ネバーランド": [
+          "ネバーランド"
+        ],
+        "イーグルス": [
+          "イーグルス"
+        ],
+        "C-C-B": [
+          "C-C-B"
+        ],
+        "いいとも青年隊": [
+          "いいとも青年隊"
+        ],
+        "THE GOOD-BYE": [
+          "THE GOOD-BYE"
+        ],
+        "チェッカーズ": [
+          "チェッカーズ"
+        ],
+        "一世風靡セピア": [
+          "一世風靡セピア"
+        ],
+        "SALLY": [
+          "SALLY"
+        ],
+        "JR-III": [
+          "JR-III"
+        ],
+        "JACブラザース": [
+          "JACブラザース"
+        ],
+        "リフラフ": [
+          "リフラフ"
+        ],
+        "ザ・モータースポーツ・ミュージック": [
+          "ザ・モータースポーツ・ミュージック"
+        ],
+        "RA$H": [
+          "RA$H"
+        ],
+        "少年隊": [
+          "少年隊"
+        ],
+        "息っ子クラブ": [
+          "息っ子クラブ"
+        ],
+        "たけし軍団COUNT DOWN": [
+          "たけし軍団COUNT DOWN"
+        ],
+        "おぼっちゃま（水島新太郎・サード長嶋）": [
+          "おぼっちゃま（水島新太郎・サード長嶋）"
+        ],
+        "A-JARI": [
+          "A-JARI"
+        ],
+        "おめで隊": [
+          "おめで隊"
+        ],
+        "光GENJI": [
+          "光GENJI"
+        ],
+        "圭修": [
+          "圭修"
+        ],
+        "男闘呼組": [
+          "男闘呼組"
+        ],
+        "CHA-CHA": [
+          "CHA-CHA"
+        ],
+        "THE PEPPER BOYS": [
+          "THE PEPPER BOYS"
+        ],
+        "幕末塾": [
+          "幕末塾"
+        ],
+        "K・Chaps!": [
+          "K・Chaps!"
+        ],
+        "摩訶不思議": [
+          "摩訶不思議"
+        ],
+        "JA-JA": [
+          "JA-JA"
+        ],
+        "SHINE'S": [
+          "SHINE'S"
+        ],
+        "マーケット・クラブ": [
+          "マーケット・クラブ"
+        ],
+        "忍者": [
+          "忍者"
+        ],
+        "レッドドルフィンズ": [
+          "レッドドルフィンズ"
+        ],
+        "SMAP": [
+          "SMAP"
+        ],
+        "LL BROTHERS": [
+          "LL BROTHERS"
+        ],
+        "IMPERIAL JB's": [
+          "IMPERIAL JB's"
+        ],
+        "音松くん": [
+          "音松くん"
+        ],
+        "SAY・S": [
+          "SAY・S"
+        ],
+        "三橋クンと中倉クン": [
+          "三橋クンと中倉クン"
+        ],
+        "TOKIO": [
+          "TOKIO"
+        ],
+        "光GENJI SUPER 5": [
+          "光GENJI SUPER 5"
+        ],
+        "AKIRA & KOHJI（赤坂晃・内海光司）": [
+          "AKIRA & KOHJI（赤坂晃・内海光司）"
+        ],
+        "B☆KOOL": [
+          "B☆KOOL"
+        ],
+        "グレートチキンパワーズ": [
+          "グレートチキンパワーズ"
+        ],
+        "H.A.N.D.": [
+          "H.A.N.D."
+        ],
+        "V6": [
+          "V6"
+        ],
+        "LAZY KNACK": [
+          "LAZY KNACK"
+        ],
+        "E.M.U": [
+          "E.M.U"
+        ],
+        "ノンキーズ": [
+          "ノンキーズ"
+        ],
+        "猿岩石": [
+          "猿岩石"
+        ],
+        "DA PUMP": [
+          "DA PUMP"
+        ],
+        "DOMOTO": [
+          "KinKi Kids",
+          "DOMOTO"
+        ],
+        "pool bit boys": [
+          "pool bit boys"
+        ],
+        "J-FRIENDS": [
+          "J-FRIENDS"
+        ],
+        "野猿": [
+          "野猿"
+        ],
+        "Coming Century": [
+          "Coming Century"
+        ],
+        "嵐": [
+          "嵐"
+        ],
+        "20th Century": [
+          "20th Century"
+        ],
+        "DOGGY BAG": [
+          "DOGGY BAG"
+        ],
+        "Secret Agent": [
+          "Secret Agent"
+        ],
+        "HEADS": [
+          "HEADS"
+        ],
+        "Kids Alive": [
+          "Kids Alive"
+        ],
+        "w-inds.": [
+          "w-inds."
+        ],
+        "RUN&GUN": [
+          "RUN&GUN"
+        ],
+        "MiMyCEN": [
+          "MiMyCEN"
+        ],
+        "FLAME": [
+          "FLAME"
+        ],
+        "INSPi": [
+          "INSPi"
+        ],
+        "RAG FAIR": [
+          "RAG FAIR"
+        ],
+        "Ya-Ya-yah": [
+          "Ya-Ya-yah"
+        ],
+        "Lead": [
+          "Lead"
+        ],
+        "チン☆パラ": [
+          "チン☆パラ"
+        ],
+        "The NaB's": [
+          "The NaB's"
+        ],
+        "タッキー&翼": [
+          "タッキー&翼"
+        ],
+        "ORANGE RANGE": [
+          "ORANGE RANGE"
+        ],
+        "NEWS": [
+          "NEWS"
+        ],
+        "TEAM★NACS": [
+          "TEAM★NACS"
+        ],
+        "SUPER EIGHT": [
+          "SUPER EIGHT",
+          "関ジャニ∞"
+        ],
+        "微熱DANJI": [
+          "微熱DANJI"
+        ],
+        "トラジ・ハイジ": [
+          "トラジ・ハイジ"
+        ],
+        "WaT": [
+          "WaT"
+        ],
+        "修二と彰": [
+          "修二と彰"
+        ],
+        "KAT-TUN": [
+          "KAT-TUN"
+        ],
+        "sprout": [
+          "sprout"
+        ],
+        "GYM": [
+          "GYM"
+        ],
+        "AcQuA-E.P.": [
+          "AcQuA-E.P."
+        ],
+        "木更津キャッツアイ feat.MCU": [
+          "木更津キャッツアイ feat.MCU"
+        ],
+        "テゴマス": [
+          "テゴマス"
+        ],
+        "CLUB PRINCE": [
+          "CLUB PRINCE"
+        ],
+        "トリオ・ザ・シャキーン": [
+          "トリオ・ザ・シャキーン"
+        ],
+        "GOLF&MIKE": [
+          "GOLF&MIKE"
+        ],
+        "Hey! Say! 7": [
+          "Hey! Say! 7"
+        ],
+        "HotchPotchi": [
+          "HotchPotchi"
+        ],
+        "AGE-OF-EP": [
+          "AGE-OF-EP"
+        ],
+        "PureBoys": [
+          "PureBoys"
+        ],
+        "Hey! Say! JUMP": [
+          "Hey! Say! JUMP"
+        ],
+        "QUESTION?": [
+          "QUESTION?"
+        ],
+        "ゴールデンボンバー": [
+          "ゴールデンボンバー"
+        ],
+        "羞恥心": [
+          "羞恥心"
+        ],
+        "SHIPS": [
+          "SHIPS"
+        ],
+        "The SHIGOTONIN": [
+          "The SHIGOTONIN"
+        ],
+        "紫SHIKIBU": [
+          "紫SHIKIBU"
+        ],
+        "中山優馬 w/B.I.Shadow": [
+          "中山優馬 w/B.I.Shadow"
+        ],
+        "フレンズ": [
+          "フレンズ"
+        ],
+        "新選組リアン": [
+          "新選組リアン"
+        ],
+        "MM3": [
+          "MM3"
+        ],
+        "スノープリンス合唱団": [
+          "スノープリンス合唱団"
+        ],
+        "Playz": [
+          "Playz"
+        ],
+        "イケメン3": [
+          "イケメン3"
+        ],
+        "サーターアンダギー": [
+          "サーターアンダギー"
+        ],
+        "NYC": [
+          "NYC"
+        ],
+        "ココア男。": [
+          "ココア男。"
+        ],
+        "純烈": [
+          "純烈"
+        ],
+        "D☆DATE": [
+          "D☆DATE"
+        ],
+        "Kis-My-Ft2": [
+          "Kis-My-Ft2"
+        ],
+        "timelesz": [
+          "timelesz",
+          "Sexy Zone"
+        ],
+        "A.B.C-Z": [
+          "A.B.C-Z"
+        ],
+        "BOYS AND MEN": [
+          "BOYS AND MEN"
+        ],
+        "DISH//": [
+          "DISH//"
+        ],
+        "超特急": [
+          "超特急"
+        ],
+        "Vimclip": [
+          "Vimclip"
+        ],
+        "PrizmaX": [
+          "PrizmaX"
+        ],
+        "MeseMoa.": [
+          "MeseMoa."
+        ],
+        "Da-iCE": [
+          "Da-iCE"
+        ],
+        "ブレイク☆スルー“5D": [
+          "ブレイク☆スルー“5D"
+        ],
+        "CHaCK-UP": [
+          "CHaCK-UP"
+        ],
+        "RUSH300": [
+          "RUSH300"
+        ],
+        "SOLIDEMO": [
+          "SOLIDEMO"
+        ],
+        "WEST.": [
+          "WEST.",
+          "ジャニーズWEST"
+        ],
+        "10神ACTOR": [
+          "10神ACTOR"
+        ],
+        "カスタマイZ": [
+          "カスタマイZ"
+        ],
+        "アルスマグナ": [
+          "アルスマグナ"
+        ],
+        "Sakurashimeji": [
+          "Sakurashimeji",
+          "さくらしめじ"
+        ],
+        "MAGiC BOYZ": [
+          "MAGiC BOYZ"
+        ],
+        "RADIO FISH": [
+          "RADIO FISH"
+        ],
+        "*ChocoLate Bomb!!": [
+          "*ChocoLate Bomb!!"
+        ],
+        "M!LK": [
+          "M!LK"
+        ],
+        "BMK": [
+          "BMK"
+        ],
+        "X4": [
+          "X4"
+        ],
+        "XOX": [
+          "XOX"
+        ],
+        "MAG!C☆PRINCE": [
+          "MAG!C☆PRINCE"
+        ],
+        "スタメンKiDS": [
+          "スタメンKiDS"
+        ],
+        "SUPER★DRAGON": [
+          "SUPER★DRAGON"
+        ],
+        "#HASHTAG": [
+          "#HASHTAG"
+        ],
+        "NORD": [
+          "NORD"
+        ],
+        "スター☆コンチェルト": [
+          "スター☆コンチェルト"
+        ],
+        "BuZZ": [
+          "BuZZ"
+        ],
+        "祭nine.": [
+          "祭nine."
+        ],
+        "UNIVERSAL BOYS": [
+          "UNIVERSAL BOYS"
+        ],
+        "九星隊": [
+          "九星隊"
+        ],
+        "新世紀えぴっくすたぁネ申": [
+          "新世紀えぴっくすたぁネ申"
+        ],
+        "BATTLE BOYS": [
+          "BATTLE BOYS"
+        ],
+        "Super Break Dawn": [
+          "Super Break Dawn"
+        ],
+        "King & Prince": [
+          "King & Prince"
+        ],
+        "ONE N' ONLY": [
+          "ONE N' ONLY"
+        ],
+        "Hi☆Five": [
+          "Hi☆Five"
+        ],
+        "CUBERS": [
+          "CUBERS"
+        ],
+        "ボイメンエリア研究生": [
+          "ボイメンエリア研究生"
+        ],
+        "甘党男子": [
+          "甘党男子"
+        ],
+        "パンダドラゴン": [
+          "パンダドラゴン"
+        ],
+        "AlbaNox": [
+          "AlbaNox"
+        ],
+        "cosmic!!": [
+          "cosmic!!"
+        ],
+        "9bic": [
+          "9bic"
+        ],
+        "楽遊BOYS編集部 MEID": [
+          "楽遊BOYS編集部 MEID"
+        ],
+        "原因は自分にある。": [
+          "原因は自分にある。"
+        ],
+        "bunting_kiss": [
+          "bunting_kiss"
+        ],
+        "Snow Man": [
+          "Snow Man"
+        ],
+        "SixTONES": [
+          "SixTONES"
+        ],
+        "JO1": [
+          "JO1"
+        ],
+        "VOYZ BOY": [
+          "VOYZ BOY"
+        ],
+        "PSYCHIC FEVER from EXILE TRIBE": [
+          "PSYCHIC FEVER from EXILE TRIBE"
+        ],
+        "OWV": [
+          "OWV"
+        ],
+        "ORβIT": [
+          "ORβIT"
+        ],
+        "ENJIN": [
+          "ENJIN",
+          "円神"
+        ],
+        "SHARE LOCK HOMES": [
+          "SHARE LOCK HOMES"
+        ],
+        "BXW": [
+          "BXW"
+        ],
+        "BUDDiiS": [
+          "BUDDiiS"
+        ],
+        "WATWING": [
+          "WATWING"
+        ],
+        "INI": [
+          "INI"
+        ],
+        "BE:FIRST": [
+          "BE:FIRST"
+        ],
+        "なにわ男子": [
+          "なにわ男子"
+        ],
+        "BLVCKBERRY": [
+          "BLVCKBERRY"
+        ],
+        "VECTALL": [
+          "VECTALL"
+        ],
+        "OCTPATH": [
+          "OCTPATH"
+        ],
+        "夢喰NEON": [
+          "夢喰NEON"
+        ],
+        "ベアードアード": [
+          "ベアードアード"
+        ],
+        "THE SUPER FRUIT": [
+          "THE SUPER FRUIT"
+        ],
+        "Travis Japan": [
+          "Travis Japan"
+        ],
+        "&TEAM": [
+          "&TEAM"
+        ],
+        "Place Order": [
+          "Place Order"
+        ],
+        "LIL LEAGUE from EXILE TRIBE": [
+          "LIL LEAGUE from EXILE TRIBE"
+        ],
+        "Maison B": [
+          "Maison B"
+        ],
+        "Lienel": [
+          "Lienel"
+        ],
+        "DXTEEN": [
+          "DXTEEN"
+        ],
+        "MAZZEL": [
+          "MAZZEL"
+        ],
+        "ICEx": [
+          "ICEx"
+        ],
+        "IMP.": [
+          "IMP."
+        ],
+        "TOZ": [
+          "TOZ"
+        ],
+        "Number_i": [
+          "Number_i"
+        ],
+        "NCT WISH": [
+          "NCT WISH"
+        ],
+        "UNiFY": [
+          "UNiFY"
+        ],
+        "Aぇ! group": [
+          "Aぇ! group"
+        ],
+        "NEXZ": [
+          "NEXZ"
+        ],
+        "WILD BLUE": [
+          "WILD BLUE"
+        ],
+        "aoen": [
+          "aoen"
+        ],
+        "CLASS SEVEN": [
+          "CLASS SEVEN"
+        ],
+        "STARGLOW": [
+          "STARGLOW"
+        ],
+        "VOKSY DAYS": [
+          "VOKSY DAYS"
+        ],
+        "ROIROM": [
+          "ROIROM"
+        ],
+        "VIBY": [
+          "VIBY"
+        ],
+        "TAGRIGHT": [
+          "TAGRIGHT"
+        ],
+        "AEN": [
+          "AEN"
+        ],
+        "RUNIDRE": [
+          "RUNIDRE"
+        ],
+        "KO1KEYZ": [
+          "KO1KEYZ"
+        ],
+        "iiONDO": [
+          "iiONDO"
+        ],
+        "KEY TO LIT": [
+          "KEY TO LIT"
+        ],
+        "モナキ": [
+          "モナキ"
+        ],
+        "ONE OR EIGHT": [
+          "ONE OR EIGHT"
+        ],
+        "EXILE": [
+          "EXILE"
+        ],
+        "三代目 J SOUL BROTHERS from EXILE TRIBE": [
+          "三代目 J SOUL BROTHERS from EXILE TRIBE"
+        ],
+        "GENERATIONS from EXILE TRIBE": [
+          "GENERATIONS from EXILE TRIBE"
+        ],
+        "FANTASTICS from EXILE TRIBE": [
+          "FANTASTICS from EXILE TRIBE"
+        ],
+        "THE RAMPAGE from EXILE TRIBE": [
+          "THE RAMPAGE from EXILE TRIBE"
+        ],
+        "龍宮城": [
+          "龍宮城"
+        ],
+        "KID PHENOMENON from EXILE TRIBE": [
+          "KID PHENOMENON from EXILE TRIBE",
+          "KID PHENOMENON"
+        ],
+        "THE JET BOY BANGERZ from EXILE TRIBE": [
+          "THE JET BOY BANGERZ from EXILE TRIBE",
+          "THE JET BOY BANGERZ"
+        ],
+        "BALLISTIK BOYZ from EXILE TRIBE": [
+          "BALLISTIK BOYZ from EXILE TRIBE"
+        ],
+        "WOLF HOWL HARMONY from EXILE TRIBE": [
+          "WOLF HOWL HARMONY from EXILE TRIBE",
+          "WOLF HOWL HARMONY"
+        ],
+        "EXILE THE SECOND": [
+          "EXILE THE SECOND"
+        ],
+        "7ORDER": [
+          "7ORDER"
+        ],
+        "Cloud ten": [
+          "Cloud ten"
+        ],
+        "ふぉ～ゆ～": [
+          "ふぉ～ゆ～"
+        ],
+        "ACEes": [
+          "ACEes"
+        ],
+        "B&ZAI": [
+          "B&ZAI"
+        ],
+        "EBiDAN": [
+          "EBiDAN"
+        ],
+        "JI BLUE": [
+          "JI BLUE"
+        ],
+        "SHOW-WA": [
+          "SHOW-WA"
+        ],
+        "MATSURI": [
+          "MATSURI"
+        ],
+        "風輪": [
+          "風輪"
+        ],
+        "SAD originals.": [
+          "SAD originals."
+        ],
+        "Crimson Crat Clan": [
+          "Crimson Crat Clan"
+        ],
+        "Last Prince": [
+          "Last Prince"
+        ],
+        "Seven Deuce": [
+          "Seven Deuce"
+        ],
+        "Def Class": [
+          "Def Class"
+        ],
+        "NEWTREND": [
+          "NEWTREND"
+        ],
+        "D.O.L": [
+          "D.O.L"
+        ],
+        "BLACK IRIS": [
+          "BLACK IRIS"
+        ],
+        "MADKID": [
+          "MADKID"
+        ]
+      }
+    },
+    "girls": {
+      "artists": [
+        "【eN】",
+        "@onefive",
+        "＃2i2",
+        "＃Mooove!",
+        "#ジューロック",
+        "＃ババババンビ",
+        "＃よーよーよー",
+        "℃-ute",
+        "=LOVE",
+        "≠ME",
+        "≒JOY",
+        "3B junior",
+        "80 pan",
+        "9nine",
+        "AdamLilith",
+        "ael-アエル-",
+        "AeLL.",
+        "AI-SACHI",
+        "AIKATSU☆STARS!",
+        "AKB48",
+        "AKBアイドリング!!!",
+        "AKIARIM",
+        "AMEFURASSHI",
+        "Ange☆Reve",
+        "AppleTale",
+        "ARCANA PROJECT",
+        "ASP",
+        "Awww!",
+        "AXELL",
+        "B.B.WAVES",
+        "B.O.L.T",
+        "B'dash",
+        "BaBe",
+        "BABY'S",
+        "BABYMETAL",
+        "BELLRING少女ハート",
+        "Berryz工房",
+        "BEYOOOOONDS",
+        "BiS",
+        "BiSH",
+        "BOYSTYLE",
+        "bump.y",
+        "Buono!",
+        "Buzy",
+        "BYOB",
+        "C-ZONE",
+        "C.C.ガールズ",
+        "CANDY TUNE",
+        "Carezza",
+        "CARRY LOOSE",
+        "chee's",
+        "Cheeky Parade",
+        "ChocoLe",
+        "Chocolove from AKB48",
+        "choice?",
+        "Chu!☆Lips",
+        "Chu☆Oh!Dolly",
+        "CIRRA",
+        "CoCo",
+        "COLOR",
+        "cotton",
+        "CROWN POP",
+        "CUTIE STREET",
+        "CYNHN",
+        "D-Rive",
+        "D&D",
+        "DANCEROID",
+        "DEF.DIVA",
+        "DiVA",
+        "Doll☆Elements",
+        "DORA",
+        "Dream",
+        "Dream5",
+        "E-girls",
+        "Early Morning",
+        "EARTH",
+        "EMPiRE",
+        "ENGAG.ING",
+        "EUPHORIA",
+        "ExWHYZ",
+        "f5ve",
+        "fav me",
+        "Feam",
+        "Fine",
+        "Finger Runs",
+        "fishbowl",
+        "FleuЯR",
+        "FLIP-FLAP",
+        "Flower",
+        "Folder5",
+        "FRUITS ZIPPER",
+        "GAM",
+        "GANG PARADE",
+        "Gatas Brilhantes H.P.",
+        "GEM",
+        "GEMS COMPANY",
+        "Girl's BOX",
+        "Girls²",
+        "GO TO THE BEDS",
+        "GO-BANG'S",
+        "GPP",
+        "Gran☆Ciel",
+        "HANA",
+        "Happiness",
+        "Hauptharmonie",
+        "High-King",
+        "HINOIチーム",
+        "HiP",
+        "HKT48",
+        "HOP CLUB",
+        "HOT DOG CAT",
+        "hy4_4yh",
+        "I'mew（あいみゅう）",
+        "IDOLATER",
+        "iLiFE!",
+        "Ill",
+        "IS:SUE",
+        "iScream",
+        "iSPY",
+        "iTRiP",
+        "JamsCollection",
+        "JAPANARIZM",
+        "JBエンジェルス",
+        "Jewel☆Neige",
+        "Jewel☆Rouge",
+        "JK21",
+        "Juice=Juice",
+        "KAGAJO☆4S",
+        "KEY WEST CLUB",
+        "KiSS KiSS",
+        "KissBee",
+        "KissBeeWEST",
+        "Kolokol",
+        "Laki",
+        "log you",
+        "LumiUnion",
+        "Ma'Scar'Piece",
+        "MAD MEDiCiNE",
+        "Maison book girl",
+        "MAPA",
+        "MarryDoll",
+        "Mary Angel",
+        "MAX",
+        "ME:I",
+        "Melody",
+        "Merry BAD TUNE.",
+        "METAMO",
+        "Mi LUNA from お月ちゃんのうた",
+        "Mi-Ke",
+        "Mia REGINA",
+        "MIGMA SHELTER",
+        "MilkyWay",
+        "MISSION",
+        "MOMO",
+        "momonaki",
+        "MORE STAR",
+        "MyDearDarlin'",
+        "NANIMONO",
+        "Negicco",
+        "NEOかしまし娘",
+        "NEOちゃっきり娘",
+        "NGT48",
+        "NightOwl",
+        "NILKLY",
+        "NiziU",
+        "NMB48",
+        "NO NAME",
+        "Not yet",
+        "OCHA NORMA",
+        "Osaka翔Gangs",
+        "Pabo",
+        "PANDAMIC",
+        "PARADISE GO!! GO!!",
+        "PARADISES",
+        "PassCode",
+        "PASSPO☆",
+        "Peachy's",
+        "Peel the Apple",
+        "Perfume",
+        "PIGGS",
+        "Pinkish",
+        "PLIME",
+        "PRIKIL",
+        "Qlair",
+        "Qnto syrup",
+        "Queen & Elizabeth",
+        "R.C.T.",
+        "Rain Tree",
+        "RE-GE",
+        "route0",
+        "RuRian",
+        "S★スパイシー",
+        "Say a Little Prayer",
+        "SAY-LA",
+        "SDN48",
+        "SHAKE",
+        "SHOW-YA",
+        "SI☆NA",
+        "SiAM&POPTUNe",
+        "SKE48",
+        "sora tob sakana",
+        "SPEED",
+        "SPLASH",
+        "Springs",
+        "STAiNY",
+        "STAR☆ANIS",
+        "Starmarie",
+        "Stella☆Beats",
+        "Straight Angeli",
+        "STU48",
+        "Sugar",
+        "SUPER MONKEY'S",
+        "SUPER☆GiRLS",
+        "Suppli Mode",
+        "Survive-ZERO",
+        "SWEET STEADY",
+        "SweetS",
+        "T-BACKS",
+        "Tan.San.Sui.",
+        "TEAM SHACHI",
+        "TENRIN",
+        "THE HOOPERS",
+        "There There Theres",
+        "Toi Toi Toi",
+        "Tomato n' Pine",
+        "Twinklestars",
+        "ukka",
+        "UPローチ",
+        "VENUS",
+        "W",
+        "W∞アンナ",
+        "WAgg",
+        "WHITE SCORPION",
+        "Whiteberry",
+        "WILL-O'",
+        "Wink",
+        "XG",
+        "yosugala",
+        "YURIMARI",
+        "Z-1",
+        "ZOC",
+        "ZONE",
+        "ZYX",
+        "あぁ!",
+        "アーマーガールズ",
+        "アイスクリーム夢少女",
+        "アイドリング!!!",
+        "アイドルカレッジ",
+        "アイドル教室",
+        "アイドル夢工場",
+        "アイドル妖怪カワユシ",
+        "アイリーン&エリカ",
+        "あかなぎ",
+        "アキシブproject",
+        "アップアップガールズ（仮）",
+        "アテナ&ロビケロッツ",
+        "あみん",
+        "あややムwithエコハムず",
+        "アリス十番",
+        "アンジュルム",
+        "いぎなり東北産",
+        "うしろゆびさされ組",
+        "うしろ髪ひかれ隊",
+        "エコモニ。",
+        "えぬえむとぅけ",
+        "エンジェルス",
+        "おかわりシスターズ",
+        "オトメ☆コーポレーション",
+        "オナッターズ",
+        "おニャン子クラブ",
+        "オレンジ・シスターズ",
+        "ガーディアンズ4",
+        "カミングフレーバー",
+        "カレッジ・コスモス",
+        "カントリー・ガールズ",
+        "カントリー娘。",
+        "キッスの世界",
+        "キャナァーリ倶楽部",
+        "キャプテン",
+        "キャラメル☆リボン",
+        "きゃんきゃん",
+        "キャンパスナイターズ",
+        "きら☆ぴか",
+        "キララとウララ",
+        "ギリギリガールズ",
+        "グーグールル",
+        "クマリデパート",
+        "クラッシュギャルズ",
+        "クリィミー♥パフェ",
+        "クリマカーユ",
+        "クロスノエシス",
+        "ココナッツ娘。",
+        "ココロコロン",
+        "コスプレックス",
+        "コスメティックロボット",
+        "こぶしファクトリー",
+        "ごまっとう",
+        "こんぺいとう",
+        "ザ・ポチ!",
+        "さくら学院",
+        "シェイプUPガールズ",
+        "シェキドル",
+        "しず風",
+        "シャニムニ＝パレード",
+        "シャワー",
+        "しゅごキャラエッグ!",
+        "しろもん",
+        "スターチスのラブレター",
+        "スターボー",
+        "スチームガールズ",
+        "すべての瞬間は君だった。",
+        "セイントフォー",
+        "せかいシティ",
+        "セブンティーンクラブ",
+        "ソフトクリーム",
+        "タイトル未定",
+        "たこやきレインボー",
+        "タンポポ",
+        "チェキッ娘",
+        "チェリーブロッサム",
+        "チャイルズ",
+        "チャオ ベッラ チンクエッティ",
+        "チョンマゲ娘",
+        "つばきファクトリー",
+        "ディア☆",
+        "テクプリ",
+        "てん・むす",
+        "てんとうむChu!",
+        "でんぱ組.inc",
+        "ともいき・木を植えたい",
+        "ドリームモーニング娘。",
+        "ナチュラルポイント",
+        "ナットウエンジェル",
+        "にっぽんワチャチャ",
+        "ニャンギラス",
+        "ねこまんまっ!! from お月ちゃんのうた",
+        "ねずみっ子クラブ",
+        "ノースリーブス",
+        "のんふぃく!",
+        "パイレーツ",
+        "はちみつロケット",
+        "ばってん少女隊",
+        "ばっぷる",
+        "ハニースパイスRe.",
+        "バニラビーンズ",
+        "パラディーク",
+        "ハロー!プロジェクトオールスターズ",
+        "バンドじゃないもん！MAXX NAKAYOSHI",
+        "パンプキン",
+        "ぴゅあふる",
+        "ファントムシータ",
+        "ブスっ子くらぶ",
+        "プッチモニ",
+        "プリンセス・プリンセス",
+        "フルーツ",
+        "フレンチ・キス",
+        "ベボガ!",
+        "ベリーズ",
+        "ぼくはまだしなない",
+        "ポピンズ",
+        "マジェスティックセブン",
+        "まなみのりさ",
+        "まニャン子クラブ",
+        "マヒマヒ",
+        "マボロシ可憐GeNE",
+        "まりもみ",
+        "ミームトーキョー",
+        "ミニスカート",
+        "みにちあ☆ベアーズ",
+        "ミニパティ",
+        "ミニハムず",
+        "ミニモニ。",
+        "メロン記念日",
+        "モエギノジノム",
+        "モーニング娘。",
+        "モーニング娘。さくら組",
+        "モーニング娘。誕生10年記念隊",
+        "ももいろクローバーZ",
+        "ヤなことそっとミュート",
+        "やまだかつてないWink",
+        "ゆいかおり",
+        "よしもとグラビアエージェンシー",
+        "よせなべトリオ",
+        "ラブ・クレッシェンド",
+        "ラフ×ラフ",
+        "リルネード",
+        "ロージークロニクル",
+        "わーすた",
+        "愛乙女★DOLL",
+        "安倍なつみ&矢島舞美（℃-ute）",
+        "奥澤村",
+        "横浜純情小町☆",
+        "音楽ガッタス",
+        "仮面女子",
+        "可憐Girl's",
+        "可憐なアイボリー",
+        "科学究明機構ロヂカ?",
+        "雅〜MIYABI〜",
+        "怪傑!トロピカル丸",
+        "開歌-かいか-",
+        "街角景気☆仮面女子↑",
+        "完熟娘。",
+        "恵比寿★マスカッツ",
+        "恵比寿マスカッツ",
+        "恵比寿マスカッツ1.5",
+        "月島きらり starring 久住小春 (モーニング娘。)",
+        "後浦なつみ",
+        "高嶺のなでしこ",
+        "黒BUTAオールスターズ",
+        "桜っ子クラブさくら組",
+        "私立恵比寿中学",
+        "七つ星",
+        "純情!トロピカル丸",
+        "純情のアフィリア",
+        "女猿",
+        "少女隊",
+        "神使轟く、激情の如く。",
+        "推定少女",
+        "制服向上委員会",
+        "青空のプラネタリウム",
+        "青山Rabness",
+        "青春!トロピカル丸",
+        "川崎純情小町☆",
+        "戦国アニマル極楽浄土",
+        "閃光プラネタゲート",
+        "全力少女R",
+        "太陽とシスコムーン",
+        "大阪パフォーマンスドール",
+        "中野風女シスターズ",
+        "超ときめき♡宣伝部",
+        "点染テンセイ少女。",
+        "都内某所",
+        "東京パフォーマンスドール",
+        "豆柴の大群",
+        "南青山少女歌劇団",
+        "虹のコンキスタドール",
+        "虹色幻想曲 〜プリズム・ファンタジア〜",
+        "日向坂46",
+        "乃木坂46",
+        "美少女か・ら・ふ・るギャング",
+        "美少女クラブ31",
+        "美勇伝",
+        "風男塾",
+        "僕が見たかった青空",
+        "妄想キャリブレーション",
+        "夜光性アミューズ",
+        "櫻坂46",
+        "殲滅のディストピア",
+        "CiON",
+        "22/7",
+        "Little Glee Monster",
+        "NEYM",
+        "Luce Twinkle Wink☆",
+        "Appare!",
+        "MISS MERCY"
+      ],
+      "aliases": {
+        "【eN】": [
+          "【eN】"
+        ],
+        "@onefive": [
+          "@onefive"
+        ],
+        "＃2i2": [
+          "＃2i2"
+        ],
+        "＃Mooove!": [
+          "＃Mooove!"
+        ],
+        "#ジューロック": [
+          "#ジューロック"
+        ],
+        "＃ババババンビ": [
+          "＃ババババンビ"
+        ],
+        "＃よーよーよー": [
+          "＃よーよーよー"
+        ],
+        "℃-ute": [
+          "℃-ute"
+        ],
+        "=LOVE": [
+          "=LOVE"
+        ],
+        "≠ME": [
+          "≠ME"
+        ],
+        "≒JOY": [
+          "≒JOY"
+        ],
+        "3B junior": [
+          "3B junior"
+        ],
+        "80 pan": [
+          "80 pan"
+        ],
+        "9nine": [
+          "9nine"
+        ],
+        "AdamLilith": [
+          "AdamLilith"
+        ],
+        "ael-アエル-": [
+          "ael-アエル-"
+        ],
+        "AeLL.": [
+          "AeLL."
+        ],
+        "AI-SACHI": [
+          "AI-SACHI"
+        ],
+        "AIKATSU☆STARS!": [
+          "AIKATSU☆STARS!"
+        ],
+        "AKB48": [
+          "AKB48"
+        ],
+        "AKBアイドリング!!!": [
+          "AKBアイドリング!!!"
+        ],
+        "AKIARIM": [
+          "AKIARIM"
+        ],
+        "AMEFURASSHI": [
+          "AMEFURASSHI"
+        ],
+        "Ange☆Reve": [
+          "Ange☆Reve"
+        ],
+        "AppleTale": [
+          "AppleTale"
+        ],
+        "ARCANA PROJECT": [
+          "ARCANA PROJECT"
+        ],
+        "ASP": [
+          "ASP"
+        ],
+        "Awww!": [
+          "Awww!"
+        ],
+        "AXELL": [
+          "AXELL"
+        ],
+        "B.B.WAVES": [
+          "B.B.WAVES"
+        ],
+        "B.O.L.T": [
+          "B.O.L.T"
+        ],
+        "B'dash": [
+          "B'dash"
+        ],
+        "BaBe": [
+          "BaBe"
+        ],
+        "BABY'S": [
+          "BABY'S"
+        ],
+        "BABYMETAL": [
+          "BABYMETAL"
+        ],
+        "BELLRING少女ハート": [
+          "BELLRING少女ハート"
+        ],
+        "Berryz工房": [
+          "Berryz工房"
+        ],
+        "BEYOOOOONDS": [
+          "BEYOOOOONDS"
+        ],
+        "BiS": [
+          "BiS"
+        ],
+        "BiSH": [
+          "BiSH"
+        ],
+        "BOYSTYLE": [
+          "BOYSTYLE"
+        ],
+        "bump.y": [
+          "bump.y"
+        ],
+        "Buono!": [
+          "Buono!"
+        ],
+        "Buzy": [
+          "Buzy"
+        ],
+        "BYOB": [
+          "BYOB"
+        ],
+        "C-ZONE": [
+          "C-ZONE"
+        ],
+        "C.C.ガールズ": [
+          "C.C.ガールズ"
+        ],
+        "CANDY TUNE": [
+          "CANDY TUNE"
+        ],
+        "Carezza": [
+          "Carezza"
+        ],
+        "CARRY LOOSE": [
+          "CARRY LOOSE"
+        ],
+        "chee's": [
+          "chee's"
+        ],
+        "Cheeky Parade": [
+          "Cheeky Parade"
+        ],
+        "ChocoLe": [
+          "ChocoLe"
+        ],
+        "Chocolove from AKB48": [
+          "Chocolove from AKB48"
+        ],
+        "choice?": [
+          "choice?"
+        ],
+        "Chu!☆Lips": [
+          "Chu!☆Lips"
+        ],
+        "Chu☆Oh!Dolly": [
+          "Chu☆Oh!Dolly"
+        ],
+        "CIRRA": [
+          "CIRRA"
+        ],
+        "CoCo": [
+          "CoCo"
+        ],
+        "COLOR": [
+          "COLOR"
+        ],
+        "cotton": [
+          "cotton"
+        ],
+        "CROWN POP": [
+          "CROWN POP"
+        ],
+        "CUTIE STREET": [
+          "CUTIE STREET"
+        ],
+        "CYNHN": [
+          "CYNHN"
+        ],
+        "D-Rive": [
+          "D-Rive"
+        ],
+        "D&D": [
+          "D&D"
+        ],
+        "DANCEROID": [
+          "DANCEROID"
+        ],
+        "DEF.DIVA": [
+          "DEF.DIVA"
+        ],
+        "DiVA": [
+          "DiVA"
+        ],
+        "Doll☆Elements": [
+          "Doll☆Elements"
+        ],
+        "DORA": [
+          "DORA"
+        ],
+        "Dream": [
+          "Dream"
+        ],
+        "Dream5": [
+          "Dream5"
+        ],
+        "E-girls": [
+          "E-girls"
+        ],
+        "Early Morning": [
+          "Early Morning"
+        ],
+        "EARTH": [
+          "EARTH"
+        ],
+        "EMPiRE": [
+          "EMPiRE"
+        ],
+        "ENGAG.ING": [
+          "ENGAG.ING"
+        ],
+        "EUPHORIA": [
+          "EUPHORIA"
+        ],
+        "ExWHYZ": [
+          "ExWHYZ"
+        ],
+        "f5ve": [
+          "f5ve"
+        ],
+        "fav me": [
+          "fav me"
+        ],
+        "Feam": [
+          "Feam"
+        ],
+        "Fine": [
+          "Fine"
+        ],
+        "Finger Runs": [
+          "Finger Runs"
+        ],
+        "fishbowl": [
+          "fishbowl"
+        ],
+        "FleuЯR": [
+          "FleuЯR"
+        ],
+        "FLIP-FLAP": [
+          "FLIP-FLAP"
+        ],
+        "Flower": [
+          "Flower"
+        ],
+        "Folder5": [
+          "Folder5"
+        ],
+        "FRUITS ZIPPER": [
+          "FRUITS ZIPPER"
+        ],
+        "GAM": [
+          "GAM"
+        ],
+        "GANG PARADE": [
+          "GANG PARADE"
+        ],
+        "Gatas Brilhantes H.P.": [
+          "Gatas Brilhantes H.P."
+        ],
+        "GEM": [
+          "GEM"
+        ],
+        "GEMS COMPANY": [
+          "GEMS COMPANY"
+        ],
+        "Girl's BOX": [
+          "Girl's BOX"
+        ],
+        "Girls²": [
+          "Girls²"
+        ],
+        "GO TO THE BEDS": [
+          "GO TO THE BEDS"
+        ],
+        "GO-BANG'S": [
+          "GO-BANG'S"
+        ],
+        "GPP": [
+          "GPP"
+        ],
+        "Gran☆Ciel": [
+          "Gran☆Ciel"
+        ],
+        "HANA": [
+          "HANA"
+        ],
+        "Happiness": [
+          "Happiness"
+        ],
+        "Hauptharmonie": [
+          "Hauptharmonie"
+        ],
+        "High-King": [
+          "High-King"
+        ],
+        "HINOIチーム": [
+          "HINOIチーム"
+        ],
+        "HiP": [
+          "HiP"
+        ],
+        "HKT48": [
+          "HKT48"
+        ],
+        "HOP CLUB": [
+          "HOP CLUB"
+        ],
+        "HOT DOG CAT": [
+          "HOT DOG CAT"
+        ],
+        "hy4_4yh": [
+          "hy4_4yh"
+        ],
+        "I'mew（あいみゅう）": [
+          "I'mew（あいみゅう）"
+        ],
+        "IDOLATER": [
+          "IDOLATER"
+        ],
+        "iLiFE!": [
+          "iLiFE!"
+        ],
+        "Ill": [
+          "Ill"
+        ],
+        "IS:SUE": [
+          "IS:SUE"
+        ],
+        "iScream": [
+          "iScream"
+        ],
+        "iSPY": [
+          "iSPY"
+        ],
+        "iTRiP": [
+          "iTRiP"
+        ],
+        "JamsCollection": [
+          "JamsCollection"
+        ],
+        "JAPANARIZM": [
+          "JAPANARIZM"
+        ],
+        "JBエンジェルス": [
+          "JBエンジェルス"
+        ],
+        "Jewel☆Neige": [
+          "Jewel☆Neige"
+        ],
+        "Jewel☆Rouge": [
+          "Jewel☆Rouge"
+        ],
+        "JK21": [
+          "JK21"
+        ],
+        "Juice=Juice": [
+          "Juice=Juice"
+        ],
+        "KAGAJO☆4S": [
+          "KAGAJO☆4S"
+        ],
+        "KEY WEST CLUB": [
+          "KEY WEST CLUB"
+        ],
+        "KiSS KiSS": [
+          "KiSS KiSS"
+        ],
+        "KissBee": [
+          "KissBee"
+        ],
+        "KissBeeWEST": [
+          "KissBeeWEST"
+        ],
+        "Kolokol": [
+          "Kolokol"
+        ],
+        "Laki": [
+          "Laki"
+        ],
+        "log you": [
+          "log you"
+        ],
+        "LumiUnion": [
+          "LumiUnion"
+        ],
+        "Ma'Scar'Piece": [
+          "Ma'Scar'Piece"
+        ],
+        "MAD MEDiCiNE": [
+          "MAD MEDiCiNE"
+        ],
+        "Maison book girl": [
+          "Maison book girl"
+        ],
+        "MAPA": [
+          "MAPA"
+        ],
+        "MarryDoll": [
+          "MarryDoll"
+        ],
+        "Mary Angel": [
+          "Mary Angel"
+        ],
+        "MAX": [
+          "MAX"
+        ],
+        "ME:I": [
+          "ME:I"
+        ],
+        "Melody": [
+          "Melody"
+        ],
+        "Merry BAD TUNE.": [
+          "Merry BAD TUNE."
+        ],
+        "METAMO": [
+          "METAMO"
+        ],
+        "Mi LUNA from お月ちゃんのうた": [
+          "Mi LUNA from お月ちゃんのうた"
+        ],
+        "Mi-Ke": [
+          "Mi-Ke"
+        ],
+        "Mia REGINA": [
+          "Mia REGINA"
+        ],
+        "MIGMA SHELTER": [
+          "MIGMA SHELTER"
+        ],
+        "MilkyWay": [
+          "MilkyWay"
+        ],
+        "MISSION": [
+          "MISSION"
+        ],
+        "MOMO": [
+          "MOMO"
+        ],
+        "momonaki": [
+          "momonaki"
+        ],
+        "MORE STAR": [
+          "MORE STAR"
+        ],
+        "MyDearDarlin'": [
+          "MyDearDarlin'"
+        ],
+        "NANIMONO": [
+          "NANIMONO"
+        ],
+        "Negicco": [
+          "Negicco"
+        ],
+        "NEOかしまし娘": [
+          "NEOかしまし娘"
+        ],
+        "NEOちゃっきり娘": [
+          "NEOちゃっきり娘"
+        ],
+        "NGT48": [
+          "NGT48"
+        ],
+        "NightOwl": [
+          "NightOwl"
+        ],
+        "NILKLY": [
+          "NILKLY"
+        ],
+        "NiziU": [
+          "NiziU"
+        ],
+        "NMB48": [
+          "NMB48"
+        ],
+        "NO NAME": [
+          "NO NAME"
+        ],
+        "Not yet": [
+          "Not yet"
+        ],
+        "OCHA NORMA": [
+          "OCHA NORMA"
+        ],
+        "Osaka翔Gangs": [
+          "Osaka翔Gangs"
+        ],
+        "Pabo": [
+          "Pabo"
+        ],
+        "PANDAMIC": [
+          "PANDAMIC"
+        ],
+        "PARADISE GO!! GO!!": [
+          "PARADISE GO!! GO!!"
+        ],
+        "PARADISES": [
+          "PARADISES"
+        ],
+        "PassCode": [
+          "PassCode"
+        ],
+        "PASSPO☆": [
+          "PASSPO☆"
+        ],
+        "Peachy's": [
+          "Peachy's"
+        ],
+        "Peel the Apple": [
+          "Peel the Apple"
+        ],
+        "Perfume": [
+          "Perfume"
+        ],
+        "PIGGS": [
+          "PIGGS"
+        ],
+        "Pinkish": [
+          "Pinkish"
+        ],
+        "PLIME": [
+          "PLIME"
+        ],
+        "PRIKIL": [
+          "PRIKIL"
+        ],
+        "Qlair": [
+          "Qlair"
+        ],
+        "Qnto syrup": [
+          "Qnto syrup"
+        ],
+        "Queen & Elizabeth": [
+          "Queen & Elizabeth"
+        ],
+        "R.C.T.": [
+          "R.C.T."
+        ],
+        "Rain Tree": [
+          "Rain Tree"
+        ],
+        "RE-GE": [
+          "RE-GE"
+        ],
+        "route0": [
+          "route0"
+        ],
+        "RuRian": [
+          "RuRian"
+        ],
+        "S★スパイシー": [
+          "S★スパイシー"
+        ],
+        "Say a Little Prayer": [
+          "Say a Little Prayer"
+        ],
+        "SAY-LA": [
+          "SAY-LA"
+        ],
+        "SDN48": [
+          "SDN48"
+        ],
+        "SHAKE": [
+          "SHAKE"
+        ],
+        "SHOW-YA": [
+          "SHOW-YA"
+        ],
+        "SI☆NA": [
+          "SI☆NA"
+        ],
+        "SiAM&POPTUNe": [
+          "SiAM&POPTUNe"
+        ],
+        "SKE48": [
+          "SKE48"
+        ],
+        "sora tob sakana": [
+          "sora tob sakana"
+        ],
+        "SPEED": [
+          "SPEED"
+        ],
+        "SPLASH": [
+          "SPLASH"
+        ],
+        "Springs": [
+          "Springs"
+        ],
+        "STAiNY": [
+          "STAiNY"
+        ],
+        "STAR☆ANIS": [
+          "STAR☆ANIS"
+        ],
+        "Starmarie": [
+          "Starmarie"
+        ],
+        "Stella☆Beats": [
+          "Stella☆Beats"
+        ],
+        "Straight Angeli": [
+          "Straight Angeli"
+        ],
+        "STU48": [
+          "STU48"
+        ],
+        "Sugar": [
+          "Sugar"
+        ],
+        "SUPER MONKEY'S": [
+          "SUPER MONKEY'S"
+        ],
+        "SUPER☆GiRLS": [
+          "SUPER☆GiRLS"
+        ],
+        "Suppli Mode": [
+          "Suppli Mode"
+        ],
+        "Survive-ZERO": [
+          "Survive-ZERO"
+        ],
+        "SWEET STEADY": [
+          "SWEET STEADY"
+        ],
+        "SweetS": [
+          "SweetS"
+        ],
+        "T-BACKS": [
+          "T-BACKS"
+        ],
+        "Tan.San.Sui.": [
+          "Tan.San.Sui."
+        ],
+        "TEAM SHACHI": [
+          "TEAM SHACHI"
+        ],
+        "TENRIN": [
+          "TENRIN"
+        ],
+        "THE HOOPERS": [
+          "THE HOOPERS"
+        ],
+        "There There Theres": [
+          "There There Theres"
+        ],
+        "Toi Toi Toi": [
+          "Toi Toi Toi"
+        ],
+        "Tomato n' Pine": [
+          "Tomato n' Pine"
+        ],
+        "Twinklestars": [
+          "Twinklestars"
+        ],
+        "ukka": [
+          "ukka"
+        ],
+        "UPローチ": [
+          "UPローチ"
+        ],
+        "VENUS": [
+          "VENUS"
+        ],
+        "W": [
+          "W"
+        ],
+        "W∞アンナ": [
+          "W∞アンナ"
+        ],
+        "WAgg": [
+          "WAgg"
+        ],
+        "WHITE SCORPION": [
+          "WHITE SCORPION"
+        ],
+        "Whiteberry": [
+          "Whiteberry"
+        ],
+        "WILL-O'": [
+          "WILL-O'"
+        ],
+        "Wink": [
+          "Wink"
+        ],
+        "XG": [
+          "XG"
+        ],
+        "yosugala": [
+          "yosugala"
+        ],
+        "YURIMARI": [
+          "YURIMARI"
+        ],
+        "Z-1": [
+          "Z-1"
+        ],
+        "ZOC": [
+          "ZOC"
+        ],
+        "ZONE": [
+          "ZONE"
+        ],
+        "ZYX": [
+          "ZYX"
+        ],
+        "あぁ!": [
+          "あぁ!"
+        ],
+        "アーマーガールズ": [
+          "アーマーガールズ"
+        ],
+        "アイスクリーム夢少女": [
+          "アイスクリーム夢少女"
+        ],
+        "アイドリング!!!": [
+          "アイドリング!!!"
+        ],
+        "アイドルカレッジ": [
+          "アイドルカレッジ"
+        ],
+        "アイドル教室": [
+          "アイドル教室"
+        ],
+        "アイドル夢工場": [
+          "アイドル夢工場"
+        ],
+        "アイドル妖怪カワユシ": [
+          "アイドル妖怪カワユシ"
+        ],
+        "アイリーン&エリカ": [
+          "アイリーン&エリカ"
+        ],
+        "あかなぎ": [
+          "あかなぎ"
+        ],
+        "アキシブproject": [
+          "アキシブproject"
+        ],
+        "アップアップガールズ（仮）": [
+          "アップアップガールズ（仮）"
+        ],
+        "アテナ&ロビケロッツ": [
+          "アテナ&ロビケロッツ"
+        ],
+        "あみん": [
+          "あみん"
+        ],
+        "あややムwithエコハムず": [
+          "あややムwithエコハムず"
+        ],
+        "アリス十番": [
+          "アリス十番"
+        ],
+        "アンジュルム": [
+          "アンジュルム"
+        ],
+        "いぎなり東北産": [
+          "いぎなり東北産"
+        ],
+        "うしろゆびさされ組": [
+          "うしろゆびさされ組"
+        ],
+        "うしろ髪ひかれ隊": [
+          "うしろ髪ひかれ隊"
+        ],
+        "エコモニ。": [
+          "エコモニ。"
+        ],
+        "えぬえむとぅけ": [
+          "えぬえむとぅけ"
+        ],
+        "エンジェルス": [
+          "エンジェルス"
+        ],
+        "おかわりシスターズ": [
+          "おかわりシスターズ"
+        ],
+        "オトメ☆コーポレーション": [
+          "オトメ☆コーポレーション"
+        ],
+        "オナッターズ": [
+          "オナッターズ"
+        ],
+        "おニャン子クラブ": [
+          "おニャン子クラブ"
+        ],
+        "オレンジ・シスターズ": [
+          "オレンジ・シスターズ"
+        ],
+        "ガーディアンズ4": [
+          "ガーディアンズ4"
+        ],
+        "カミングフレーバー": [
+          "カミングフレーバー"
+        ],
+        "カレッジ・コスモス": [
+          "カレッジ・コスモス"
+        ],
+        "カントリー・ガールズ": [
+          "カントリー・ガールズ"
+        ],
+        "カントリー娘。": [
+          "カントリー娘。"
+        ],
+        "キッスの世界": [
+          "キッスの世界"
+        ],
+        "キャナァーリ倶楽部": [
+          "キャナァーリ倶楽部"
+        ],
+        "キャプテン": [
+          "キャプテン"
+        ],
+        "キャラメル☆リボン": [
+          "キャラメル☆リボン"
+        ],
+        "きゃんきゃん": [
+          "きゃんきゃん"
+        ],
+        "キャンパスナイターズ": [
+          "キャンパスナイターズ"
+        ],
+        "きら☆ぴか": [
+          "きら☆ぴか"
+        ],
+        "キララとウララ": [
+          "キララとウララ"
+        ],
+        "ギリギリガールズ": [
+          "ギリギリガールズ"
+        ],
+        "グーグールル": [
+          "グーグールル"
+        ],
+        "クマリデパート": [
+          "クマリデパート"
+        ],
+        "クラッシュギャルズ": [
+          "クラッシュギャルズ"
+        ],
+        "クリィミー♥パフェ": [
+          "クリィミー♥パフェ"
+        ],
+        "クリマカーユ": [
+          "クリマカーユ"
+        ],
+        "クロスノエシス": [
+          "クロスノエシス"
+        ],
+        "ココナッツ娘。": [
+          "ココナッツ娘。"
+        ],
+        "ココロコロン": [
+          "ココロコロン"
+        ],
+        "コスプレックス": [
+          "コスプレックス"
+        ],
+        "コスメティックロボット": [
+          "コスメティックロボット"
+        ],
+        "こぶしファクトリー": [
+          "こぶしファクトリー"
+        ],
+        "ごまっとう": [
+          "ごまっとう"
+        ],
+        "こんぺいとう": [
+          "こんぺいとう"
+        ],
+        "ザ・ポチ!": [
+          "ザ・ポチ!"
+        ],
+        "さくら学院": [
+          "さくら学院"
+        ],
+        "シェイプUPガールズ": [
+          "シェイプUPガールズ"
+        ],
+        "シェキドル": [
+          "シェキドル"
+        ],
+        "しず風": [
+          "しず風"
+        ],
+        "シャニムニ＝パレード": [
+          "シャニムニ＝パレード"
+        ],
+        "シャワー": [
+          "シャワー"
+        ],
+        "しゅごキャラエッグ!": [
+          "しゅごキャラエッグ!"
+        ],
+        "しろもん": [
+          "しろもん"
+        ],
+        "スターチスのラブレター": [
+          "スターチスのラブレター"
+        ],
+        "スターボー": [
+          "スターボー"
+        ],
+        "スチームガールズ": [
+          "スチームガールズ"
+        ],
+        "すべての瞬間は君だった。": [
+          "すべての瞬間は君だった。"
+        ],
+        "セイントフォー": [
+          "セイントフォー"
+        ],
+        "せかいシティ": [
+          "せかいシティ"
+        ],
+        "セブンティーンクラブ": [
+          "セブンティーンクラブ"
+        ],
+        "ソフトクリーム": [
+          "ソフトクリーム"
+        ],
+        "タイトル未定": [
+          "タイトル未定"
+        ],
+        "たこやきレインボー": [
+          "たこやきレインボー"
+        ],
+        "タンポポ": [
+          "タンポポ"
+        ],
+        "チェキッ娘": [
+          "チェキッ娘"
+        ],
+        "チェリーブロッサム": [
+          "チェリーブロッサム"
+        ],
+        "チャイルズ": [
+          "チャイルズ"
+        ],
+        "チャオ ベッラ チンクエッティ": [
+          "チャオ ベッラ チンクエッティ"
+        ],
+        "チョンマゲ娘": [
+          "チョンマゲ娘"
+        ],
+        "つばきファクトリー": [
+          "つばきファクトリー"
+        ],
+        "ディア☆": [
+          "ディア☆"
+        ],
+        "テクプリ": [
+          "テクプリ"
+        ],
+        "てん・むす": [
+          "てん・むす"
+        ],
+        "てんとうむChu!": [
+          "てんとうむChu!"
+        ],
+        "でんぱ組.inc": [
+          "でんぱ組.inc"
+        ],
+        "ともいき・木を植えたい": [
+          "ともいき・木を植えたい"
+        ],
+        "ドリームモーニング娘。": [
+          "ドリームモーニング娘。"
+        ],
+        "ナチュラルポイント": [
+          "ナチュラルポイント"
+        ],
+        "ナットウエンジェル": [
+          "ナットウエンジェル"
+        ],
+        "にっぽんワチャチャ": [
+          "にっぽんワチャチャ"
+        ],
+        "ニャンギラス": [
+          "ニャンギラス"
+        ],
+        "ねこまんまっ!! from お月ちゃんのうた": [
+          "ねこまんまっ!! from お月ちゃんのうた"
+        ],
+        "ねずみっ子クラブ": [
+          "ねずみっ子クラブ"
+        ],
+        "ノースリーブス": [
+          "ノースリーブス"
+        ],
+        "のんふぃく!": [
+          "のんふぃく!"
+        ],
+        "パイレーツ": [
+          "パイレーツ"
+        ],
+        "はちみつロケット": [
+          "はちみつロケット"
+        ],
+        "ばってん少女隊": [
+          "ばってん少女隊"
+        ],
+        "ばっぷる": [
+          "ばっぷる"
+        ],
+        "ハニースパイスRe.": [
+          "ハニースパイスRe."
+        ],
+        "バニラビーンズ": [
+          "バニラビーンズ"
+        ],
+        "パラディーク": [
+          "パラディーク"
+        ],
+        "ハロー!プロジェクトオールスターズ": [
+          "ハロー!プロジェクトオールスターズ"
+        ],
+        "バンドじゃないもん！MAXX NAKAYOSHI": [
+          "バンドじゃないもん！MAXX NAKAYOSHI"
+        ],
+        "パンプキン": [
+          "パンプキン"
+        ],
+        "ぴゅあふる": [
+          "ぴゅあふる"
+        ],
+        "ファントムシータ": [
+          "ファントムシータ"
+        ],
+        "ブスっ子くらぶ": [
+          "ブスっ子くらぶ"
+        ],
+        "プッチモニ": [
+          "プッチモニ"
+        ],
+        "プリンセス・プリンセス": [
+          "プリンセス・プリンセス"
+        ],
+        "フルーツ": [
+          "フルーツ"
+        ],
+        "フレンチ・キス": [
+          "フレンチ・キス"
+        ],
+        "ベボガ!": [
+          "ベボガ!"
+        ],
+        "ベリーズ": [
+          "ベリーズ"
+        ],
+        "ぼくはまだしなない": [
+          "ぼくはまだしなない"
+        ],
+        "ポピンズ": [
+          "ポピンズ"
+        ],
+        "マジェスティックセブン": [
+          "マジェスティックセブン"
+        ],
+        "まなみのりさ": [
+          "まなみのりさ"
+        ],
+        "まニャン子クラブ": [
+          "まニャン子クラブ"
+        ],
+        "マヒマヒ": [
+          "マヒマヒ"
+        ],
+        "マボロシ可憐GeNE": [
+          "マボロシ可憐GeNE"
+        ],
+        "まりもみ": [
+          "まりもみ"
+        ],
+        "ミームトーキョー": [
+          "ミームトーキョー"
+        ],
+        "ミニスカート": [
+          "ミニスカート"
+        ],
+        "みにちあ☆ベアーズ": [
+          "みにちあ☆ベアーズ"
+        ],
+        "ミニパティ": [
+          "ミニパティ"
+        ],
+        "ミニハムず": [
+          "ミニハムず"
+        ],
+        "ミニモニ。": [
+          "ミニモニ。"
+        ],
+        "メロン記念日": [
+          "メロン記念日"
+        ],
+        "モエギノジノム": [
+          "モエギノジノム"
+        ],
+        "モーニング娘。": [
+          "モーニング娘。",
+          "モーニング娘。'24",
+          "モーニング娘。'25",
+          "モーニング娘。'26"
+        ],
+        "モーニング娘。さくら組": [
+          "モーニング娘。さくら組"
+        ],
+        "モーニング娘。誕生10年記念隊": [
+          "モーニング娘。誕生10年記念隊"
+        ],
+        "ももいろクローバーZ": [
+          "ももいろクローバーZ"
+        ],
+        "ヤなことそっとミュート": [
+          "ヤなことそっとミュート"
+        ],
+        "やまだかつてないWink": [
+          "やまだかつてないWink"
+        ],
+        "ゆいかおり": [
+          "ゆいかおり"
+        ],
+        "よしもとグラビアエージェンシー": [
+          "よしもとグラビアエージェンシー"
+        ],
+        "よせなべトリオ": [
+          "よせなべトリオ"
+        ],
+        "ラブ・クレッシェンド": [
+          "ラブ・クレッシェンド"
+        ],
+        "ラフ×ラフ": [
+          "ラフ×ラフ"
+        ],
+        "リルネード": [
+          "リルネード"
+        ],
+        "ロージークロニクル": [
+          "ロージークロニクル"
+        ],
+        "わーすた": [
+          "わーすた"
+        ],
+        "愛乙女★DOLL": [
+          "愛乙女★DOLL"
+        ],
+        "安倍なつみ&矢島舞美（℃-ute）": [
+          "安倍なつみ&矢島舞美（℃-ute）"
+        ],
+        "奥澤村": [
+          "奥澤村"
+        ],
+        "横浜純情小町☆": [
+          "横浜純情小町☆"
+        ],
+        "音楽ガッタス": [
+          "音楽ガッタス"
+        ],
+        "仮面女子": [
+          "仮面女子"
+        ],
+        "可憐Girl's": [
+          "可憐Girl's"
+        ],
+        "可憐なアイボリー": [
+          "可憐なアイボリー"
+        ],
+        "科学究明機構ロヂカ?": [
+          "科学究明機構ロヂカ?"
+        ],
+        "雅〜MIYABI〜": [
+          "雅〜MIYABI〜"
+        ],
+        "怪傑!トロピカル丸": [
+          "怪傑!トロピカル丸"
+        ],
+        "開歌-かいか-": [
+          "開歌-かいか-"
+        ],
+        "街角景気☆仮面女子↑": [
+          "街角景気☆仮面女子↑"
+        ],
+        "完熟娘。": [
+          "完熟娘。"
+        ],
+        "恵比寿★マスカッツ": [
+          "恵比寿★マスカッツ"
+        ],
+        "恵比寿マスカッツ": [
+          "恵比寿マスカッツ"
+        ],
+        "恵比寿マスカッツ1.5": [
+          "恵比寿マスカッツ1.5"
+        ],
+        "月島きらり starring 久住小春 (モーニング娘。)": [
+          "月島きらり starring 久住小春 (モーニング娘。)"
+        ],
+        "後浦なつみ": [
+          "後浦なつみ"
+        ],
+        "高嶺のなでしこ": [
+          "高嶺のなでしこ"
+        ],
+        "黒BUTAオールスターズ": [
+          "黒BUTAオールスターズ"
+        ],
+        "桜っ子クラブさくら組": [
+          "桜っ子クラブさくら組"
+        ],
+        "私立恵比寿中学": [
+          "私立恵比寿中学"
+        ],
+        "七つ星": [
+          "七つ星"
+        ],
+        "純情!トロピカル丸": [
+          "純情!トロピカル丸"
+        ],
+        "純情のアフィリア": [
+          "純情のアフィリア"
+        ],
+        "女猿": [
+          "女猿"
+        ],
+        "少女隊": [
+          "少女隊"
+        ],
+        "神使轟く、激情の如く。": [
+          "神使轟く、激情の如く。"
+        ],
+        "推定少女": [
+          "推定少女"
+        ],
+        "制服向上委員会": [
+          "制服向上委員会"
+        ],
+        "青空のプラネタリウム": [
+          "青空のプラネタリウム"
+        ],
+        "青山Rabness": [
+          "青山Rabness"
+        ],
+        "青春!トロピカル丸": [
+          "青春!トロピカル丸"
+        ],
+        "川崎純情小町☆": [
+          "川崎純情小町☆"
+        ],
+        "戦国アニマル極楽浄土": [
+          "戦国アニマル極楽浄土"
+        ],
+        "閃光プラネタゲート": [
+          "閃光プラネタゲート"
+        ],
+        "全力少女R": [
+          "全力少女R"
+        ],
+        "太陽とシスコムーン": [
+          "太陽とシスコムーン"
+        ],
+        "大阪パフォーマンスドール": [
+          "大阪パフォーマンスドール"
+        ],
+        "中野風女シスターズ": [
+          "中野風女シスターズ"
+        ],
+        "超ときめき♡宣伝部": [
+          "超ときめき♡宣伝部",
+          "超ときめき(ハート)宣伝部"
+        ],
+        "点染テンセイ少女。": [
+          "点染テンセイ少女。"
+        ],
+        "都内某所": [
+          "都内某所"
+        ],
+        "東京パフォーマンスドール": [
+          "東京パフォーマンスドール"
+        ],
+        "豆柴の大群": [
+          "豆柴の大群"
+        ],
+        "南青山少女歌劇団": [
+          "南青山少女歌劇団"
+        ],
+        "虹のコンキスタドール": [
+          "虹のコンキスタドール"
+        ],
+        "虹色幻想曲 〜プリズム・ファンタジア〜": [
+          "虹色幻想曲 〜プリズム・ファンタジア〜"
+        ],
+        "日向坂46": [
+          "日向坂46",
+          "けやき坂46"
+        ],
+        "乃木坂46": [
+          "乃木坂46"
+        ],
+        "美少女か・ら・ふ・るギャング": [
+          "美少女か・ら・ふ・るギャング"
+        ],
+        "美少女クラブ31": [
+          "美少女クラブ31"
+        ],
+        "美勇伝": [
+          "美勇伝"
+        ],
+        "風男塾": [
+          "風男塾"
+        ],
+        "僕が見たかった青空": [
+          "僕が見たかった青空"
+        ],
+        "妄想キャリブレーション": [
+          "妄想キャリブレーション"
+        ],
+        "夜光性アミューズ": [
+          "夜光性アミューズ"
+        ],
+        "櫻坂46": [
+          "櫻坂46",
+          "欅坂46"
+        ],
+        "殲滅のディストピア": [
+          "殲滅のディストピア"
+        ],
+        "CiON": [
+          "CiON"
+        ],
+        "22/7": [
+          "22/7"
+        ],
+        "Little Glee Monster": [
+          "Little Glee Monster"
+        ],
+        "NEYM": [
+          "NEYM"
+        ],
+        "Luce Twinkle Wink☆": [
+          "Luce Twinkle Wink☆"
+        ],
+        "Appare!": [
+          "Appare!"
+        ],
+        "MISS MERCY": [
+          "MISS MERCY"
+        ]
+      }
+    },
+    "korean": {
+      "artists": [
+        "SUPER JUNIOR",
+        "Brown Eyed Girls",
+        "BIGBANG",
+        "KARA",
+        "FTISLAND",
+        "少女時代",
+        "Sunny Hill",
+        "SUPERNOVA",
+        "DAVICHI",
+        "SHINee",
+        "2AM",
+        "U-KISS",
+        "2PM",
+        "2NE1",
+        "T-ARA",
+        "HIGHLIGHT",
+        "F.CUZ",
+        "CNBLUE",
+        "大国男児",
+        "INFINITE",
+        "TEEN TOP",
+        "BBGIRLS",
+        "Block B",
+        "Apink",
+        "B1A4",
+        "BF",
+        "JYJ",
+        "MYNAME",
+        "EXID",
+        "BTOB",
+        "EXO",
+        "VIXX",
+        "Flashe",
+        "AOA",
+        "FIESTAR",
+        "24K",
+        "BTS",
+        "GOT7",
+        "JJCC",
+        "BADKIZ",
+        "AKMU",
+        "MAMAMOO",
+        "BIGFLO",
+        "HALO",
+        "Red Velvet",
+        "WINNER",
+        "UNIQ",
+        "purfles",
+        "GFRIEND",
+        "OH MY GIRL",
+        "ROMEO",
+        "MONSTA X",
+        "N.Flying",
+        "SEVENTEEN",
+        "Bambino",
+        "DAY6",
+        "UP10TION",
+        "iKON",
+        "TWICE",
+        "VAV",
+        "MAP6",
+        "SNUPER",
+        "ASTRO",
+        "VOISPER",
+        "宇宙少女",
+        "KNK",
+        "NCT",
+        "A.DE",
+        "VROMANCE",
+        "KARD",
+        "BLACKPINK",
+        "SF9",
+        "PENTAGON",
+        "VICTON",
+        "MOMOLAND",
+        "Dreamcatcher",
+        "A.C.E",
+        "ALICE",
+        "FAVORITE",
+        "ONF",
+        "The Rose",
+        "Golden Child",
+        "IZ",
+        "HASHTAG",
+        "HI CUTIE",
+        "SKYE",
+        "BUSTERS",
+        "fromis_9",
+        "TARGET",
+        "Stray Kids",
+        "NOIR",
+        "i-dle",
+        "SATURDAY",
+        "今月の少女",
+        "ALiKE",
+        "THE MAN BLK",
+        "LST",
+        "Maywish",
+        "ATEEZ",
+        "JBJ95",
+        "M.O.N.T",
+        "ONEUS",
+        "VERIVERY",
+        "MustB",
+        "AWEEK",
+        "ITZY",
+        "VANNER",
+        "The Pink Lady",
+        "TOMORROW X TOGETHER",
+        "TRIGER",
+        "The T-Bird",
+        "EVERGLOW",
+        "Girl Crush",
+        "PEACE",
+        "Newkidd",
+        "ONEWE",
+        "3YE",
+        "AB6IX",
+        "OnlyOneOf",
+        "BZ-BOYS",
+        "CIX",
+        "FANATICS",
+        "TEEN TEEN",
+        "SuperM",
+        "ARIAZ",
+        "DKB",
+        "UNVS",
+        "XENEX",
+        "MCND",
+        "CRAXY",
+        "CRAVITY",
+        "H&D",
+        "LUCY",
+        "WOOAH",
+        "SECRET NUMBER",
+        "E'LAST",
+        "MAKAMAKA",
+        "TREASURE",
+        "GHOST9",
+        "PRECIOUS",
+        "WEi",
+        "BLACKSWAN",
+        "Asome.D",
+        "DRIPPIN",
+        "P1Harmony",
+        "STAYC",
+        "aespa",
+        "withus",
+        "ENHYPEN",
+        "Rolling Quartz",
+        "TRI.BE",
+        "KINGDOM",
+        "ATO6",
+        "PIXY",
+        "WOW",
+        "NTX",
+        "W.A.O",
+        "BLITZERS",
+        "EPEX",
+        "LIGHTSUM",
+        "JUST B",
+        "OMEGA X",
+        "SKYLE",
+        "PoshGirls",
+        "PRITTI-G",
+        "Ferry Blue",
+        "ICHILLIN'",
+        "MEGAMAX",
+        "Billlie",
+        "IVE",
+        "Xdinary Heroes",
+        "Rocking Doll",
+        "Kep1er",
+        "H1-KEY",
+        "TRENDZ",
+        "VIVIZ",
+        "NMIXX",
+        "BLACK LEVEL",
+        "TEMPEST",
+        "NINE.i",
+        "ILY:1",
+        "YOUNITE",
+        "LE SSERAFIM",
+        "PRIKIL",
+        "CLASS:y",
+        "TNX",
+        "BLANK2Y",
+        "Lapillus",
+        "Girl's World",
+        "IRRIS",
+        "NewJeans",
+        "CSR",
+        "We;Na",
+        "PATTERN",
+        "ABLUE",
+        "Queenz Eye",
+        "ARTBEAT v",
+        "AIMERS",
+        "FIFTY FIFTY",
+        "WeNU",
+        "&TEAM",
+        "PRIMROSE",
+        "MAVE:",
+        "8TURN",
+        "tripleS",
+        "MADEIN",
+        "HAWW",
+        "xikers",
+        "WE US",
+        "X:IN",
+        "VI'ENX",
+        "XODIAC",
+        "CMDM",
+        "ADYA",
+        "(M)IRROR",
+        "The Wind",
+        "BOYNEXTDOOR",
+        "LUN8",
+        "Bunny.T",
+        "KISS OF LIFE",
+        "ZEROBASEONE",
+        "SEVENUS",
+        "n.SSign",
+        "PLAN B",
+        "RIIZE",
+        "EL7Z UP",
+        "Loossemble",
+        "EVNNE",
+        "FANTASY BOYS",
+        "POW",
+        "82MAJOR",
+        "YOUNG POSSE",
+        "QWER",
+        "Catch The Young",
+        "eite",
+        "WHIB",
+        "AMPERS&ONE",
+        "EASTSHINE",
+        "BABYMONSTER",
+        "ONE PACT",
+        "Geenius",
+        "WAKER",
+        "ALL(H)OURS",
+        "DXMON",
+        "TWS",
+        "NCT WISH",
+        "NOMAD",
+        "ILLIT",
+        "RESCENE",
+        "UNIS",
+        "Candy Shop",
+        "VVUP",
+        "NOWZ",
+        "SPIA",
+        "NCHIVE",
+        "UNICODE",
+        "BEWAVE",
+        "Big Ocean",
+        "TIOT",
+        "ANEX",
+        "DAYCHILD",
+        "ASC2NT",
+        "For The More",
+        "NEXZ",
+        "B-OURS",
+        "WATERFIRE",
+        "ARTMS",
+        "BADVILLAIN",
+        "I:MOND",
+        "B.D.U",
+        "DIGNITY",
+        "3piece",
+        "MEOVV",
+        "DRAGON PONY",
+        "SAY MY NAME",
+        "TRY1",
+        "ODD YOUTH",
+        "tracer",
+        "LOVEONE",
+        "izna",
+        "A2O MAY",
+        "XLOV",
+        "Kandis",
+        "KickFlip",
+        "Element",
+        "AWIN",
+        "Hearts2Hearts",
+        "NouerA",
+        "3WAY",
+        "IN A MINUTE",
+        "KiiiKiii",
+        "NEWBEAT",
+        "M.prism",
+        "CLOSE YOUR EYES",
+        "ifeye",
+        "cosmosy",
+        "SW：C",
+        "VVS",
+        "BURVEY",
+        "HITGS",
+        "UDTT",
+        "ablume",
+        "SMORZ",
+        "POLARIX",
+        "KIIRAS",
+        "I1IT",
+        "USPEER",
+        "Double 0ne",
+        "BE BOYS",
+        "Baby DONT Cry",
+        "ALLDAY PROJECT",
+        "AHOF",
+        "CRAZANGEL",
+        "1VERSE",
+        "SEVENTOEIGHT",
+        "N.TOP",
+        "idntt",
+        "AtHeart",
+        "CORTIS",
+        "iii",
+        "AxMxP",
+        "IDID",
+        "NWH:I",
+        "AM8IC",
+        "THE SSYNDROME",
+        "LATENCY",
+        "ALPHA DRIVE ONE",
+        "LNGSHOT",
+        "NAVILLERA",
+        "DAILY:DIRECTION",
+        "CHASER",
+        "WEZAG",
+        "TUNEXX",
+        "S2iT",
+        "STRITZ",
+        "NXMERCY",
+        "AmbiO",
+        "KEYVITUP",
+        "MODYSSEY",
+        "ARISE",
+        "UNCHILD",
+        "GENUS",
+        "NAZE",
+        "YUHZ",
+        "FLARE U",
+        "FRAME THE X",
+        "AND2BLE",
+        "H//PE Princess",
+        "Heart Of Woman",
+        "Keyveatz",
+        "ASCENDER",
+        "VAY ONN",
+        "EMOTI:M",
+        "AEN",
+        "WAYF BOYS",
+        "OURBIRTHDAY",
+        "TUIDE",
+        "A2O LITE",
+        "MISAMO"
+      ],
+      "aliases": {
+        "SUPER JUNIOR": [
+          "SUPER JUNIOR",
+          "Super Junior"
+        ],
+        "Brown Eyed Girls": [
+          "Brown Eyed Girls"
+        ],
+        "BIGBANG": [
+          "BIGBANG"
+        ],
+        "KARA": [
+          "KARA"
+        ],
+        "FTISLAND": [
+          "FTISLAND"
+        ],
+        "少女時代": [
+          "少女時代",
+          "Girls’ Generation",
+          "Girls' Generation",
+          "Girls Generation",
+          "SNSD"
+        ],
+        "Sunny Hill": [
+          "Sunny Hill"
+        ],
+        "SUPERNOVA": [
+          "SUPERNOVA",
+          "超新星"
+        ],
+        "DAVICHI": [
+          "DAVICHI"
+        ],
+        "SHINee": [
+          "SHINee"
+        ],
+        "2AM": [
+          "2AM"
+        ],
+        "U-KISS": [
+          "U-KISS"
+        ],
+        "2PM": [
+          "2PM"
+        ],
+        "2NE1": [
+          "2NE1"
+        ],
+        "T-ARA": [
+          "T-ARA"
+        ],
+        "HIGHLIGHT": [
+          "HIGHLIGHT",
+          "BEAST"
+        ],
+        "F.CUZ": [
+          "F.CUZ"
+        ],
+        "CNBLUE": [
+          "CNBLUE"
+        ],
+        "大国男児": [
+          "大国男児"
+        ],
+        "INFINITE": [
+          "INFINITE"
+        ],
+        "TEEN TOP": [
+          "TEEN TOP"
+        ],
+        "BBGIRLS": [
+          "BBGIRLS",
+          "Brave Girls"
+        ],
+        "Block B": [
+          "Block B"
+        ],
+        "Apink": [
+          "Apink"
+        ],
+        "B1A4": [
+          "B1A4"
+        ],
+        "BF": [
+          "BF",
+          "BOYFRIEND"
+        ],
+        "JYJ": [
+          "JYJ"
+        ],
+        "MYNAME": [
+          "MYNAME"
+        ],
+        "EXID": [
+          "EXID"
+        ],
+        "BTOB": [
+          "BTOB"
+        ],
+        "EXO": [
+          "EXO"
+        ],
+        "VIXX": [
+          "VIXX"
+        ],
+        "Flashe": [
+          "Flashe"
+        ],
+        "AOA": [
+          "AOA"
+        ],
+        "FIESTAR": [
+          "FIESTAR"
+        ],
+        "24K": [
+          "24K"
+        ],
+        "BTS": [
+          "BTS",
+          "防弾少年団",
+          "BTS (防弾少年団)",
+          "BTS (防彈少年團)"
+        ],
+        "GOT7": [
+          "GOT7"
+        ],
+        "JJCC": [
+          "JJCC"
+        ],
+        "BADKIZ": [
+          "BADKIZ"
+        ],
+        "AKMU": [
+          "AKMU"
+        ],
+        "MAMAMOO": [
+          "MAMAMOO"
+        ],
+        "BIGFLO": [
+          "BIGFLO"
+        ],
+        "HALO": [
+          "HALO"
+        ],
+        "Red Velvet": [
+          "Red Velvet"
+        ],
+        "WINNER": [
+          "WINNER"
+        ],
+        "UNIQ": [
+          "UNIQ"
+        ],
+        "purfles": [
+          "purfles"
+        ],
+        "GFRIEND": [
+          "GFRIEND"
+        ],
+        "OH MY GIRL": [
+          "OH MY GIRL"
+        ],
+        "ROMEO": [
+          "ROMEO"
+        ],
+        "MONSTA X": [
+          "MONSTA X"
+        ],
+        "N.Flying": [
+          "N.Flying"
+        ],
+        "SEVENTEEN": [
+          "SEVENTEEN"
+        ],
+        "Bambino": [
+          "Bambino"
+        ],
+        "DAY6": [
+          "DAY6"
+        ],
+        "UP10TION": [
+          "UP10TION"
+        ],
+        "iKON": [
+          "iKON"
+        ],
+        "TWICE": [
+          "TWICE"
+        ],
+        "VAV": [
+          "VAV"
+        ],
+        "MAP6": [
+          "MAP6"
+        ],
+        "SNUPER": [
+          "SNUPER"
+        ],
+        "ASTRO": [
+          "ASTRO"
+        ],
+        "VOISPER": [
+          "VOISPER"
+        ],
+        "宇宙少女": [
+          "宇宙少女",
+          "WJSN"
+        ],
+        "KNK": [
+          "KNK"
+        ],
+        "NCT": [
+          "NCT",
+          "NCT 127",
+          "NCT DREAM",
+          "WayV",
+          "NCT DOJAEJUNG"
+        ],
+        "A.DE": [
+          "A.DE"
+        ],
+        "VROMANCE": [
+          "VROMANCE"
+        ],
+        "KARD": [
+          "KARD"
+        ],
+        "BLACKPINK": [
+          "BLACKPINK"
+        ],
+        "SF9": [
+          "SF9"
+        ],
+        "PENTAGON": [
+          "PENTAGON"
+        ],
+        "VICTON": [
+          "VICTON"
+        ],
+        "MOMOLAND": [
+          "MOMOLAND"
+        ],
+        "Dreamcatcher": [
+          "Dreamcatcher"
+        ],
+        "A.C.E": [
+          "A.C.E"
+        ],
+        "ALICE": [
+          "ALICE",
+          "ELRIS"
+        ],
+        "FAVORITE": [
+          "FAVORITE"
+        ],
+        "ONF": [
+          "ONF"
+        ],
+        "The Rose": [
+          "The Rose"
+        ],
+        "Golden Child": [
+          "Golden Child"
+        ],
+        "IZ": [
+          "IZ"
+        ],
+        "HASHTAG": [
+          "HASHTAG"
+        ],
+        "HI CUTIE": [
+          "HI CUTIE"
+        ],
+        "SKYE": [
+          "SKYE",
+          "IN2IT"
+        ],
+        "BUSTERS": [
+          "BUSTERS"
+        ],
+        "fromis_9": [
+          "fromis_9"
+        ],
+        "TARGET": [
+          "TARGET"
+        ],
+        "Stray Kids": [
+          "Stray Kids"
+        ],
+        "NOIR": [
+          "NOIR"
+        ],
+        "i-dle": [
+          "i-dle",
+          "(G)I-DLE",
+          "GIDLE",
+          "I-DLE"
+        ],
+        "SATURDAY": [
+          "SATURDAY"
+        ],
+        "今月の少女": [
+          "今月の少女",
+          "LOONA"
+        ],
+        "ALiKE": [
+          "ALiKE"
+        ],
+        "THE MAN BLK": [
+          "THE MAN BLK"
+        ],
+        "LST": [
+          "LST"
+        ],
+        "Maywish": [
+          "Maywish"
+        ],
+        "ATEEZ": [
+          "ATEEZ"
+        ],
+        "JBJ95": [
+          "JBJ95"
+        ],
+        "M.O.N.T": [
+          "M.O.N.T"
+        ],
+        "ONEUS": [
+          "ONEUS"
+        ],
+        "VERIVERY": [
+          "VERIVERY"
+        ],
+        "MustB": [
+          "MustB"
+        ],
+        "AWEEK": [
+          "AWEEK"
+        ],
+        "ITZY": [
+          "ITZY"
+        ],
+        "VANNER": [
+          "VANNER"
+        ],
+        "The Pink Lady": [
+          "The Pink Lady"
+        ],
+        "TOMORROW X TOGETHER": [
+          "TOMORROW X TOGETHER",
+          "TXT"
+        ],
+        "TRIGER": [
+          "TRIGER",
+          "TRIGGER"
+        ],
+        "The T-Bird": [
+          "The T-Bird"
+        ],
+        "EVERGLOW": [
+          "EVERGLOW"
+        ],
+        "Girl Crush": [
+          "Girl Crush"
+        ],
+        "PEACE": [
+          "PEACE"
+        ],
+        "Newkidd": [
+          "Newkidd"
+        ],
+        "ONEWE": [
+          "ONEWE"
+        ],
+        "3YE": [
+          "3YE"
+        ],
+        "AB6IX": [
+          "AB6IX"
+        ],
+        "OnlyOneOf": [
+          "OnlyOneOf"
+        ],
+        "BZ-BOYS": [
+          "BZ-BOYS"
+        ],
+        "CIX": [
+          "CIX"
+        ],
+        "FANATICS": [
+          "FANATICS"
+        ],
+        "TEEN TEEN": [
+          "TEEN TEEN"
+        ],
+        "SuperM": [
+          "SuperM"
+        ],
+        "ARIAZ": [
+          "ARIAZ"
+        ],
+        "DKB": [
+          "DKB"
+        ],
+        "UNVS": [
+          "UNVS"
+        ],
+        "XENEX": [
+          "XENEX"
+        ],
+        "MCND": [
+          "MCND"
+        ],
+        "CRAXY": [
+          "CRAXY"
+        ],
+        "CRAVITY": [
+          "CRAVITY"
+        ],
+        "H&D": [
+          "H&D"
+        ],
+        "LUCY": [
+          "LUCY"
+        ],
+        "WOOAH": [
+          "WOOAH",
+          "woo!ah!"
+        ],
+        "SECRET NUMBER": [
+          "SECRET NUMBER"
+        ],
+        "E'LAST": [
+          "E'LAST"
+        ],
+        "MAKAMAKA": [
+          "MAKAMAKA"
+        ],
+        "TREASURE": [
+          "TREASURE"
+        ],
+        "GHOST9": [
+          "GHOST9"
+        ],
+        "PRECIOUS": [
+          "PRECIOUS"
+        ],
+        "WEi": [
+          "WEi"
+        ],
+        "BLACKSWAN": [
+          "BLACKSWAN"
+        ],
+        "Asome.D": [
+          "Asome.D"
+        ],
+        "DRIPPIN": [
+          "DRIPPIN"
+        ],
+        "P1Harmony": [
+          "P1Harmony"
+        ],
+        "STAYC": [
+          "STAYC"
+        ],
+        "aespa": [
+          "aespa"
+        ],
+        "withus": [
+          "withus"
+        ],
+        "ENHYPEN": [
+          "ENHYPEN"
+        ],
+        "Rolling Quartz": [
+          "Rolling Quartz"
+        ],
+        "TRI.BE": [
+          "TRI.BE"
+        ],
+        "KINGDOM": [
+          "KINGDOM"
+        ],
+        "ATO6": [
+          "ATO6"
+        ],
+        "PIXY": [
+          "PIXY"
+        ],
+        "WOW": [
+          "WOW"
+        ],
+        "NTX": [
+          "NTX"
+        ],
+        "W.A.O": [
+          "W.A.O"
+        ],
+        "BLITZERS": [
+          "BLITZERS"
+        ],
+        "EPEX": [
+          "EPEX"
+        ],
+        "LIGHTSUM": [
+          "LIGHTSUM"
+        ],
+        "JUST B": [
+          "JUST B"
+        ],
+        "OMEGA X": [
+          "OMEGA X"
+        ],
+        "SKYLE": [
+          "SKYLE"
+        ],
+        "PoshGirls": [
+          "PoshGirls"
+        ],
+        "PRITTI-G": [
+          "PRITTI-G"
+        ],
+        "Ferry Blue": [
+          "Ferry Blue"
+        ],
+        "ICHILLIN'": [
+          "ICHILLIN'"
+        ],
+        "MEGAMAX": [
+          "MEGAMAX"
+        ],
+        "Billlie": [
+          "Billlie"
+        ],
+        "IVE": [
+          "IVE"
+        ],
+        "Xdinary Heroes": [
+          "Xdinary Heroes"
+        ],
+        "Rocking Doll": [
+          "Rocking Doll"
+        ],
+        "Kep1er": [
+          "Kep1er"
+        ],
+        "H1-KEY": [
+          "H1-KEY"
+        ],
+        "TRENDZ": [
+          "TRENDZ"
+        ],
+        "VIVIZ": [
+          "VIVIZ"
+        ],
+        "NMIXX": [
+          "NMIXX"
+        ],
+        "BLACK LEVEL": [
+          "BLACK LEVEL"
+        ],
+        "TEMPEST": [
+          "TEMPEST"
+        ],
+        "NINE.i": [
+          "NINE.i"
+        ],
+        "ILY:1": [
+          "ILY:1"
+        ],
+        "YOUNITE": [
+          "YOUNITE"
+        ],
+        "LE SSERAFIM": [
+          "LE SSERAFIM"
+        ],
+        "PRIKIL": [
+          "PRIKIL"
+        ],
+        "CLASS:y": [
+          "CLASS:y"
+        ],
+        "TNX": [
+          "TNX",
+          "THE NEW SIX"
+        ],
+        "BLANK2Y": [
+          "BLANK2Y"
+        ],
+        "Lapillus": [
+          "Lapillus"
+        ],
+        "Girl's World": [
+          "Girl's World"
+        ],
+        "IRRIS": [
+          "IRRIS"
+        ],
+        "NewJeans": [
+          "NewJeans"
+        ],
+        "CSR": [
+          "CSR"
+        ],
+        "We;Na": [
+          "We;Na"
+        ],
+        "PATTERN": [
+          "PATTERN"
+        ],
+        "ABLUE": [
+          "ABLUE"
+        ],
+        "Queenz Eye": [
+          "Queenz Eye"
+        ],
+        "ARTBEAT v": [
+          "ARTBEAT v",
+          "ARTBEAT"
+        ],
+        "AIMERS": [
+          "AIMERS"
+        ],
+        "FIFTY FIFTY": [
+          "FIFTY FIFTY"
+        ],
+        "WeNU": [
+          "WeNU"
+        ],
+        "&TEAM": [
+          "&TEAM"
+        ],
+        "PRIMROSE": [
+          "PRIMROSE"
+        ],
+        "MAVE:": [
+          "MAVE:"
+        ],
+        "8TURN": [
+          "8TURN"
+        ],
+        "tripleS": [
+          "tripleS"
+        ],
+        "MADEIN": [
+          "MADEIN",
+          "LIMELIGHT"
+        ],
+        "HAWW": [
+          "HAWW"
+        ],
+        "xikers": [
+          "xikers"
+        ],
+        "WE US": [
+          "WE US"
+        ],
+        "X:IN": [
+          "X:IN"
+        ],
+        "VI'ENX": [
+          "VI'ENX"
+        ],
+        "XODIAC": [
+          "XODIAC"
+        ],
+        "CMDM": [
+          "CMDM"
+        ],
+        "ADYA": [
+          "ADYA"
+        ],
+        "(M)IRROR": [
+          "(M)IRROR"
+        ],
+        "The Wind": [
+          "The Wind"
+        ],
+        "BOYNEXTDOOR": [
+          "BOYNEXTDOOR"
+        ],
+        "LUN8": [
+          "LUN8"
+        ],
+        "Bunny.T": [
+          "Bunny.T"
+        ],
+        "KISS OF LIFE": [
+          "KISS OF LIFE"
+        ],
+        "ZEROBASEONE": [
+          "ZEROBASEONE"
+        ],
+        "SEVENUS": [
+          "SEVENUS"
+        ],
+        "n.SSign": [
+          "n.SSign"
+        ],
+        "PLAN B": [
+          "PLAN B"
+        ],
+        "RIIZE": [
+          "RIIZE"
+        ],
+        "EL7Z UP": [
+          "EL7Z UP"
+        ],
+        "Loossemble": [
+          "Loossemble"
+        ],
+        "EVNNE": [
+          "EVNNE"
+        ],
+        "FANTASY BOYS": [
+          "FANTASY BOYS"
+        ],
+        "POW": [
+          "POW"
+        ],
+        "82MAJOR": [
+          "82MAJOR"
+        ],
+        "YOUNG POSSE": [
+          "YOUNG POSSE"
+        ],
+        "QWER": [
+          "QWER"
+        ],
+        "Catch The Young": [
+          "Catch The Young"
+        ],
+        "eite": [
+          "eite"
+        ],
+        "WHIB": [
+          "WHIB"
+        ],
+        "AMPERS&ONE": [
+          "AMPERS&ONE"
+        ],
+        "EASTSHINE": [
+          "EASTSHINE"
+        ],
+        "BABYMONSTER": [
+          "BABYMONSTER"
+        ],
+        "ONE PACT": [
+          "ONE PACT"
+        ],
+        "Geenius": [
+          "Geenius"
+        ],
+        "WAKER": [
+          "WAKER"
+        ],
+        "ALL(H)OURS": [
+          "ALL(H)OURS"
+        ],
+        "DXMON": [
+          "DXMON"
+        ],
+        "TWS": [
+          "TWS"
+        ],
+        "NCT WISH": [
+          "NCT WISH"
+        ],
+        "NOMAD": [
+          "NOMAD"
+        ],
+        "ILLIT": [
+          "ILLIT"
+        ],
+        "RESCENE": [
+          "RESCENE"
+        ],
+        "UNIS": [
+          "UNIS"
+        ],
+        "Candy Shop": [
+          "Candy Shop"
+        ],
+        "VVUP": [
+          "VVUP"
+        ],
+        "NOWZ": [
+          "NOWZ",
+          "NOWADAYS"
+        ],
+        "SPIA": [
+          "SPIA"
+        ],
+        "NCHIVE": [
+          "NCHIVE"
+        ],
+        "UNICODE": [
+          "UNICODE"
+        ],
+        "BEWAVE": [
+          "BEWAVE"
+        ],
+        "Big Ocean": [
+          "Big Ocean"
+        ],
+        "TIOT": [
+          "TIOT"
+        ],
+        "ANEX": [
+          "ANEX"
+        ],
+        "DAYCHILD": [
+          "DAYCHILD"
+        ],
+        "ASC2NT": [
+          "ASC2NT"
+        ],
+        "For The More": [
+          "For The More"
+        ],
+        "NEXZ": [
+          "NEXZ"
+        ],
+        "B-OURS": [
+          "B-OURS"
+        ],
+        "WATERFIRE": [
+          "WATERFIRE"
+        ],
+        "ARTMS": [
+          "ARTMS"
+        ],
+        "BADVILLAIN": [
+          "BADVILLAIN"
+        ],
+        "I:MOND": [
+          "I:MOND"
+        ],
+        "B.D.U": [
+          "B.D.U"
+        ],
+        "DIGNITY": [
+          "DIGNITY"
+        ],
+        "3piece": [
+          "3piece"
+        ],
+        "MEOVV": [
+          "MEOVV"
+        ],
+        "DRAGON PONY": [
+          "DRAGON PONY"
+        ],
+        "SAY MY NAME": [
+          "SAY MY NAME"
+        ],
+        "TRY1": [
+          "TRY1"
+        ],
+        "ODD YOUTH": [
+          "ODD YOUTH"
+        ],
+        "tracer": [
+          "tracer"
+        ],
+        "LOVEONE": [
+          "LOVEONE"
+        ],
+        "izna": [
+          "izna"
+        ],
+        "A2O MAY": [
+          "A2O MAY"
+        ],
+        "XLOV": [
+          "XLOV"
+        ],
+        "Kandis": [
+          "Kandis"
+        ],
+        "KickFlip": [
+          "KickFlip"
+        ],
+        "Element": [
+          "Element"
+        ],
+        "AWIN": [
+          "AWIN"
+        ],
+        "Hearts2Hearts": [
+          "Hearts2Hearts"
+        ],
+        "NouerA": [
+          "NouerA"
+        ],
+        "3WAY": [
+          "3WAY"
+        ],
+        "IN A MINUTE": [
+          "IN A MINUTE"
+        ],
+        "KiiiKiii": [
+          "KiiiKiii"
+        ],
+        "NEWBEAT": [
+          "NEWBEAT"
+        ],
+        "M.prism": [
+          "M.prism"
+        ],
+        "CLOSE YOUR EYES": [
+          "CLOSE YOUR EYES"
+        ],
+        "ifeye": [
+          "ifeye"
+        ],
+        "cosmosy": [
+          "cosmosy"
+        ],
+        "SW：C": [
+          "SW：C"
+        ],
+        "VVS": [
+          "VVS"
+        ],
+        "BURVEY": [
+          "BURVEY"
+        ],
+        "HITGS": [
+          "HITGS"
+        ],
+        "UDTT": [
+          "UDTT"
+        ],
+        "ablume": [
+          "ablume"
+        ],
+        "SMORZ": [
+          "SMORZ"
+        ],
+        "POLARIX": [
+          "POLARIX"
+        ],
+        "KIIRAS": [
+          "KIIRAS"
+        ],
+        "I1IT": [
+          "I1IT"
+        ],
+        "USPEER": [
+          "USPEER"
+        ],
+        "Double 0ne": [
+          "Double 0ne"
+        ],
+        "BE BOYS": [
+          "BE BOYS"
+        ],
+        "Baby DONT Cry": [
+          "Baby DONT Cry"
+        ],
+        "ALLDAY PROJECT": [
+          "ALLDAY PROJECT"
+        ],
+        "AHOF": [
+          "AHOF"
+        ],
+        "CRAZANGEL": [
+          "CRAZANGEL"
+        ],
+        "1VERSE": [
+          "1VERSE"
+        ],
+        "SEVENTOEIGHT": [
+          "SEVENTOEIGHT"
+        ],
+        "N.TOP": [
+          "N.TOP"
+        ],
+        "idntt": [
+          "idntt"
+        ],
+        "AtHeart": [
+          "AtHeart"
+        ],
+        "CORTIS": [
+          "CORTIS"
+        ],
+        "iii": [
+          "iii"
+        ],
+        "AxMxP": [
+          "AxMxP"
+        ],
+        "IDID": [
+          "IDID"
+        ],
+        "NWH:I": [
+          "NWH:I"
+        ],
+        "AM8IC": [
+          "AM8IC"
+        ],
+        "THE SSYNDROME": [
+          "THE SSYNDROME"
+        ],
+        "LATENCY": [
+          "LATENCY"
+        ],
+        "ALPHA DRIVE ONE": [
+          "ALPHA DRIVE ONE"
+        ],
+        "LNGSHOT": [
+          "LNGSHOT"
+        ],
+        "NAVILLERA": [
+          "NAVILLERA"
+        ],
+        "DAILY:DIRECTION": [
+          "DAILY:DIRECTION"
+        ],
+        "CHASER": [
+          "CHASER"
+        ],
+        "WEZAG": [
+          "WEZAG"
+        ],
+        "TUNEXX": [
+          "TUNEXX"
+        ],
+        "S2iT": [
+          "S2iT"
+        ],
+        "STRITZ": [
+          "STRITZ"
+        ],
+        "NXMERCY": [
+          "NXMERCY"
+        ],
+        "AmbiO": [
+          "AmbiO"
+        ],
+        "KEYVITUP": [
+          "KEYVITUP"
+        ],
+        "MODYSSEY": [
+          "MODYSSEY"
+        ],
+        "ARISE": [
+          "ARISE"
+        ],
+        "UNCHILD": [
+          "UNCHILD"
+        ],
+        "GENUS": [
+          "GENUS"
+        ],
+        "NAZE": [
+          "NAZE"
+        ],
+        "YUHZ": [
+          "YUHZ"
+        ],
+        "FLARE U": [
+          "FLARE U"
+        ],
+        "FRAME THE X": [
+          "FRAME THE X"
+        ],
+        "AND2BLE": [
+          "AND2BLE"
+        ],
+        "H//PE Princess": [
+          "H//PE Princess"
+        ],
+        "Heart Of Woman": [
+          "Heart Of Woman"
+        ],
+        "Keyveatz": [
+          "Keyveatz"
+        ],
+        "ASCENDER": [
+          "ASCENDER"
+        ],
+        "VAY ONN": [
+          "VAY ONN"
+        ],
+        "EMOTI:M": [
+          "EMOTI:M"
+        ],
+        "AEN": [
+          "AEN"
+        ],
+        "WAYF BOYS": [
+          "WAYF BOYS"
+        ],
+        "OURBIRTHDAY": [
+          "OURBIRTHDAY"
+        ],
+        "TUIDE": [
+          "TUIDE"
+        ],
+        "A2O LITE": [
+          "A2O LITE"
+        ],
+        "MISAMO": [
+          "MISAMO"
+        ]
+      }
+    }
+  },
+  "annual_image_additions": {
+    "boys": {
+      "SMAP": [
+        "SMAP"
+      ],
+      "V6": [
+        "V6"
+      ],
+      "タッキー&翼": [
+        "タッキー&翼"
+      ]
+    },
+    "girls": {
+      "櫻坂46": [
+        "欅坂46"
+      ],
+      "日向坂46": [
+        "けやき坂46"
+      ]
+    },
+    "korean": {
+      "BTS": [
+        "BTS (防弾少年団)",
+        "BTS (防彈少年團)"
+      ],
+      "東方神起": [
+        "東方神起"
+      ],
+      "神話": [
+        "神話",
+        "SHINHWA"
+      ],
+      "SS501": [
+        "SS501"
+      ],
+      "S.E.S.": [
+        "S.E.S."
+      ],
+      "Fin.K.L": [
+        "Fin.K.L"
+      ],
+      "H.O.T.": [
+        "H.O.T."
+      ],
+      "SECHSKIES": [
+        "SECHSKIES",
+        "Sechs Kies"
+      ]
+    }
+  },
+  "note": "site は現在のサイトの分類を保持。annual_image_additions は年間記録画像に使用した追加・旧名義対応。サイトの数値を無断で変えないため別プロファイル。",
+  "classification_sources": {
+    "girls_group_artists_wikipedia.json": {
+      "source": "https://ja.wikipedia.org/wiki/日本の女性アイドルグループの一覧",
+      "page_id": 45945,
+      "retrieved": "2026-08-28",
+      "note": "年代別・ローカルアイドル欄のリンク項目を抽出。事務所・プロジェクト等の親項目は除き、実在する親グループは補完。",
+      "artists": [
+        "【eN】",
+        "@onefive",
+        "＃2i2",
+        "＃Mooove!",
+        "#ジューロック",
+        "＃ババババンビ",
+        "＃よーよーよー",
+        "℃-ute",
+        "=LOVE",
+        "≠ME",
+        "≒JOY",
+        "3B junior",
+        "80 pan",
+        "9nine",
+        "AdamLilith",
+        "ael-アエル-",
+        "AeLL.",
+        "AI-SACHI",
+        "AIKATSU☆STARS!",
+        "AKB48",
+        "AKBアイドリング!!!",
+        "AKIARIM",
+        "AMEFURASSHI",
+        "Ange☆Reve",
+        "AppleTale",
+        "ARCANA PROJECT",
+        "ASP",
+        "Awww!",
+        "AXELL",
+        "B.B.WAVES",
+        "B.O.L.T",
+        "B'dash",
+        "BaBe",
+        "BABY'S",
+        "BABYMETAL",
+        "BELLRING少女ハート",
+        "Berryz工房",
+        "BEYOOOOONDS",
+        "BiS",
+        "BiSH",
+        "BOYSTYLE",
+        "bump.y",
+        "Buono!",
+        "Buzy",
+        "BYOB",
+        "C-ZONE",
+        "C.C.ガールズ",
+        "CANDY TUNE",
+        "Carezza",
+        "CARRY LOOSE",
+        "chee's",
+        "Cheeky Parade",
+        "ChocoLe",
+        "Chocolove from AKB48",
+        "choice?",
+        "Chu!☆Lips",
+        "Chu☆Oh!Dolly",
+        "CIRRA",
+        "CoCo",
+        "COLOR",
+        "cotton",
+        "CROWN POP",
+        "CUTIE STREET",
+        "CYNHN",
+        "D-Rive",
+        "D&D",
+        "DANCEROID",
+        "DEF.DIVA",
+        "DiVA",
+        "Doll☆Elements",
+        "DORA",
+        "Dream",
+        "Dream5",
+        "E-girls",
+        "Early Morning",
+        "EARTH",
+        "EMPiRE",
+        "ENGAG.ING",
+        "EUPHORIA",
+        "ExWHYZ",
+        "f5ve",
+        "fav me",
+        "Feam",
+        "Fine",
+        "Finger Runs",
+        "fishbowl",
+        "FleuЯR",
+        "FLIP-FLAP",
+        "Flower",
+        "Folder5",
+        "FRUITS ZIPPER",
+        "GAM",
+        "GANG PARADE",
+        "Gatas Brilhantes H.P.",
+        "GEM",
+        "GEMS COMPANY",
+        "Girl's BOX",
+        "Girls²",
+        "GO TO THE BEDS",
+        "GO-BANG'S",
+        "GPP",
+        "Gran☆Ciel",
+        "HANA",
+        "Happiness",
+        "Hauptharmonie",
+        "High-King",
+        "HINOIチーム",
+        "HiP",
+        "HKT48",
+        "HOP CLUB",
+        "HOT DOG CAT",
+        "hy4_4yh",
+        "I'mew（あいみゅう）",
+        "IDOLATER",
+        "iLiFE!",
+        "Ill",
+        "IS:SUE",
+        "iScream",
+        "iSPY",
+        "iTRiP",
+        "JamsCollection",
+        "JAPANARIZM",
+        "JBエンジェルス",
+        "Jewel☆Neige",
+        "Jewel☆Rouge",
+        "JK21",
+        "Juice=Juice",
+        "KAGAJO☆4S",
+        "KEY WEST CLUB",
+        "KiSS KiSS",
+        "KissBee",
+        "KissBeeWEST",
+        "Kolokol",
+        "Laki",
+        "log you",
+        "LumiUnion",
+        "Ma'Scar'Piece",
+        "MAD MEDiCiNE",
+        "Maison book girl",
+        "MAPA",
+        "MarryDoll",
+        "Mary Angel",
+        "MAX",
+        "ME:I",
+        "Melody",
+        "Merry BAD TUNE.",
+        "METAMO",
+        "Mi LUNA from お月ちゃんのうた",
+        "Mi-Ke",
+        "Mia REGINA",
+        "MIGMA SHELTER",
+        "MilkyWay",
+        "MISSION",
+        "MOMO",
+        "momonaki",
+        "MORE STAR",
+        "MyDearDarlin'",
+        "NANIMONO",
+        "Negicco",
+        "NEOかしまし娘",
+        "NEOちゃっきり娘",
+        "NGT48",
+        "NightOwl",
+        "NILKLY",
+        "NiziU",
+        "NMB48",
+        "NO NAME",
+        "Not yet",
+        "OCHA NORMA",
+        "Osaka翔Gangs",
+        "Pabo",
+        "PANDAMIC",
+        "PARADISE GO!! GO!!",
+        "PARADISES",
+        "PassCode",
+        "PASSPO☆",
+        "Peachy's",
+        "Peel the Apple",
+        "Perfume",
+        "PIGGS",
+        "Pinkish",
+        "PLIME",
+        "PRIKIL",
+        "Qlair",
+        "Qnto syrup",
+        "Queen & Elizabeth",
+        "R.C.T.",
+        "Rain Tree",
+        "RE-GE",
+        "route0",
+        "RuRian",
+        "S★スパイシー",
+        "Say a Little Prayer",
+        "SAY-LA",
+        "SDN48",
+        "SHAKE",
+        "SHOW-YA",
+        "SI☆NA",
+        "SiAM&POPTUNe",
+        "SKE48",
+        "sora tob sakana",
+        "SPEED",
+        "SPLASH",
+        "Springs",
+        "STAiNY",
+        "STAR☆ANIS",
+        "Starmarie",
+        "Stella☆Beats",
+        "Straight Angeli",
+        "STU48",
+        "Sugar",
+        "SUPER MONKEY'S",
+        "SUPER☆GiRLS",
+        "Suppli Mode",
+        "Survive-ZERO",
+        "SWEET STEADY",
+        "SweetS",
+        "T-BACKS",
+        "Tan.San.Sui.",
+        "TEAM SHACHI",
+        "TENRIN",
+        "THE HOOPERS",
+        "There There Theres",
+        "Toi Toi Toi",
+        "Tomato n' Pine",
+        "Twinklestars",
+        "ukka",
+        "UPローチ",
+        "VENUS",
+        "W",
+        "W∞アンナ",
+        "WAgg",
+        "WHITE SCORPION",
+        "Whiteberry",
+        "WILL-O'",
+        "Wink",
+        "XG",
+        "yosugala",
+        "YURIMARI",
+        "Z-1",
+        "ZOC",
+        "ZONE",
+        "ZYX",
+        "あぁ!",
+        "アーマーガールズ",
+        "アイスクリーム夢少女",
+        "アイドリング!!!",
+        "アイドルカレッジ",
+        "アイドル教室",
+        "アイドル夢工場",
+        "アイドル妖怪カワユシ",
+        "アイリーン&エリカ",
+        "あかなぎ",
+        "アキシブproject",
+        "アップアップガールズ（仮）",
+        "アテナ&ロビケロッツ",
+        "あみん",
+        "あややムwithエコハムず",
+        "アリス十番",
+        "アンジュルム",
+        "いぎなり東北産",
+        "うしろゆびさされ組",
+        "うしろ髪ひかれ隊",
+        "エコモニ。",
+        "えぬえむとぅけ",
+        "エンジェルス",
+        "おかわりシスターズ",
+        "オトメ☆コーポレーション",
+        "オナッターズ",
+        "おニャン子クラブ",
+        "オレンジ・シスターズ",
+        "ガーディアンズ4",
+        "カミングフレーバー",
+        "カレッジ・コスモス",
+        "カントリー・ガールズ",
+        "カントリー娘。",
+        "キッスの世界",
+        "キャナァーリ倶楽部",
+        "キャプテン",
+        "キャラメル☆リボン",
+        "きゃんきゃん",
+        "キャンパスナイターズ",
+        "きら☆ぴか",
+        "キララとウララ",
+        "ギリギリガールズ",
+        "グーグールル",
+        "クマリデパート",
+        "クラッシュギャルズ",
+        "クリィミー♥パフェ",
+        "クリマカーユ",
+        "クロスノエシス",
+        "ココナッツ娘。",
+        "ココロコロン",
+        "コスプレックス",
+        "コスメティックロボット",
+        "こぶしファクトリー",
+        "ごまっとう",
+        "こんぺいとう",
+        "ザ・ポチ!",
+        "さくら学院",
+        "シェイプUPガールズ",
+        "シェキドル",
+        "しず風",
+        "シャニムニ＝パレード",
+        "シャワー",
+        "しゅごキャラエッグ!",
+        "しろもん",
+        "スターチスのラブレター",
+        "スターボー",
+        "スチームガールズ",
+        "すべての瞬間は君だった。",
+        "セイントフォー",
+        "せかいシティ",
+        "セブンティーンクラブ",
+        "ソフトクリーム",
+        "タイトル未定",
+        "たこやきレインボー",
+        "タンポポ",
+        "チェキッ娘",
+        "チェリーブロッサム",
+        "チャイルズ",
+        "チャオ ベッラ チンクエッティ",
+        "チョンマゲ娘",
+        "つばきファクトリー",
+        "ディア☆",
+        "テクプリ",
+        "てん・むす",
+        "てんとうむChu!",
+        "でんぱ組.inc",
+        "ともいき・木を植えたい",
+        "ドリームモーニング娘。",
+        "ナチュラルポイント",
+        "ナットウエンジェル",
+        "にっぽんワチャチャ",
+        "ニャンギラス",
+        "ねこまんまっ!! from お月ちゃんのうた",
+        "ねずみっ子クラブ",
+        "ノースリーブス",
+        "のんふぃく!",
+        "パイレーツ",
+        "はちみつロケット",
+        "ばってん少女隊",
+        "ばっぷる",
+        "ハニースパイスRe.",
+        "バニラビーンズ",
+        "パラディーク",
+        "ハロー!プロジェクトオールスターズ",
+        "バンドじゃないもん！MAXX NAKAYOSHI",
+        "パンプキン",
+        "ぴゅあふる",
+        "ファントムシータ",
+        "ブスっ子くらぶ",
+        "プッチモニ",
+        "プリンセス・プリンセス",
+        "フルーツ",
+        "フレンチ・キス",
+        "ベボガ!",
+        "ベリーズ",
+        "ぼくはまだしなない",
+        "ポピンズ",
+        "マジェスティックセブン",
+        "まなみのりさ",
+        "まニャン子クラブ",
+        "マヒマヒ",
+        "マボロシ可憐GeNE",
+        "まりもみ",
+        "ミームトーキョー",
+        "ミニスカート",
+        "みにちあ☆ベアーズ",
+        "ミニパティ",
+        "ミニハムず",
+        "ミニモニ。",
+        "メロン記念日",
+        "モエギノジノム",
+        "モーニング娘。",
+        "モーニング娘。さくら組",
+        "モーニング娘。誕生10年記念隊",
+        "ももいろクローバーZ",
+        "ヤなことそっとミュート",
+        "やまだかつてないWink",
+        "ゆいかおり",
+        "よしもとグラビアエージェンシー",
+        "よせなべトリオ",
+        "ラブ・クレッシェンド",
+        "ラフ×ラフ",
+        "リルネード",
+        "ロージークロニクル",
+        "わーすた",
+        "愛乙女★DOLL",
+        "安倍なつみ&矢島舞美（℃-ute）",
+        "奥澤村",
+        "横浜純情小町☆",
+        "音楽ガッタス",
+        "仮面女子",
+        "可憐Girl's",
+        "可憐なアイボリー",
+        "科学究明機構ロヂカ?",
+        "雅〜MIYABI〜",
+        "怪傑!トロピカル丸",
+        "開歌-かいか-",
+        "街角景気☆仮面女子↑",
+        "完熟娘。",
+        "恵比寿★マスカッツ",
+        "恵比寿マスカッツ",
+        "恵比寿マスカッツ1.5",
+        "月島きらり starring 久住小春 (モーニング娘。)",
+        "後浦なつみ",
+        "高嶺のなでしこ",
+        "黒BUTAオールスターズ",
+        "桜っ子クラブさくら組",
+        "私立恵比寿中学",
+        "七つ星",
+        "純情!トロピカル丸",
+        "純情のアフィリア",
+        "女猿",
+        "少女隊",
+        "神使轟く、激情の如く。",
+        "推定少女",
+        "制服向上委員会",
+        "青空のプラネタリウム",
+        "青山Rabness",
+        "青春!トロピカル丸",
+        "川崎純情小町☆",
+        "戦国アニマル極楽浄土",
+        "閃光プラネタゲート",
+        "全力少女R",
+        "太陽とシスコムーン",
+        "大阪パフォーマンスドール",
+        "中野風女シスターズ",
+        "超ときめき♡宣伝部",
+        "点染テンセイ少女。",
+        "都内某所",
+        "東京パフォーマンスドール",
+        "豆柴の大群",
+        "南青山少女歌劇団",
+        "虹のコンキスタドール",
+        "虹色幻想曲 〜プリズム・ファンタジア〜",
+        "日向坂46",
+        "乃木坂46",
+        "美少女か・ら・ふ・るギャング",
+        "美少女クラブ31",
+        "美勇伝",
+        "風男塾",
+        "僕が見たかった青空",
+        "妄想キャリブレーション",
+        "夜光性アミューズ",
+        "櫻坂46",
+        "殲滅のディストピア"
+      ]
+    },
+    "korean_idol_groups_wikipedia.json": {
+      "source": "https://ja.wikipedia.org/wiki/韓国のアイドルグループ一覧",
+      "page_id": 3002939,
+      "revision_id": 110828530,
+      "retrieved_at": "2026-08-31",
+      "criteria": "デビュー年が2005年以降。2026年は2026-08-31までにデビュー日を確認できるもの。解散年／活動休止年が空欄、または活動再開年が記載されているグループ。",
+      "note": "出典表は解散年と活動休止年を同一列で扱うため、終了年があり再開年がない行を保守的に除外。活動休止中だが未解散の一部グループも除外される可能性があります。",
+      "count": 357,
+      "artists": [
+        "SUPER JUNIOR",
+        "Brown Eyed Girls",
+        "BIGBANG",
+        "KARA",
+        "FTISLAND",
+        "少女時代",
+        "Sunny Hill",
+        "SUPERNOVA",
+        "DAVICHI",
+        "SHINee",
+        "2AM",
+        "U-KISS",
+        "2PM",
+        "2NE1",
+        "T-ARA",
+        "HIGHLIGHT",
+        "F.CUZ",
+        "CNBLUE",
+        "大国男児",
+        "INFINITE",
+        "TEEN TOP",
+        "BBGIRLS",
+        "Block B",
+        "Apink",
+        "B1A4",
+        "BF",
+        "JYJ",
+        "MYNAME",
+        "EXID",
+        "BTOB",
+        "EXO",
+        "VIXX",
+        "Flashe",
+        "AOA",
+        "FIESTAR",
+        "24K",
+        "BTS",
+        "GOT7",
+        "JJCC",
+        "BADKIZ",
+        "AKMU",
+        "MAMAMOO",
+        "BIGFLO",
+        "HALO",
+        "Red Velvet",
+        "WINNER",
+        "UNIQ",
+        "purfles",
+        "GFRIEND",
+        "OH MY GIRL",
+        "ROMEO",
+        "MONSTA X",
+        "N.Flying",
+        "SEVENTEEN",
+        "Bambino",
+        "DAY6",
+        "UP10TION",
+        "iKON",
+        "TWICE",
+        "VAV",
+        "MAP6",
+        "SNUPER",
+        "ASTRO",
+        "VOISPER",
+        "宇宙少女",
+        "KNK",
+        "NCT",
+        "A.DE",
+        "VROMANCE",
+        "KARD",
+        "BLACKPINK",
+        "SF9",
+        "PENTAGON",
+        "VICTON",
+        "MOMOLAND",
+        "Dreamcatcher",
+        "A.C.E",
+        "ALICE",
+        "FAVORITE",
+        "ONF",
+        "The Rose",
+        "Golden Child",
+        "IZ",
+        "HASHTAG",
+        "HI CUTIE",
+        "SKYE",
+        "BUSTERS",
+        "fromis_9",
+        "TARGET",
+        "Stray Kids",
+        "NOIR",
+        "i-dle",
+        "SATURDAY",
+        "今月の少女",
+        "ALiKE",
+        "THE MAN BLK",
+        "LST",
+        "Maywish",
+        "ATEEZ",
+        "JBJ95",
+        "M.O.N.T",
+        "ONEUS",
+        "VERIVERY",
+        "MustB",
+        "AWEEK",
+        "ITZY",
+        "VANNER",
+        "The Pink Lady",
+        "TOMORROW X TOGETHER",
+        "TRIGER",
+        "The T-Bird",
+        "EVERGLOW",
+        "Girl Crush",
+        "PEACE",
+        "Newkidd",
+        "ONEWE",
+        "3YE",
+        "AB6IX",
+        "OnlyOneOf",
+        "BZ-BOYS",
+        "CIX",
+        "FANATICS",
+        "TEEN TEEN",
+        "SuperM",
+        "ARIAZ",
+        "DKB",
+        "UNVS",
+        "XENEX",
+        "MCND",
+        "CRAXY",
+        "CRAVITY",
+        "H&D",
+        "LUCY",
+        "WOOAH",
+        "SECRET NUMBER",
+        "E'LAST",
+        "MAKAMAKA",
+        "TREASURE",
+        "GHOST9",
+        "PRECIOUS",
+        "WEi",
+        "BLACKSWAN",
+        "Asome.D",
+        "DRIPPIN",
+        "P1Harmony",
+        "STAYC",
+        "aespa",
+        "withus",
+        "ENHYPEN",
+        "Rolling Quartz",
+        "TRI.BE",
+        "KINGDOM",
+        "ATO6",
+        "PIXY",
+        "WOW",
+        "NTX",
+        "W.A.O",
+        "BLITZERS",
+        "EPEX",
+        "LIGHTSUM",
+        "JUST B",
+        "OMEGA X",
+        "SKYLE",
+        "PoshGirls",
+        "PRITTI-G",
+        "Ferry Blue",
+        "ICHILLIN'",
+        "MEGAMAX",
+        "Billlie",
+        "IVE",
+        "Xdinary Heroes",
+        "Rocking Doll",
+        "Kep1er",
+        "H1-KEY",
+        "TRENDZ",
+        "VIVIZ",
+        "NMIXX",
+        "BLACK LEVEL",
+        "TEMPEST",
+        "NINE.i",
+        "ILY:1",
+        "YOUNITE",
+        "LE SSERAFIM",
+        "PRIKIL",
+        "CLASS:y",
+        "TNX",
+        "BLANK2Y",
+        "Lapillus",
+        "Girl's World",
+        "IRRIS",
+        "NewJeans",
+        "CSR",
+        "We;Na",
+        "PATTERN",
+        "ABLUE",
+        "Queenz Eye",
+        "ARTBEAT v",
+        "AIMERS",
+        "FIFTY FIFTY",
+        "WeNU",
+        "&TEAM",
+        "PRIMROSE",
+        "MAVE:",
+        "8TURN",
+        "tripleS",
+        "MADEIN",
+        "HAWW",
+        "xikers",
+        "WE US",
+        "X:IN",
+        "VI'ENX",
+        "XODIAC",
+        "CMDM",
+        "ADYA",
+        "(M)IRROR",
+        "The Wind",
+        "BOYNEXTDOOR",
+        "LUN8",
+        "Bunny.T",
+        "KISS OF LIFE",
+        "ZEROBASEONE",
+        "SEVENUS",
+        "n.SSign",
+        "PLAN B",
+        "RIIZE",
+        "EL7Z UP",
+        "Loossemble",
+        "EVNNE",
+        "FANTASY BOYS",
+        "POW",
+        "82MAJOR",
+        "YOUNG POSSE",
+        "QWER",
+        "Catch The Young",
+        "eite",
+        "WHIB",
+        "AMPERS&ONE",
+        "EASTSHINE",
+        "BABYMONSTER",
+        "ONE PACT",
+        "Geenius",
+        "WAKER",
+        "ALL(H)OURS",
+        "DXMON",
+        "TWS",
+        "NCT WISH",
+        "NOMAD",
+        "ILLIT",
+        "RESCENE",
+        "UNIS",
+        "Candy Shop",
+        "VVUP",
+        "NOWZ",
+        "SPIA",
+        "NCHIVE",
+        "UNICODE",
+        "BEWAVE",
+        "Big Ocean",
+        "TIOT",
+        "ANEX",
+        "DAYCHILD",
+        "ASC2NT",
+        "For The More",
+        "NEXZ",
+        "B-OURS",
+        "WATERFIRE",
+        "ARTMS",
+        "BADVILLAIN",
+        "I:MOND",
+        "B.D.U",
+        "DIGNITY",
+        "3piece",
+        "MEOVV",
+        "DRAGON PONY",
+        "SAY MY NAME",
+        "TRY1",
+        "ODD YOUTH",
+        "tracer",
+        "LOVEONE",
+        "izna",
+        "A2O MAY",
+        "XLOV",
+        "Kandis",
+        "KickFlip",
+        "Element",
+        "AWIN",
+        "Hearts2Hearts",
+        "NouerA",
+        "3WAY",
+        "IN A MINUTE",
+        "KiiiKiii",
+        "NEWBEAT",
+        "M.prism",
+        "CLOSE YOUR EYES",
+        "ifeye",
+        "cosmosy",
+        "SW：C",
+        "VVS",
+        "BURVEY",
+        "HITGS",
+        "UDTT",
+        "ablume",
+        "SMORZ",
+        "POLARIX",
+        "KIIRAS",
+        "I1IT",
+        "USPEER",
+        "Double 0ne",
+        "BE BOYS",
+        "Baby DONT Cry",
+        "ALLDAY PROJECT",
+        "AHOF",
+        "CRAZANGEL",
+        "1VERSE",
+        "SEVENTOEIGHT",
+        "N.TOP",
+        "idntt",
+        "AtHeart",
+        "CORTIS",
+        "iii",
+        "AxMxP",
+        "IDID",
+        "NWH:I",
+        "AM8IC",
+        "THE SSYNDROME",
+        "LATENCY",
+        "ALPHA DRIVE ONE",
+        "LNGSHOT",
+        "NAVILLERA",
+        "DAILY:DIRECTION",
+        "CHASER",
+        "WEZAG",
+        "TUNEXX",
+        "S2iT",
+        "STRITZ",
+        "NXMERCY",
+        "AmbiO",
+        "KEYVITUP",
+        "MODYSSEY",
+        "ARISE",
+        "UNCHILD",
+        "GENUS",
+        "NAZE",
+        "YUHZ",
+        "FLARE U",
+        "FRAME THE X",
+        "AND2BLE",
+        "H//PE Princess",
+        "Heart Of Woman",
+        "Keyveatz",
+        "ASCENDER",
+        "VAY ONN",
+        "EMOTI:M",
+        "AEN",
+        "WAYF BOYS",
+        "OURBIRTHDAY",
+        "TUIDE"
+      ],
+      "aliases": {
+        "SUPER JUNIOR": [
+          "SUPER JUNIOR",
+          "Super Junior"
+        ],
+        "少女時代": [
+          "少女時代",
+          "Girls’ Generation",
+          "Girls' Generation",
+          "Girls Generation",
+          "SNSD"
+        ],
+        "SUPERNOVA": [
+          "SUPERNOVA",
+          "超新星"
+        ],
+        "HIGHLIGHT": [
+          "HIGHLIGHT",
+          "BEAST"
+        ],
+        "BBGIRLS": [
+          "BBGIRLS",
+          "Brave Girls"
+        ],
+        "BF": [
+          "BF",
+          "BOYFRIEND"
+        ],
+        "BTS": [
+          "BTS",
+          "防弾少年団"
+        ],
+        "宇宙少女": [
+          "宇宙少女",
+          "WJSN"
+        ],
+        "NCT": [
+          "NCT",
+          "NCT 127",
+          "NCT DREAM",
+          "WayV",
+          "NCT DOJAEJUNG"
+        ],
+        "ALICE": [
+          "ALICE",
+          "ELRIS"
+        ],
+        "SKYE": [
+          "SKYE",
+          "IN2IT"
+        ],
+        "i-dle": [
+          "i-dle",
+          "(G)I-DLE",
+          "GIDLE",
+          "I-DLE"
+        ],
+        "今月の少女": [
+          "今月の少女",
+          "LOONA"
+        ],
+        "TOMORROW X TOGETHER": [
+          "TOMORROW X TOGETHER",
+          "TXT"
+        ],
+        "TRIGER": [
+          "TRIGER",
+          "TRIGGER"
+        ],
+        "WOOAH": [
+          "WOOAH",
+          "woo!ah!"
+        ],
+        "TNX": [
+          "TNX",
+          "THE NEW SIX"
+        ],
+        "ARTBEAT v": [
+          "ARTBEAT v",
+          "ARTBEAT"
+        ],
+        "MADEIN": [
+          "MADEIN",
+          "LIMELIGHT"
+        ],
+        "NOWZ": [
+          "NOWZ",
+          "NOWADAYS"
+        ]
+      }
+    },
+    "boys_groups_wikipedia": {
+      "url": "https://ja.wikipedia.org/wiki/日本の男性アイドルグループの一覧",
+      "scope": "年代別のグループ名欄。既存の代表名と別名対応を使用。 従来の登録グループとヒートマップ掲載済みのグループも維持。"
+    }
+  }
+}

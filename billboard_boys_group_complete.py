@@ -157,139 +157,15 @@ PREVIEW_FILE = PROJECT_DIRECTORY / "preview.html"
 # 集計対象アーティスト
 # ============================================================
 
-TARGET_ARTISTS = [
-    "純烈",
-    "モナキ",
-    "BE:FIRST",
-    "M!LK",
-    "Snow Man",
-    "King & Prince",
-    "嵐",
-    "ONE OR EIGHT",
-    "Da-iCE",
-    "&TEAM",
-    "Number_i",
-    "EXILE",
-    "NCT WISH",
-    "SixTONES",
-    "timelesz",
-    "Hey! Say! JUMP",
-    "NEWS",
-    "MAZZEL",
-    "なにわ男子",
-    "STARGLOW",
-    "Travis Japan",
-    "三代目 J SOUL BROTHERS from EXILE TRIBE",
-    "DA PUMP",
-    "NEXZ",
-    "GENERATIONS from EXILE TRIBE",
-    "SUPER EIGHT",
-    "JO1",
-    "Kis-My-Ft2",
-    "INI",
-    "FANTASTICS from EXILE TRIBE",
-    "WEST.",
-    "THE RAMPAGE from EXILE TRIBE",
-    "PSYCHIC FEVER from EXILE TRIBE",
-    "DXTEEN",
-    "原因は自分にある。",
-    "超特急",
-    "A.B.C-Z",
-    "IMP.",
-    "龍宮城",
-    "LIL LEAGUE from EXILE TRIBE",
-    "DOMOTO",
-    "w-inds.",
-    "KID PHENOMENON from EXILE TRIBE",
-    "BUDDiiS",
-    "THE JET BOY BANGERZ from EXILE TRIBE",
-    "BALLISTIK BOYZ from EXILE TRIBE",
-    "ONE N' ONLY",
-    "WOLF HOWL HARMONY from EXILE TRIBE",
-    "Sakurashimeji",
-    "SUPER★DRAGON",
-    "WILD BLUE",
-    "ICEx",
-    "Lienel",
-    "EXILE THE SECOND",
-    "THE SUPER FRUIT",
-    "OCTPATH",
-    "20th Century",
-    "OWV",
-    "WATWING",
-    "TAGRIGHT",
-    "ENJIN",
-    "ORβIT",
-    "UNiFY",
-    "TOKIO",
-    "Aぇ! group",
-    "7ORDER",
-    "aoen",
-    "VOKSY DAYS",
-    "ROIROM",
-    "VIBY",
-    "Cloud ten",
-    "KO1KEYZ",
-    "CLASS SEVEN",
-    "iiONDO",
-    "ふぉ～ゆ～",
-    "KEY TO LIT",
-    "ACEes",
-    "B&ZAI",
-]
-
-
-ARTIST_ALIASES = {
-    artist: [artist]
-    for artist in TARGET_ARTISTS
-}
-
-# 旧名義を現在の正式表記へ合算します。楽曲名はチャート掲載時の表記を維持します。
-ARTIST_ALIASES["DOMOTO"] = [
-    "KinKi Kids",
-    "DOMOTO",
-]
-ARTIST_ALIASES["WEST."] = [
-    "WEST.",
-    "ジャニーズWEST",
-]
-ARTIST_ALIASES["SUPER EIGHT"] = [
-    "SUPER EIGHT",
-    "関ジャニ∞",
-]
-ARTIST_ALIASES["timelesz"] = [
-    "timelesz",
-    "Sexy Zone",
-]
-
-GIRLS_GROUP_DATA = json.loads(
-    Path(__file__).with_name(
-        "girls_group_artists_wikipedia.json"
-    ).read_text(encoding="utf-8")
-)
-GIRLS_GROUP_ARTISTS = GIRLS_GROUP_DATA["artists"]
-GIRLS_GROUP_ALIASES = {
-    artist: [artist]
-    for artist in GIRLS_GROUP_ARTISTS
-}
-GIRLS_GROUP_ALIASES["モーニング娘。"] = [
-    "モーニング娘。",
-    "モーニング娘。'24",
-    "モーニング娘。'25",
-    "モーニング娘。'26",
-]
-
-KOREAN_IDOL_DATA = json.loads(
-    Path(__file__).with_name(
-        "korean_idol_groups_wikipedia.json"
-    ).read_text(encoding="utf-8")
-)
-KOREAN_IDOL_ARTISTS = KOREAN_IDOL_DATA["artists"]
-KOREAN_IDOL_ALIASES = {
-    artist: KOREAN_IDOL_DATA.get("aliases", {}).get(artist, [artist])
-    for artist in KOREAN_IDOL_ARTISTS
-}
-
+_registry = json.loads(
+    Path(__file__).with_name("artists-registry.json").read_text(encoding="utf-8")
+)["site"]
+TARGET_ARTISTS = _registry["boys"]["artists"]
+ARTIST_ALIASES = _registry["boys"]["aliases"]
+GIRLS_GROUP_ARTISTS = _registry["girls"]["artists"]
+GIRLS_GROUP_ALIASES = _registry["girls"]["aliases"]
+KOREAN_IDOL_ARTISTS = _registry["korean"]["artists"]
+KOREAN_IDOL_ALIASES = _registry["korean"]["aliases"]
 
 
 # ============================================================
