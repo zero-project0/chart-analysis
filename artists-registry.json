@@ -275,20 +275,7 @@
         "ふぉ～ゆ～",
         "ACEes",
         "B&ZAI",
-        "EBiDAN",
-        "JI BLUE",
-        "SHOW-WA",
-        "MATSURI",
-        "風輪",
-        "SAD originals.",
-        "Crimson Crat Clan",
-        "Last Prince",
-        "Seven Deuce",
-        "Def Class",
-        "NEWTREND",
-        "D.O.L",
-        "BLACK IRIS",
-        "MADKID"
+        "MATSURI"
       ],
       "aliases": {
         "スリーファンキーズ": [
@@ -1116,47 +1103,8 @@
         "B&ZAI": [
           "B&ZAI"
         ],
-        "EBiDAN": [
-          "EBiDAN"
-        ],
-        "JI BLUE": [
-          "JI BLUE"
-        ],
-        "SHOW-WA": [
-          "SHOW-WA"
-        ],
         "MATSURI": [
           "MATSURI"
-        ],
-        "風輪": [
-          "風輪"
-        ],
-        "SAD originals.": [
-          "SAD originals."
-        ],
-        "Crimson Crat Clan": [
-          "Crimson Crat Clan"
-        ],
-        "Last Prince": [
-          "Last Prince"
-        ],
-        "Seven Deuce": [
-          "Seven Deuce"
-        ],
-        "Def Class": [
-          "Def Class"
-        ],
-        "NEWTREND": [
-          "NEWTREND"
-        ],
-        "D.O.L": [
-          "D.O.L"
-        ],
-        "BLACK IRIS": [
-          "BLACK IRIS"
-        ],
-        "MADKID": [
-          "MADKID"
         ]
       }
     },
@@ -5163,7 +5111,8 @@
         "DREAM CODE",
         "DREAMOFONE",
         "SUGAR DAYS",
-        "ANARKI CULTURE"
+        "ANARKI CULTURE",
+        "MISAMO"
       ],
       "aliases": {
         "野菊": [
@@ -7933,6 +7882,9 @@
         "SPEED (韓国)": [
           "SPEED (韓国)",
           "스피드"
+        ],
+        "MISAMO": [
+          "MISAMO"
         ]
       }
     }
@@ -12287,11 +12239,14 @@
         ]
       },
       "url": "https://ja.wikipedia.org/wiki/韓国のアイドルグループ一覧",
-      "scope": "年代別のグループ一覧。掲載名と確認済みの旧名義を使用。"
+      "scope": "年代別のグループ一覧。掲載名と確認済みの旧名義を使用。",
+      "site_exceptions": [
+        "MISAMO"
+      ]
     },
     "boys_groups_wikipedia": {
       "url": "https://ja.wikipedia.org/wiki/日本の男性アイドルグループの一覧",
-      "scope": "年代別のグループ名欄。既存の代表名と別名対応を使用。 従来の登録グループとヒートマップ掲載済みのグループも維持。"
+      "scope": "年代別のグループ名欄と、指定された追加19組。既存の代表名と別名対応を使用。"
     }
   }
 }
