@@ -2347,6 +2347,11 @@ def write_dashboard_assets(directory, assets):
 
 
 def save_site(matched_by_chart, collections_by_chart):
+    canonical_name = "超ときめき♡宣伝部"
+    name_aliases = {
+        normalize_artist_name(alias): canonical_name
+        for alias in GIRLS_GROUP_ALIASES[canonical_name]
+    }
     overall_entries_by_chart = {}
     for chart_code, chart_collections in collections_by_chart.items():
         overall_entries = []
@@ -2354,7 +2359,9 @@ def save_site(matched_by_chart, collections_by_chart):
             for entry in collection["entries"]:
                 item = dict(entry)
                 item["year"] = collection["year"]
-                item["target_artist"] = entry["artist"]
+                item["target_artist"] = name_aliases.get(
+                    normalize_artist_name(entry["artist"]), entry["artist"]
+                )
                 overall_entries.append(item)
         overall_entries_by_chart[chart_code] = overall_entries
 
