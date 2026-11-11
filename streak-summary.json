@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-11-04",
-    "issues": 975,
-    "songs": 4399,
+    "last": "2026-11-11",
+    "issues": 976,
+    "songs": 4404,
     "displayed": [
       {
         "title": "Lemon",
@@ -272,9 +272,9 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-11-04",
-    "issues": 475,
-    "songs": 478,
+    "last": "2026-11-11",
+    "issues": 476,
+    "songs": 479,
     "displayed": [
       {
         "title": "ライラック",
@@ -446,6 +446,19 @@
         "rank": 13
       },
       {
+        "title": "好きすぎて滅!",
+        "artist": "M!LK",
+        "weeks": 47,
+        "start": "2025-12-24",
+        "end": "2026-11-11",
+        "ongoing": true,
+        "begins_at_chart_start": false,
+        "total_top10_weeks": 50,
+        "best_rank_in_streak": 2,
+        "runs": 3,
+        "rank": 14
+      },
+      {
         "title": "Blue Jeans",
         "artist": "HANA",
         "weeks": 46,
@@ -456,20 +469,7 @@
         "total_top10_weeks": 47,
         "best_rank_in_streak": 1,
         "runs": 2,
-        "rank": 14
-      },
-      {
-        "title": "好きすぎて滅!",
-        "artist": "M!LK",
-        "weeks": 46,
-        "start": "2025-12-24",
-        "end": "2026-11-04",
-        "ongoing": true,
-        "begins_at_chart_start": false,
-        "total_top10_weeks": 49,
-        "best_rank_in_streak": 2,
-        "runs": 3,
-        "rank": 14
+        "rank": 15
       },
       {
         "title": "怪獣の花唄",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-11-04",
-    "issues": 475,
-    "songs": 1921,
+    "last": "2026-11-11",
+    "issues": 476,
+    "songs": 1928,
     "displayed": [
       {
         "title": "Lemon",
