@@ -4,6 +4,7 @@ Known incomplete evidence is explicit in data-quality.json. It never passes
 chart_is_complete; builders may retain verified partial rows with a notice.
 """
 import csv,html,json,unicodedata
+import shared_data
 from collections import defaultdict
 from datetime import date,timedelta
 from pathlib import Path
@@ -18,7 +19,7 @@ def row_key(row):
     return (row['chart_date'],int(row['rank']),artist,normalize(row['title']))
 
 def quality(root):
-    p=Path(root)/'data-quality.json'
+    p=shared_data.metadata_file(root,'data-quality.json')
     return json.loads(p.read_text(encoding='utf-8')) if p.exists() else {'charts':{}}
 
 def unavailable_dates(root,code):
@@ -28,7 +29,7 @@ def allowed_partial(root,code,day,count):
     return any(x['date']==day and x['verified_rows']==count for x in quality(root)['charts'].get(code,{}).get('partial_weeks',[]))
 
 def validate_saved_rows(rows,year,code,root):
-    recover_file=Path(root)/'verified-recoveries.json'
+    recover_file=shared_data.metadata_file(root,'verified-recoveries.json')
     recoveries=json.loads(recover_file.read_text(encoding='utf-8')) if recover_file.exists() else []
     allowed={(row_key(r),r['source_url']) for r in recoveries if r['chart_code']==code}
     seen=set();weekly=defaultdict(list)
@@ -74,7 +75,7 @@ def update_quality(root,collections_by_chart):
         info.update(start=dates[0],end=dates[-1],published_weeks=len(dates),rows=sum(len(c['entries']) for c in collections))
         ends.append(dates[-1])
     q['through']=min(ends)
-    (Path(root)/'data-quality.json').write_text(json.dumps(q,ensure_ascii=False,indent=2),encoding='utf-8')
+    shared_data.metadata_file(root,'data-quality.json').write_text(json.dumps(q,ensure_ascii=False,indent=2),encoding='utf-8')
     return q
 
 def write_quality_assets(root,destination):

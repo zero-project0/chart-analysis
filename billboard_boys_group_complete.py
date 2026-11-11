@@ -16,6 +16,7 @@ from urllib.request import HTTPCookieProcessor, Request, build_opener
 
 from bs4 import BeautifulSoup
 import chart_integrity
+import shared_data
 
 
 # ============================================================
@@ -157,20 +158,14 @@ PREVIEW_FILE = PROJECT_DIRECTORY / "preview.html"
 # 集計対象アーティスト
 # ============================================================
 
-_registry = json.loads(
-    Path(__file__).with_name("artists-registry.json").read_text(encoding="utf-8")
-)["site"]
-TARGET_ARTISTS = _registry["boys"]["artists"]
-ARTIST_ALIASES = _registry["boys"]["aliases"]
-GIRLS_GROUP_ARTISTS = _registry["girls"]["artists"]
-GIRLS_GROUP_ALIASES = _registry["girls"]["aliases"]
-KOREAN_IDOL_ARTISTS = _registry["korean"]["artists"]
-KOREAN_IDOL_ALIASES = _registry["korean"]["aliases"]
-
-
-# ============================================================
-# 共通処理
-# ============================================================
+# Artist definitions have a single editable source in shared metadata.
+_registry = shared_data.registry(PROJECT_DIRECTORY)['site']
+TARGET_ARTISTS = _registry['boys']['artists']
+ARTIST_ALIASES = _registry['boys']['aliases']
+GIRLS_GROUP_ARTISTS = _registry['girls']['artists']
+GIRLS_GROUP_ALIASES = _registry['girls']['aliases']
+KOREAN_IDOL_ARTISTS = _registry['korean']['artists']
+KOREAN_IDOL_ALIASES = _registry['korean']['aliases']
 
 def normalize_text(value):
     if value is None:
@@ -576,7 +571,7 @@ def fetch_chart_html(opener, chart_date, chart_code=CHART_CODE):
     return None, "失敗"
 
 def fixed_year_file(year, chart_code=CHART_CODE):
-    return OUTPUT_DIRECTORY / (
+    return shared_data.source_directory(PROJECT_DIRECTORY) / (
         f"billboard_{chart_code}_{year}_entries.csv"
     )
 
@@ -1000,7 +995,7 @@ def save_collection_report(collections):
 def save_year_entries(collection):
     year = collection["year"]
     chart_code = collection["chart_code"]
-    output_file = OUTPUT_DIRECTORY / (
+    output_file = shared_data.source_directory(PROJECT_DIRECTORY) / (
         f"billboard_{chart_code}_{year}_entries.csv"
     )
     fieldnames = [
@@ -2346,7 +2341,7 @@ def write_dashboard_assets(directory, assets):
         )
 
 
-def save_site(matched_by_chart, collections_by_chart):
+def build_site_dashboards(matched_by_chart, collections_by_chart):
     canonical_name = "超ときめき♡宣伝部"
     name_aliases = {
         normalize_artist_name(alias): canonical_name
@@ -2407,6 +2402,11 @@ def save_site(matched_by_chart, collections_by_chart):
         }
         for scope, (entries_by_chart, artist_names) in scope_sources.items()
     }
+    return dashboards
+
+
+def save_site(matched_by_chart, collections_by_chart):
+    dashboards = build_site_dashboards(matched_by_chart, collections_by_chart)
     data_quality = chart_integrity.update_quality(PROJECT_DIRECTORY, collections_by_chart)
     for charts in dashboards.values():
         for code, dashboard in charts.items():
@@ -2440,6 +2440,7 @@ def save_site(matched_by_chart, collections_by_chart):
     SITE_FILE.write_bytes(encoded_document)
     PREVIEW_FILE.write_bytes(encoded_document)
     write_cumulative_comparison_pages()
+    shared_data.publish_sources(PROJECT_DIRECTORY)
 
 # ============================================================
 # ターミナル表示

@@ -6,7 +6,7 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 
 - Hot 100：2008/1/16公開分から。
 - Streaming Songs / Download Songs：2017/10/4公開分から。
-- 2026/10/14公開分まで収録（2026年は各指標41週）。10/14公開分は3指標それぞれ100曲を確認し、サイトの12データセットと連続記録を更新しました。2026/10/1に過去分の公開日・重複・欠損を再検証しました。
+- 2026/11/11公開分まで収録（2026年は各指標45週）。11/11公開分は3指標それぞれ100曲を確認し、サイトの12データセットと連続記録を更新しました。2026/10/1に過去分の公開日・重複・欠損を再検証しました。
 - Download 2020/3/18は公式資料で確認できた68曲を収録。TOP10は全曲確認済みですが、全順位は未完了です。
 - Hot 100の年末年始7週は公式アーカイブに掲載がなく、休載か欠損か未確定です。
 - 詳細と出典は `data-quality.html`、機械可読な収録状況は `data-quality.json`、補完行の出典は `verified-recoveries.json` に記録しています。
@@ -24,7 +24,25 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 - `calculate-top10-streaks.py`：同じCSVから3指標のTOP10連続記録を再計算します。
 - `render-top10-posters.py`：再計算した記録から、公開日に対応するPNG画像を生成します（Windowsのメイリオを使用）。
 
-## 更新方法
+## データの管理
+
+- 共通原本は `../chart-analysis-data/source/`、分類と別名の編集元は `../chart-analysis-data/metadata/artists-registry.json`。
+- `chart-data-config.json` と `shared_data.py` が共通原本を解決します。共通フォルダーが存在しない環境では、このリポジトリ内のCSV・JSONを使います。
+- `data/*.js`、`billboard_output/*.csv`、`records/*` は生成・配布用データです。ローカルで通常の編集を行うときは共通原本を使用します。
+- 旧分類JSONは共通データの `history/20261111-management/legacy-registry/` に保管しています。
+
+共通データがある環境では、管理フォルダーから以下を実行します。
+
+```powershell
+python tools/manage.py audit
+python tools/manage.py verify
+python tools/manage.py refresh
+python tools/render-records.py
+```
+
+`audit` は原本一覧・分類・4版の分割データを読み取り専用で確認します。`verify` は元CSVを検証して一覧を更新します。`refresh` は取得済み原本から12データセットと連続記録を再集計し、各版へ配布します。画像は最後のコマンドで生成します。週次データの取得とGitHubへの反映は別の操作です。
+
+## 共通データがない環境での更新方法
 
 Pythonと `requirements.txt` の依存パッケージを用意し、`python billboard_boys_group_complete.py` を実行します。最新年は未取得週だけ取得し、過去年は検証済みCSVを再利用します。取得を伴わない再集計は `python rebuild-data.py`、連続記録は `python calculate-top10-streaks.py`、記録画像はその後に `python render-top10-posters.py` で更新します。収録期間の表示と画像リンクは公開日に追従します。
 

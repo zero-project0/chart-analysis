@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "shared_root": "..\\chart-analysis-data",
+  "note": "Shared source; local deployment snapshots are generated exports."
+}

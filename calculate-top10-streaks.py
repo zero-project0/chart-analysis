@@ -4,8 +4,9 @@ from collections import Counter,defaultdict
 from datetime import date
 from pathlib import Path
 import chart_integrity
+import shared_data
 sys.stdout.reconfigure(encoding='utf-8')
-ROOT=Path(__file__).parent;SOURCE=ROOT/'billboard_output';OUT=ROOT/'records';OUT.mkdir(exist_ok=True)
+ROOT=Path(__file__).parent;SOURCE=shared_data.source_directory(ROOT);OUT=shared_data.result_directory(ROOT);OUT.mkdir(exist_ok=True)
 norm=chart_integrity.normalize
 charts={}
 for code in ['hot100','stsongs','dlsongs']:
@@ -49,6 +50,8 @@ for code in ['hot100','stsongs','dlsongs']:
 (OUT/'rankings.json').write_text(json.dumps(charts,ensure_ascii=False,indent=2),encoding='utf-8')
 # Keep the legacy Hot100 export in sync for existing consumers.
 legacy=[dict(rank=r['rank'],artist=r['artist'],title=r['title'],consecutive_weeks=r['weeks'],start=r['start'],end=r['end'],ongoing=r['ongoing'],best_rank_in_streak=r['best_rank_in_streak'],total_top10_weeks=r['total_top10_weeks'],runs=r['runs']) for r in charts['hot100']['records']]
-with (ROOT/'hot100_top10_consecutive_2008_2026.csv').open('w',newline='',encoding='utf-8-sig') as f:
+with (OUT.parent/'hot100_top10_consecutive_2008_2026.csv' if shared_data.shared_root(ROOT) else ROOT/'hot100_top10_consecutive_2008_2026.csv').open('w',newline='',encoding='utf-8-sig') as f:
     w=csv.DictWriter(f,fieldnames=list(legacy[0]));w.writeheader();w.writerows(legacy)
-(ROOT/'streak-summary.json').write_text(json.dumps({c:{k:v for k,v in x.items() if k not in {'records','dates'}} for c,x in charts.items()},ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT.parent/'streak-summary.json' if shared_data.shared_root(ROOT) else ROOT/'streak-summary.json').write_text(json.dumps({c:{k:v for k,v in x.items() if k not in {'records','dates'}} for c,x in charts.items()},ensure_ascii=False,indent=2),encoding='utf-8')
+
+shared_data.publish_records(ROOT)
