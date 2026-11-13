@@ -98,7 +98,7 @@
   let artistLineMeta=null;
   function artistLineSeries(artist,source){
     const latest=String(source.latestDate).slice(0,4),years=artistGraphYears();
-    return years.map((year,i)=>({year,color:year===latest?'#0088ff':i===0?'#8e8e93':'#af52de',dash:year===latest?[]:i===0?[4,4]:[9,4],values:artistCumulativeForYear(artist,year),dates:source.publicationDates?.[year]||[],latest:year===latest}));
+    return years.map((year,i)=>({year,color:year===latest?'#0088ff':i===0?'#8e8e93':'#af52de',dash:year===latest?[]:i===0?[4,4]:[9,4],values:artistCumulativeForYear(artist,year),dates:source.publicationDates?.[year]||[]}));
   }
   function paintArtistLines(ctx,series,width,height,ox=0,oy=0){
     const left=44,right=19,top=20,bottom=37,gw=width-left-right,gh=height-top-bottom,maximum=Math.max(1,...series.flatMap(s=>s.values)),step=Math.max(1,Math.pow(10,Math.floor(Math.log10(maximum/4)))),tick=Math.ceil(maximum/4/step)*step,max=tick*4,points=[];
@@ -108,9 +108,8 @@
     series.forEach((s,row)=>{
       const start=Date.UTC(Number(s.year),0,1),end=Date.UTC(Number(s.year)+1,0,1),ps=s.values.map((value,index)=>({value,index,row,year:s.year,date:s.dates[index]||'',x:left+(s.dates[index]?(Date.parse(s.dates[index]+'T00:00:00Z')-start)/(end-start):index/52)*gw,y:top+gh-value/max*gh}));points.push(...ps);
       if(!ps.length)return;
-      if(s.latest){ctx.beginPath();ctx.moveTo(ps[0].x,top+gh);for(const p of ps)ctx.lineTo(p.x,p.y);ctx.lineTo(ps.at(-1).x,top+gh);ctx.closePath();ctx.fillStyle='#0088ff10';ctx.fill();}
-      ctx.beginPath();ps.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle=s.color;ctx.lineWidth=s.latest?3:2;ctx.setLineDash(s.dash);ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke();ctx.setLineDash([]);
-      const p=ps.at(-1);ctx.beginPath();ctx.arc(p.x,p.y,s.latest?4.5:3.5,0,Math.PI*2);ctx.fillStyle=s.color;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=1.5;ctx.stroke();
+      ctx.beginPath();ps.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.setLineDash(s.dash);ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke();ctx.setLineDash([]);
+      const p=ps.at(-1);ctx.beginPath();ctx.arc(p.x,p.y,3.5,0,Math.PI*2);ctx.fillStyle=s.color;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=1.5;ctx.stroke();
     });ctx.restore();return{points,series,width,height,left,right,top,bottom,max};
   }
   drawArtistSelectedYearTrend=function(artist){
@@ -118,7 +117,7 @@
     canvas.width=Math.round(width*ratio);canvas.height=height*ratio;canvas.style.width=width+'px';canvas.style.height=height+'px';const ctx=canvas.getContext('2d');ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,width,height);artistLineMeta=paintArtistLines(ctx,series,width,height);
     activeYearTrendArtist=artist;activeArtistYearSeries=series;
     q('#detailDialog .trend-panel h3').textContent='年ごとの累積ランクイン推移';const legend=q('#detailDialog .trend-legend');legend.classList.add('artist-line-legend');
-    legend.innerHTML=series.map(s=>`<span class="artist-year-key${s.latest?' is-latest':''}"><span><i style="background:${s.color}"></i>${s.year}年</span><strong>${(s.values.at(-1)||0).toLocaleString('ja-JP')}<small>回</small></strong></span>`).join('');
+    legend.innerHTML=series.map(s=>`<span class="artist-year-key"><span><i style="background:${s.color}"></i>${s.year}年</span><strong>${(s.values.at(-1)||0).toLocaleString('ja-JP')}<small>回</small></strong></span>`).join('');
     let note=q('#artistPeriodNote');if(!note){note=document.createElement('p');note.id='artistPeriodNote';note.className='artist-period-note';canvas.parentElement.before(note);}
     note.textContent=`縦軸は累積回数、横軸は月。${String(source.latestDate).slice(0,4)}年は${source.latestDate.replaceAll('-','.')}まで。`;
     let table=q('#artistPeriodData');if(!table){table=document.createElement('details');table.id='artistPeriodData';table.className='artist-period-data';canvas.parentElement.after(table);}
