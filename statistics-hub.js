@@ -21,11 +21,11 @@
     $('#statContext').textContent='保存済み画像の集計日は画像ごとに異なります。上部のアーティスト分類・チャートを変えても、元画像の内容は変わりません。画像の対象は題名と画像内の表記で確認できます。';
   }
   function openImage(id){const a=window.CHART_RECORD_IMAGES?.items.find(a=>a.id===id);if(!a)return;$('#recordImageTitle').textContent=a.title;$('#recordImageMeta').textContent='画像の集計日 '+a.cutoff+' / PNG / '+(a.bytes/1024/1024).toFixed(1)+' MB';$('#recordImageFull').src=a.src;$('#recordImageFull').alt=a.title;$('#recordImageDownload').href=a.src;$('#recordImageDownload').download=a.filename;$('#recordImageDownload').textContent='元のPNGを保存';$('#recordImageOpen').href=a.src;if(!viewer.open)viewer.showModal();$('.record-image-preview').scrollTop=0;}
-  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.linkedPreview){openLinked();}else if(button.dataset.statView){view=button.dataset.statView;render();}else if(button.dataset.recordPreview){openImage(button.dataset.recordPreview);}else if(button.id==='recordImagesMore'){imageLimit+=6;renderImages();}});
+  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.linkedPreview){openLinked(Number(button.dataset.linkedPreview)||0);}else if(button.dataset.statView){view=button.dataset.statView;render();}else if(button.dataset.recordPreview){openImage(button.dataset.recordPreview);}else if(button.id==='recordImagesMore'){imageLimit+=6;renderImages();}});
   $('#recordImageChart').addEventListener('change',e=>{imageChart=e.target.value;imageLimit=6;renderImages();});
   $('#recordImageSearch').addEventListener('input',e=>{imageQuery=e.target.value;imageLimit=6;renderImages();});
   const boxPicker=document.createElement('div');boxPicker.className='box-artist-picker';boxPicker.innerHTML='<div class="box-picker-mode"><button data-box-mode="top" class="active">累積TOP10</button><button data-box-mode="custom">アーティストを選ぶ</button><button data-box-mode="years">アーティストの年別比較</button></div><div id="boxArtistFields" hidden><label for="boxArtistInput">表示するアーティスト（最大10組）</label><div class="box-artist-search"><input id="boxArtistInput" list="boxArtistOptions" placeholder="名前を入力・選択" autocomplete="off"><datalist id="boxArtistOptions"></datalist><button id="boxArtistAdd">追加</button></div><div id="boxArtistSelected"></div><p id="boxArtistStatus" role="status">分類外のアーティストを追加すると「すべて」に切り替わります。</p></div>';section.querySelector('.stats-controls').after(boxPicker);
-  let boxMode='top',yearArtist='',chosenYears=[],chosenArtists=[],linkedPayload=null,linkedObjectUrl='';
+  let boxMode='top',yearArtist='',chosenYears=[],chosenArtists=[],linkedPayload=null,linkedObjectUrls=[];
   const yearPicker=document.createElement('div');yearPicker.id='boxYearFields';yearPicker.hidden=true;yearPicker.innerHTML='<label for="boxYearArtist">比較するアーティスト</label><div class="box-artist-search"><input id="boxYearArtist" list="boxArtistOptions" placeholder="名前を入力・選択" autocomplete="off"><button id="boxYearApply">表示</button></div><fieldset class="box-year-options"><legend>比較する年（複数選択）</legend><div id="boxYearOptions"></div></fieldset><p id="boxYearStatus" role="status">同じ楽曲は各年で同じ色。各年を1〜53週の共通幅で表示します。</p>';boxPicker.append(yearPicker);
   async function applyYearArtist(){const name=$('#boxYearArtist').value.trim();if(!name)return;let model=normalize(dashboard);if(!model.artists.some(a=>a.name===name)){await activateDashboard('all',chartCode);model=normalize(dashboard);}if(!model.artists.some(a=>a.name===name)){$('#boxYearStatus').textContent='収録されている名前を候補から選んでください。';return;}yearArtist=name;render();}
   $('#boxYearApply').addEventListener('click',applyYearArtist);$('#boxYearArtist').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyYearArtist();}});
@@ -68,7 +68,10 @@
   function artistButton(name){return`<button class="stat-link" data-stat-artist="${escape(name)}">${escape(name)}</button>`;}
   function songButton(s){return`<button class="stat-link" data-stat-song="${escape(s.title)}" data-stat-owner="${escape(s.artist)}">${escape(s.title)}</button><small>${escape(s.artist)}</small>`;}
   function heading(title,copy){return`<div class="stats-heading"><h3>${escape(title)}</h3><p>${escape(copy)}</p></div>`;}
-  function more(count){return count>limit?`<button class="stats-more" id="statMore">さらに20件表示（全${count.toLocaleString()}件）</button>`:'';}
+  function more(count){
+    if(tab==='years')return count>limit&&limit<40?'<button class="stats-more" id="statMore">さらに20件表示（最大40件）</button>':'';
+    return count>limit?`<button class="stats-more" id="statMore">さらに20件表示（全${count.toLocaleString()}件）</button>`:'';
+  }
   function boxes(model,options={}){
     if(boxMode==='years'&&!options.artist)return yearBoxes(model);
     const boxYear=options.year||year,historyFor=s=>s.history.filter(p=>p.date.startsWith(boxYear));
@@ -124,12 +127,12 @@
     exportRows=[['年','アーティスト','累積登場数','登場週','楽曲数','TOP10登場数','最高順位'],...rows.map(r=>[r.year,r.name,r.count,r.dates.size,r.songs.size,r.top10,r.best])];
     return heading('単年登場回数 歴代ランキング','グループ・アーティスト×年の比較。各年1〜12月の公開日で集計し、最終年は最新取得分まで。分類・名義はこのサイトに合わせます。')+table(['順位','アーティスト','年','累積登場数','楽曲数','TOP10'],rows.slice(0,limit).map(r=>`<tr><td>${rows.findIndex(x=>x.count===r.count)+1}</td><td>${artistButton(r.name)}</td><td>${r.year}</td><td class="stat-number">${r.count}<small>回</small></td><td>${r.songs.size}曲</td><td>${r.top10}回</td></tr>`))+more(rows.length);
   }
-  function openLinked(){if(!linkedPayload)return;const a=linkedPayload;$('#recordImageTitle').textContent=a.title;$('#recordImageMeta').textContent=a.context;$('#recordImageFull').src=a.src;$('#recordImageFull').alt=a.title;$('#recordImageDownload').href=a.src;$('#recordImageDownload').download=a.filename;$('#recordImageDownload').textContent='このPNGを保存';$('#recordImageOpen').href=a.openSrc||a.src;if(!viewer.open)viewer.showModal();$('.record-image-preview').scrollTop=0;}
+  function openLinked(page=0){const a=linkedPayload?.[page];if(!a)return;$('#recordImageTitle').textContent=a.title;$('#recordImageMeta').textContent=a.context;$('#recordImageFull').src=a.src;$('#recordImageFull').alt=a.title;$('#recordImageDownload').href=a.src;$('#recordImageDownload').download=a.filename;$('#recordImageDownload').textContent='このPNGを保存';$('#recordImageOpen').href=a.openSrc||a.src;if(!viewer.open)viewer.showModal();$('.record-image-preview').scrollTop=0;}
   async function renderLinked(model,token){
     const source=$('#statContent'),raw=exportRows.slice(1).map(r=>[...r]),boxCards=[...source.querySelectorAll('.stats-box-card')].map(el=>({name:el.querySelector('h4 .stat-link')?.textContent||el.querySelector('h4').textContent,total:el.querySelector('.stats-box-head p strong').textContent,svg:el.querySelector('svg').outerHTML,songs:[...el.querySelectorAll('[data-song-title]')].map(e=>({title:e.dataset.songTitle,color:e.dataset.songColor}))}));
     const liveTab=tab,liveYear=year,liveScope=scopeCode,liveChart=chartCode,liveEntity=entity,liveThreshold=threshold,liveRun=$('#statRun').selectedOptions[0].textContent,scope=scopeLabel().replace(/総合/g,''),chart=dashboard.chartName.replace(/^Billboard Japan /i,''),context=$('#statContext').textContent.replace(/ \/ 出典：Billboard JAPAN$/,'').replace(/総合/g,'');
-    const annual=liveTab==='years',streak=liveTab==='streaks',box=liveTab==='boxes',metric=annual?2:3,cut=raw[19]?.[metric],rows=box?raw:raw.filter((r,i)=>i<20||r[metric]===cut),accent=streak?({hot100:'#326d52',stsongs:'#006c9c',dlsongs:'#9a5934'})[liveChart]:({boys:'#006c9c',girls:'#a34d68',korean:'#886b00',combined:'#326d52',all:'#326d52'})[liveScope];
-    const title=box?boxMode==='years'?`${yearArtist} 年別ランクイン推移`:`${liveYear}年 週別ランクイン ${boxMode==='custom'?'選択アーティスト':'TOP10'}`:streak?`TOP${liveThreshold} 連続週数`:annual?(liveYear==='all'?'単年登場回数 歴代TOP20':`${liveYear}年 主な実績 TOP20`):`${liveYear==='all'?'歴代':liveYear+'年'} 累積登場数 TOP20`;
+    const annual=liveTab==='years',streak=liveTab==='streaks',box=liveTab==='boxes',metric=annual?2:3,cut=raw[19]?.[metric],rows=annual?raw.slice(0,40):box?raw:raw.filter((r,i)=>i<20||r[metric]===cut),accent=streak?({hot100:'#326d52',stsongs:'#006c9c',dlsongs:'#9a5934'})[liveChart]:({boys:'#006c9c',girls:'#a34d68',korean:'#886b00',combined:'#326d52',all:'#326d52'})[liveScope];
+    const title=box?boxMode==='years'?`${yearArtist} 年別ランクイン推移`:`${liveYear}年 週別ランクイン ${boxMode==='custom'?'選択アーティスト':'TOP10'}`:streak?`TOP${liveThreshold} 連続週数`:annual?(liveYear==='all'?'単年登場回数 歴代TOP40':`${liveYear}年 主な実績 TOP40`):`${liveYear==='all'?'歴代':liveYear+'年'} 累積登場数 TOP20`;
     const subtitle=box?'1マス＝1曲×1週。曲が多い週は細いマスで横に折り返し。':streak?liveRun+' · 楽曲ごとの連続週数 · 同順位を含む':annual?'アーティスト×年の記録 · 同順位を含む':`${liveEntity==='artist'?'アーティスト':'楽曲'}ごとの累積ランクイン · 同順位を含む`;
     linkedPayload=null;
     if(box&&!boxCards.length){source.innerHTML='<p class="stats-empty">上の入力欄からアーティストを追加してください。</p>';return;}
@@ -143,45 +146,62 @@
     }
     const compactBoxes=box&&boxCards.length>=7;
     if(compactBoxes){const gap=10,start=190,height=(2220-start-gap*(boxCards.length-1))/boxCards.length;boxCards.forEach((card,i)=>{card.y=start+i*(height+gap);card.height=height;});}
-    const canvas=document.createElement('canvas'),W=1800,rowHeight=1615/Math.max(20,rows.length),H=box?(compactBoxes?2400:Math.max(900,nextBoxY+170)):2400;canvas.width=W;canvas.height=H;canvas.id='linkedRecordCanvas';canvas.setAttribute('aria-label',scope+' / '+title);canvas.dataset.rows=JSON.stringify(rows);canvas.dataset.recordScope=liveScope;canvas.dataset.recordChart=liveChart;canvas.dataset.year=liveYear;canvas.dataset.tab=liveTab;canvas.dataset.columns='1';canvas.dataset.legendSongs=JSON.stringify(boxCards.map(b=>({name:b.name,songs:b.songs})));canvas.dataset.boxLayout=JSON.stringify(boxCards.map(b=>({y:b.y,height:b.height}))); canvas.dataset.artistOrder=JSON.stringify(boxCards.map((b,i)=>({name:b.name,column:1,row:i+1})));
-    const ctx=canvas.getContext('2d'),font='Meiryo,"Yu Gothic UI",sans-serif';
-    function text(value,x,y,size=28,color='#1d1d1f',bold=false,max=1500){ctx.font=`${bold?650:400} ${size}px ${font}`;while(ctx.measureText(String(value)).width>max&&size>18){size--;ctx.font=`${bold?650:400} ${size}px ${font}`;}ctx.fillStyle=color;ctx.textAlign='left';ctx.fillText(String(value),x,y);}
-    function rightText(value,x,y,size=28,color='#1d1d1f',bold=false){ctx.font=`${bold?700:400} ${size}px Arial,${font}`;ctx.fillStyle=color;ctx.textAlign='right';ctx.fillText(String(value),x,y);ctx.textAlign='left';}
-    function round(x,y,w,h,color,r=16){ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}
-    ctx.fillStyle='#f5f5f7';ctx.fillRect(0,0,W,H);ctx.textBaseline='top';
-    if(box){const dy=compactBoxes?-24:0;text('Billboard JAPAN / '+chart,60,compactBoxes?22:34,compactBoxes?23:25,'#6e6e73');text(title,58,84+dy,compactBoxes?42:48,'#1d1d1f',true,1680);text(scope+' / '+subtitle,60,157+dy-(compactBoxes?12:0),compactBoxes?21:24,'#6e6e73',false,1680);text(colorMode==='song'?'色＝楽曲（同一アーティスト内で固定）':'色が濃いほど週の曲数が多い',60,199+dy-(compactBoxes?16:0),compactBoxes?20:23,'#6e6e73');}
-    else{ctx.save();ctx.shadowColor='#00000013';ctx.shadowBlur=24;ctx.shadowOffsetY=10;round(48,38,W-96,H-86,'#fff',38);ctx.restore();ctx.strokeStyle='#e1e1e6';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(48,38,W-96,H-86,38);ctx.stroke();round(96,89,8,49,accent,4);text('Billboard JAPAN / '+chart,125,89,32,'#1d1d1f',true);rightText(model.latest.replaceAll('-','.'),1698,96,24,'#6e6e73');text(({boys:'ボーイズグループ',girls:'ガールズグループ',korean:'K-POPグループ',combined:'ボーイズ＆ガールズグループ',all:'全アーティスト'})[liveScope],96,183,52,accent,true);text(title,92,261,62,'#1d1d1f',true,1610);text(subtitle,99,347,26,'#6e6e73',false,1600);}
-    if(box){
-      for(const [i,b]of boxCards.entries()){
-        const svg=new DOMParser().parseFromString(b.svg,'image/svg+xml').documentElement;
-        const y=b.y;round(48,y,1704,b.height,'#fff',20);
-        text((boxMode==='years'?'':(i+1)+'. ')+b.name,80,y+(compactBoxes?8:16),compactBoxes?32:40,'#1d1d1f',true,1360);rightText(b.total+'回',1720,y+(compactBoxes?6:14),compactBoxes?36:44,accent,true);
-        const sx=1640/1040,ox=80,plotScale=b.legend.length?1:Math.max(.75,(b.height-150)/120),base=b.legend.length?y+211:y+b.height-50;
-        ctx.strokeStyle='#e5e5ea';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ox+20*sx,base);ctx.lineTo(ox+1020*sx,base);ctx.stroke();
-        for(const r of svg.querySelectorAll('rect'))round(ox+Number(r.getAttribute('x'))*sx,base+(Number(r.getAttribute('y'))-152)*plotScale,Number(r.getAttribute('width'))*sx,Number(r.getAttribute('height'))*plotScale,r.getAttribute('fill'),1.5);
-        for(const label of svg.querySelectorAll('[data-week-count]')){ctx.font=(compactBoxes?'500 16px ':'500 19px ')+font;ctx.fillStyle='#62626b';ctx.textAlign='center';const ly=base+(Number(label.getAttribute('y'))-152)*plotScale-(compactBoxes?14:17);ctx.fillText(label.textContent,ox+Number(label.getAttribute('x'))*sx,ly);ctx.textAlign='left';}
-        for(const m of svg.querySelectorAll('[data-month]')){const mx=ox+Number(m.getAttribute('x'))*sx;ctx.strokeStyle='#d2d2d7';ctx.beginPath();ctx.moveTo(mx,base+6);ctx.lineTo(mx,base+10);ctx.stroke();ctx.font=(compactBoxes?'600 22px ':'600 26px ')+font;ctx.fillStyle='#62626b';ctx.textAlign='center';ctx.fillText(m.textContent,mx,base+23);ctx.textAlign='left';}
-        for(const item of b.legend){round(item.x,y+286+item.y,16,16,item.color,4);item.lines.forEach((line,j)=>text(line,item.x+30,y+280+item.y+j*36,26,'#515158',false,748));}
+    const allRows=rows,pageRows=annual&&rows.length>20?[rows.slice(0,20),rows.slice(20)]:[rows],images=[];
+    for(const [pageIndex,rows]of pageRows.entries()){
+      const canvas=document.createElement('canvas'),W=1800,rowHeight=1615/Math.max(20,rows.length),H=box?(compactBoxes?2400:Math.max(900,nextBoxY+170)):2400;canvas.width=W;canvas.height=H;canvas.id=pageIndex?'linkedRecordCanvas'+(pageIndex+1):'linkedRecordCanvas';canvas.dataset.page=String(pageIndex+1);canvas.dataset.pages=String(pageRows.length);canvas.setAttribute('aria-label',scope+' / '+title);canvas.dataset.rows=JSON.stringify(rows);canvas.dataset.recordScope=liveScope;canvas.dataset.recordChart=liveChart;canvas.dataset.year=liveYear;canvas.dataset.tab=liveTab;canvas.dataset.columns='1';canvas.dataset.legendSongs=JSON.stringify(boxCards.map(b=>({name:b.name,songs:b.songs})));canvas.dataset.boxLayout=JSON.stringify(boxCards.map(b=>({y:b.y,height:b.height}))); canvas.dataset.artistOrder=JSON.stringify(boxCards.map((b,i)=>({name:b.name,column:1,row:i+1})));
+      const ctx=canvas.getContext('2d'),font='Meiryo,"Yu Gothic UI",sans-serif';
+      function text(value,x,y,size=28,color='#1d1d1f',bold=false,max=1500){ctx.font=`${bold?650:400} ${size}px ${font}`;while(ctx.measureText(String(value)).width>max&&size>18){size--;ctx.font=`${bold?650:400} ${size}px ${font}`;}ctx.fillStyle=color;ctx.textAlign='left';ctx.fillText(String(value),x,y);}
+      function rightText(value,x,y,size=28,color='#1d1d1f',bold=false){ctx.font=`${bold?700:400} ${size}px Arial,${font}`;ctx.fillStyle=color;ctx.textAlign='right';ctx.fillText(String(value),x,y);ctx.textAlign='left';}
+      function round(x,y,w,h,color,r=16){ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}
+      ctx.fillStyle='#f5f5f7';ctx.fillRect(0,0,W,H);ctx.textBaseline='top';
+      if(box){const dy=compactBoxes?-24:0;text('Billboard JAPAN / '+chart,60,compactBoxes?22:34,compactBoxes?23:25,'#6e6e73');text(title,58,84+dy,compactBoxes?42:48,'#1d1d1f',true,1680);text(scope+' / '+subtitle,60,157+dy-(compactBoxes?12:0),compactBoxes?21:24,'#6e6e73',false,1680);text(colorMode==='song'?'色＝楽曲（同一アーティスト内で固定）':'色が濃いほど週の曲数が多い',60,199+dy-(compactBoxes?16:0),compactBoxes?20:23,'#6e6e73');}
+      else{ctx.save();ctx.shadowColor='#00000013';ctx.shadowBlur=24;ctx.shadowOffsetY=10;round(48,38,W-96,H-86,'#fff',38);ctx.restore();ctx.strokeStyle='#e1e1e6';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(48,38,W-96,H-86,38);ctx.stroke();round(96,89,8,49,accent,4);text('Billboard JAPAN / '+chart,125,89,32,'#1d1d1f',true);rightText(model.latest.replaceAll('-','.'),1698,96,24,'#6e6e73');text(({boys:'ボーイズグループ',girls:'ガールズグループ',korean:'K-POPグループ',combined:'ボーイズ＆ガールズグループ',all:'全アーティスト'})[liveScope],96,183,52,accent,true);text(title,92,261,62,'#1d1d1f',true,1610);text(subtitle+(pageRows.length>1?' · '+(pageIndex+1)+' / '+pageRows.length+'枚':''),99,347,26,'#6e6e73',false,1600);}
+      if(box){
+        for(const [i,b]of boxCards.entries()){
+          const svg=new DOMParser().parseFromString(b.svg,'image/svg+xml').documentElement;
+          const y=b.y;round(48,y,1704,b.height,'#fff',20);
+          text((boxMode==='years'?'':(i+1)+'. ')+b.name,80,y+(compactBoxes?8:16),compactBoxes?32:40,'#1d1d1f',true,1360);rightText(b.total+'回',1720,y+(compactBoxes?6:14),compactBoxes?36:44,accent,true);
+          const sx=1640/1040,ox=80,plotScale=b.legend.length?1:Math.max(.75,(b.height-150)/120),base=b.legend.length?y+211:y+b.height-50;
+          ctx.strokeStyle='#e5e5ea';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ox+20*sx,base);ctx.lineTo(ox+1020*sx,base);ctx.stroke();
+          for(const r of svg.querySelectorAll('rect'))round(ox+Number(r.getAttribute('x'))*sx,base+(Number(r.getAttribute('y'))-152)*plotScale,Number(r.getAttribute('width'))*sx,Number(r.getAttribute('height'))*plotScale,r.getAttribute('fill'),1.5);
+          for(const label of svg.querySelectorAll('[data-week-count]')){ctx.font=(compactBoxes?'500 16px ':'500 19px ')+font;ctx.fillStyle='#62626b';ctx.textAlign='center';const ly=base+(Number(label.getAttribute('y'))-152)*plotScale-(compactBoxes?14:17);ctx.fillText(label.textContent,ox+Number(label.getAttribute('x'))*sx,ly);ctx.textAlign='left';}
+          for(const m of svg.querySelectorAll('[data-month]')){const mx=ox+Number(m.getAttribute('x'))*sx;ctx.strokeStyle='#d2d2d7';ctx.beginPath();ctx.moveTo(mx,base+6);ctx.lineTo(mx,base+10);ctx.stroke();ctx.font=(compactBoxes?'600 22px ':'600 26px ')+font;ctx.fillStyle='#62626b';ctx.textAlign='center';ctx.fillText(m.textContent,mx,base+23);ctx.textAlign='left';}
+          for(const item of b.legend){round(item.x,y+286+item.y,16,16,item.color,4);item.lines.forEach((line,j)=>text(line,item.x+30,y+280+item.y+j*36,26,'#515158',false,748));}
+        }
+      }else{
+        const displayName=(name,y)=>name==='三代目 J SOUL BROTHERS from EXILE TRIBE'?'三代目 J SOUL BROTHERS':name==='GENERATIONS from EXILE TRIBE'?'GENERATIONS':name==='THE RAMPAGE from EXILE TRIBE'?'THE RAMPAGE':name==='櫻坂46'&&Number(y)<2020?'欅坂46（現・櫻坂46）':name==='日向坂46'&&Number(y)<2019?'けやき坂46（現・日向坂46）':name;
+        const winner=allRows[0],barX=annual?1080:1240,barW=annual?443:283;
+        round(96,400,1608,78,'#f5f5f7',20);text(streak?'最長記録':'最多記録',121,422,24,'#6e6e73');
+        if(winner){text(annual?displayName(winner[1],winner[0]):winner[1],284,418,33,'#1d1d1f',true,650);rightText(Number(winner[metric]).toLocaleString()+(streak?'週':'回'),1160,414,41,accent,true);rightText(streak?'掲載曲の継続中 '+rows.filter(r=>r[6]==='はい').length+'曲':annual?winner[0]+'年'+(winner[0]===String(model.latest).slice(0,4)?'・途中記録':''):'サイト収録データ',1675,427,25,accent,true);}else text('該当する記録はありません',284,418,30,'#6e6e73');
+        text('順位',111,505,21,'#6e6e73');text(streak||liveEntity==='song'&&!annual?'楽曲 / アーティスト':liveScope==='all'?'アーティスト':'グループ名',216,505,21,'#6e6e73');text(streak?'連続期間':annual?'年':'補足',annual?948:948,505,21,'#6e6e73');text(streak?'連続週数':annual?'単年の累積登場回数':'累積登場数',barX,505,21,'#6e6e73');
+        const maximum=Math.max(1,...allRows.map(r=>Number(r[metric]))),axis=Math.ceil(maximum/(streak?10:50))*(streak?10:50),tint=streak?({hot100:'#e7f2eb',stsongs:'#e9f3fb',dlsongs:'#faece5'})[liveChart]:({boys:'#e9f3fb',girls:'#f9ebf0',korean:'#fff5cc',combined:'#e7f2eb',all:'#e7f2eb'})[liveScope];
+        rows.forEach((r,i)=>{const y=540+i*rowHeight,value=Number(r[metric]),highlight=streak?r[6]==='はい':annual?r[0]===String(model.latest).slice(0,4):i===0;
+          if(highlight||i%2===0)round(96,y,1608,rowHeight-4,highlight?tint:'#f7f7f9',14);
+          const rank=allRows.findIndex(x=>Number(x[metric])===value)+1;text(String(rank).padStart(2,'0'),115,y+(rowHeight-32)/2,29,'#6e6e73',true);
+          text(annual?displayName(r[1],r[0]):r[1],216,y+(annual?(rowHeight-38)/2:6),annual?34:32,'#1d1d1f',true,annual?660:696);
+          if(streak||!annual&&liveEntity==='song')text(r[2],217,y+44,21,'#6e6e73',false,696);
+          if(streak){text(r[4].replaceAll('-','.'),948,y+10,23,'#6e6e73');text(r[6]==='はい'?'— 継続中':'— '+r[5].replaceAll('-','.'),948,y+42,23,highlight?accent:'#6e6e73',highlight);}else if(annual){text(r[0],927,y+(rowHeight-36)/2,34,highlight?accent:'#6e6e73',highlight);}else text(r[4]+'週 / TOP10 '+r[5]+'回',948,y+24,22,'#6e6e73',false,275);
+          const barY=y+(rowHeight-24)/2;round(barX,barY,barW,24,'#e7e7ec',12);round(barX,barY,Math.max(2,barW*value/axis),24,highlight?accent:'#acb1b5',12);rightText(value.toLocaleString(),1660,y+(rowHeight-46)/2,42,highlight?accent:'#1d1d1f',true);rightText(streak?'週':'回',1692,y+(rowHeight-22)/2,18,'#6e6e73');
+        });
       }
-    }else{
-      const displayName=(name,y)=>name==='三代目 J SOUL BROTHERS from EXILE TRIBE'?'三代目 J SOUL BROTHERS':name==='GENERATIONS from EXILE TRIBE'?'GENERATIONS':name==='THE RAMPAGE from EXILE TRIBE'?'THE RAMPAGE':name==='櫻坂46'&&Number(y)<2020?'欅坂46（現・櫻坂46）':name==='日向坂46'&&Number(y)<2019?'けやき坂46（現・日向坂46）':name;
-      const winner=rows[0],barX=annual?1080:1240,barW=annual?443:283;
-      round(96,400,1608,78,'#f5f5f7',20);text(streak?'最長記録':'最多記録',121,422,24,'#6e6e73');
-      if(winner){text(annual?displayName(winner[1],winner[0]):winner[1],284,418,33,'#1d1d1f',true,650);rightText(Number(winner[metric]).toLocaleString()+(streak?'週':'回'),1160,414,41,accent,true);rightText(streak?'掲載曲の継続中 '+rows.filter(r=>r[6]==='はい').length+'曲':annual?winner[0]+'年'+(winner[0]===String(model.latest).slice(0,4)?'・途中記録':''):'サイト収録データ',1675,427,25,accent,true);}else text('該当する記録はありません',284,418,30,'#6e6e73');
-      text('順位',111,505,21,'#6e6e73');text(streak||liveEntity==='song'&&!annual?'楽曲 / アーティスト':liveScope==='all'?'アーティスト':'グループ名',216,505,21,'#6e6e73');text(streak?'連続期間':annual?'年':'補足',annual?948:948,505,21,'#6e6e73');text(streak?'連続週数':annual?'単年の累積登場回数':'累積登場数',barX,505,21,'#6e6e73');
-      const maximum=Math.max(1,...rows.map(r=>Number(r[metric]))),axis=Math.ceil(maximum/(streak?10:50))*(streak?10:50),tint=streak?({hot100:'#e7f2eb',stsongs:'#e9f3fb',dlsongs:'#faece5'})[liveChart]:({boys:'#e9f3fb',girls:'#f9ebf0',korean:'#fff5cc',combined:'#e7f2eb',all:'#e7f2eb'})[liveScope];
-      rows.forEach((r,i)=>{const y=540+i*rowHeight,value=Number(r[metric]),highlight=streak?r[6]==='はい':annual?r[0]===String(model.latest).slice(0,4):i===0;
-        if(highlight||i%2===0)round(96,y,1608,rowHeight-4,highlight?tint:'#f7f7f9',14);
-        const rank=rows.findIndex(x=>Number(x[metric])===value)+1;text(String(rank).padStart(2,'0'),115,y+(rowHeight-32)/2,29,'#6e6e73',true);
-        text(annual?displayName(r[1],r[0]):r[1],216,y+(annual?(rowHeight-38)/2:6),annual?34:32,'#1d1d1f',true,annual?660:696);
-        if(streak||!annual&&liveEntity==='song')text(r[2],217,y+44,21,'#6e6e73',false,696);
-        if(streak){text(r[4].replaceAll('-','.'),948,y+10,23,'#6e6e73');text(r[6]==='はい'?'— 継続中':'— '+r[5].replaceAll('-','.'),948,y+42,23,highlight?accent:'#6e6e73',highlight);}else if(annual){text(r[0],927,y+(rowHeight-36)/2,34,highlight?accent:'#6e6e73',highlight);}else text(r[4]+'週 / TOP10 '+r[5]+'回',948,y+24,22,'#6e6e73',false,275);
-        const barY=y+(rowHeight-24)/2;round(barX,barY,barW,24,'#e7e7ec',12);round(barX,barY,Math.max(2,barW*value/axis),24,highlight?accent:'#acb1b5',12);rightText(value.toLocaleString(),1660,y+(rowHeight-46)/2,42,highlight?accent:'#1d1d1f',true);rightText(streak?'週':'回',1692,y+(rowHeight-22)/2,18,'#6e6e73');
-      });
+      const footer=box?H-140:540+Math.max(1,rows.length)*rowHeight+38;ctx.strokeStyle='#d2d2d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(96,footer-20);ctx.lineTo(W-96,footer-20);ctx.stroke();text(context,99,footer+4,21,'#6e6e73',false,1600);text(streak?'連続判定は収録済みの公開週順。最新週までの記録のみ「継続中」。':'1曲×1週＝1回。同週に複数曲が入った場合は別々に加算。',99,footer+44,22,'#6e6e73',false,1600);text('出典：Billboard JAPAN',99,footer+84,21,'#6e6e73',false,1600);
+      if(token!==revision||view!=='linked')return;
+      const src=canvas.toDataURL('image/png'),filename=`billboard-${liveScope}-${liveChart}-${liveTab}-${streak?'all':boxMode==='years'&&box?'selected-years':liveYear}-${model.latest}${pageRows.length>1?'-'+(pageIndex+1):''}.png`;
+      const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+      if(token!==revision||view!=='linked')return;
+      images.push({canvas,src,blob,filename,title:scope+' / '+title,context});
     }
-    const footer=box?H-140:540+Math.max(1,rows.length)*rowHeight+38;ctx.strokeStyle='#d2d2d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(96,footer-20);ctx.lineTo(W-96,footer-20);ctx.stroke();text(context,99,footer+4,21,'#6e6e73',false,1600);text(streak?'連続判定は収録済みの公開週順。最新週までの記録のみ「継続中」。':'1曲×1週＝1回。同週に複数曲が入った場合は別々に加算。',99,footer+44,22,'#6e6e73',false,1600);text('出典：Billboard JAPAN',99,footer+84,21,'#6e6e73',false,1600);
     if(token!==revision||view!=='linked')return;
-    const src=canvas.toDataURL('image/png'),filename=`billboard-${liveScope}-${liveChart}-${liveTab}-${streak?'all':boxMode==='years'&&box?'selected-years':liveYear}-${model.latest}.png`;const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(token!==revision||view!=='linked')return;if(linkedObjectUrl)URL.revokeObjectURL(linkedObjectUrl);linkedObjectUrl=URL.createObjectURL(blob);linkedPayload={src,openSrc:linkedObjectUrl,filename,title:scope+' / '+title,context};$('#linkedRecordPreview').append(canvas);$('#linkedRecordActions').innerHTML=`<a class="record-save" id="linkedRecordSave" href="${src}" download="${filename}">このPNGを保存</a><button data-linked-preview="true">拡大して見る</button>`;$('.linked-record-status').textContent='サイトのデータから生成済み';section.dataset.imageReady=String(token);
+    linkedObjectUrls.forEach(url=>URL.revokeObjectURL(url));
+    linkedObjectUrls=images.map(image=>URL.createObjectURL(image.blob));
+    linkedPayload=images.map((image,index)=>({...image,openSrc:linkedObjectUrls[index]}));
+    images.forEach((image,index)=>{
+      if(images.length>1){const label=document.createElement('p');label.className='linked-record-page-label';label.textContent=(index+1)+'枚目（'+(index*20+1)+'〜'+(index*20+pageRows[index].length)+'件）';$('#linkedRecordPreview').append(label);}
+      $('#linkedRecordPreview').append(image.canvas);
+    });
+    $('#linkedRecordActions').innerHTML=images.map((image,index)=>`<a class="record-save" id="linkedRecordSave${index?index+1:''}" href="${image.src}" download="${image.filename}">${images.length>1?(index+1)+'枚目のPNGを保存':'このPNGを保存'}</a><button data-linked-preview="${index}">${images.length>1?(index+1)+'枚目を拡大':'拡大して見る'}</button>`).join('');
+    $('.linked-record-status').textContent='サイトのデータから生成済み'+(images.length>1?' · '+images.length+'枚':'');
+    section.dataset.imageReady=String(token);
   }
   function render(){
     section.dataset.view=view;section.querySelector('.stats-controls').hidden=view==='images';libraryControls.hidden=view!=='images';
@@ -200,7 +220,7 @@
   }
   // Avoid a name collision between the list of available years and the renderer.
   const windowYear=years;
-  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.statTab){imageLimit=6;tab=button.dataset.statTab;limit=20;if(tab==='totals'||tab==='years')year='all';render();}else if(button.id==='statMore'){limit+=20;render();}else if(button.dataset.statArtist){openDetail(button.dataset.statArtist);}else if(button.dataset.statSong){openSongDetail(button.dataset.statOwner,button.dataset.statSong);}else if(button.id==='statExport'){
+  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.statTab){imageLimit=6;tab=button.dataset.statTab;limit=20;if(tab==='totals'||tab==='years')year='all';render();}else if(button.id==='statMore'){limit=tab==='years'?Math.min(40,limit+20):limit+20;render();}else if(button.dataset.statArtist){openDetail(button.dataset.statArtist);}else if(button.dataset.statSong){openSongDetail(button.dataset.statOwner,button.dataset.statSong);}else if(button.id==='statExport'){
     const csv='\ufeff'+exportRows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=`billboard-${scopeCode}-${chartCode}-${tab}-${tab==='streaks'?'all':year}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }});
   section.addEventListener('change',e=>{const id=e.target.id;if(id==='statYear')year=e.target.value;else if(id==='statEntity')entity=e.target.value;else if(id==='statLimit')threshold=Number(e.target.value);else if(id==='statRun')runMode=e.target.value;else if(id==='statColor')colorMode=e.target.value;else return;limit=20;render();});

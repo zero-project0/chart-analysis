@@ -23,3 +23,5 @@
 /* Roomier boxes and complete song legends for a single year. */
 .stats-box-card{padding:28px 0 24px}.stats-box-scroll{margin-top:16px}.stats-box-scroll svg{min-width:1000px}.box-song-legend{display:flex;flex-wrap:wrap;gap:12px 24px;padding:16px 4px 18px;border-top:1px solid #f0f0f3;margin-top:10px}.box-song-item{display:inline-flex;align-items:baseline;gap:9px;max-width:100%;font-size:13px;line-height:1.7;color:#515158;overflow-wrap:anywhere}.box-song-item i{display:inline-block;flex:0 0 10px;width:10px;height:10px;border-radius:3px;align-self:flex-start;margin-top:6px}.box-song-item>span{min-width:0}.stats-box-head p span{line-height:1.8}.stats-week-data{margin-top:9px}
 @media(max-width:700px){.stats-box-card{padding:24px 0 20px}.stats-box-scroll{margin-top:16px}.stats-box-scroll svg{min-width:1060px}.box-song-legend{gap:12px 18px;padding:14px 2px 16px}.box-song-item{font-size:13px;line-height:1.8}.stats-box-head{align-items:flex-start}.stats-box-head h4{font-size:18px}.stats-box-head p strong{font-size:27px}}
+
+.linked-record-page-label{margin:22px 0 12px;font-size:14px;font-weight:600;color:#515158}.linked-record-page-label:first-child{margin-top:0}
