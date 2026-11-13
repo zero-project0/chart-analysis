@@ -175,8 +175,8 @@
         if(winner){text(annual?displayName(winner[1],winner[0]):winner[1],284,418,33,'#1d1d1f',true,650);rightText(Number(winner[metric]).toLocaleString()+(streak?'週':'回'),1160,414,41,accent,true);rightText(streak?'掲載曲の継続中 '+rows.filter(r=>r[6]==='はい').length+'曲':annual?winner[0]+'年'+(winner[0]===String(model.latest).slice(0,4)?'・途中記録':''):'サイト収録データ',1675,427,25,accent,true);}else text('該当する記録はありません',284,418,30,'#6e6e73');
         text('順位',111,505,21,'#6e6e73');text(streak||liveEntity==='song'&&!annual?'楽曲 / アーティスト':liveScope==='all'?'アーティスト':'グループ名',216,505,21,'#6e6e73');text(streak?'連続期間':annual?'年':'補足',annual?948:948,505,21,'#6e6e73');text(streak?'連続週数':annual?'単年の累積登場回数':'累積登場数',barX,505,21,'#6e6e73');
         const maximum=Math.max(1,...allRows.map(r=>Number(r[metric]))),axis=Math.ceil(maximum/(streak?10:50))*(streak?10:50),tint=streak?({hot100:'#e7f2eb',stsongs:'#e9f3fb',dlsongs:'#faece5'})[liveChart]:({boys:'#e9f3fb',girls:'#f9ebf0',korean:'#fff5cc',combined:'#e7f2eb',all:'#e7f2eb'})[liveScope];
-        rows.forEach((r,i)=>{const y=540+i*rowHeight,value=Number(r[metric]),highlight=streak?r[6]==='はい':annual?r[0]===String(model.latest).slice(0,4):i===0;
-          if(!(annual&&liveYear==='2026')&&(highlight||i%2===0))round(96,y,1608,rowHeight-4,highlight?tint:'#f7f7f9',14);
+        rows.forEach((r,i)=>{const y=540+i*rowHeight,value=Number(r[metric]),highlight=streak?r[6]==='はい':annual?liveYear==='all'&&r[0]===String(model.latest).slice(0,4):i===0;
+          if(highlight||i%2===0)round(96,y,1608,rowHeight-4,highlight?tint:'#f7f7f9',14);
           const rank=allRows.findIndex(x=>Number(x[metric])===value)+1;text(String(rank).padStart(2,'0'),115,y+(rowHeight-32)/2,29,'#6e6e73',true);
           text(annual?displayName(r[1],r[0]):r[1],216,y+(annual?(rowHeight-38)/2:6),annual?34:32,'#1d1d1f',true,annual?660:696);
           if(streak||!annual&&liveEntity==='song')text(r[2],217,y+44,21,'#6e6e73',false,696);
