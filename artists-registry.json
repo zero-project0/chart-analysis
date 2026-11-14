@@ -274,7 +274,8 @@
         "ふぉ～ゆ～",
         "ACEes",
         "B&ZAI",
-        "MATSURI"
+        "MATSURI",
+        "EBiDAN"
       ],
       "aliases": {
         "スリーファンキーズ": [
@@ -1101,6 +1102,9 @@
         ],
         "MATSURI": [
           "MATSURI"
+        ],
+        "EBiDAN": [
+          "EBiDAN"
         ]
       }
     },
