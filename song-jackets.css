@@ -1,0 +1,31 @@
+.jacket-preview-note{padding:12px 24px;text-align:center;background:#edf5e9;color:#3d6348;font-size:13px;font-weight:600}
+.song-jacket{width:48px;height:48px;flex:0 0 48px;display:inline-flex;align-items:center;justify-content:center;background:#edf0ed;border-radius:4px;overflow:hidden;vertical-align:middle}
+.song-jacket img{display:block;width:100%;height:100%;object-fit:contain}
+.jacket-unavailable::before{content:'♪';font:24px system-ui;color:#a4afa6}
+.jacket-song-cell{display:flex;align-items:center;gap:14px;min-width:0}
+.jacket-title-copy{display:flex;flex-direction:column;gap:5px;min-width:0;white-space:normal}
+.jacket-credit{display:inline-flex;align-items:center;gap:5px;width:max-content;max-width:100%;font-size:10px;font-weight:400;color:#657269;text-decoration:none}
+.jacket-spotify-logo{width:63px;height:24px;object-fit:contain;display:block}
+.jacket-latest{gap:10px!important;align-items:center!important}
+.jacket-latest>.song-jacket{width:44px;height:44px;flex-basis:44px}
+.jacket-latest>span:last-child{min-width:0;flex:1}
+.jacket-attribution{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:11px;color:#657269;text-decoration:none;justify-content:flex-end}
+.jacket-search{gap:12px!important}.jacket-search .song-jacket{width:40px;height:40px;flex-basis:40px}.jacket-search .search-result-main{flex:1;min-width:0}
+#songDialog .modal-head.has-song-jacket{display:flex;align-items:flex-start;gap:22px}
+.jacket-detail-block{flex:0 0 120px;display:flex;flex-direction:column;gap:9px}
+.jacket-detail-block .song-jacket{width:120px;height:120px;display:flex;border-radius:8px}
+.jacket-detail-block .jacket-credit{align-self:center}
+.jacket-related-song{display:flex!important;align-items:center;gap:12px}.jacket-related-copy{min-width:0;flex:1}.jacket-compare-item{display:flex!important;align-items:center;gap:10px}.jacket-compare-item>.song-jacket{width:36px;height:36px;flex-basis:36px}.jacket-compare-item .compare-chip-main,.jacket-compare-item .compare-result-main{flex:1;min-width:0}#compareLegend .jacket-compare-item>.song-jacket{width:32px;height:32px;flex-basis:32px}#downloadJacketShare{padding:10px 16px;border:1px solid #d6dfd3;border-radius:12px;background:#edf5e9;color:#365c40;font:inherit;font-weight:600;cursor:pointer}
+#songDialog .modal-head.has-song-jacket>div:not(.jacket-detail-block):not(.modal-actions){flex:1;min-width:0}
+#songDialog .modal-head.has-song-jacket h2{overflow-wrap:anywhere}
+@media(max-width:650px){.song-jacket{width:40px;height:40px;flex-basis:40px}.jacket-song-cell{gap:9px}.jacket-latest>.song-jacket{width:40px;height:40px;flex-basis:40px}.jacket-attribution{justify-content:flex-start;font-size:10px}#songDialog .modal-head.has-song-jacket{gap:12px;flex-wrap:wrap}.jacket-detail-block{flex-basis:88px}.jacket-detail-block .song-jacket{width:88px;height:88px}#songDialog .modal-head.has-song-jacket>.modal-actions{flex-basis:100%;margin-left:0;justify-content:flex-end}#songDialog .modal-head.has-song-jacket h2{font-size:23px;line-height:1.45}.jacket-detail-block .jacket-credit{font-size:9px}.jacket-detail-block .jacket-spotify-logo{width:50px}}
+
+/* Record artwork stays beside labels; numerical columns retain their widths. */
+.record-artwork-cell{display:inline-flex;align-items:center;gap:12px;vertical-align:middle;text-align:left}
+.record-artwork-cell>img{width:48px;height:48px;object-fit:contain;flex:none;background:#f5f5f7}
+.record-artwork-copy{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.record-artwork-source{display:flex;align-items:center;gap:2px;color:#52644a;font-size:11px;text-decoration:none}
+.record-artwork-source img{width:64px;height:28px;object-fit:contain}
+.stats-box-head .record-artwork-cell>img{width:44px;height:44px}
+
+.record-artwork-copy{gap:4px}.record-artwork-copy .stat-link{line-height:1.5!important}.record-artwork-copy small{line-height:1.5!important;margin:0!important}.record-page-select{display:flex;align-items:center;gap:12px;margin:12px 0 20px;font-size:14px}.record-page-select select{padding:10px;border:1px solid #d2d2d7;border-radius:8px;background:white;color:#1d1d1f;max-width:100%}

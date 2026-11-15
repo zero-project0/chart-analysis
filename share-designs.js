@@ -16,10 +16,10 @@
     return{ctx,text,line,rect};
   }
   function footer(draw,period,source,dates){const {line,text}=draw;line(64,592,1136,592,'#d9d3c9');const range=dates.length?dates[0]+'〜'+dates.at(-1):'対象期間に記録なし';text(period+'集計 / '+range+' 公開分',64,604,16,muted,true);text('出典：Billboard JAPAN',64,630,15,muted);text('1曲×1週＝1回',1136,630,15,muted,false,280,'right');}
-  function compactHeader(draw,source,title,subtitle){
+  function compactHeader(draw,source,title,subtitle,jacket=null){
     const {rect,text}=draw;rect(0,0,1200,675,'#fafafa');rect(24,18,1152,639,'#fff',20);rect(60,18,1080,7,'#b8ff25');
     text('MUSIC CHART ANALYSIS',60,38,19,'#64665f',true);text(source.latestDate.replaceAll('-','.')+' 公開分',1140,38,20,'#64665f',false,320,'right');
-    text(title,60,103,54,'#171915',true,1080);text(subtitle,60,179,25,'#64665f',false,1080);
+    const tx=jacket?225:60; if(jacket)window.SongJackets.paint(draw.ctx,jacket,60,91,132);text(title,tx,103,jacket?48:54,'#171915',true,1140-tx);text(subtitle,tx,179,jacket?22:25,'#64665f',false,1140-tx);
   }
   function compactFooter(draw,source,label,dates){
     const {line,text}=draw;line(60,597,1140,597,'#e5e5e8');const range=dates.length?dates[0].replaceAll('-','.')+' — '+dates.at(-1).replaceAll('-','.'):'対象期間に記録なし';text(source.chartName+' / '+label+' / '+range,60,620,19,'#64665f',false,780);text('出典：Billboard JAPAN',1140,620,19,'#64665f',false,280,'right');
@@ -68,18 +68,18 @@
     const draw=setup(canvas,source,''),{ctx,text,line,rect}=draw,year=String(source.latestDate).slice(0,4),label=period==='all'?'全期間':year+'年',history=[...(song.history||[])].sort((a,b)=>a.date.localeCompare(b.date));
     rect(0,0,1200,675,'#fafafa');rect(24,18,1152,639,'#fff',20);rect(60,18,1080,7,'#b8ff25');
     text('MUSIC CHART ANALYSIS',60,38,19,'#64665f',true);text(source.latestDate.replaceAll('-','.')+' 公開分',1140,38,20,'#64665f',false,320,'right');
-    text(song.title,60,100,51,'#171915',true,520);text(song.artist+' / '+source.chartName+' / '+label,60,170,25,'#64665f',false,520);
+    const jacket=window.SongJackets?.get(song.artist,song.title),tx=jacket?225:60;if(jacket)window.SongJackets.paint(ctx,jacket,60,91,132);text(song.title,tx,100,jacket?41:51,'#171915',true,580-tx);text(song.artist,tx,159,25,'#64665f',false,580-tx);text(source.chartName+' / '+label,tx,199,20,'#64665f',false,580-tx);
     if(view==='graph'){
       rect(614,96,168,100,'#efffcf',14);
       [['最新',song.latestRank==null?'—':song.latestRank+'位'],['最高',song.best==null?'—':song.best+'位'],['登場',(song.weeks??new Set(history.map(p=>p.date)).size)+'週']].forEach(([name,value],i)=>{const x=630+i*180;text(name,x,109,21,'#64665f');text(value,x,146,38,i?'#171915':'#425b16',true,150);});
       const axis=Math.max(1,...history.map(p=>p.rank))<=10?10:100,area={x:105,y:269,w:930,h:240};
       chart(draw,[{color:blue,points:history.map(p=>({date:p.date,value:p.rank}))}],area,{rank:true,axis,surface:'#fff',tickSize:22,sparseDates:true});
     }else{
-      compactHeader(draw,source,song.title,song.artist+' / 楽曲概要 / '+source.chartName+' / '+label);
+      compactHeader(draw,source,song.title,song.artist+' / 楽曲概要 / '+source.chartName+' / '+label,jacket);
       [['最新順位',song.latestRank==null?'—':song.latestRank+'位'],['最高順位',song.best==null?'—':song.best+'位'],['登場週数',(song.weeks??new Set(history.map(p=>p.date)).size)+'週'],['TOP10入り',song.top10+'回']].forEach(([name,value],i)=>{const x=60+i*280;if(i===0)rect(x-16,247,262,151,'#efffcf',14);text(name,x,265,23,'#64665f');summaryValue(draw,value,x,315,64,i===0?'#425b16':'#171915',240);});
       line(60,439,1140,439,'#e5e5e8');[['初登場',history[0]?.date],['最終登場',history.at(-1)?.date]].forEach(([name,value],i)=>{const x=60+i*580;text(name,x,475,22,'#64665f');text(value?value.replaceAll('-','.'):'—',x,514,32,'#171915',true,500);});
     }
     line(60,597,1140,597,'#e5e5e8');const range=history.length?history[0].date.replaceAll('-','.')+' — '+history.at(-1).date.replaceAll('-','.'):'対象期間に記録なし';text(source.chartName+' / '+label+' / '+range,60,620,19,'#64665f',false,780);text('出典：Billboard JAPAN',1140,620,19,'#64665f',false,280,'right');
-    canvas.dataset.shareDesign='song-C';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:song.appearances,latest:song.latestRank,best:song.best,top10:song.top10});
+    if(jacket)window.SongJackets.paintCredit(ctx,jacket,825,555,315);canvas.dataset.shareDesign='song-C';canvas.dataset.jacketUri=jacket?.uri||'';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:song.appearances,latest:song.latestRank,best:song.best,top10:song.top10});
   };
 })();
