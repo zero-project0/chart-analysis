@@ -37,6 +37,22 @@
   $('#boxArtistAdd').addEventListener('click',addBoxArtist);$('#boxArtistInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addBoxArtist();}});
   boxPicker.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.boxMode){boxMode=b.dataset.boxMode;render();}else if(b.dataset.boxRemove){chosenArtists=chosenArtists.filter(a=>a!==b.dataset.boxRemove);render();}});
   let tab='boxes',year=String(dashboard.latestDate).slice(0,4),entity='artist',threshold=10,runMode='longest',colorMode='song',limit=20,linkedPage=0,exportRows=[],revision=0;
+  const recordParams=new URLSearchParams(location.hash.slice(1)),recordPage=document.documentElement.dataset.page==='records';
+  const pick=(key,allowed,fallback)=>allowed.includes(recordParams.get(key))?recordParams.get(key):fallback;
+  const arrayParam=key=>{try{const a=JSON.parse(recordParams.get(key));return Array.isArray(a)?a.filter(v=>typeof v==='string').slice(0,20):[];}catch{return[];}};
+  if(recordPage){
+    tab=pick('recordTab',['boxes','streaks','totals','years'],tab);view=pick('recordView',['linked','data'],view);layout=pick('recordLayout',['table','grid'],layout);
+    const requestedYear=recordParams.get('recordYear');if(requestedYear==='all'||/^\d{4}$/.test(requestedYear||''))year=requestedYear;
+    entity=pick('recordEntity',['artist','song'],entity);threshold=Number(pick('recordLimit',['3','10','100'],String(threshold)));runMode=pick('recordRun',['longest','debut','ongoing'],runMode);colorMode=pick('recordColor',['song','count'],colorMode);
+    linkedPage=Math.max(0,Math.min(100,Number(recordParams.get('recordPage'))||0));boxMode=pick('recordBox',['top','custom','years'],boxMode);yearArtist=recordParams.get('recordArtist')||'';chosenArtists=arrayParam('recordArtists').slice(0,10);chosenYears=arrayParam('recordYears');if(recordParams.has('recordYears'))yearPicker.dataset.initialized='true';
+  }
+  function syncRecordState(){
+    if(!recordPage)return;const hash=new URLSearchParams(location.hash.slice(1));
+    const state={recordTab:tab,recordYear:year,recordView:view,recordLayout:layout,recordEntity:entity,recordLimit:threshold,recordRun:runMode,recordColor:colorMode,recordPage:linkedPage,recordBox:boxMode};
+    for(const [key,value]of Object.entries(state))hash.set(key,String(value));
+    for(const [key,value]of Object.entries({recordArtist:yearArtist,recordArtists:chosenArtists.length?JSON.stringify(chosenArtists):'',recordYears:boxMode==='years'?JSON.stringify(chosenYears):''})){if(value)hash.set(key,value);else hash.delete(key);}
+    history.replaceState(history.state,'',location.pathname+location.search+'#'+hash);
+  }
   const cache=new WeakMap();
   function normalize(source){
     if(cache.has(source))return cache.get(source);
@@ -126,7 +142,7 @@
     const rows=box?raw:raw.filter(r=>ranks.get(Number(r[metric]))<=20);
     const pages=[];if(box)pages.push(rows);else for(let i=0;i<rows.length;i+=25)pages.push(rows.slice(i,i+25));if(!pages.length)pages.push([]);
     const finalRank=box?boxCards.length:ranks.get(Number(rows.at(-1)?.[metric]))||0,titleRank=rows.length>=20?20:finalRank;
-    linkedPage=Math.max(0,Math.min(linkedPage,pages.length-1));const chosenPage=linkedPage;
+    linkedPage=Math.max(0,Math.min(linkedPage,pages.length-1));syncRecordState();const chosenPage=linkedPage;
     const pageStart=box?1:ranks.get(Number(pages[chosenPage][0]?.[metric]))||0,pageEnd=box?boxCards.length:ranks.get(Number(pages[chosenPage].at(-1)?.[metric]))||0;
     const title=box?boxMode==='years'?`${yearArtist} 年別ランクイン推移`:`${liveYear}年 週別ランクイン ${boxMode==='custom'?'選択アーティスト':'TOP'+boxCards.length}`:streak?`TOP${liveThreshold} 連続週数`:annual?(liveYear==='all'?`単年登場回数 歴代TOP${titleRank}`:`${liveYear}年 主な実績 TOP${titleRank}`):`${liveYear==='all'?'歴代':liveYear+'年'} 累積登場数 TOP${titleRank}`;
     const subtitle=box?'1マス＝1曲×1週。曲が多い週は細いマスで横に折り返し。':streak?liveRun+' · 楽曲ごとの連続週数 · 同順位を含む':annual?'アーティスト×年の記録 · 同順位を含む':`${liveEntity==='artist'?'アーティスト':'楽曲'}ごとの累積ランクイン · 同順位を含む`;
@@ -212,10 +228,12 @@
     section.dataset.imageReady=String(token);
   }
   function render(){
+    if(recordPage&&(scopeCode!==requestedScopeCode||chartCode!==requestedChartCode)){$('#statContent').innerHTML='<p class="stats-empty">選択した分類・チャートを読み込んでいます…</p>';return;}
     section.dataset.view=view;section.querySelector('.stats-controls').hidden=false;
     section.querySelectorAll('[data-stat-view]').forEach(b=>{b.hidden=b.dataset.statLayout==='grid'&&tab==='boxes';const active=b.dataset.statView===view&&(!b.dataset.statLayout||b.dataset.statLayout===(tab==='boxes'?'table':layout));b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
     revision++;const model=normalize(dashboard);syncBoxPicker(model);const years=Object.keys(dashboard.publicationDates||{}).sort().reverse();
     if(!years.includes(year)&&year!=='all')year=years[0];if(tab==='boxes'&&year==='all')year=years[0];
+    syncRecordState();
     $('#statYear').innerHTML=(tab==='totals'?'<option value="all">全期間</option>':tab==='years'?'<option value="all">単年記録の歴代比較</option>':'')+years.map(y=>`<option value="${y}"${y===year?' selected':''}>${y}年</option>`).join('');$('#statYear').value=year;
     $('#statYearLabel').hidden=tab==='streaks'||tab==='boxes'&&boxMode==='years';$('#statEntityLabel').hidden=tab!=='totals';$('#statLimitLabel').hidden=tab!=='streaks';$('#statRunLabel').hidden=tab!=='streaks';$('#statColorLabel').hidden=tab!=='boxes';
     document.querySelectorAll('[data-stat-tab]').forEach(b=>{const active=b.dataset.statTab===tab;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;});
@@ -233,6 +251,6 @@
   }});
   section.addEventListener('change',e=>{const id=e.target.id;if(id==='recordPage'){linkedPage=Number(e.target.value);render();return;}linkedPage=0;if(id==='statYear')year=e.target.value;else if(id==='statEntity')entity=e.target.value;else if(id==='statLimit')threshold=Number(e.target.value);else if(id==='statRun')runMode=e.target.value;else if(id==='statColor')colorMode=e.target.value;else return;limit=20;render();});
   $('.stats-tabs').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...section.querySelectorAll('[data-stat-tab]')],i=tabs.indexOf(document.activeElement),next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();tabs[next].focus();});
-  const baseApply=applyDashboard;applyDashboard=function(...args){const value=baseApply.apply(this,args);linkedPage=0;limit=20;render();return value;};
+  const baseApply=applyDashboard;applyDashboard=function(...args){const value=baseApply.apply(this,args);limit=20;render();return value;};
   render();
 })();
