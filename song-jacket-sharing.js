@@ -3,7 +3,8 @@
   'use strict';
   const api=window.SongJackets,images=new Map(),jobs=new WeakMap();
   function preload(src){return new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src;});}
-  api.ready=Promise.all((window.SONG_JACKETS||[]).map(async item=>{const image=await preload(item.imageData||item.image);images.set(item.uri,image);}));
+  api.ready=Promise.all([...(window.SONG_JACKETS||[]),...(window.ARTIST_PHOTOS||[])].map(async item=>{const image=await preload(item.imageData||item.image);images.set(item.uri,image);}));
+  api.getArtistPhoto=name=>(window.ARTIST_PHOTOS||[]).find(item=>String(item.artist).normalize('NFKC').replace(/\s/g,'').toLowerCase()===String(name).normalize('NFKC').replace(/\s/g,'').toLowerCase());
   const logoReady=preload(window.JACKET_SPOTIFY_LOGO).then(img=>api.logoImage=img);
   api.ready=Promise.all([api.ready,logoReady]);
   api.paint=(ctx,item,x,y,size)=>{const img=images.get(item.uri);if(!img)return false;ctx.save();ctx.beginPath();ctx.roundRect(x,y,size,size,size>=100?8:4);ctx.clip();ctx.drawImage(img,x,y,size,size);ctx.restore();return true;};
@@ -20,13 +21,7 @@
   const paintSong=window.paintChosenSongShare;
   window.paintChosenSongShare=function(...args){const token={};jobs.set(args[0],token);const result=paintSong(...args);api.ready.then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='song')paintSong(...args);});return result;};
   const paintArtist=window.paintChosenArtistShare;
-  window.paintChosenArtistShare=function(canvas,artist,selected,...args){
-    const token={};jobs.set(canvas,token);
-    const render=()=>{delete canvas.dataset.jacketCount;paintArtist(canvas,artist,selected,...args);const songs=selected.songs.filter(s=>api.get(artist.artist,s.title)).slice(0,3);if(!songs.length)return;
-      const old=document.createElement('canvas');old.width=canvas.width;old.height=canvas.height;old.getContext('2d').drawImage(canvas,0,0);canvas.height+=130;const ctx=canvas.getContext('2d');ctx.fillStyle='#fffdf8';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(old,0,0);ctx.textBaseline='top';ctx.fillStyle='#697168';ctx.font='16px Meiryo,sans-serif';ctx.fillText('掲載楽曲のジャケット',60,old.height+10);
-      songs.forEach((s,i)=>{const item=api.get(artist.artist,s.title),x=60+i*365;api.paint(ctx,item,x,old.height+44,64);ctx.fillStyle='#24211d';ctx.font='bold 18px Meiryo,sans-serif';ctx.fillText(s.title,x+78,old.height+48,260);api.paintCredit(ctx,item,x+78,old.height+77,260);});canvas.dataset.jacketCount=String(songs.length);
-    };render();api.ready.then(()=>{if(jobs.get(canvas)===token&&currentShareTarget?.type==='artist')render();});
-  };
+  window.paintChosenArtistShare=function(...args){const token={};jobs.set(args[0],token);const render=()=>paintArtist(...args);render();api.ready.then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='artist')render();});};
   const originalComparison=buildComparisonShareImage;
   buildComparisonShareImage=function(){
     const base=originalComparison();if(compareType!=='song')return base;

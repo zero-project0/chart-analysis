@@ -47,22 +47,41 @@
     else{const totalMonths=(new Date(max).getUTCFullYear()-new Date(min).getUTCFullYear())*12+new Date(max).getUTCMonth()-new Date(min).getUTCMonth();if(totalMonths<15){const ticks=[];let date=new Date(min);date=new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,1));while(+date<max){ticks.push(+date);date=new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,1));}const every=Math.max(1,Math.ceil(ticks.length/3));text(new Date(min).getUTCMonth()+1+'月',area.x,area.y+area.h+15,16,muted);ticks.filter((_,i)=>i%every===every-1).forEach(v=>{const x=area.x+(v-min)/span*area.w;if(x<area.x+area.w-45)text(new Date(v).getUTCMonth()+1+'月',x,area.y+area.h+15,16,muted);});}else{for(let i=0;i<4;i++){const date=new Date(min+span*i/3);text(date.getUTCFullYear()+'/'+(date.getUTCMonth()+1),area.x+area.w*i/3,area.y+area.h+15,15,muted,false,100,i===3?'right':'left');}}}
   }
   function metrics(draw,list){list.forEach(([label,value],i)=>{const x=64+i*270;draw.rect(x,335,250,142,'#f3f0e9',10);draw.rect(x,335,250,5,'#b8ff25');draw.text(label,x+18,360,18,muted,true,214);draw.text(value,x+18,403,37,ink,true,214);});}
+  // Adopted Apple Design proposal: image and metrics are separate, facts lead.
   window.paintChosenArtistShare=(canvas,artist,selected,source,period,view)=>{
-    const recent=period==='recent',year=String(source.latestDate).slice(0,4),draw=setup(canvas,source,view==='graph'?'ARTIST GRAPH':'ARTIST PROFILE');
+    const recent=period==='recent',year=String(source.latestDate).slice(0,4),draw=setup(canvas,source,''),{ctx,text,line,rect}=draw;
     const label=recent?(Number(year)-2)+'〜'+year+'年':period==='all'?'全期間':year+'年';
-    draw.text(source.chartName+' / '+(recent?'年ごとの累積ランクイン推移':label+'の累積ランクイン推移'),64,165,19,muted,true);draw.text(artist.artist,64,202,46,ink,true);
-    const allDates=[...new Set(Object.values(source.publicationDates||{}).flat())].sort(),selectedDates=allDates.filter(d=>period==='all'||(recent?Number(d.slice(0,4))>=Number(year)-2:d.startsWith(year)));
+    const api=window.SongJackets,photo=api?.getArtistPhoto?.(artist.artist),chartName=source.chartName.replace(/^Billboard Japan /i,'');
+    const allDates=[...new Set(Object.values(source.publicationDates||{}).flat())].sort();
+    const selectedDates=allDates.filter(d=>period==='all'||(recent?Number(d.slice(0,4))>=Number(year)-2&&Number(d.slice(0,4))<=Number(year):d.startsWith(year)));
+    rect(0,0,1200,675,'#fff');rect(0,0,1200,4,'#b8ff25');
+    text('MUSIC CHART ANALYSIS',48,27,17,'#64665f',true);text(source.latestDate.replaceAll('-','.')+' 公開分まで',1152,26,18,'#64665f',false,360,'right');
+    const headPhoto=view==='graph'&&photo,headX=headPhoto?146:48;
+    if(headPhoto)api.paint(ctx,photo,48,72,76);
+    text(artist.artist,headX,74,43,'#171915',true,1152-headX);
+    text(chartName+' / '+(view==='summary'?label+'のランクイン実績':recent?'年別の累積登場回数':label+'の累積登場回数'),headX,132,22,'#64665f',false,1152-headX);
+    let series=[];
+    const topSongs=[...selected.songs].sort((a,b)=>b.appearances-a.appearances||a.title.localeCompare(b.title,'ja')).slice(0,3);
     if(view==='summary'){
-      compactHeader(draw,source,artist.artist,'アーティスト概要 / '+source.chartName+' / '+label);
-      [['累積登場数',selected.appearances+'回'],['登場週数',selected.weeks+'週'],['ランクイン楽曲',selected.songs.length+'曲'],['TOP10入り',selected.top10+'回']].forEach(([name,value],i)=>{const x=60+(i%2)*555,y=246+Math.floor(i/2)*158;draw.rect(x,y,525,137,i===0?'#efffcf':'#f2f2f4',14);draw.text(name,x+26,y+17,23,'#64665f');summaryValue(draw,value,x+26,y+54,65,i===0?'#425b16':'#171915',473);});
-      compactFooter(draw,source,label,selectedDates);canvas.dataset.shareDesign='artist-summary-A';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:selected.appearances,weeks:selected.weeks,songs:selected.songs.length,top10:selected.top10});return;
+      if(photo){rect(48,180,292,330,'#f5f5f7',24);api.paint(ctx,photo,70,200,248);text(artist.artist,194,473,22,'#64665f',true,248,'center');}
+      [['累積登場回数',selected.appearances,'回'],['登場週数',selected.weeks,'週'],['ランクイン楽曲数',selected.songs.length,'曲'],['TOP10入り',selected.top10,'回']].forEach(([name,value,unit],i)=>{
+        const x=photo?372+(i%2)*402:48+(i%2)*564,y=180+Math.floor(i/2)*174,w=photo?378:540;
+        rect(x,y,w,156,i===0?'#efffcf':'#f5f5f7',24);text(name,x+26,y+21,23,'#64665f');
+        let size=82,number=Number(value).toLocaleString();ctx.font='700 '+size+'px Arial,'+font;while(ctx.measureText(number).width>w-100&&size>30){size--;ctx.font='700 '+size+'px Arial,'+font;}
+        const numberWidth=ctx.measureText(number).width;ctx.fillStyle=i===0?'#425b16':'#171915';ctx.fillText(number,x+23,y+61);text(unit,x+numberWidth+37,y+size+32,27,i===0?'#425b16':'#171915',true,48);
+      });
+      text(topSongs.length?'楽曲別登場回数 上位'+topSongs.length+'曲（'+label+'）':'対象期間の楽曲別記録はありません',48,525,20,'#171915',true,780);text('1曲×1週＝1回',1152,527,17,'#64665f',false,300,'right');
+      topSongs.forEach((song,i)=>{const x=48+i*375,item=api?.get(artist.artist,song.title),hasArt=item&&api.paint(ctx,item,x,557,38),tx=x+(hasArt?51:0);text(song.title,tx,554,20,'#171915',true,x+354-tx);text(song.appearances.toLocaleString()+'回',tx,580,17,'#64665f',false,300);});
+    }else{
+      if(recent){series=Array.from({length:3},(_,i)=>{const yr=String(Number(year)-2+i),counts=new Map();(artist.allSongs||artist.songs||[]).forEach(song=>(song.allTimeHistory||song.history||[]).filter(p=>p.date.startsWith(yr)).forEach(p=>counts.set(p.date,(counts.get(p.date)||0)+1)));let total=0;return{year:yr,color:seriesColors[i],points:allDates.filter(d=>d.startsWith(yr)).map(date=>({date,value:total+=counts.get(date)||0}))};});}
+      else{const counts=new Map();selected.songs.forEach(song=>song.history.forEach(p=>counts.set(p.date,(counts.get(p.date)||0)+1)));let total=0;series=[{year:label,color:blue,points:selectedDates.map(date=>({date,value:total+=counts.get(date)||0}))}];}
+      series.forEach((s,i)=>{const x=48+i*375,w=series.length>1?354:1104;rect(x,175,w,70,'#f5f5f7',18);text(s.year+(recent?'年':''),x+20,198,24,'#64665f',false,series.length>1?130:700);text((s.points.at(-1)?.value||0).toLocaleString()+'回',x+w-20,190,38,s.color,true,series.length>1?180:330,'right');});
+      const maximum=Math.max(1,...series.flatMap(s=>s.points.map(p=>p.value))),step=maximum>100?50:maximum>20?10:5,axis=Math.ceil(maximum/step)*step;
+      chart(draw,series,{x:111,y:281,w:989,h:246},{axis,calendar:recent,surface:'#fff',tickSize:19});
+      text(recent?String(Number(year)-2)+'・'+String(Number(year)-1)+'年：年間集計 / '+year+'年：'+source.latestDate.replaceAll('-','.')+' 公開分まで':'1曲×1週＝1回。同じ週の複数曲は別々に加算。',48,580,18,'#64665f',false,1104);
     }
-    let series;
-    if(recent){series=Array.from({length:3},(_,i)=>{const yr=String(Number(year)-2+i),counts=new Map();(artist.allSongs||artist.songs||[]).forEach(s=>(s.allTimeHistory||s.history||[]).filter(p=>p.date.startsWith(yr)).forEach(p=>counts.set(p.date,(counts.get(p.date)||0)+1)));let total=0;return{year:yr,color:seriesColors[i],points:allDates.filter(d=>d.startsWith(yr)).map(date=>({date,value:total+=counts.get(date)||0}))};});}
-    else{const counts=new Map();selected.songs.forEach(s=>s.history.forEach(p=>counts.set(p.date,(counts.get(p.date)||0)+1)));let total=0;series=[{year:label,color:blue,points:selectedDates.map(date=>({date,value:total+=counts.get(date)||0}))}];}
-    if(view==='summary')metrics(draw,[['累積登場数',selected.appearances+'回'],['登場週',selected.weeks+'週'],['ランクイン楽曲',selected.songs.length+'曲'],['TOP10入り',selected.top10+'回']]);
-    else{series.forEach((s,i)=>{const x=88+i*(series.length>1?348:0);draw.line(x,282,x+30,282,s.color,4);draw.text(s.year+(recent?'年':'')+'  '+(s.points.at(-1)?.value||0)+'回',x+42,267,21,ink,true,series.length>1?286:960);});const maximum=Math.max(1,...series.flatMap(s=>s.points.map(p=>p.value))),step=maximum>100?50:maximum>20?10:5,axis=Math.ceil(maximum/step)*step;chart(draw,series,{x:96,y:318,w:1000,h:230},{axis,calendar:recent});}
-    canvas.dataset.shareDesign='artist-A';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:selected.appearances,series:series.map(s=>({year:s.year,total:s.points.at(-1)?.value||0}))});footer(draw,label,source,selectedDates);
+    line(48,611,1152,611,'#e1e4de',1);const range=selectedDates.length?selectedDates[0].replaceAll('-','.')+' — '+selectedDates.at(-1).replaceAll('-','.')+' 公開分':'対象期間に記録なし';text(range,48,632,18,'#64665f',false,830);text('出典：Billboard JAPAN',1152,632,17,'#64665f',false,270,'right');
+    canvas.dataset.shareDesign=view==='summary'?'artist-summary-apple-design':'artist-graph-apple-design';canvas.dataset.artistPhoto=photo?.uri||'';canvas.dataset.jacketCount=String(view==='summary'?topSongs.filter(song=>api?.get(artist.artist,song.title)).length:0);canvas.dataset.shareTopSongs=JSON.stringify(topSongs.map(song=>({title:song.title,count:song.appearances})));canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:selected.appearances,weeks:selected.weeks,songs:selected.songs.length,top10:selected.top10,series:series.map(s=>({year:s.year,total:s.points.at(-1)?.value||0}))});
   };
   window.paintChosenSongShare=(canvas,song,source,period,view)=>{
     const draw=setup(canvas,source,''),{ctx,text,line,rect}=draw,year=String(source.latestDate).slice(0,4),label=period==='all'?'全期間':year+'年',history=[...(song.history||[])].sort((a,b)=>a.date.localeCompare(b.date));
