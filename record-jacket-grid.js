@@ -5,7 +5,7 @@
   const {canvas,rows,metric,ranks,annual,streak,liveEntity,liveYear,liveScope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork}=o;
   const header=document.createElement('canvas');header.width=canvas.width;header.height=490;header.getContext('2d').drawImage(canvas,0,0);
   const W=1800,H=2400,cols=5,left=96,pitch=326.4,compact=rows.length>20,start=compact?280:535,nRows=Math.max(compact?5:4,Math.ceil(rows.length/cols)),rowHeight=(2220-start)/nRows;
-  const imageSize=streak?(compact?220:240):(compact?268:286),titleSize=compact?22:24,labelSize=compact?19:21;
+  const imageSize=streak?(compact?208:228):(compact?260:280),titleSize=compact?22:24,labelSize=compact?19:21;
   canvas.width=W;canvas.height=H;Object.assign(canvas.dataset,{columns:String(cols),layout:'visual',aspectRatio:'3:4',headerStyle:compact?'compact':'original'});
   const ctx=canvas.getContext('2d'),font='Meiryo,"Yu Gothic UI",sans-serif',ink='#1d1d1f',muted='#697078';ctx.textBaseline='top';
   ctx.fillStyle='#f5f5f7';ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff';ctx.beginPath();ctx.roundRect(48,38,W-96,H-86,38);ctx.fill();ctx.strokeStyle='#e1e1e6';ctx.lineWidth=1;ctx.stroke();
@@ -25,8 +25,10 @@
   const bounds=[];
   rows.forEach((r,i)=>{
    const x=left+i%cols*pitch,y=start+Math.floor(i/cols)*rowHeight,value=Number(r[metric]),rank=ranks.get(value);
-   const active=streak?r[6]==='はい':annual?liveYear==='all'&&String(r[0])===String(model.latest).slice(0,4):true;
-   const color=active?accent:muted,rankColor=!active?'#a1a5aa':({1:'#af8a37',2:'#8896a4',3:'#ad7b58'})[rank]||'#244d70';
+   const highlighted=streak?r[6]==='はい':annual&&liveYear==='all'&&String(r[0])===String(model.latest).slice(0,4);
+   const color=ink,rankColor=({1:'#af8a37',2:'#8896a4',3:'#ad7b58'})[rank]||'#244d70';
+   // Rank colors express placement only. A separate card background expresses record status.
+   if(highlighted){ctx.save();ctx.globalAlpha=.11;round(x-12,y-8,pitch-12,rowHeight-4,accent,16);ctx.restore();}
    const art=rowArtwork(r);
    if(!artwork?.paint(ctx,art,x,y,imageSize)){round(x,y,imageSize,imageSize,'#e8ebee',7);text('画像未取得',x+25,y+imageSize/2-12,20,muted,false,imageSize-45);}
    // Rank crosses only the lower-right edge; the count occupies the left gap.
@@ -39,12 +41,12 @@
    text(annual?String(r[0])+'年':liveEntity==='artist'&&!streak?'登場 '+r[4]+'週':r[2],x,labelY,labelSize,annual?color:muted,annual,imageSize);
    let lastY=labelY+labelSize;
    if(streak){text(String(r[4]).replaceAll('-','.')+' —',x,labelY+27,compact?16:18,muted,false,imageSize);text(r[6]==='はい'?'継続中':String(r[5]).replaceAll('-','.'),x,labelY+50,compact?17:19,r[6]==='はい'?accent:muted,r[6]==='はい',imageSize);lastY=labelY+72;}
-   bounds.push({rank,x,y,size:imageSize,bottom:lastY,rowBottom:start+(Math.floor(i/cols)+1)*rowHeight,ongoing:streak&&r[6]==='はい'});
+   bounds.push({rank,x,y,size:imageSize,bottom:lastY,rowBottom:start+(Math.floor(i/cols)+1)*rowHeight,ongoing:streak&&r[6]==='はい',highlighted:Boolean(highlighted),rankColor});
   });
   canvas.dataset.cardBounds=JSON.stringify(bounds);
   ctx.strokeStyle='#d2d2d7';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,2230);ctx.lineTo(W-left,2230);ctx.stroke();
   text(context,left,2252,18,muted,false,1608);
-  text(streak?'最新週まで継続中の記録のみ色を付けています。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
+  text(streak?'背景色付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景色付き：'+String(model.latest).slice(0,4)+'年の記録。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
   text('出典：Billboard JAPAN / サイト収録データ',left,2330,20,muted,false,1608);
   if(!rows.length)text('該当する記録はありません',left,start+70,30,muted);
  }
