@@ -74372,6 +74372,22 @@
       "verification": "EBiDAN Spotify artist identity and all nine credited featured groups match the chart title; original version, not the trial-enrollment version",
       "image": "jacket-assets/releases/bcc60dbdc7effc309886fd94.jpg",
       "bytes": 68950
+    },
+    {
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "title": "One Shot",
+      "spotifyTitle": "One Shot - 『仮面ライダーマイス』主題歌",
+      "album": "One Shot (『仮面ライダーマイス』主題歌)",
+      "albumUri": "spotify:album:1nEMm5N3EHlp3gmFq3YbzY",
+      "albumLabel": "Single",
+      "uri": "spotify:track:057V57pz78kEoVsoWG2SIS",
+      "url": "https://open.spotify.com/track/057V57pz78kEoVsoWG2SIS?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=4c197c53-6677-42db-97bf-728493b4807f",
+      "sourceImage": "https://i.scdn.co/image/ab67616d00001e02b99bfbcaf1cb1b1d16f803a6",
+      "selection": "manually confirmed original single",
+      "verification": "Official THE RAMPAGE discography confirms One Shot. Spotify title adds the theme-song annotation; original full version, not TV size or instrumental.",
+      "verificationSource": "https://therampage-ldh.jp/s/ldh05o/artist/00/discography?ima=0000",
+      "image": "jacket-assets/releases/aea008a7cdb9807538df864e.jpg",
+      "bytes": 48073
     }
   ]
 }

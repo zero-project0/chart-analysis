@@ -1,12 +1,12 @@
 {
   "checkedAt": "2026-11-16",
   "targets": 5429,
-  "registered": 4958,
-  "unresolved": 471,
-  "uniqueImages": 4186,
+  "registered": 4959,
+  "unresolved": 470,
+  "uniqueImages": 4187,
   "registeredArtists": 417,
   "displayedReleaseLabels": {
-    "Single": 2748,
+    "Single": 2749,
     "Album": 843,
     "EP": 1299,
     "Compilation": 68
@@ -27,10 +27,6 @@
     {
       "artist": "LE SSERAFIM",
       "title": "Made My Night (Remixes Cover ver.)"
-    },
-    {
-      "artist": "THE RAMPAGE from EXILE TRIBE",
-      "title": "One Shot"
     },
     {
       "artist": "&TEAM",
