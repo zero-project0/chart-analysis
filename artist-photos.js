@@ -23,9 +23,9 @@
     identity.querySelector('.artist-detail-photo')?.remove();copy.querySelector('.artist-photo-source')?.remove();
     const item=photos.get(norm(name));identity.classList.toggle('artist-detail-identity',Boolean(item));
     if(!item)return;
-    const link=document.createElement('a');link.className='artist-detail-photo';link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',name+'のSpotifyプロフィールを開く');
+    const link=document.createElement(item.url?'a':'span');link.className='artist-detail-photo';if(item.url){link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',name+'のSpotifyプロフィールを開く');}
     const image=portrait(item,false);image.removeAttribute('aria-hidden');link.append(image);identity.prepend(link);
-    const credit=window.SongJackets.credit(item);credit.classList.add('artist-photo-source');copy.append(credit);
+    if(item.url){const credit=window.SongJackets.credit(item);credit.classList.add('artist-photo-source');copy.append(credit);}
   }
   const render=renderArtists;renderArtists=function(...args){const result=render.apply(this,args);decorateRows();return result;};
   const open=openDetail;openDetail=function(name,...args){const result=open.call(this,name,...args);decorateDetail(name);return result;};

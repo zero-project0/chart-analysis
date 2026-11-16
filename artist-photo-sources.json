@@ -7236,6 +7236,21 @@
       "scopes": [
         "boys"
       ]
+    },
+    {
+      "artist": "SMAP",
+      "uri": "user-image:artist:smap",
+      "image": "jacket-assets/artists/smap-user-provided.jpg",
+      "size": [
+        690,
+        604
+      ],
+      "scopes": [
+        "boys"
+      ],
+      "source": "user-provided",
+      "verifiedAt": "2026-11-16",
+      "verification": "Image explicitly selected and supplied by user; original bytes preserved."
     }
   ]
 }

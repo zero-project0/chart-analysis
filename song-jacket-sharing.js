@@ -9,7 +9,7 @@
   api.getArtistPhoto=name=>photos.get(norm(name));
   const logoReady=preload(window.JACKET_SPOTIFY_LOGO).then(img=>api.logoImage=img);
   api.ready=Promise.all([api.ready,logoReady]);
-  api.paint=(ctx,item,x,y,size)=>{const img=images.get(item.uri);if(!img)return false;ctx.save();ctx.beginPath();ctx.roundRect(x,y,size,size,size>=100?8:4);ctx.clip();ctx.drawImage(img,x,y,size,size);ctx.restore();return true;};
+  api.paint=(ctx,item,x,y,size)=>{const img=images.get(item.uri);if(!img)return false;ctx.save();ctx.beginPath();ctx.roundRect(x,y,size,size,size>=100?8:4);ctx.clip();const scale=Math.min(size/img.naturalWidth,size/img.naturalHeight),w=img.naturalWidth*scale,h=img.naturalHeight*scale;ctx.drawImage(img,x+(size-w)/2,y+(size-h)/2,w,h);ctx.restore();return true;};
   api.paintCredit=()=>{}; // Credits are displayed in the site UI, not in exported images.
   const songArt=item=>api.get(item.artist,item.title);
   const artistArt=(artist,selected)=>[api.getArtistPhoto(artist.artist),...[...selected.songs].sort((a,b)=>b.appearances-a.appearances||a.title.localeCompare(b.title,'ja')).slice(0,3).map(song=>api.get(artist.artist,song.title))];

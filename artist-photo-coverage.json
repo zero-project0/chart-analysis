@@ -2,19 +2,12 @@
   "checkedAt": "2026-11-16",
   "target": "boys and girls with chart history, including gender-classified K-pop",
   "targetCount": 461,
-  "registeredCount": 426,
-  "boys": 188,
+  "registeredCount": 427,
+  "boys": 189,
   "girls": 238,
   "unresolved": [
     {
       "artist": "NYC",
-      "scopes": [
-        "boys"
-      ],
-      "reason": "artist identity or image could not be confirmed"
-    },
-    {
-      "artist": "SMAP",
       "scopes": [
         "boys"
       ],

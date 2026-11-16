@@ -21,6 +21,7 @@
       const subtitle=button.nextElementSibling?.tagName==='SMALL'?button.nextElementSibling:null;
       button.before(layout);layout.append(img,copy);copy.append(button);
       if(subtitle)copy.append(subtitle);
+      if(!item.url)return;
       const link=document.createElement('a');link.className='record-artwork-source';link.href=item.url;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',item.artist+'をSpotifyで開く');
       const logo=document.createElement('img');logo.src='jacket-assets/spotify-logo.svg';logo.alt='Spotify';link.append(logo,document.createTextNode('で開く'));copy.append(link);
     });
