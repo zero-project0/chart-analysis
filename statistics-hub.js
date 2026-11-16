@@ -47,7 +47,7 @@
   async function addBoxArtist(){const name=$('#boxArtistInput').value.trim();if(!name)return;if(chosenArtists.length>=10){$('#boxArtistStatus').textContent='最大10組まで選べます。先に選択を外してください。';return;}let model=normalize(dashboard);if(!model.artists.some(a=>a.name===name)){await activateDashboard('all',chartCode);model=normalize(dashboard);}if(!model.artists.some(a=>a.name===name)){$('#boxArtistStatus').textContent='収録されている名前を候補から選んでください。';return;}if(!chosenArtists.includes(name))chosenArtists.push(name);$('#boxArtistInput').value='';render();}
   $('#boxArtistAdd').addEventListener('click',addBoxArtist);$('#boxArtistInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addBoxArtist();}});
   boxPicker.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.boxMode){boxMode=b.dataset.boxMode;render();}else if(b.dataset.boxRemove){chosenArtists=chosenArtists.filter(a=>a!==b.dataset.boxRemove);render();}});
-  let tab='boxes',year=String(dashboard.latestDate).slice(0,4),entity='artist',threshold=10,runMode='longest',colorMode='song',limit=25,linkedPage=0,exportRows=[],revision=0;
+  let tab='boxes',year=String(dashboard.latestDate).slice(0,4),entity='artist',threshold=10,runMode='longest',colorMode='song',limit=20,linkedPage=0,exportRows=[],revision=0;
   const cache=new WeakMap();
   function normalize(source){
     if(cache.has(source))return cache.get(source);
@@ -68,8 +68,10 @@
   function artistButton(name){return`<button class="stat-link" data-stat-artist="${escape(name)}">${escape(name)}</button>`;}
   function songButton(s){return`<button class="stat-link" data-stat-song="${escape(s.title)}" data-stat-owner="${escape(s.artist)}">${escape(s.title)}</button><small>${escape(s.artist)}</small>`;}
   function heading(title,copy){return`<div class="stats-heading"><h3>${escape(title)}</h3><p>${escape(copy)}</p></div>`;}
+  function rankedSlice(rows,key){const cutoff=rows[limit-1]?.[key];return rows.filter((row,i)=>i<limit||row[key]===cutoff);}
   function more(count){
-    return count>limit?`<button class="stats-more" id="statMore">さらに25件表示（全${count.toLocaleString()}件）</button>`:'';
+    const metric=tab==='years'?2:3,records=exportRows.slice(1),cutoff=records[limit-1]?.[metric],shown=records.filter((r,i)=>i<limit||r[metric]===cutoff).length;
+    return count>shown?`<button class="stats-more" id="statMore">さらに20件表示（全${count.toLocaleString()}件）</button>`:'';
   }
   function boxes(model,options={}){
     if(boxMode==='years'&&!options.artist)return yearBoxes(model);
@@ -105,42 +107,43 @@
     }
     records.sort((a,b)=>b.weeks-a.weeks||a.start.localeCompare(b.start)||a.s.title.localeCompare(b.s.title,'ja'));
     exportRows=[['順位','曲名','アーティスト','連続週数','開始公開日','終了公開日','継続中','チャート開始時点からの記録'],...records.map((r,i)=>[i&&records[i-1].weeks===r.weeks?records.findIndex(x=>x.weeks===r.weeks)+1:i+1,r.s.title,r.s.artist,r.weeks,r.start,r.end,r.ongoing?'はい':'いいえ',r.leftCensored?'はい':'いいえ'])];
-    return heading(`TOP${threshold} 連続週数`,'順位は連続週数順。同週数は同順位。連続の判定にはチャートの公開週一覧を使い、年をまたいで数えます。')+table(['順位','楽曲・アーティスト','連続週数','記録期間','状態'],records.slice(0,limit).map((r,i)=>`<tr><td>${exportRows[i+1][0]}</td><td>${songButton(r.s)}${r.leftCensored?'<small>開始週以前は未確認</small>':''}</td><td class="stat-number">${r.weeks}<small>週</small></td><td>${r.start}<small>〜 ${r.end}</small></td><td>${r.ongoing?'<span class="stat-live">継続中</span>':'確定'}</td></tr>`))+(!records.length?'<p class="stats-empty">この条件の記録はありません。</p>':'')+more(records.length);
+    return heading(`TOP${threshold} 連続週数`,'順位は連続週数順。同週数は同順位。連続の判定にはチャートの公開週一覧を使い、年をまたいで数えます。')+table(['順位','楽曲・アーティスト','連続週数','記録期間','状態'],rankedSlice(records,'weeks').map((r,i)=>`<tr><td>${exportRows[i+1][0]}</td><td>${songButton(r.s)}${r.leftCensored?'<small>開始週以前は未確認</small>':''}</td><td class="stat-number">${r.weeks}<small>週</small></td><td>${r.start}<small>〜 ${r.end}</small></td><td>${r.ongoing?'<span class="stat-live">継続中</span>':'確定'}</td></tr>`))+(!records.length?'<p class="stats-empty">この条件の記録はありません。</p>':'')+more(records.length);
   }
   function totals(model){
     const rows=entity==='artist'?rankedArtists(model):model.songs.map(s=>{const h=selectedHistory(s);return{s,name:s.title,count:h.length,weeks:h.length,top10:h.filter(p=>p.rank<=10).length,best:h.length?Math.min(...h.map(p=>p.rank)):null};}).filter(s=>s.count).sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name,'ja'));
     exportRows=[['順位',entity==='artist'?'アーティスト':'楽曲','アーティスト（楽曲の場合）','累積登場数','登場週','TOP10登場数','最高順位'],...rows.map((r,i)=>[i&&rows[i-1].count===r.count?rows.findIndex(x=>x.count===r.count)+1:i+1,r.name,r.s?.artist||'',r.count,r.weeks,r.top10,r.best])];
-    return heading(`${year==='all'?'歴代':year+'年'}の累積ランクイン`,'累積登場数＝各曲が各週にランクインした回数の合計。アーティストの「登場週」は複数曲が入った週も1週と数えます。')+table(['順位',entity==='artist'?'アーティスト':'楽曲・アーティスト','累積登場数','登場週','TOP10','最高'],rows.slice(0,limit).map((r,i)=>`<tr><td>${exportRows[i+1][0]}</td><td>${r.s?songButton(r.s):artistButton(r.name)}</td><td class="stat-number">${r.count.toLocaleString()}<small>回</small></td><td>${r.weeks}週</td><td>${r.top10.toLocaleString()}回</td><td>${r.best}位</td></tr>`))+(!rows.length?'<p class="stats-empty">この期間の記録はありません。</p>':'')+more(rows.length);
+    return heading(`${year==='all'?'歴代':year+'年'}の累積ランクイン`,'累積登場数＝各曲が各週にランクインした回数の合計。アーティストの「登場週」は複数曲が入った週も1週と数えます。')+table(['順位',entity==='artist'?'アーティスト':'楽曲・アーティスト','累積登場数','登場週','TOP10','最高'],rankedSlice(rows,'count').map((r,i)=>`<tr><td>${exportRows[i+1][0]}</td><td>${r.s?songButton(r.s):artistButton(r.name)}</td><td class="stat-number">${r.count.toLocaleString()}<small>回</small></td><td>${r.weeks}週</td><td>${r.top10.toLocaleString()}回</td><td>${r.best}位</td></tr>`))+(!rows.length?'<p class="stats-empty">この期間の記録はありません。</p>':'')+more(rows.length);
   }
   function years(model){
     if(year==='all')return annualHistory(model);
     const ranked=rankedArtists(model),songRows=model.songs.map(s=>({s,h:selectedHistory(s)})).filter(x=>x.h.length).sort((a,b)=>b.h.length-a.h.length||a.s.title.localeCompare(b.s.title,'ja')),total=ranked.reduce((n,r)=>n+r.count,0);
     exportRows=[['年','アーティスト','累積登場数','登場週','楽曲数','TOP10登場数','最高順位'],...ranked.map(r=>[year,r.name,r.count,r.weeks,r.songs,r.top10,r.best])];
     const leader=ranked[0],hit=songRows[0];
-    return heading(`${year}年の主な実績`,'年はチャート公開日の1月〜12月で集計。最終年は取得済みの最新公開分まで。Billboardの年間チャートとは集計期間が異なります。')+`<div class="stats-highlights"><article><span>ランクインした対象</span><strong>${ranked.length.toLocaleString()}<small>組</small></strong><p>${songRows.length.toLocaleString()}曲 / 累積${total.toLocaleString()}回</p></article><article><span>アーティスト累積1位</span><strong class="stats-highlight-name">${leader?escape(leader.name):'—'}</strong><p>${leader?leader.count.toLocaleString()+'回・'+leader.songs+'曲':'記録なし'}</p></article><article><span>楽曲の登場回数1位</span><strong class="stats-highlight-name">${hit?escape(hit.s.title):'—'}</strong><p>${hit?escape(hit.s.artist)+' / '+hit.h.length+'回':'記録なし'}</p></article></div>`+table(['順位','アーティスト','累積登場数','楽曲数','TOP10','最高'],ranked.slice(0,limit).map((r,i)=>`<tr><td>${ranked.findIndex(x=>x.count===r.count)+1}</td><td>${artistButton(r.name)}</td><td class="stat-number">${r.count.toLocaleString()}<small>回</small></td><td>${r.songs}曲</td><td>${r.top10}回</td><td>${r.best}位</td></tr>`))+more(ranked.length);
+    return heading(`${year}年の主な実績`,'年はチャート公開日の1月〜12月で集計。最終年は取得済みの最新公開分まで。Billboardの年間チャートとは集計期間が異なります。')+`<div class="stats-highlights"><article><span>ランクインした対象</span><strong>${ranked.length.toLocaleString()}<small>組</small></strong><p>${songRows.length.toLocaleString()}曲 / 累積${total.toLocaleString()}回</p></article><article><span>アーティスト累積1位</span><strong class="stats-highlight-name">${leader?escape(leader.name):'—'}</strong><p>${leader?leader.count.toLocaleString()+'回・'+leader.songs+'曲':'記録なし'}</p></article><article><span>楽曲の登場回数1位</span><strong class="stats-highlight-name">${hit?escape(hit.s.title):'—'}</strong><p>${hit?escape(hit.s.artist)+' / '+hit.h.length+'回':'記録なし'}</p></article></div>`+table(['順位','アーティスト','累積登場数','楽曲数','TOP10','最高'],rankedSlice(ranked,'count').map((r,i)=>`<tr><td>${ranked.findIndex(x=>x.count===r.count)+1}</td><td>${artistButton(r.name)}</td><td class="stat-number">${r.count.toLocaleString()}<small>回</small></td><td>${r.songs}曲</td><td>${r.top10}回</td><td>${r.best}位</td></tr>`))+more(ranked.length);
   }
   function annualHistory(model){
     const rows=[];
     for(const a of model.artists){const byYear=new Map();for(const s of a.songs)for(const p of s.history){const y=p.date.slice(0,4);if(!byYear.has(y))byYear.set(y,{year:y,name:a.name,count:0,dates:new Set(),songs:new Set(),top10:0,best:100});const r=byYear.get(y);r.count++;r.dates.add(p.date);r.songs.add(s.title);if(p.rank<=10)r.top10++;r.best=Math.min(r.best,p.rank);}rows.push(...byYear.values());}
     rows.sort((a,b)=>b.count-a.count||b.year.localeCompare(a.year)||a.name.localeCompare(b.name,'ja'));
     exportRows=[['年','アーティスト','累積登場数','登場週','楽曲数','TOP10登場数','最高順位'],...rows.map(r=>[r.year,r.name,r.count,r.dates.size,r.songs.size,r.top10,r.best])];
-    return heading('単年登場回数 歴代ランキング','グループ・アーティスト×年の比較。各年1〜12月の公開日で集計し、最終年は最新取得分まで。分類・名義はこのサイトに合わせます。')+table(['順位','アーティスト','年','累積登場数','楽曲数','TOP10'],rows.slice(0,limit).map(r=>`<tr><td>${rows.findIndex(x=>x.count===r.count)+1}</td><td>${artistButton(r.name)}</td><td>${r.year}</td><td class="stat-number">${r.count}<small>回</small></td><td>${r.songs.size}曲</td><td>${r.top10}回</td></tr>`))+more(rows.length);
+    return heading('単年登場回数 歴代ランキング','グループ・アーティスト×年の比較。各年1〜12月の公開日で集計し、最終年は最新取得分まで。分類・名義はこのサイトに合わせます。')+table(['順位','アーティスト','年','累積登場数','楽曲数','TOP10'],rankedSlice(rows,'count').map(r=>`<tr><td>${rows.findIndex(x=>x.count===r.count)+1}</td><td>${artistButton(r.name)}</td><td>${r.year}</td><td class="stat-number">${r.count}<small>回</small></td><td>${r.songs.size}曲</td><td>${r.top10}回</td></tr>`))+more(rows.length);
   }
   function openLinked(page=0){const a=linkedPayload?.[page];if(!a)return;$('#recordImageTitle').textContent=a.title;$('#recordImageMeta').textContent=a.context;$('#recordImageFull').src=a.src;$('#recordImageFull').alt=a.title;$('#recordImageDownload').href=a.src;$('#recordImageDownload').download=a.filename;$('#recordImageDownload').textContent='このPNGを保存';$('#recordImageOpen').href=a.openSrc||a.src;if(!viewer.open)viewer.showModal();$('.record-image-preview').scrollTop=0;}
   async function renderLinked(model,token){
     const source=$('#statContent'),raw=exportRows.slice(1).map(r=>[...r]),boxCards=[...source.querySelectorAll('.stats-box-card')].map(el=>({name:el.querySelector('h4 .stat-link')?.textContent||el.querySelector('h4').textContent,total:el.querySelector('.stats-box-head p strong').textContent,svg:el.querySelector('svg').outerHTML,songs:[...el.querySelectorAll('[data-song-title]')].map(e=>({title:e.dataset.songTitle,color:e.dataset.songColor}))}));
     const liveTab=tab,liveYear=year,liveScope=scopeCode,liveChart=chartCode,liveEntity=entity,liveThreshold=threshold,liveRun=$('#statRun').selectedOptions[0].textContent,scope=scopeLabel().replace(/総合/g,''),chart=dashboard.chartName.replace(/^Billboard Japan /i,''),context=$('#statContext').textContent.replace(/ \/ 出典：Billboard JAPAN$/,'').replace(/総合/g,'');
-    const annual=liveTab==='years',streak=liveTab==='streaks',box=liveTab==='boxes',metric=annual?2:3,rows=raw,accent=streak?({hot100:'#326d52',stsongs:'#006c9c',dlsongs:'#9a5934'})[liveChart]:({boys:'#006c9c',girls:'#a34d68',korean:'#886b00',combined:'#326d52',all:'#326d52'})[liveScope];
-    const ranks=new Map();if(!box)rows.forEach((r,i)=>{const value=Number(r[metric]);if(!ranks.has(value))ranks.set(value,i+1);});
-    const pageRows=[];if(box)pageRows.push(rows);else for(const r of rows){const band=Math.floor((ranks.get(Number(r[metric]))-1)/25);if(!pageRows[band])pageRows[band]=[];pageRows[band].push(r);}
-    const pages=pageRows.filter(Boolean);if(!pages.length)pages.push([]);
+    const annual=liveTab==='years',streak=liveTab==='streaks',box=liveTab==='boxes',metric=annual?2:3,accent=streak?({hot100:'#326d52',stsongs:'#006c9c',dlsongs:'#9a5934'})[liveChart]:({boys:'#006c9c',girls:'#a34d68',korean:'#886b00',combined:'#326d52',all:'#326d52'})[liveScope];
+    const ranks=new Map();if(!box)raw.forEach((r,i)=>{const value=Number(r[metric]);if(!ranks.has(value))ranks.set(value,i+1);});
+    const rows=box?raw:raw.filter(r=>ranks.get(Number(r[metric]))<=20);
+    const pages=[];if(box)pages.push(rows);else for(let i=0;i<rows.length;i+=25)pages.push(rows.slice(i,i+25));if(!pages.length)pages.push([]);
+    const finalRank=box?boxCards.length:ranks.get(Number(rows.at(-1)?.[metric]))||0,titleRank=rows.length>=20?20:finalRank;
     linkedPage=Math.max(0,Math.min(linkedPage,pages.length-1));const chosenPage=linkedPage;
     const pageStart=box?1:ranks.get(Number(pages[chosenPage][0]?.[metric]))||0,pageEnd=box?boxCards.length:ranks.get(Number(pages[chosenPage].at(-1)?.[metric]))||0;
-    const title=box?boxMode==='years'?`${yearArtist} 年別ランクイン推移`:`${liveYear}年 週別ランクイン ${boxMode==='custom'?'選択アーティスト':'TOP'+boxCards.length}`:streak?`TOP${liveThreshold} 連続週数`:annual?(liveYear==='all'?`単年登場回数 歴代TOP${pageEnd}`:`${liveYear}年 主な実績 TOP${pageEnd}`):`${liveYear==='all'?'歴代':liveYear+'年'} 累積登場数 TOP${pageEnd}`;
+    const title=box?boxMode==='years'?`${yearArtist} 年別ランクイン推移`:`${liveYear}年 週別ランクイン ${boxMode==='custom'?'選択アーティスト':'TOP'+boxCards.length}`:streak?`TOP${liveThreshold} 連続週数`:annual?(liveYear==='all'?`単年登場回数 歴代TOP${titleRank}`:`${liveYear}年 主な実績 TOP${titleRank}`):`${liveYear==='all'?'歴代':liveYear+'年'} 累積登場数 TOP${titleRank}`;
     const subtitle=box?'1マス＝1曲×1週。曲が多い週は細いマスで横に折り返し。':streak?liveRun+' · 楽曲ごとの連続週数 · 同順位を含む':annual?'アーティスト×年の記録 · 同順位を含む':`${liveEntity==='artist'?'アーティスト':'楽曲'}ごとの累積ランクイン · 同順位を含む`;
     linkedPayload=null;
     if(box&&!boxCards.length){source.innerHTML='<p class="stats-empty">上の入力欄からアーティストを追加してください。</p>';return;}
-    source.innerHTML='<div class="linked-record-head"><div><h3>'+escape(title)+'</h3><p>上部の分類・チャートと、この画面の条件に連動します。'+(box?' 縦1列のPNGとして保存できます。':'')+'</p></div><span class="linked-record-status">画像を生成中…</span></div><div id="linkedRecordPreview" class="linked-record-preview"></div><div id="linkedRecordActions" class="record-image-actions"></div><p class="stats-footnote">サイトと同じ集計結果から作成。保存済みの元画像は変更しません。</p>';
+    source.innerHTML='<div class="linked-record-head"><div><h3>'+escape(title)+'</h3><p>上部の分類・チャートと、この画面の条件に連動します。'+(!box?' ランキングは20位以内・同順位を含み、1枚25件まで掲載します。':'')+(box?' 縦1列のPNGとして保存できます。':'')+'</p></div><span class="linked-record-status">画像を生成中…</span></div><div id="linkedRecordPreview" class="linked-record-preview"></div><div id="linkedRecordActions" class="record-image-actions"></div><p class="stats-footnote">サイトと同じ集計結果から作成。保存済みの元画像は変更しません。</p>';
     await window.RecordArtwork?.ready;
     if(token!==revision||view!=='linked')return;
     const artwork=window.RecordArtwork;
@@ -210,11 +213,11 @@
     linkedObjectUrls=images.map(image=>URL.createObjectURL(image.blob));
     linkedPayload=images.map((image,index)=>({...image,openSrc:linkedObjectUrls[index]}));
     images.forEach((image,index)=>{
-      if(pages.length>1){const label=document.createElement('p');label.className='linked-record-page-label';label.textContent=(chosenPage+1)+'枚目（'+pageStart+'〜'+pageEnd+'位・同順位を含む）';$('#linkedRecordPreview').append(label);}
+      if(pages.length>1){const label=document.createElement('p');label.className='linked-record-page-label';label.textContent=(chosenPage+1)+'枚目（'+pageStart+'〜'+pageEnd+'位・'+(chosenPage*25+1)+'〜'+(chosenPage*25+pages[chosenPage].length)+'件）';$('#linkedRecordPreview').append(label);}
       $('#linkedRecordPreview').append(image.canvas);
     });
     $('#linkedRecordActions').innerHTML=images.map((image,index)=>`<a class="record-save" id="linkedRecordSave${index?index+1:''}" href="${image.src}" download="${image.filename}">${images.length>1?(index+1)+'枚目のPNGを保存':'このPNGを保存'}</a><button data-linked-preview="${index}">${images.length>1?(index+1)+'枚目を拡大':'拡大して見る'}</button>`).join('');
-    if(pages.length>1){const nav=document.createElement('label');nav.className='record-page-select';nav.textContent='掲載ページ ';const select=document.createElement('select');select.id='recordPage';pages.forEach((page,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=(i+1)+'枚目（'+ranks.get(Number(page[0][metric]))+'〜'+ranks.get(Number(page.at(-1)[metric]))+'位）';option.selected=i===chosenPage;select.append(option);});nav.append(select);$('#linkedRecordPreview').before(nav);}
+    if(pages.length>1){const nav=document.createElement('label');nav.className='record-page-select';nav.textContent='掲載ページ ';const select=document.createElement('select');select.id='recordPage';pages.forEach((page,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=(i+1)+'枚目（'+ranks.get(Number(page[0][metric]))+'〜'+ranks.get(Number(page.at(-1)[metric]))+'位・'+(i*25+1)+'〜'+(i*25+page.length)+'件）';option.selected=i===chosenPage;select.append(option);});nav.append(select);$('#linkedRecordPreview').before(nav);}
     $('.linked-record-status').textContent='サイトのデータから生成済み'+(pages.length>1?' · 全'+pages.length+'枚':'');
     section.dataset.imageReady=String(token);
   }
@@ -236,11 +239,11 @@
   }
   // Avoid a name collision between the list of available years and the renderer.
   const windowYear=years;
-  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.statTab){linkedPage=0;imageLimit=6;tab=button.dataset.statTab;limit=25;if(tab==='totals'||tab==='years')year='all';render();}else if(button.id==='statMore'){limit+=25;render();}else if(button.dataset.statArtist){openDetail(button.dataset.statArtist);}else if(button.dataset.statSong){openSongDetail(button.dataset.statOwner,button.dataset.statSong);}else if(button.id==='statExport'){
+  section.addEventListener('click',e=>{const button=e.target.closest('button');if(!button)return;if(button.dataset.statTab){linkedPage=0;imageLimit=6;tab=button.dataset.statTab;limit=20;if(tab==='totals'||tab==='years')year='all';render();}else if(button.id==='statMore'){limit+=20;render();}else if(button.dataset.statArtist){openDetail(button.dataset.statArtist);}else if(button.dataset.statSong){openSongDetail(button.dataset.statOwner,button.dataset.statSong);}else if(button.id==='statExport'){
     const csv='\ufeff'+exportRows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=`billboard-${scopeCode}-${chartCode}-${tab}-${tab==='streaks'?'all':year}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }});
-  section.addEventListener('change',e=>{const id=e.target.id;if(id==='recordPage'){linkedPage=Number(e.target.value);render();return;}linkedPage=0;if(id==='statYear')year=e.target.value;else if(id==='statEntity')entity=e.target.value;else if(id==='statLimit')threshold=Number(e.target.value);else if(id==='statRun')runMode=e.target.value;else if(id==='statColor')colorMode=e.target.value;else return;limit=25;render();});
+  section.addEventListener('change',e=>{const id=e.target.id;if(id==='recordPage'){linkedPage=Number(e.target.value);render();return;}linkedPage=0;if(id==='statYear')year=e.target.value;else if(id==='statEntity')entity=e.target.value;else if(id==='statLimit')threshold=Number(e.target.value);else if(id==='statRun')runMode=e.target.value;else if(id==='statColor')colorMode=e.target.value;else return;limit=20;render();});
   $('.stats-tabs').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...section.querySelectorAll('[data-stat-tab]')],i=tabs.indexOf(document.activeElement),next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();tabs[next].focus();});
-  const baseApply=applyDashboard;applyDashboard=function(...args){const value=baseApply.apply(this,args);linkedPage=0;limit=25;render();return value;};
+  const baseApply=applyDashboard;applyDashboard=function(...args){const value=baseApply.apply(this,args);linkedPage=0;limit=20;render();return value;};
   render();
 })();
