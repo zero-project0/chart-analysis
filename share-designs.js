@@ -91,7 +91,7 @@
     if(view==='graph'){
       rect(614,96,168,100,'#efffcf',14);
       [['最新',song.latestRank==null?'—':song.latestRank+'位'],['最高',song.best==null?'—':song.best+'位'],['登場',(song.weeks??new Set(history.map(p=>p.date)).size)+'週']].forEach(([name,value],i)=>{const x=630+i*180;text(name,x,109,21,'#64665f');text(value,x,146,38,i?'#171915':'#425b16',true,150);});
-      const axis=Math.max(1,...history.map(p=>p.rank))<=10?10:100,area={x:105,y:269,w:930,h:240};
+      const axis=100,area={x:105,y:269,w:930,h:240};
       chart(draw,[{color:blue,points:history.map(p=>({date:p.date,value:p.rank}))}],area,{rank:true,axis,surface:'#fff',tickSize:22,sparseDates:true});
     }else{
       compactHeader(draw,source,song.title,song.artist+' / 楽曲概要 / '+source.chartName+' / '+label,jacket);
