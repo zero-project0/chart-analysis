@@ -28,7 +28,10 @@
    const highlighted=streak?r[6]==='はい':annual&&liveYear==='all'&&String(r[0])===String(model.latest).slice(0,4);
    const color=ink,rankColor=({1:'#af8a37',2:'#8896a4',3:'#ad7b58'})[rank]||'#244d70';
    // Rank colors express placement only. A separate card background expresses record status.
-   if(highlighted){ctx.save();ctx.globalAlpha=.11;round(x-12,y-8,pitch-12,rowHeight-4,accent,16);ctx.restore();}
+   if(highlighted){
+    ctx.save();ctx.globalAlpha=.11;round(x-12,y-8,pitch-12,rowHeight-4,accent,16);
+    ctx.globalAlpha=.72;ctx.strokeStyle=accent;ctx.lineWidth=4;ctx.stroke();ctx.restore();
+   }
    const art=rowArtwork(r);
    if(!artwork?.paint(ctx,art,x,y,imageSize)){round(x,y,imageSize,imageSize,'#e8ebee',7);text('画像未取得',x+25,y+imageSize/2-12,20,muted,false,imageSize-45);}
    // Rank crosses only the lower-right edge; the count occupies the left gap.
@@ -46,7 +49,7 @@
   canvas.dataset.cardBounds=JSON.stringify(bounds);
   ctx.strokeStyle='#d2d2d7';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,2230);ctx.lineTo(W-left,2230);ctx.stroke();
   text(context,left,2252,18,muted,false,1608);
-  text(streak?'背景色付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景色付き：'+String(model.latest).slice(0,4)+'年の記録。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
+  text(streak?'背景・枠線付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景・枠線付き：'+String(model.latest).slice(0,4)+'年の記録。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
   text('出典：Billboard JAPAN / サイト収録データ',left,2330,20,muted,false,1608);
   if(!rows.length)text('該当する記録はありません',left,start+70,30,muted);
  }
