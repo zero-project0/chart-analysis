@@ -74357,6 +74357,21 @@
       "verification": "exact normalized title and artist identity",
       "image": "jacket-assets/releases/78056e622c3fe05e55833585.jpg",
       "bytes": 23643
+    },
+    {
+      "artist": "EBiDAN",
+      "title": "Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)",
+      "spotifyTitle": "Yes! 東京",
+      "album": "Yes! 東京",
+      "albumUri": "spotify:album:0skvdIItoA1Yoji6LKPWvh",
+      "albumLabel": "Single",
+      "uri": "spotify:track:3TTpqfAnZaSbQD0zbmIR9g",
+      "url": "https://open.spotify.com/track/3TTpqfAnZaSbQD0zbmIR9g?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=507cc9d8-a701-48ec-b7c5-ba74fbb81062",
+      "sourceImage": "https://i.scdn.co/image/ab67616d00001e024814205afc4f3180f33bab91",
+      "selection": "manually confirmed same-title single release",
+      "verification": "EBiDAN Spotify artist identity and all nine credited featured groups match the chart title; original version, not the trial-enrollment version",
+      "image": "jacket-assets/releases/bcc60dbdc7effc309886fd94.jpg",
+      "bytes": 68950
     }
   ]
 }

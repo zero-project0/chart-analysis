@@ -1,21 +1,17 @@
 {
   "checkedAt": "2026-11-16",
   "targets": 5429,
-  "registered": 4957,
-  "unresolved": 472,
+  "registered": 4958,
+  "unresolved": 471,
   "uniqueImages": 4186,
   "registeredArtists": 417,
   "displayedReleaseLabels": {
-    "Single": 2747,
+    "Single": 2748,
     "Album": 843,
     "EP": 1299,
     "Compilation": 68
   },
   "unresolvedSongs": [
-    {
-      "artist": "EBiDAN",
-      "title": "Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)"
-    },
     {
       "artist": "ILLIT",
       "title": "I Got Your Back (feat. JISOO,MOMOKA of HANA)"
