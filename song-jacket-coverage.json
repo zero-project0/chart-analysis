@@ -1,0 +1,1904 @@
+{
+  "checkedAt": "2026-11-16",
+  "targets": 5429,
+  "registered": 4957,
+  "unresolved": 472,
+  "uniqueImages": 4186,
+  "registeredArtists": 417,
+  "displayedReleaseLabels": {
+    "Single": 2747,
+    "Album": 843,
+    "EP": 1299,
+    "Compilation": 68
+  },
+  "unresolvedSongs": [
+    {
+      "artist": "EBiDAN",
+      "title": "Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)"
+    },
+    {
+      "artist": "ILLIT",
+      "title": "I Got Your Back (feat. JISOO,MOMOKA of HANA)"
+    },
+    {
+      "artist": "M!LK",
+      "title": "しおざきわんだーらんど (塩崎太智)"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "SPAGHETTI (feat. j-hope of BTS)"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "Made My Night (Remixes Cover ver.)"
+    },
+    {
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "title": "One Shot"
+    },
+    {
+      "artist": "&TEAM",
+      "title": "桜色Yell"
+    },
+    {
+      "artist": "THE JET BOY BANGERZ from EXILE TRIBE",
+      "title": "HEAD UP introduced by Zeebra"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "O-Shan-Tee"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "Be Your Shadow"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "Backup Plan"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "My Own Night"
+    },
+    {
+      "artist": "光GENJI",
+      "title": "スター・ライト"
+    },
+    {
+      "artist": "n.SSign",
+      "title": "Funky like me (Feat. PEAK & PITCH)"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Panorama"
+    },
+    {
+      "artist": "SMAP",
+      "title": "世界に一つだけの花"
+    },
+    {
+      "artist": "BLACKPINK",
+      "title": "AS IF IT'S YOUR LAST"
+    },
+    {
+      "artist": "BTS",
+      "title": "Yet To Come (The Most Beautiful Moment)"
+    },
+    {
+      "artist": "KARA",
+      "title": "ミスター"
+    },
+    {
+      "artist": "BLACKPINK",
+      "title": "BOOMBAYAH"
+    },
+    {
+      "artist": "IZ*ONE",
+      "title": "幻想童話 (Secret Story of the Swan)"
+    },
+    {
+      "artist": "なにわ男子",
+      "title": "初心LOVE"
+    },
+    {
+      "artist": "SMAP",
+      "title": "ありがとう"
+    },
+    {
+      "artist": "BTS",
+      "title": "血、汗、涙"
+    },
+    {
+      "artist": "KARA",
+      "title": "ジャンピン"
+    },
+    {
+      "artist": "嵐",
+      "title": "ワイルドアットハート"
+    },
+    {
+      "artist": "TOMORROW X TOGETHER",
+      "title": "9と4分の3番線で君を待つ(Run Away)"
+    },
+    {
+      "artist": "ITZY",
+      "title": "マ・フィ・ア.in the morning"
+    },
+    {
+      "artist": "東方神起",
+      "title": "どうして君を好きになってしまったんだろう?"
+    },
+    {
+      "artist": "Juice=Juice",
+      "title": "四の五の言わず颯と別れてあげた"
+    },
+    {
+      "artist": "DISH//",
+      "title": "僕たちがやりました"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Joy!!"
+    },
+    {
+      "artist": "SMAP",
+      "title": "シャレオツ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "華麗なる逆襲"
+    },
+    {
+      "artist": "SMAP",
+      "title": "This is love"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Top Of The World"
+    },
+    {
+      "artist": "SMAP",
+      "title": "さかさまの空"
+    },
+    {
+      "artist": "SMAP",
+      "title": "そのまま"
+    },
+    {
+      "artist": "BLACKPINK",
+      "title": "FOREVER YOUNG"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "Lose My Breath (feat.Charlie Puth)"
+    },
+    {
+      "artist": "NCT",
+      "title": "Chain"
+    },
+    {
+      "artist": "BUDDiiS",
+      "title": "LOVE ME"
+    },
+    {
+      "artist": "timelesz",
+      "title": "麒麟の子"
+    },
+    {
+      "artist": "Da-iCE",
+      "title": "liveDevil feat. 木村昴"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Moment"
+    },
+    {
+      "artist": "SMAP",
+      "title": "そっときゅっと"
+    },
+    {
+      "artist": "SMAP",
+      "title": "僕の半分"
+    },
+    {
+      "artist": "NiziU",
+      "title": "LOVE LINE"
+    },
+    {
+      "artist": "BTS",
+      "title": "IDOL feat.Nicki Minaj"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Otherside"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Yes we are"
+    },
+    {
+      "artist": "SMAP",
+      "title": "この瞬間(とき)、きっと夢じゃない"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Mr.S-SAITEI DE SAIKOU NO OTOKO-"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "UNFORGIVEN (feat. Nile Rodgers, Ado) -Japanese ver.-"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "Social Path (feat.LiSA)"
+    },
+    {
+      "artist": "NCT WISH",
+      "title": "WISH"
+    },
+    {
+      "artist": "timelesz",
+      "title": "カラクリだらけのテンダネス"
+    },
+    {
+      "artist": "超特急",
+      "title": "カチカジャ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Mistake!"
+    },
+    {
+      "artist": "SMAP",
+      "title": "not alone〜幸せになろうよ〜"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "青いベンチ"
+    },
+    {
+      "artist": "Melody",
+      "title": "遥花〜はるか〜"
+    },
+    {
+      "artist": "TOMORROW X TOGETHER",
+      "title": "0X1=LOVESONG (I Know I Love You) (feat. 幾田りら)"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "FXXK IT"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "FLOWER ROAD"
+    },
+    {
+      "artist": "RAINBOW",
+      "title": "A"
+    },
+    {
+      "artist": "timelesz",
+      "title": "King & Queen & Joker"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Honey Honey"
+    },
+    {
+      "artist": "WEST.",
+      "title": "ジパング・おおきに大作戦"
+    },
+    {
+      "artist": "NYC",
+      "title": "勇気100%"
+    },
+    {
+      "artist": "NYC",
+      "title": "ハイナ!"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "雨傘"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "アイアイ傘"
+    },
+    {
+      "artist": "中山優馬 w/B.I.Shadow",
+      "title": "悪魔な恋"
+    },
+    {
+      "artist": "NiziU",
+      "title": "What if"
+    },
+    {
+      "artist": "SDN48",
+      "title": "MIN・MIN・MIN"
+    },
+    {
+      "artist": "SDN48",
+      "title": "負け惜しみコングラチュレーション"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "LAST DANCE"
+    },
+    {
+      "artist": "ALICE",
+      "title": "イチバンボシ"
+    },
+    {
+      "artist": "NCT",
+      "title": "Fact Check"
+    },
+    {
+      "artist": "東方神起",
+      "title": "BREAK OUT!"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Share The World"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "バーニング・ラヴ"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Sexy Summerに雪が降る"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Sexy Zone"
+    },
+    {
+      "artist": "timelesz",
+      "title": "夏のハイドレンジア"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Lady ダイヤモンド"
+    },
+    {
+      "artist": "NYC",
+      "title": "よく遊びよく学べ"
+    },
+    {
+      "artist": "NYC",
+      "title": "ユメタマゴ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "オリジナル・スマイル"
+    },
+    {
+      "artist": "SMAP",
+      "title": "弾丸ファイター"
+    },
+    {
+      "artist": "SMAP",
+      "title": "STAY"
+    },
+    {
+      "artist": "SMAP",
+      "title": "オレンジ"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "太陽と砂漠のバラ"
+    },
+    {
+      "artist": "カスタマイZ",
+      "title": "COOLEST"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "猫中毒"
+    },
+    {
+      "artist": "Flower",
+      "title": "let go again feat.VERBAL(m-flo)"
+    },
+    {
+      "artist": "SDN48",
+      "title": "愛、チュセヨ"
+    },
+    {
+      "artist": "rhythmic",
+      "title": "キミに伝えたくて"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "ドレスコード"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "ソリクン"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "MY HEAVEN"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "WE LIKE 2 PARTY"
+    },
+    {
+      "artist": "2AM",
+      "title": "Never let you go〜死んでも離さない〜"
+    },
+    {
+      "artist": "NCT",
+      "title": "Favorite (Vampire)"
+    },
+    {
+      "artist": "東方神起",
+      "title": "時ヲ止メテ"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Bolero"
+    },
+    {
+      "artist": "Kis-My-Ft2",
+      "title": "アイノビート"
+    },
+    {
+      "artist": "timelesz",
+      "title": "LET'S MUSIC"
+    },
+    {
+      "artist": "timelesz",
+      "title": "ROCK THA TOWN"
+    },
+    {
+      "artist": "timelesz",
+      "title": "イノセントデイズ"
+    },
+    {
+      "artist": "timelesz",
+      "title": "カラフル Eyes"
+    },
+    {
+      "artist": "timelesz",
+      "title": "バィバィDuバィ〜See you again〜"
+    },
+    {
+      "artist": "timelesz",
+      "title": "勝利の日まで"
+    },
+    {
+      "artist": "timelesz",
+      "title": "男 never give up"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Cha-Cha-Cha チャンピオン"
+    },
+    {
+      "artist": "timelesz",
+      "title": "君にHITOMEBORE"
+    },
+    {
+      "artist": "NYC",
+      "title": "ワンダフルキューピット"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Jazz"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "-遥か-"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "advance"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "NaNaNa(太陽なんていらねぇ)"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "fragile"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "リリック"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "LOVE,HOLIDAY."
+    },
+    {
+      "artist": "The SHIGOTONIN",
+      "title": "鏡花水月"
+    },
+    {
+      "artist": "イーグルス",
+      "title": "ふたりだけのクリスマス"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "愛はタカラモノ"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "七夕祭り"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "サヨナラにさよなら"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "魔法のメロディ"
+    },
+    {
+      "artist": "フレンズ",
+      "title": "泣いてもいいですか"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Triangle"
+    },
+    {
+      "artist": "AKB48",
+      "title": "誰かのために〜What can I do for someone?〜"
+    },
+    {
+      "artist": "STU48",
+      "title": "思い出せる恋をしよう"
+    },
+    {
+      "artist": "C-ZONE",
+      "title": "SUMMER☆PARTY"
+    },
+    {
+      "artist": "HKT48",
+      "title": "3-2"
+    },
+    {
+      "artist": "SDN48",
+      "title": "GAGAGA"
+    },
+    {
+      "artist": "rhythmic",
+      "title": "光のレール"
+    },
+    {
+      "artist": "渡り廊下走り隊7",
+      "title": "バレンタイン・キッス"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "Kawaii"
+    },
+    {
+      "artist": "LE SSERAFIM",
+      "title": "ジュエリー"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "TOP"
+    },
+    {
+      "artist": "ALICE",
+      "title": "moving on"
+    },
+    {
+      "artist": "ALICE",
+      "title": "リズム"
+    },
+    {
+      "artist": "AOA",
+      "title": "愛をちょうだい feat.TAKANORI NISHIKAWA(T.M.Revolution)"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "SHOCK"
+    },
+    {
+      "artist": "RAINBOW",
+      "title": "マッハ"
+    },
+    {
+      "artist": "SHINee",
+      "title": "321"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "My Precious World"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Stand by U"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Beautiful you"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Ｐｕｒｐｌｅ Ｌｉｎｅ"
+    },
+    {
+      "artist": "東方神起",
+      "title": "Survivor"
+    },
+    {
+      "artist": "BBGIRLS",
+      "title": "Rollin'"
+    },
+    {
+      "artist": "SixTONES",
+      "title": "Hysteria"
+    },
+    {
+      "artist": "DOMOTO",
+      "title": "KANZAI BOYA"
+    },
+    {
+      "artist": "NCT WISH",
+      "title": "Songbird"
+    },
+    {
+      "artist": "timelesz",
+      "title": "NOT FOUND"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Real Sexy!"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Trust Me, Trust You."
+    },
+    {
+      "artist": "timelesz",
+      "title": "よびすて"
+    },
+    {
+      "artist": "timelesz",
+      "title": "Cream"
+    },
+    {
+      "artist": "timelesz",
+      "title": "極東DANCE"
+    },
+    {
+      "artist": "超特急",
+      "title": "栄光"
+    },
+    {
+      "artist": "D☆DATE",
+      "title": "GLORY DAYS"
+    },
+    {
+      "artist": "RADIO FISH",
+      "title": "GOLDEN TOWER feat.當山みれい"
+    },
+    {
+      "artist": "RADIO FISH",
+      "title": "LAST NUMBER feat.中元日芽香(乃木坂46)"
+    },
+    {
+      "artist": "SMAP",
+      "title": "gift"
+    },
+    {
+      "artist": "SMAP",
+      "title": "がんばりましょう"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "見上げた流星"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "ホントんとこ"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "愛!wanna be with you..."
+    },
+    {
+      "artist": "TOKIO",
+      "title": "手紙"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "東京ドライブ"
+    },
+    {
+      "artist": "V6",
+      "title": "君が思い出す僕は君を愛しているだろうか"
+    },
+    {
+      "artist": "V6",
+      "title": "ｗａｙ ｏｆ ｌｉｆｅ"
+    },
+    {
+      "artist": "Vimclip",
+      "title": "My Generation feat.大野雄大、花村想太 from Da-iCE"
+    },
+    {
+      "artist": "スノープリンス合唱団",
+      "title": "スノープリンス"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "恋詩-コイウタ-"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "Journey Journey〜ボクラノミライ〜"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "Heartful Voice"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "僕のそばには星がある"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "山手線内回り〜愛の迷路〜"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "ヒカリ"
+    },
+    {
+      "artist": "JO1",
+      "title": "Eyes On Me (feat. R3HAB)"
+    },
+    {
+      "artist": "JO1",
+      "title": "WOW WAR TONIGHT 〜時には起こせよムーヴメント(JO1 ver.)"
+    },
+    {
+      "artist": "INI",
+      "title": "BREATH"
+    },
+    {
+      "artist": "AKB48",
+      "title": "ここがロドスだ、ここで跳べ!"
+    },
+    {
+      "artist": "AKBアイドリング!!!",
+      "title": "チューしようぜ!"
+    },
+    {
+      "artist": "Aqours",
+      "title": "キモチもユメも一緒だね!"
+    },
+    {
+      "artist": "Aqours",
+      "title": "\"MY LIST\" to you!"
+    },
+    {
+      "artist": "Flower",
+      "title": "Dreamin' Together feat.Little Mix"
+    },
+    {
+      "artist": "MAX",
+      "title": "Chocolate"
+    },
+    {
+      "artist": "SDN48",
+      "title": "口説きながら麻布十番 duet with みのもんた"
+    },
+    {
+      "artist": "ひめキュンフルーツ缶",
+      "title": "アンダンテ"
+    },
+    {
+      "artist": "仮面女子",
+      "title": "仮面大陸〜ペルソニア〜"
+    },
+    {
+      "artist": "Juice=Juice",
+      "title": "プラトニック・プラネット"
+    },
+    {
+      "artist": "MAX",
+      "title": "Lights Down Low (feat. Taka)"
+    },
+    {
+      "artist": "RAY",
+      "title": "脳内麻薬 (feat. CHEHON, MAKA, 句潤, POWER WAVE, CIMA & keith)"
+    },
+    {
+      "artist": "W",
+      "title": "Growin'Groovin'"
+    },
+    {
+      "artist": "BTS",
+      "title": "Heartbeat"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "SOBER"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "BAE BAE"
+    },
+    {
+      "artist": "2AM",
+      "title": "電話に出ない君に"
+    },
+    {
+      "artist": "BF",
+      "title": "My Avatar"
+    },
+    {
+      "artist": "CROSS GENE",
+      "title": "Shooting Star"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "BAD GIRL"
+    },
+    {
+      "artist": "HISTORY",
+      "title": "消えてしまった My Love"
+    },
+    {
+      "artist": "INFINITE",
+      "title": "BTD"
+    },
+    {
+      "artist": "MBLAQ",
+      "title": "Your Luv"
+    },
+    {
+      "artist": "NCT",
+      "title": "Punch"
+    },
+    {
+      "artist": "NCT",
+      "title": "Kick It"
+    },
+    {
+      "artist": "NCT",
+      "title": "Wakey-Wakey"
+    },
+    {
+      "artist": "NCT",
+      "title": "gimme gimme"
+    },
+    {
+      "artist": "NCT",
+      "title": "2 Baddies"
+    },
+    {
+      "artist": "NCT",
+      "title": "Sticker"
+    },
+    {
+      "artist": "NCT",
+      "title": "First Love"
+    },
+    {
+      "artist": "NCT",
+      "title": "Ay-Yo"
+    },
+    {
+      "artist": "SHINee",
+      "title": "Sherlock"
+    },
+    {
+      "artist": "SM☆SH",
+      "title": "Lunatic"
+    },
+    {
+      "artist": "SUPER JUNIOR",
+      "title": "美人(BONAMANA)"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Crescent rise"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Heavenly Visitor"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "DIAMOND FUSION"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Treasure!"
+    },
+    {
+      "artist": "東方神起",
+      "title": "呪文-MIROTIC-"
+    },
+    {
+      "artist": "BLACKPINK",
+      "title": "REALLY"
+    },
+    {
+      "artist": "BTS",
+      "title": "Butter (feat. Megan Thee Stallion)"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "KISS IN THE MUSIC"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "BEAUTIFUL PRAYER"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "PLACES"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Empathy"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Hidden Region"
+    },
+    {
+      "artist": "嵐",
+      "title": "Move your body"
+    },
+    {
+      "artist": "嵐",
+      "title": "タイトル未定"
+    },
+    {
+      "artist": "SixTONES",
+      "title": "love u…"
+    },
+    {
+      "artist": "SixTONES",
+      "title": "You & I"
+    },
+    {
+      "artist": "SixTONES",
+      "title": "光る、兆し"
+    },
+    {
+      "artist": "Travis Japan",
+      "title": "Namidaの結晶"
+    },
+    {
+      "artist": "timelesz",
+      "title": "puzzle"
+    },
+    {
+      "artist": "timelesz",
+      "title": "BAD BOYS"
+    },
+    {
+      "artist": "timelesz",
+      "title": "La Sexy Woman"
+    },
+    {
+      "artist": "timelesz",
+      "title": "すっぴんKISS"
+    },
+    {
+      "artist": "timelesz",
+      "title": "マワレミラクル"
+    },
+    {
+      "artist": "aoen",
+      "title": "青い太陽 (The Blue Sun)"
+    },
+    {
+      "artist": "DISH//",
+      "title": "ギブミーチョコレート!"
+    },
+    {
+      "artist": "Hi☆Five",
+      "title": "WE CAN FLY"
+    },
+    {
+      "artist": "Lead",
+      "title": "スタンドアップ！"
+    },
+    {
+      "artist": "MAG!C☆PRINCE",
+      "title": "絶対★アイシテル!"
+    },
+    {
+      "artist": "PrizmaX",
+      "title": "UP PrizmaX 全国推定売上枚数 総合ポイント数 3,191"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Battery"
+    },
+    {
+      "artist": "SMAP",
+      "title": "ココカラ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Mr.S"
+    },
+    {
+      "artist": "SMAP",
+      "title": "夜空ノムコウ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "BEST FRIEND"
+    },
+    {
+      "artist": "SMAP",
+      "title": "shake"
+    },
+    {
+      "artist": "SMAP",
+      "title": "ユーモアしちゃうよ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "愛が止まるまでは"
+    },
+    {
+      "artist": "SMAP",
+      "title": "好きよ"
+    },
+    {
+      "artist": "SMAP",
+      "title": "Amazing Discovery"
+    },
+    {
+      "artist": "SMAP",
+      "title": "White Message"
+    },
+    {
+      "artist": "SMAP",
+      "title": "We are SMAP!"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "クモ"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "羽田空港の奇跡"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "青春（ＳＥＩＳＹｕＮ）"
+    },
+    {
+      "artist": "TOKIO",
+      "title": "KIBOU"
+    },
+    {
+      "artist": "アルスマグナ",
+      "title": "サンバDEわっしょい! feat.九瓏幸子"
+    },
+    {
+      "artist": "アルスマグナ",
+      "title": "気分上々↑↑ feat.SAE TOKIMIYA"
+    },
+    {
+      "artist": "イーグルス",
+      "title": "ホテル・カリフォルニア"
+    },
+    {
+      "artist": "イーグルス",
+      "title": "ならず者"
+    },
+    {
+      "artist": "カスタマイZ",
+      "title": "一筋の光明"
+    },
+    {
+      "artist": "カスタマイZ",
+      "title": "解"
+    },
+    {
+      "artist": "カスタマイZ",
+      "title": "鎮魂歌-レクイエム-"
+    },
+    {
+      "artist": "カスタマイZ",
+      "title": "Life and death"
+    },
+    {
+      "artist": "サーターアンダギー",
+      "title": "YELL〜輝くためのもの〜"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "小悪魔ジュリエット"
+    },
+    {
+      "artist": "タッキー&翼",
+      "title": "抱夏-ダキナツ-"
+    },
+    {
+      "artist": "テゴマス",
+      "title": "もしも、この世界から○○がなくなったら"
+    },
+    {
+      "artist": "SUPER★DRAGON",
+      "title": "love or like (Tokyo) (feat. Anatomy Rabbit)"
+    },
+    {
+      "artist": "JO1",
+      "title": "GrandMaster"
+    },
+    {
+      "artist": "INI",
+      "title": "Howlin'"
+    },
+    {
+      "artist": "Da-iCE",
+      "title": "Dance Dance feat. 木村昴"
+    },
+    {
+      "artist": "三代目 J SOUL BROTHERS from EXILE TRIBE",
+      "title": "FUTURE"
+    },
+    {
+      "artist": "IMP.",
+      "title": "CRUISIN' (Instrumental)"
+    },
+    {
+      "artist": "7ORDER",
+      "title": "Sabaoflower"
+    },
+    {
+      "artist": "DA PUMP",
+      "title": "Magical Babyrinth (マジカル・バビリンス)"
+    },
+    {
+      "artist": "DA PUMP",
+      "title": "バケバケNight!"
+    },
+    {
+      "artist": "野猿",
+      "title": "First impression feat.CA"
+    },
+    {
+      "artist": "CANDY TUNE",
+      "title": "推し(ハート)好き(ハート)しんどい"
+    },
+    {
+      "artist": "SKE48",
+      "title": "夏よ、急げ!"
+    },
+    {
+      "artist": "SKE48",
+      "title": "強き者よ"
+    },
+    {
+      "artist": "AKB48",
+      "title": "桜の花びらたち2008"
+    },
+    {
+      "artist": "AKB48",
+      "title": "掌が語ること"
+    },
+    {
+      "artist": "AKB48",
+      "title": "桜の花びらたち２００８"
+    },
+    {
+      "artist": "風男塾",
+      "title": "もしもこれが恋なら"
+    },
+    {
+      "artist": "風男塾",
+      "title": "新たなる幕開けのための幕開けによる狂詩曲〜キミがいればオレたちも笑顔∞(無限大)〜"
+    },
+    {
+      "artist": "超ときめき♡宣伝部",
+      "title": "DEADHEAT"
+    },
+    {
+      "artist": "超ときめき♡宣伝部",
+      "title": "どどどどどりーまー"
+    },
+    {
+      "artist": "超ときめき♡宣伝部",
+      "title": "むてきのうた"
+    },
+    {
+      "artist": "超ときめき♡宣伝部",
+      "title": "ガンバ!!"
+    },
+    {
+      "artist": "いぎなり東北産",
+      "title": "らう゛(ハート)戦セーション"
+    },
+    {
+      "artist": "9nine",
+      "title": "イーアル!キョンシー feat.好好!キョンシーガール"
+    },
+    {
+      "artist": "BILLIE IDLE",
+      "title": "そして、また、、"
+    },
+    {
+      "artist": "BILLIE IDLE",
+      "title": "僕らまだちっぽけな頃の話"
+    },
+    {
+      "artist": "BILLIE IDLE",
+      "title": "LAST ORGY"
+    },
+    {
+      "artist": "Berryz工房",
+      "title": "行け行けモンキーダンス"
+    },
+    {
+      "artist": "CoverGirls",
+      "title": "アナタシカ"
+    },
+    {
+      "artist": "Dear L mana",
+      "title": "ふたり眠るまで"
+    },
+    {
+      "artist": "HKT48",
+      "title": "君とどこかへ行きたい"
+    },
+    {
+      "artist": "High-King",
+      "title": "CC(シンデレラコンプレックス)"
+    },
+    {
+      "artist": "High-King",
+      "title": "C\\C(シンデレラ\\コンプレックス)"
+    },
+    {
+      "artist": "Jewel☆Neige",
+      "title": "白い雪とマーガレット"
+    },
+    {
+      "artist": "Pinkish",
+      "title": "JAMBO"
+    },
+    {
+      "artist": "Queen & Elizabeth",
+      "title": "Love■Wars"
+    },
+    {
+      "artist": "RAY",
+      "title": "sign"
+    },
+    {
+      "artist": "RAY",
+      "title": "ebb and flow"
+    },
+    {
+      "artist": "RAY",
+      "title": "a-gain"
+    },
+    {
+      "artist": "RAY",
+      "title": "secret arms"
+    },
+    {
+      "artist": "RAY",
+      "title": "初めてガールズ!"
+    },
+    {
+      "artist": "RAY",
+      "title": "■km/h"
+    },
+    {
+      "artist": "RAY",
+      "title": "lull〜そして僕らは〜"
+    },
+    {
+      "artist": "RAY",
+      "title": "楽園PROJECT"
+    },
+    {
+      "artist": "SAY-LA",
+      "title": "こじらせ片思い"
+    },
+    {
+      "artist": "SDN48",
+      "title": "1ガロンの汗"
+    },
+    {
+      "artist": "Stella☆Beats",
+      "title": "Fantastic Traveller"
+    },
+    {
+      "artist": "Stella☆Beats",
+      "title": "さあ共に!-story of yours-"
+    },
+    {
+      "artist": "Stella☆Beats",
+      "title": "星空シンフォニー"
+    },
+    {
+      "artist": "Stella☆Beats",
+      "title": "冬、マスカレード"
+    },
+    {
+      "artist": "Tomato n' Pine",
+      "title": "踊れカルナヴｧル"
+    },
+    {
+      "artist": "W",
+      "title": "AFTER THE RAIN"
+    },
+    {
+      "artist": "W",
+      "title": "VICTORY BELIEVER"
+    },
+    {
+      "artist": "WHY@DOLL",
+      "title": "サンライズ!〜君がくれた希望〜"
+    },
+    {
+      "artist": "drop",
+      "title": "「星のない夜だから」"
+    },
+    {
+      "artist": "palet",
+      "title": "Over The Rainbow"
+    },
+    {
+      "artist": "palet",
+      "title": "勝利のシール"
+    },
+    {
+      "artist": "℃-ute",
+      "title": "キャンパスライフ〜生まれて来てよかった〜"
+    },
+    {
+      "artist": "おはガールちゅ!ちゅ!ちゅ!",
+      "title": "夢ふうせん"
+    },
+    {
+      "artist": "さくらシンデレラ",
+      "title": "夏恋クレシェンド"
+    },
+    {
+      "artist": "さくらシンデレラ",
+      "title": "ぐるぐるワンワン"
+    },
+    {
+      "artist": "さくらシンデレラ",
+      "title": "未来プロローグ"
+    },
+    {
+      "artist": "さくらシンデレラ",
+      "title": "さくらの木の下で"
+    },
+    {
+      "artist": "さんみゅ〜",
+      "title": "ほほにキスして"
+    },
+    {
+      "artist": "たこやきレインボー",
+      "title": "元気売りの少女〜浪花名歌五十選〜"
+    },
+    {
+      "artist": "たこやきレインボー",
+      "title": "クリぼっちONE DAY!!"
+    },
+    {
+      "artist": "ばってん少女隊",
+      "title": "ばってん少女。"
+    },
+    {
+      "artist": "ひめキュンフルーツ缶",
+      "title": "ハルカナタ"
+    },
+    {
+      "artist": "まなみのりさ",
+      "title": "真夏のエイプリルフール"
+    },
+    {
+      "artist": "まなみのりさ",
+      "title": "νポラリスAb"
+    },
+    {
+      "artist": "アイドリング!!!",
+      "title": "Cheering You!!!"
+    },
+    {
+      "artist": "アイドリング!!!",
+      "title": "Ｓｎｏｗ ｃｅｌｅｂｒａｔｉｏｎ"
+    },
+    {
+      "artist": "アイドリング!!!",
+      "title": "「職業:アイドル。」"
+    },
+    {
+      "artist": "アリス十番",
+      "title": "全開☆ヒーロー"
+    },
+    {
+      "artist": "チャオ ベッラ チンクエッティ",
+      "title": "表参道"
+    },
+    {
+      "artist": "チャオ ベッラ チンクエッティ",
+      "title": "どうしよう、わたし"
+    },
+    {
+      "artist": "チャオ ベッラ チンクエッティ",
+      "title": "ハイテンション!我っが人生!!"
+    },
+    {
+      "artist": "ドリームモーニング娘。",
+      "title": "シャイニングバタフライ"
+    },
+    {
+      "artist": "バニラビーンズ",
+      "title": "LOVE & HATE"
+    },
+    {
+      "artist": "フルーティー",
+      "title": "FRONT LINER"
+    },
+    {
+      "artist": "ベボガ!",
+      "title": "ドラマよりもドラマティック"
+    },
+    {
+      "artist": "ベボガ!",
+      "title": "かちとばせ!栄光のレインボー"
+    },
+    {
+      "artist": "マボロシ可憐GeNE",
+      "title": "最強純情DNA"
+    },
+    {
+      "artist": "ワンダーウィード",
+      "title": "バルタン星人"
+    },
+    {
+      "artist": "ワンダーウィード",
+      "title": "get to chance"
+    },
+    {
+      "artist": "仮面女子",
+      "title": "元気種☆"
+    },
+    {
+      "artist": "愛乙女★DOLL",
+      "title": "セツナツ、ダイバー"
+    },
+    {
+      "artist": "愛乙女★DOLL",
+      "title": "Bargain girl"
+    },
+    {
+      "artist": "愛乙女★DOLL",
+      "title": "High Jump!!"
+    },
+    {
+      "artist": "愛乙女★DOLL",
+      "title": "Paradise in the summer"
+    },
+    {
+      "artist": "清竜人25",
+      "title": "Will You Marry Me?"
+    },
+    {
+      "artist": "清竜人25",
+      "title": "A・B・Cじゃグッと来ない!!"
+    },
+    {
+      "artist": "清竜人25",
+      "title": "アバンチュールしようよ"
+    },
+    {
+      "artist": "虹のコンキスタドール",
+      "title": "やるっきゃない!2015"
+    },
+    {
+      "artist": "ME:I",
+      "title": "ビヨンド 〜越えてゆこう〜(日本版エンドソング)"
+    },
+    {
+      "artist": "Fine",
+      "title": "BRAND NEW STARS!! (fine Ver.)"
+    },
+    {
+      "artist": "Fine",
+      "title": "FUSIONIC STARS!! - fine ver. -"
+    },
+    {
+      "artist": "Aqours",
+      "title": "Future flight"
+    },
+    {
+      "artist": "E-girls",
+      "title": "My Way feat.FIRE BALL,MIGHTY CROWN & PKCZ?"
+    },
+    {
+      "artist": "E-girls",
+      "title": "Let's Feel High feat.MIGHTY CROWN & PKCZ?"
+    },
+    {
+      "artist": "RAY",
+      "title": "(ハート）km/h"
+    },
+    {
+      "artist": "W",
+      "title": "Great Sympathy"
+    },
+    {
+      "artist": "W",
+      "title": "VIVA!!ファミリーリズム"
+    },
+    {
+      "artist": "W",
+      "title": "RAY OF LIGHT (W Ver.)"
+    },
+    {
+      "artist": "でんぱ組.inc",
+      "title": "子(ハート)丑(ハート)寅(ハート)卯(ハート)辰(ハート)巳(ハート)"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "GIRLFRIEND"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "Let's not fall in love"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "Bringing You Love"
+    },
+    {
+      "artist": "BIGBANG",
+      "title": "Let's Not Fall In Love"
+    },
+    {
+      "artist": "100%",
+      "title": "Warrior"
+    },
+    {
+      "artist": "100%",
+      "title": "How to cry"
+    },
+    {
+      "artist": "2AM",
+      "title": "For you〜君のためにできること〜"
+    },
+    {
+      "artist": "2AM",
+      "title": "誰にも渡せないよ"
+    },
+    {
+      "artist": "AOA",
+      "title": "ミニスカート"
+    },
+    {
+      "artist": "Apink",
+      "title": "サマータイム!"
+    },
+    {
+      "artist": "Apink",
+      "title": "Orion"
+    },
+    {
+      "artist": "Apink",
+      "title": "Bye Bye"
+    },
+    {
+      "artist": "Apink",
+      "title": "Brand New Days"
+    },
+    {
+      "artist": "Apink",
+      "title": "もっとGO!GO!"
+    },
+    {
+      "artist": "B1A4",
+      "title": "イゲムスンイリヤ〜なんで?どうして?"
+    },
+    {
+      "artist": "BF",
+      "title": "GLIDER"
+    },
+    {
+      "artist": "BF",
+      "title": "Be my shine〜君を離さない〜"
+    },
+    {
+      "artist": "BF",
+      "title": "瞳のメロディ"
+    },
+    {
+      "artist": "BF",
+      "title": "Try my wings"
+    },
+    {
+      "artist": "BF",
+      "title": "キミとDance Dance Dance"
+    },
+    {
+      "artist": "BF",
+      "title": "Pinky Santa"
+    },
+    {
+      "artist": "BF",
+      "title": "CALL ME"
+    },
+    {
+      "artist": "BF",
+      "title": "I Miss You"
+    },
+    {
+      "artist": "BF",
+      "title": "スタートアップ!"
+    },
+    {
+      "artist": "BIGFLO",
+      "title": "1,2,3,4"
+    },
+    {
+      "artist": "Dreamcatcher",
+      "title": "PIRI〜笛を吹け〜"
+    },
+    {
+      "artist": "F.CUZ",
+      "title": "Feeling My Soul"
+    },
+    {
+      "artist": "F.CUZ",
+      "title": "Change"
+    },
+    {
+      "artist": "F.CUZ",
+      "title": "Hello Again"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "キミはどう?"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "ADRENALINE"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "Midnight-星を数える夜-"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "最後の一言"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "Sad Movie"
+    },
+    {
+      "artist": "HIGHLIGHT",
+      "title": "Freaking Cute"
+    },
+    {
+      "artist": "JJCC",
+      "title": "今すぐに"
+    },
+    {
+      "artist": "JYJ",
+      "title": "Only One"
+    },
+    {
+      "artist": "MAMAMOO",
+      "title": "Decalcomanie"
+    },
+    {
+      "artist": "MAP6",
+      "title": "No Surrender"
+    },
+    {
+      "artist": "MAP6",
+      "title": "魅力発散タイム"
+    },
+    {
+      "artist": "MBLAQ",
+      "title": "Baby U!"
+    },
+    {
+      "artist": "NCT",
+      "title": "Go Higher"
+    },
+    {
+      "artist": "NCT",
+      "title": "Superhuman"
+    },
+    {
+      "artist": "SHINee",
+      "title": "sherlock"
+    },
+    {
+      "artist": "SHU-I",
+      "title": "HITORIJIME"
+    },
+    {
+      "artist": "SHU-I",
+      "title": "Smile For Me"
+    },
+    {
+      "artist": "SHU-I",
+      "title": "ネバギバYeah!"
+    },
+    {
+      "artist": "SM☆SH",
+      "title": "STEP"
+    },
+    {
+      "artist": "SM☆SH",
+      "title": "TRUE LOVE"
+    },
+    {
+      "artist": "SM☆SH",
+      "title": "Bounce★up"
+    },
+    {
+      "artist": "STAYC",
+      "title": "POPPY"
+    },
+    {
+      "artist": "SUPER JUNIOR",
+      "title": "One More Time(Otra Vez) feat.REIK"
+    },
+    {
+      "artist": "T-ARA",
+      "title": "NUMBER NINE"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "DAYBREAK INTERLUDE"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "In the meantime"
+    },
+    {
+      "artist": "UP10TION",
+      "title": "CHASER"
+    },
+    {
+      "artist": "UP10TION",
+      "title": "ID"
+    },
+    {
+      "artist": "WINNER",
+      "title": "FATE NUMBER FOR"
+    },
+    {
+      "artist": "Wanna One",
+      "title": "I PROMISE YOU(I.P.U.)"
+    },
+    {
+      "artist": "今月の少女",
+      "title": "HULA HOOP"
+    },
+    {
+      "artist": "今月の少女",
+      "title": "LUMINOUS"
+    },
+    {
+      "artist": "BTS",
+      "title": "Serendipity"
+    },
+    {
+      "artist": "BLACKPINK",
+      "title": "SEE U LATER"
+    },
+    {
+      "artist": "iKON",
+      "title": "ADORE YOU"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "SLASH"
+    },
+    {
+      "artist": "Stray Kids",
+      "title": "Lose My Breath (feat.Charlie Puth) (Instrumental)"
+    },
+    {
+      "artist": "TOMORROW X TOGETHER",
+      "title": "Your Light"
+    },
+    {
+      "artist": "n.SSign",
+      "title": "In Summer"
+    },
+    {
+      "artist": "ENHYPEN",
+      "title": "A Kind Of Magic"
+    },
+    {
+      "artist": "ENHYPEN",
+      "title": "Mistletoe"
+    },
+    {
+      "artist": "ATEEZ",
+      "title": "From"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Radiance"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Smile Again"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "VARIANT"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "バラツユ"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "Triple Down"
+    },
+    {
+      "artist": "TRIGER",
+      "title": "SOL"
+    },
+    {
+      "artist": "東方神起",
+      "title": "The Chance of Love"
+    },
+    {
+      "artist": "ASTRO",
+      "title": "夢の中のMoon"
+    },
+    {
+      "artist": "NCT",
+      "title": "Give Me That"
+    },
+    {
+      "artist": "NCT",
+      "title": "Be There For Me"
+    },
+    {
+      "artist": "NCT",
+      "title": "White Lie"
+    },
+    {
+      "artist": "NCT",
+      "title": "Home Alone"
+    },
+    {
+      "artist": "NCT",
+      "title": "Welcome To My Paradise"
+    },
+    {
+      "artist": "NCT",
+      "title": "Colors"
+    },
+    {
+      "artist": "NCT",
+      "title": "Save"
+    },
+    {
+      "artist": "TREASURE",
+      "title": "ORANGE"
+    },
+    {
+      "artist": "iKON",
+      "title": "Why Why Why"
+    }
+  ]
+}
