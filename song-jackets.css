@@ -1,4 +1,17 @@
 .jacket-preview-note{padding:12px 24px;text-align:center;background:#edf5e9;color:#3d6348;font-size:13px;font-weight:600}
+.artist-portrait{display:inline-flex;flex:none;width:48px;height:48px;background:#f5f5f7;border-radius:8px;overflow:hidden;vertical-align:middle}
+.artist-portrait[hidden]{display:none}
+.artist-portrait img{display:block;width:100%;height:100%;object-fit:contain}
+.artist-ranking-identity{display:flex;align-items:center;gap:12px;min-width:0}
+.artist-ranking-copy{display:block;min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.5}
+#detailDialog .modal-head>div:first-child{min-width:0;flex:1}
+.artist-detail-identity{display:flex;align-items:center;gap:20px}
+.artist-detail-copy{min-width:0}
+#detailName{overflow-wrap:anywhere}
+.artist-detail-photo{display:block;flex:none;border-radius:12px}
+.artist-detail-photo .artist-portrait{width:88px;height:88px;border-radius:12px}
+.artist-photo-source{margin-top:6px}
+@media(max-width:650px){.artist-ranking-identity{gap:9px}.artist-ranking-identity .artist-portrait{width:40px;height:40px}.artist-detail-identity{gap:12px}.artist-detail-photo .artist-portrait{width:56px;height:56px;border-radius:8px}#detailDialog .modal-head{flex-wrap:wrap}#detailDialog .modal-head>.modal-actions{flex:none}.artist-detail-copy .artist-photo-source{font-size:9px}.artist-detail-copy .jacket-spotify-logo{width:50px;height:20px}}
 .song-jacket{width:48px;height:48px;flex:0 0 48px;display:inline-flex;align-items:center;justify-content:center;background:#edf0ed;border-radius:4px;overflow:hidden;vertical-align:middle}
 .song-jacket img{display:block;width:100%;height:100%;object-fit:contain}
 .jacket-unavailable::before{content:'♪';font:24px system-ui;color:#a4afa6}
