@@ -145,6 +145,8 @@
     if(token!==revision||view!=='linked')return;
     const artwork=window.RecordArtwork;
     const rowArtwork=r=>streak||(!annual&&liveEntity==='song')?artwork?.song(r[2],r[1]):artwork?.artist(r[1]);
+    await artwork?.ensure(box?boxCards.map(card=>artwork.artist(card.name)):pages[chosenPage].map(rowArtwork));
+    if(token!==revision||view!=='linked')return;
     const legendMeasure=document.createElement('canvas').getContext('2d');legendMeasure.font='400 26px Meiryo,"Yu Gothic UI",sans-serif';
     let nextBoxY=250;
     for(const card of boxCards){

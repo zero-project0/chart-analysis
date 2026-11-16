@@ -3,12 +3,12 @@
   'use strict';
   const norm=v=>String(v||'').normalize('NFKC').replace(/\s/g,'').toLowerCase();
   const photos=new Map((window.ARTIST_PHOTOS||[]).map(item=>[norm(item.artist),item]));
-  const images=new Map();
   const artist=name=>photos.get(norm(name));
   const song=(name,title)=>window.SongJackets?.get(name,title);
-  const ready=Promise.all([window.SongJackets?.ready,...[...photos.values()].map(item=>new Promise(resolve=>{const img=new Image();img.onload=()=>{images.set(item.uri,img);resolve();};img.onerror=()=>resolve();img.src=item.imageData||item.image;}))]);
+  const ready=window.SongJackets?.ready;
+  const ensure=items=>window.SongJackets?.ensure(items);
   const shortUrl=item=>'open.spotify.com/'+(item.uri.includes(':artist:')?'artist/':'track/')+item.uri.split(':').at(-1);
-  function paint(ctx,item,x,y,size){if(!item)return false;if(!item.uri.includes(':artist:'))return window.SongJackets.paint(ctx,item,x,y,size);const img=images.get(item.uri);if(!img)return false;ctx.drawImage(img,x,y,size,size);return true;}
+  function paint(ctx,item,x,y,size){return item?window.SongJackets.paint(ctx,item,x,y,size):false;}
   function decorate(root){
     root.querySelectorAll('[data-stat-artist],[data-stat-song]').forEach(button=>{
       if(button.dataset.recordArtwork)return;
@@ -25,5 +25,5 @@
       const logo=document.createElement('img');logo.src='jacket-assets/spotify-logo.svg';logo.alt='Spotify';link.append(logo,document.createTextNode('で開く'));copy.append(link);
     });
   }
-  window.RecordArtwork={artist,song,ready,paint,shortUrl,decorate};
+  window.RecordArtwork={artist,song,ready,ensure,paint,shortUrl,decorate};
 })();

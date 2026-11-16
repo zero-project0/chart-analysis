@@ -1,0 +1,266 @@
+{
+  "checkedAt": "2026-11-16",
+  "target": "boys and girls with chart history, including gender-classified K-pop",
+  "targetCount": 461,
+  "registeredCount": 426,
+  "boys": 188,
+  "girls": 238,
+  "unresolved": [
+    {
+      "artist": "NYC",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "SMAP",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "TOKIO",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "The SHIGOTONIN",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "イーグルス",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "カスタマイZ",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "スノープリンス合唱団",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "タッキー&翼",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "テゴマス",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "中山優馬 w/B.I.Shadow",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "AKBアイドリング!!!",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "BILLIE IDLE",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "C-ZONE",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "CoverGirls",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "Dear L mana",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "High-King",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "Melody",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "MilkyWay",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "Pinkish",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "Queen & Elizabeth",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "RAY",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "SDN48",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "Stella☆Beats",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "W",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "drop",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "rhythmic",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "おはガールちゅ!ちゅ!ちゅ!",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "しゅごキャラエッグ!",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "アリス十番",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "チャオ ベッラ チンクエッティ",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "フルーティー",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "マボロシ可憐GeNE",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "ALICE",
+      "scopes": [
+        "girls"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "BF",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    },
+    {
+      "artist": "SM☆SH",
+      "scopes": [
+        "boys"
+      ],
+      "reason": "artist identity or image could not be confirmed"
+    }
+  ],
+  "downloadFailures": [],
+  "uniqueSpotifyProfiles": 425,
+  "sharedSpotifyIds": [
+    {
+      "uri": "spotify:artist:0V31pUfAlZif00aCw0oKNz",
+      "artists": [
+        "恵比寿★マスカッツ",
+        "恵比寿マスカッツ"
+      ]
+    }
+  ]
+}

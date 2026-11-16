@@ -37,5 +37,5 @@
   const originalOpen=openSongDetail;openSongDetail=function(artist,title,...args){const result=originalOpen.call(this,artist,title,...args);decorateDetail(artist,title);if(result?.then)result.then(()=>decorateDetail(artist,title));return result;};
   decorateRows();decorateLatest();decorateSearch();
   if(document.getElementById('songDialog')?.open)decorateDetail(document.getElementById('songDetailArtist').dataset.artistName,document.getElementById('songDetailTitle').textContent);
-  if(['localhost','127.0.0.1',''].includes(location.hostname)){const banner=document.createElement('aside');banner.className='jacket-preview-note';banner.textContent='ローカル試用版 · ジャケット表示はM!LKの6曲が対象';document.querySelector('main')?.prepend(banner);}
+  if(['localhost','127.0.0.1',''].includes(location.hostname)){const banner=document.createElement('aside');banner.className='jacket-preview-note';banner.textContent='ローカル試用版 · ジャケット・アーティスト写真の表示確認';document.querySelector('main')?.prepend(banner);}
 })();

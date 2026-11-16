@@ -1,10 +1,12 @@
 /* Artwork for local previews and actual PNG exports, including file:// use. */
 (()=>{
   'use strict';
-  const api=window.SongJackets,images=new Map(),jobs=new WeakMap();
+  const api=window.SongJackets,images=new Map(),loads=new Map(),jobs=new WeakMap();
   function preload(src){return new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src;});}
-  api.ready=Promise.all([...(window.SONG_JACKETS||[]),...(window.ARTIST_PHOTOS||[])].map(async item=>{const image=await preload(item.imageData||item.image);images.set(item.uri,image);}));
-  api.getArtistPhoto=name=>(window.ARTIST_PHOTOS||[]).find(item=>String(item.artist).normalize('NFKC').replace(/\s/g,'').toLowerCase()===String(name).normalize('NFKC').replace(/\s/g,'').toLowerCase());
+  const norm=v=>String(v||'').normalize('NFKC').replace(/\s/g,'').toLowerCase(),photos=new Map((window.ARTIST_PHOTOS||[]).map(item=>[norm(item.artist),item]));
+  api.ensure=items=>Promise.all(items.filter(Boolean).map(item=>{if(!loads.has(item.uri))loads.set(item.uri,preload(item.imageData||item.image).then(image=>{images.set(item.uri,image);return image;}));return loads.get(item.uri);}));
+  api.ready=api.ensure(window.SONG_JACKETS||[]);
+  api.getArtistPhoto=name=>photos.get(norm(name));
   const logoReady=preload(window.JACKET_SPOTIFY_LOGO).then(img=>api.logoImage=img);
   api.ready=Promise.all([api.ready,logoReady]);
   api.paint=(ctx,item,x,y,size)=>{const img=images.get(item.uri);if(!img)return false;ctx.save();ctx.beginPath();ctx.roundRect(x,y,size,size,size>=100?8:4);ctx.clip();ctx.drawImage(img,x,y,size,size);ctx.restore();return true;};
@@ -21,7 +23,7 @@
   const paintSong=window.paintChosenSongShare;
   window.paintChosenSongShare=function(...args){const token={};jobs.set(args[0],token);const result=paintSong(...args);api.ready.then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='song')paintSong(...args);});return result;};
   const paintArtist=window.paintChosenArtistShare;
-  window.paintChosenArtistShare=function(...args){const token={};jobs.set(args[0],token);const render=()=>paintArtist(...args);render();api.ready.then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='artist')render();});};
+  window.paintChosenArtistShare=function(...args){const token={};jobs.set(args[0],token);const render=()=>paintArtist(...args);render();Promise.all([api.ready,api.ensure([api.getArtistPhoto(args[1].artist)])]).then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='artist')render();});};
   const originalComparison=buildComparisonShareImage;
   buildComparisonShareImage=function(){
     const base=originalComparison();if(compareType!=='song')return base;
@@ -31,7 +33,7 @@
     out.dataset.jacketCount=String(items.filter(i=>api.get(i.artist,i.title)).length);return out;
   };
   const originalCanvasBlob=canvasBlob;
-  canvasBlob=async function(){await api.ready;if(currentShareTarget?.type==='comparison'){const image=buildComparisonShareImage(),canvas=document.getElementById('shareCard');canvas.width=image.width;canvas.height=image.height;canvas.getContext('2d').drawImage(image,0,0);}else if(currentShareTarget)redrawPeriodShare();return originalCanvasBlob();};
+  canvasBlob=async function(){await api.ready;if(currentShareTarget?.type==='artist')await api.ensure([api.getArtistPhoto(currentShareTarget.data.artist)]);if(currentShareTarget?.type==='comparison'){const image=buildComparisonShareImage(),canvas=document.getElementById('shareCard');canvas.width=image.width;canvas.height=image.height;canvas.getContext('2d').drawImage(image,0,0);}else if(currentShareTarget)redrawPeriodShare();return originalCanvasBlob();};
   const originalCompareShare=openComparisonShareDialog;
   openComparisonShareDialog=function(...args){const result=originalCompareShare(...args);api.ready.then(()=>{if(currentShareTarget?.type==='comparison'&&document.getElementById('shareDialog').open){const image=buildComparisonShareImage(),canvas=document.getElementById('shareCard');canvas.width=image.width;canvas.height=image.height;canvas.getContext('2d').drawImage(image,0,0);}});return result;};
   const download=document.createElement('button');download.id='downloadJacketShare';download.className='button';download.type='button';download.textContent='PNGを保存';download.addEventListener('click',async()=>{download.disabled=true;try{const blob=await canvasBlob(),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='music-chart-jacket-share.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setShareStatus('PNG画像を保存しました。','success');}catch(error){setShareStatus('画像を保存できませんでした。','error');}finally{download.disabled=false;}});document.getElementById('shareWithImage')?.before(download);
