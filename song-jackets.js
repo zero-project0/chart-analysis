@@ -19,8 +19,8 @@
     });
   }
   function decorateLatest(){
-    document.querySelectorAll('#latestGrid .latest-song').forEach(row=>{if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';row.classList.add('jacket-latest');row.querySelector('.latest-rank')?.after(cover(lookup(row.dataset.songArtist,row.dataset.songTitle)));});
-    const grid=document.getElementById('latestViewport');if(grid&&!document.getElementById('jacketAttribution')){const note=document.createElement('a');note.id='jacketAttribution';note.className='jacket-attribution';note.href='https://open.spotify.com/artist/4jhJ8cnJ9vYKyCh289nuwQ';note.target='_blank';note.rel='noopener noreferrer';note.append(logo(),document.createTextNode('ジャケット提供 · M!LKの6曲で試用中'));grid.after(note);}
+    document.querySelectorAll('#latestGrid .latest-song').forEach(row=>{if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';row.classList.add('jacket-latest');const item=lookup(row.dataset.songArtist,row.dataset.songTitle);if(item){row.classList.add('jacket-latest-cover');row.querySelector('.latest-rank')?.after(cover(item));}row.title=row.dataset.songTitle+' / '+row.dataset.songArtist;});
+    const grid=document.getElementById('latestViewport');if(grid&&!document.getElementById('jacketAttribution')){const note=document.createElement('a');note.id='jacketAttribution';note.className='jacket-attribution';note.href='https://open.spotify.com/artist/4jhJ8cnJ9vYKyCh289nuwQ';note.target='_blank';note.rel='noopener noreferrer';note.append(logo(),document.createTextNode('ジャケット：Spotify'));(grid.closest('.latest-carousel')||grid).after(note);}
   }
   function decorateSearch(){document.querySelectorAll('#searchResults [data-song-title]').forEach(row=>{if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';row.classList.add('jacket-search');row.prepend(cover(lookup(row.dataset.songArtist,row.dataset.songTitle)));});}
   function decorateDetail(artist,title){

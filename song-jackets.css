@@ -29,3 +29,12 @@
 .stats-box-head .record-artwork-cell>img{width:44px;height:44px}
 
 .record-artwork-copy{gap:4px}.record-artwork-copy .stat-link{line-height:1.5!important}.record-artwork-copy small{line-height:1.5!important;margin:0!important}.record-page-select{display:flex;align-items:center;gap:12px;margin:12px 0 20px;font-size:14px}.record-page-select select{padding:10px;border:1px solid #d2d2d7;border-radius:8px;background:white;color:#1d1d1f;max-width:100%}
+
+/* Latest chart: artwork is an explicit third column, never a new grid row. */
+.latest-carousel .jacket-latest{grid-template-columns:51px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:12px!important}
+.latest-carousel .jacket-latest-cover{grid-template-columns:51px 44px minmax(0,1fr)}
+.latest-carousel .jacket-latest>span:last-child{display:block;min-width:0;overflow:hidden}
+.latest-carousel .jacket-latest .latest-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.4!important;max-height:2.8em}
+.latest-carousel .jacket-latest .latest-artist{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4;margin-top:4px}
+#jacketAttribution{width:100%;box-sizing:border-box;min-width:0;flex-wrap:wrap;line-height:1.5;margin-top:8px}
+@media(max-width:700px){.latest-carousel .jacket-latest{grid-template-columns:44px minmax(0,1fr);gap:9px!important}.latest-carousel .jacket-latest-cover{grid-template-columns:44px 40px minmax(0,1fr)}}
