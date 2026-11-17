@@ -12,4 +12,5 @@
     nav.append(link);
     if(location.hash==='#statistics')location.replace('records.html'+location.search+'#'+new URLSearchParams({scope:scopeCode,chart:chartCode,kpop:window.chartIncludeKpop?.()?'1':'0'}));
   }
+  const releases=document.createElement('a');releases.href='releases.html';releases.id='releasesPageLink';releases.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18"/></svg>配信カレンダー';nav.append(releases);
 })();

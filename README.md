@@ -13,6 +13,10 @@ Billboard JAPANのチャートデータを可視化する静的サイトです�
 
 ## ファイル構成
 
+- `releases.html`：国内ボーイズの2025・2026年月カレンダー。日別作品、グループ・作品名・種別の絞り込み、収録曲、Spotifyへのリンク。
+- `release-calendar-data.json`：確認済みのリリース885件の独立スナップショット（2026/11/17確認）。チャートページでは読み込みません。日付はSpotifyの作品リリース日で、初回配信日とは限りません。
+- `build-release-calendar-data.py --input <calendar-releases.json>`：収集データからカレンダー用JSONを生成します。隣の`coverage.json`から対象118組も読み込みます。CD発売日だけ分かる作品は収集データに混ぜません。自動取得は行いません。
+
 - `index.html`：公開画面。
 - `data/manifest.js` と `data/*.js`：4範囲・3指標の集計データ。実際の公開日一覧を `publicationDates` に含みます。
 - `billboard_output/billboard_*_entries.csv`：公式出典URLを保持した週次データ。

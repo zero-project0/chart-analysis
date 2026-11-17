@@ -1,0 +1,25 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const core=require('./release-calendar.js');
+const data=JSON.parse(fs.readFileSync(path.join(__dirname,'release-calendar-data.json'),'utf8'));
+assert.equal(data.releases.length,data.meta.releaseCount);
+assert.equal(new Set(data.releases.map(r=>r.id)).size,data.releases.length);
+assert.equal(data.artists.length,data.meta.registeredGroups);
+assert.equal(core.nextMonth('2025-12',1),'2026-01');
+assert.equal(core.nextMonth('2026-01',-1),'2025-12');
+assert.equal(core.validMonth('2027-01'),false);
+assert.equal(core.validMonth('2026-00'),false);
+assert.equal(core.validDate('2025-02-29'),false);
+assert.equal(core.validDate('2026-04-31'),false);
+assert.equal(core.validDate('2026-02-28'),true);
+const rows=[{date:'2026-11-11',title:'BLOOM WORLD',groups:['ふぉ～ゆ～'],type:'EP'},{date:'2026-11-18',title:'無限大LOVE!!!',groups:['BUDDiiS'],type:'EP'},{date:'2026-10-30',title:'ボクラシダイ',groups:['VOKSY DAYS'],type:'SINGLE'}];
+const state={month:'2026-11',query:'',artist:'',type:''};
+assert.equal(core.filter(rows,{...state,query:'ＢＬＯＯＭ　WORLD'}).length,1);
+assert.equal(core.filter(rows,{...state,artist:'SMAP'}).length,0);
+assert.equal(core.filter(rows,{...state,type:'SINGLE'}).length,0);
+assert.equal(core.filter(rows,{...state,artist:'BUDDiiS',type:'EP'})[0].date,'2026-11-18');
+assert.equal(core.pickDate('2026-11',core.filter(rows,state),'2026-11-17'),'2026-11-18');
+assert.equal(core.pickDate('2026-12',[],'2026-11-17'),'2026-12-01');
+const targets=new Set(data.artists.map(a=>a.name));
+for(const r of data.releases){assert(core.validDate(r.date));assert(r.groups.every(n=>targets.has(n)));assert.equal(new URL(r.url).hostname,'open.spotify.com');for(const v of r.versions){assert(v.complete);assert.equal(v.tracks.length,v.trackCount);}}
+console.log('PASS: month boundaries, real dates, normalized search, combined filters, empty month, artist scope, links and complete tracklists');

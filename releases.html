@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja" data-page="releases">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>配信カレンダー — Music Charts</title>
+<meta name="description" content="国内ボーイズグループの2025・2026年リリースを月カレンダーで確認。グループ・作品名・種別で検索できます。">
+<link rel="stylesheet" href="system-base.css"><link rel="stylesheet" href="apple-web.css"><link rel="stylesheet" href="refined-ui.css?v=annual-history-only-20261113"><link rel="stylesheet" href="release-calendar.css?v=20261117">
+<script src="release-calendar.js?v=20261117" defer></script>
+</head>
+<body>
+<a class="rc-skip" href="#calendarMain">カレンダーへ移動</a>
+<header class="top"><div class="wrap topin">
+<a class="brand" href="index.html"><span aria-hidden="true" class="mark"><svg viewBox="0 0 24 24"><path d="M5 17V11M12 17V5M19 17V8"/></svg></span>Music Charts</a>
+<nav aria-label="主な機能">
+<a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17 9 11l5 3 6-10"/></svg>チャート</a>
+<a href="records.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h16M8 3v4M16 10v4M11 17v4"/></svg>記録・実績</a>
+<a href="releases.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18"/></svg>配信カレンダー</a>
+</nav>
+<div class="rc-sidebar-note"><p class="sidebar-label">リリース対象</p><strong>国内ボーイズグループ</strong><p>2025・2026年の<br>Spotify登録作品</p></div>
+<div class="sidebar-bottom">MUSIC CHART ANALYSIS<br>2025—2026</div>
+</div></header>
+<main id="calendarMain" tabindex="-1">
+<section class="hero"><div class="wrap"><p class="eyebrow">DOMESTIC BOYS / RELEASES</p><h1>配信カレンダー</h1><p class="rc-intro">日付を選んで、その日のリリースをチェック。</p></div></section>
+<div class="wrap rc-content">
+<form class="rc-filters" id="releaseFilters" role="search" aria-label="リリースを絞り込む">
+<label class="rc-search-label" for="releaseSearch"><span>グループ・作品名</span><input type="search" id="releaseSearch" placeholder="グループ・作品名を検索" autocomplete="off"></label>
+<label for="releaseArtist"><span>グループ</span><select id="releaseArtist"><option value="">すべてのグループ</option></select></label>
+<label for="releaseType"><span>種別</span><select id="releaseType"><option value="">すべての種別</option><option value="SINGLE">シングル</option><option value="EP">EP</option><option value="ALBUM">アルバム</option><option value="COMPILATION">コンピレーション</option></select></label>
+<button type="button" class="rc-reset" id="releaseReset" hidden>絞り込みを解除</button>
+</form>
+<div id="releaseLoading" class="rc-message" role="status">リリース情報を読み込んでいます…</div>
+<div id="releaseError" class="rc-message" role="alert" hidden><p>リリース情報を読み込めませんでした。</p><button type="button" id="releaseRetry" class="rc-button">もう一度読み込む</button></div>
+<div id="releaseApp" hidden>
+<div class="rc-toolbar">
+<div class="rc-month-title"><h2 id="releaseMonthTitle"></h2><p id="releaseMonthCount" aria-live="polite"></p></div>
+<div class="rc-month-controls"><button type="button" id="releasePrevious" class="rc-icon-button" aria-label="前の月">‹</button><label class="rc-visually-hidden" for="releaseYear">年</label><select id="releaseYear" aria-label="表示する年"><option value="2025">2025年</option><option value="2026">2026年</option></select><label class="rc-visually-hidden" for="releaseMonth">月</label><select id="releaseMonth" aria-label="表示する月"></select><button type="button" id="releaseNext" class="rc-icon-button" aria-label="次の月">›</button><button type="button" id="releaseToday" class="rc-button">今月</button></div>
+</div>
+<div class="rc-layout">
+<section class="rc-calendar-panel" aria-label="月カレンダー"><div class="rc-weekdays" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div><div id="releaseDays" class="rc-days" aria-label="日付を選択"></div><p class="rc-calendar-hint">数字の横の件数は、確認済みの作品数です。</p></section>
+<section class="rc-day-panel" aria-labelledby="releaseDayTitle"><div class="rc-day-heading"><p class="kicker">RELEASES OF THE DAY</p><h2 id="releaseDayTitle"></h2><p id="releaseDayCount" aria-live="polite"></p></div><div id="releaseDayList"></div></section>
+</div>
+<details class="rc-method"><summary>収集範囲・日付について</summary><p id="releaseSourceNote"></p><p>同名・同日・同種別・同じ参加アーティストの別版は、1件にまとめています。CDの発売予定だけが確認できた作品は含めていません。未来の日付も、収集時点のSpotify公開情報に基づきます。</p><p id="releaseCoverageNote"></p><p>出典：Spotify。ジャケット・楽曲の権利は各権利者に帰属します。</p></details>
+</div>
+<noscript><p class="rc-message">カレンダーを表示するにはJavaScriptを有効にしてください。</p></noscript>
+</div></main>
+<footer><div class="wrap">Music Charts · 国内ボーイズグループのリリース情報<br><span id="releaseCheckedAt"></span></div></footer>
+</body></html>
