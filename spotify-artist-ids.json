@@ -1,0 +1,714 @@
+{
+  "checked_at": "2026-11-17",
+  "scope": "domestic boys retained in site registry",
+  "artists": [
+    {
+      "artist": "とんねるず",
+      "uri": "spotify:artist:6KYYUGQKrP2l1dOHGTYAyQ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "一世風靡セピア",
+      "uri": "spotify:artist:2OOhp3tFYaS7F1fcUgR7xL",
+      "status": "confirmed",
+      "source": "https://open.spotify.com/artist/2OOhp3tFYaS7F1fcUgR7xL?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=67207e47-b5e0-4a22-b1c1-6f1c67ef2736"
+    },
+    {
+      "artist": "光GENJI",
+      "uri": "spotify:artist:4VqJ9xIlKKCaeTQezLiQvK",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "男闘呼組",
+      "uri": "spotify:artist:2Z64EiuElGwf1n8RQ6QPLm",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SMAP",
+      "uri": null,
+      "status": "unresolved",
+      "source": null
+    },
+    {
+      "artist": "V6",
+      "uri": "spotify:artist:5fFuLHZyw9d28AIVa3pG6h",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "DA PUMP",
+      "uri": "spotify:artist:3NRXKeatDxKe4apH6XawKX",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "DOMOTO",
+      "uri": "spotify:artist:4NBCFYm6kiW9PN1E4ZhrKf",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "野猿",
+      "uri": "spotify:artist:39RDuZkEsOJBhWag2sfh6B",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Coming Century",
+      "uri": "spotify:artist:2Ee8aI45fQ8BappZAtHSMe",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "嵐",
+      "uri": "spotify:artist:1XYuC1vxinTjHCNd5clB8C",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "20th Century",
+      "uri": "spotify:artist:3LJ6xDae4k9J6ephrhB1xD",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "w-inds.",
+      "uri": "spotify:artist:2UEnhov0KDPYU2dmGUjfcn",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "RAG FAIR",
+      "uri": "spotify:artist:0jsh4KBegcOeEnAcU1Gbsk",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Lead",
+      "uri": "spotify:artist:1xveO47dkKDIE1288sCLOE",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "NEWS",
+      "uri": "spotify:artist:2Sw8snRnez7gVPNd9UU07o",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SUPER EIGHT",
+      "uri": "spotify:artist:7hPEh2rcIFbRsUdy6ZzFpQ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "WaT",
+      "uri": "spotify:artist:6l8ydM5t21VbtuU5btuRpi",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "KAT-TUN",
+      "uri": "spotify:artist:5HQAzIHOdemXR2DoevwhjT",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Hey! Say! JUMP",
+      "uri": "spotify:artist:64BB3FFJokfd3owfpnwxb0",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ゴールデンボンバー",
+      "uri": "spotify:artist:2BHobTrfUdKWd84nLdMViA",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "羞恥心",
+      "uri": "spotify:artist:1R3A8Jc5m64XnitfhGZDHA",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "フレンズ",
+      "uri": "spotify:artist:5OhmRzBs9d9IYaUt5AFqQp",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "新選組リアン",
+      "uri": "spotify:artist:1mK4GVM3za3WaJ8bq4DBXt",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "サーターアンダギー",
+      "uri": "spotify:artist:00O86uprpHhHxfD2CKL9Kl",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "純烈",
+      "uri": "spotify:artist:26TVVTy3q953UuDa8YnrvY",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "D☆DATE",
+      "uri": "spotify:artist:3SSS2Mc1LKb820SzkDkPTv",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Kis-My-Ft2",
+      "uri": "spotify:artist:4kxoWjOpCVYKgPv9nea95k",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "timelesz",
+      "uri": "spotify:artist:1ZFfhzyXjPvbzSYPlCIwo3",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "A.B.C-Z",
+      "uri": "spotify:artist:4HXPfWNUCAFpjMoWyTWz5i",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BOYS AND MEN",
+      "uri": "spotify:artist:3VZOHWaJbouQwpHvfP47Lo",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "DISH//",
+      "uri": "spotify:artist:0jJmZHZHNe8n24Y33z5Nil",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "超特急",
+      "uri": "spotify:artist:0udR1QMfgT37SQnL1QClTU",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Vimclip",
+      "uri": "spotify:artist:2nWte7ULzsQiqAJB9EpbHW",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "PrizmaX",
+      "uri": "spotify:artist:6rsTkvv0r1MFgDKiiet77k",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "MeseMoa.",
+      "uri": "spotify:artist:6MczYyGWPanwk7deJz9Dyh",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Da-iCE",
+      "uri": "spotify:artist:71UIOLnsacxQHlU55TvfiH",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SOLIDEMO",
+      "uri": "spotify:artist:7ccOn9dXuj9TGDZJSLZYP2",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "WEST.",
+      "uri": "spotify:artist:0VbpS8goXhAQ8vnwiJUNf3",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "アルスマグナ",
+      "uri": "spotify:artist:282pZbUjGDNtm0l8KfYB7i",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Sakurashimeji",
+      "uri": "spotify:artist:4GEJn9D9CbxI4UV8zQHxCY",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "MAGiC BOYZ",
+      "uri": "spotify:artist:62P8PXi3ll7qNZmFBOFU5J",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "RADIO FISH",
+      "uri": "spotify:artist:4yeAONKBGVPSHkuBU4hDt6",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "M!LK",
+      "uri": "spotify:artist:4jhJ8cnJ9vYKyCh289nuwQ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BMK",
+      "uri": "spotify:artist:6iCVcgkf5Jv4rlcSAswaz6",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "X4",
+      "uri": "spotify:artist:72F8VPAbSBVcAfIzVYO3eF",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "XOX",
+      "uri": "spotify:artist:5pSOxYP5DFanZrANbRcdHd",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "MAG!C☆PRINCE",
+      "uri": "spotify:artist:1cECFVNto1rvVw027azUtS",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SUPER★DRAGON",
+      "uri": "spotify:artist:2O86rYMEuvyrkOhyooK87W",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "#HASHTAG",
+      "uri": "spotify:artist:2DEzXtD2uolwVkicyGRv5M",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "祭nine.",
+      "uri": "spotify:artist:0XjdNvButmlTwxWZ6Yc4OV",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "九星隊",
+      "uri": "spotify:artist:6Xz6Cx4lfdffrNrnFafyTL",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BATTLE BOYS",
+      "uri": "spotify:artist:0nczbNZdnvPtWlwqrS3DJq",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "King & Prince",
+      "uri": "spotify:artist:1nzId6SLDDTUTRV7lNbgxp",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ONE N' ONLY",
+      "uri": "spotify:artist:6Pob63g9NOdT7moTAUZ4GB",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Hi☆Five",
+      "uri": "spotify:artist:3NRzIawMQc9WicomBtMvER",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "CUBERS",
+      "uri": "spotify:artist:5b0vNm8SlsmAMchGD7akjQ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ボイメンエリア研究生",
+      "uri": "spotify:artist:4xfuGC3Aj7B6dEVqsB98BV",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "甘党男子",
+      "uri": "spotify:artist:0rqjeiXudMCb4bRFkFVU5B",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "パンダドラゴン",
+      "uri": "spotify:artist:2nje3wb3iWd388d3WctKUB",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "AlbaNox",
+      "uri": "spotify:artist:1RyqUbMT5aHlv0BQ5Wl2vL",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "9bic",
+      "uri": "spotify:artist:2RSCpSXIWJm0o0of3vf75m",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "原因は自分にある。",
+      "uri": "spotify:artist:752sVqd0A0Hki7Gd2iOOV6",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Snow Man",
+      "uri": "spotify:artist:0UuiWPm9FpWvRuWNrXO98N",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SixTONES",
+      "uri": "spotify:artist:7dhueqtbx2NVq1leXyqaNl",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "JO1",
+      "uri": "spotify:artist:2koP6FEfIEVk4l2Fe6jFhu",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "PSYCHIC FEVER from EXILE TRIBE",
+      "uri": "spotify:artist:0PgE39BqM3dTVk5lyttaBb",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "OWV",
+      "uri": "spotify:artist:4CNu1NZPWMvgb46cmKepUG",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ORβIT",
+      "uri": "spotify:artist:5nIjW1OJiqkhJsdHWBfKrN",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ENJIN",
+      "uri": "spotify:artist:1xO6BVi6M8m2Q2O1EE7oEC",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "SHARE LOCK HOMES",
+      "uri": "spotify:artist:0faY25DojHZtXLVwbOwSEY",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BUDDiiS",
+      "uri": "spotify:artist:68hd7ONzgN98uAZDWMlmAQ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "WATWING",
+      "uri": "spotify:artist:7hkQYkktyo9LEAE5aIwi6e",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "INI",
+      "uri": "spotify:artist:73kxDUq2Hl7Upy4o0yFxXv",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BE:FIRST",
+      "uri": "spotify:artist:4wCW8kZ8LL7QIdcE8EOKPP",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "なにわ男子",
+      "uri": "spotify:artist:5V0oa9WaeYkBszHV6ItVD6",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "OCTPATH",
+      "uri": "spotify:artist:3RNZ3qV2S5PWCZLt69MDR7",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ベアードアード",
+      "uri": "spotify:artist:34Sc1c09Z1pTfFBmnxbnGF",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "THE SUPER FRUIT",
+      "uri": "spotify:artist:3I0DG4uOeYNPq5MCyHPPer",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Travis Japan",
+      "uri": "spotify:artist:28IJpwoVi5R92MtHxkj2Lk",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "LIL LEAGUE from EXILE TRIBE",
+      "uri": "spotify:artist:6B51WqiWwRf7LytXwWhmHJ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Lienel",
+      "uri": "spotify:artist:2OqRcm0u2f7DpFoQZQiIoj",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "DXTEEN",
+      "uri": "spotify:artist:5GkZGONRSCs4UEsbt8UVIR",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "MAZZEL",
+      "uri": "spotify:artist:5Zy2tdfVQKbDwpqWcjXg42",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ICEx",
+      "uri": "spotify:artist:36eLruAH70vIII9ppzQ5QP",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "IMP.",
+      "uri": "spotify:artist:2ahbTOVqWJKyj6TUXqFcf1",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Number_i",
+      "uri": "spotify:artist:4XFkDALFTsSHVnRtJSsaMN",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "UNiFY",
+      "uri": "spotify:artist:24tVZrU3BHkVMRX6dc7Ind",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "Aぇ! group",
+      "uri": "spotify:artist:2d2y9tvbA63vy8bPgNPKLV",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "WILD BLUE",
+      "uri": "spotify:artist:4qgBzbI2ncLyF2fEGf8GTm",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "aoen",
+      "uri": "spotify:artist:24TQYvsd9qzVdHU2j1zY5i",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "CLASS SEVEN",
+      "uri": "spotify:artist:0hiawmUZOQ1rF9sQyOSnoe",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "STARGLOW",
+      "uri": "spotify:artist:1iw2iFU0Tpq7xvkX4VZyfZ",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "VOKSY DAYS",
+      "uri": "spotify:artist:5pBpQddbH9phz8SY1o8GJC",
+      "status": "confirmed",
+      "source": "https://open.spotify.com/artist/5pBpQddbH9phz8SY1o8GJC?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=2ff50589-f01a-4804-9034-4f82b6e7bff1"
+    },
+    {
+      "artist": "ROIROM",
+      "uri": "spotify:artist:3g5EB8SrWpWGz82HifWZSj",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "VIBY",
+      "uri": "spotify:artist:6yEmYNNxZJSWa52gCezahN",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "TAGRIGHT",
+      "uri": "spotify:artist:1M0EAsHkHrYJXRQM4KwxlR",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "RUNIDRE",
+      "uri": "spotify:artist:5t1AdzpliNJCXrIlDA8MA3",
+      "status": "confirmed",
+      "source": "https://open.spotify.com/artist/5t1AdzpliNJCXrIlDA8MA3?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=bf66d508-2c91-46c2-b512-d6e4d23207a4"
+    },
+    {
+      "artist": "KO1KEYZ",
+      "uri": "spotify:artist:7EuQkJNmjEkhV4TdeHNFEc",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "iiONDO",
+      "uri": "spotify:artist:0QMQ5bO4jgkov3GUaoEhWe",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "KEY TO LIT",
+      "uri": null,
+      "status": "unresolved",
+      "source": null
+    },
+    {
+      "artist": "モナキ",
+      "uri": "spotify:artist:48La8eUwq93H7Va1Hl4bMd",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ONE OR EIGHT",
+      "uri": "spotify:artist:5bIttAFRf7URUmuuI9w7XA",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "EXILE",
+      "uri": "spotify:artist:6zGmypGQUBXD4ZC9EbfMme",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "三代目 J SOUL BROTHERS from EXILE TRIBE",
+      "uri": "spotify:artist:1g51NlHKUXlgfvGP22m0uD",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "GENERATIONS from EXILE TRIBE",
+      "uri": "spotify:artist:4HfuyMMy295oBvbIuXr0v8",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "FANTASTICS from EXILE TRIBE",
+      "uri": "spotify:artist:162Ols90jU4CctXQz15NxS",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "uri": "spotify:artist:6E94YMM50nYraxpkixvQuW",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "龍宮城",
+      "uri": "spotify:artist:0xOawbTJb7VLKsaJGjpeCK",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "KID PHENOMENON from EXILE TRIBE",
+      "uri": "spotify:artist:0fDuN5RNp3ysq68Zdz17MV",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "THE JET BOY BANGERZ from EXILE TRIBE",
+      "uri": "spotify:artist:3fjFsQiDcaCYsbcnFz3Rhi",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "BALLISTIK BOYZ from EXILE TRIBE",
+      "uri": "spotify:artist:1dZ8IZ8BXP30yhG50TH06o",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "WOLF HOWL HARMONY from EXILE TRIBE",
+      "uri": "spotify:artist:0SiKVvyHQlgxrfkCH45DVn",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "EXILE THE SECOND",
+      "uri": "spotify:artist:5l7Uyt1IiYk8l93ohXiQd6",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "7ORDER",
+      "uri": "spotify:artist:2RitDQzohyR2zJXoqovut4",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "ふぉ～ゆ～",
+      "uri": "spotify:artist:1y68SvlLLPMzENYhO1QlrX",
+      "status": "confirmed",
+      "source": "https://open.spotify.com/artist/1y68SvlLLPMzENYhO1QlrX?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=420cda0f-935e-4ba3-b035-dd331af71ac8"
+    },
+    {
+      "artist": "MATSURI",
+      "uri": "spotify:artist:0wb7fPiU6gnFEURvCodYtH",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "EBiDAN",
+      "uri": "spotify:artist:4jtwvvkDVrBZosFsvbSLXm",
+      "status": "confirmed",
+      "source": "existing confirmed collection mapping"
+    }
+  ]
+}
