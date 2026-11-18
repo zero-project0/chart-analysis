@@ -200,7 +200,7 @@
 160,back number,どうしてもどうしても,4,2026-02-11,2026-03-04,False,5,4,2,False
 160,M!LK,爆裂愛してる,4,2026-02-18,2026-03-11,False,5,5,2,False
 160,King Gnu,GO GHOST,4,2026-08-05,2026-08-26,False,5,2,2,False
-160,YOASOBI,咲き誇れ,4,2026-10-21,2026-11-11,True,4,2,1,False
+160,YOASOBI,咲き誇れ,4,2026-10-21,2026-11-11,False,4,2,1,False
 203,LiSA,ASH,3,2017-10-04,2017-10-18,False,3,1,1,True
 203,欅坂46,風に吹かれても,3,2017-11-01,2017-11-15,False,3,1,1,False
 203,JUNNA,Here,3,2017-11-08,2017-11-22,False,3,2,1,False
@@ -591,7 +591,7 @@
 282,DREAMS COME TRUE,サヨナラとバトン,2,2026-10-21,2026-10-28,False,2,5,1,False
 282,Da-iCE,うららか,2,2026-10-21,2026-10-28,False,2,6,1,False
 282,Hey!Say!JUMP,再会愛 Lie 期待して Cry,2,2026-10-28,2026-11-04,False,2,3,1,False
-282,M!LK,ザッツ!超常,2,2026-11-04,2026-11-11,True,2,2,1,False
+282,M!LK,ザッツ!超常,2,2026-11-04,2026-11-11,False,2,2,1,False
 594,Mr.Children,HANABI,1,2017-10-04,2017-10-04,False,2,9,2,True
 594,SPICY CHOCOLATE,"君のことが好きだったんだ feat.BENI,Shuta Sueyoshi(AAA) & HAN-KUN",1,2017-10-04,2017-10-04,False,1,5,1,True
 594,THE ORAL CIGARETTES,BLACK MEMORY,1,2017-10-04,2017-10-04,False,1,10,1,True
@@ -1920,10 +1920,20 @@
 594,STARGLOW,Slam Dunk,1,2026-11-04,2026-11-04,False,1,4,1,False
 594,Travis Japan,チェックメイト,1,2026-11-04,2026-11-04,False,1,1,1,False
 594,YUNHO from 東方神起,君がいる,1,2026-11-04,2026-11-04,False,1,9,1,False
-594,BE:FIRST,NOW U KNOW,1,2026-11-11,2026-11-11,True,1,1,1,False
-594,M!LK,爆裂愛しすぎて滅!(Crazy Mashup by TeddyLoid),1,2026-11-11,2026-11-11,True,1,9,1,False
-594,THE RAMPAGE from EXILE TRIBE,One Shot,1,2026-11-11,2026-11-11,True,1,6,1,False
-594,XG,DEPENDS,1,2026-11-11,2026-11-11,True,1,10,1,False
-594,スピッツ,キツネノボタン,1,2026-11-11,2026-11-11,True,1,8,1,False
-594,新しい地図 join ミュージック,いけても無理でも,1,2026-11-11,2026-11-11,True,1,3,1,False
-594,新しい地図 join ミュージック,ダイヤモンドカット,1,2026-11-11,2026-11-11,True,1,4,1,False
+594,BE:FIRST,NOW U KNOW,1,2026-11-11,2026-11-11,False,1,1,1,False
+594,M!LK,爆裂愛しすぎて滅!(Crazy Mashup by TeddyLoid),1,2026-11-11,2026-11-11,False,1,9,1,False
+594,THE RAMPAGE from EXILE TRIBE,One Shot,1,2026-11-11,2026-11-11,False,1,6,1,False
+594,XG,DEPENDS,1,2026-11-11,2026-11-11,False,1,10,1,False
+594,スピッツ,キツネノボタン,1,2026-11-11,2026-11-11,False,1,8,1,False
+594,新しい地図 join ミュージック,いけても無理でも,1,2026-11-11,2026-11-11,False,1,3,1,False
+594,新しい地図 join ミュージック,ダイヤモンドカット,1,2026-11-11,2026-11-11,False,1,4,1,False
+594,Ayumu Imazu,結び,1,2026-11-18,2026-11-18,True,1,7,1,False
+594,IMP.,Period,1,2026-11-18,2026-11-18,True,1,2,1,False
+594,Kis-My-Ft2,La la la,1,2026-11-18,2026-11-18,True,1,6,1,False
+594,Stray Kids,SUIATSU,1,2026-11-18,2026-11-18,True,1,10,1,False
+594,YOASOBI,KILLA,1,2026-11-18,2026-11-18,True,1,5,1,False
+594,ZORN,"STAR feat. アイナ・ジ・エンド,AKLO",1,2026-11-18,2026-11-18,True,1,4,1,False
+594,乃木坂46,君ロス,1,2026-11-18,2026-11-18,True,1,9,1,False
+594,千住明,別班儀礼曲,1,2026-11-18,2026-11-18,True,1,1,1,False
+594,吉田仁人,愛の形,1,2026-11-18,2026-11-18,True,1,3,1,False
+594,安田章大,ありのままの扉,1,2026-11-18,2026-11-18,True,1,8,1,False
