@@ -74388,6 +74388,36 @@
       "verificationSource": "https://therampage-ldh.jp/s/ldh05o/artist/00/discography?ima=0000",
       "image": "jacket-assets/releases/aea008a7cdb9807538df864e.jpg",
       "bytes": 48073
+    },
+    {
+      "artist": "BTS",
+      "title": "Yet To Come",
+      "spotifyTitle": "Yet To Come",
+      "album": "Proof",
+      "albumUri": "spotify:album:6al2VdKbb6FIz9d7lU7WRB",
+      "albumLabel": "Album",
+      "uri": "spotify:track:10SRMwb9EuVS1K9rYsBfHQ",
+      "url": "https://open.spotify.com/track/10SRMwb9EuVS1K9rYsBfHQ",
+      "sourceImage": "https://i.scdn.co/image/ab67616d00001e0217db30ce3f081d6818a8ad49",
+      "selection": "user-requested standard-title artwork",
+      "verification": "Spotify catalog: BTS / Yet To Come / Proof; extended chart title mapped by user request",
+      "image": "jacket-assets/releases/7476b90dcee1092e13a286fe.jpg",
+      "bytes": 9050
+    },
+    {
+      "artist": "BTS",
+      "title": "Yet To Come (The Most Beautiful Moment)",
+      "spotifyTitle": "Yet To Come",
+      "album": "Proof",
+      "albumUri": "spotify:album:6al2VdKbb6FIz9d7lU7WRB",
+      "albumLabel": "Album",
+      "uri": "spotify:track:10SRMwb9EuVS1K9rYsBfHQ",
+      "url": "https://open.spotify.com/track/10SRMwb9EuVS1K9rYsBfHQ",
+      "sourceImage": "https://i.scdn.co/image/ab67616d00001e0217db30ce3f081d6818a8ad49",
+      "selection": "user-requested standard-title artwork",
+      "verification": "Spotify catalog: BTS / Yet To Come / Proof; extended chart title mapped by user request",
+      "image": "jacket-assets/releases/7476b90dcee1092e13a286fe.jpg",
+      "bytes": 9050
     }
   ]
 }
