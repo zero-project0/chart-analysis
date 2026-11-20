@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-11-17",
-  "scope": "domestic boys retained in site registry",
+  "scope": "domestic boys and the &TEAM and NCT WISH crossover entries",
   "artists": [
     {
       "artist": "とんねるず",
@@ -709,6 +709,18 @@
       "uri": "spotify:artist:4jtwvvkDVrBZosFsvbSLXm",
       "status": "confirmed",
       "source": "existing confirmed collection mapping"
+    },
+    {
+      "artist": "&TEAM",
+      "uri": "spotify:artist:2xfxRiKxoHl5tI0MKyvqV7",
+      "status": "confirmed",
+      "source": "Spotify artist profile and official release credits"
+    },
+    {
+      "artist": "NCT WISH",
+      "uri": "spotify:artist:4FqmqIspLaUGtxAFFLsZxc",
+      "status": "confirmed",
+      "source": "Spotify artist profile and official release credits"
     }
   ]
 }

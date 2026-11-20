@@ -156,7 +156,7 @@
   async function load(){
     if(loading)return;loading=true;$('releaseLoading').hidden=false;$('releaseError').hidden=true;
     try{
-      const response=await fetch('release-calendar-data.json?v=20261117');if(!response.ok)throw Error('HTTP '+response.status);
+      const response=await fetch('release-calendar-data.json',{cache:'no-cache'});if(!response.ok)throw Error('HTTP '+response.status);
       const result=await response.json();
       if(!result.meta||!Array.isArray(result.releases)||!Array.isArray(result.artists)||result.releases.some(r=>!validDate(r.date)||!Array.isArray(r.groups)||!Array.isArray(r.versions)))throw Error('Invalid release data');
       data=result;state.artist=data.artists.some(a=>a.name===state.artist)?state.artist:'';state.type=Object.hasOwn(typeNames,state.type)?state.type:'';

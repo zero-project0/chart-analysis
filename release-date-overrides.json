@@ -7,6 +7,48 @@
       "source": "official_japan_streaming_release",
       "sourceUrl": "https://www.universal-music.co.jp/travisjapan/news/2026-11-11/",
       "note": "Official notice confirms Japan streaming release on November 18; CD release was postponed to December 16. Spotify work date is November 17."
+    },
+    {
+      "id": "spotify:album:3VVF6lIpwTZ8iEYcN0PF5u",
+      "date": "2026-10-10",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.andteam-official.jp/news/3727e6736b51"
+    },
+    {
+      "id": "spotify:album:3hSeGtxUOFxbXM9NwRWIHO",
+      "date": "2026-04-13",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.universal-music.co.jp/andteam/news/2026-04-13-2/"
+    },
+    {
+      "id": "spotify:album:0XuSRe0NBnFTAaqIfLJXS6",
+      "date": "2026-03-14",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.universal-music.co.jp/andteam/news/2026-03-16/"
+    },
+    {
+      "id": "spotify:album:31uWRO997HxhOIraAS0zpz",
+      "date": "2025-01-09",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.andteam-official.jp/discography/"
+    },
+    {
+      "id": "spotify:album:25nQUx8eJNhjD4SCFo3jtW",
+      "date": "2025-02-02",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.universal-music.co.jp/andteam/news/2025-02-02/"
+    },
+    {
+      "id": "spotify:album:6FOIiP9yLaT16PUtUkAr3E",
+      "date": "2025-04-21",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://weverse.io/andteam/notice/26601?hl=ja"
+    },
+    {
+      "id": "spotify:album:3nlrUbgv3tL93cWmaeiaAZ",
+      "date": "2025-11-28",
+      "source": "official_japan_streaming_release",
+      "sourceUrl": "https://www.andteam-official.jp/news/ksxkti"
     }
   ]
 }
