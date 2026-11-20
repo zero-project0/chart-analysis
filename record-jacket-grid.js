@@ -2,7 +2,7 @@
 (()=>{
  'use strict';
  function draw(o){
-  const {canvas,rows,metric,ranks,annual,streak,liveEntity,liveYear,liveScope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork}=o;
+  const {canvas,rows,metric,ranks,annual,streak,liveEntity,liveYear,liveScope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork,resultUnit}=o;
   const header=document.createElement('canvas');header.width=canvas.width;header.height=490;header.getContext('2d').drawImage(canvas,0,0);
   const W=1800,H=2400,cols=5,left=96,pitch=1608/cols,compact=rows.length>20,start=compact?280:535,nRows=Math.max(compact?5:4,Math.ceil(rows.length/cols)),rowHeight=(2220-start)/nRows;
   // Keep the same gutters in all five columns; size artwork from the remaining text space.
@@ -19,7 +19,7 @@
    text(({boys:'ボーイズグループ',girls:'ガールズグループ',korean:'K-POPグループ',combined:'ボーイズ＆ガールズグループ',all:'全アーティスト'})[liveScope],left,111,32,accent);
    text(title,left,159,39,ink,true,1608);
    round(left,216,1608,43,'#f5f5f7',10);
-   const winner=o.allRows[0],name=winner?.[1]||'該当する記録はありません',value=winner?Number(winner[metric]).toLocaleString()+(streak?'週':'回'):'';
+   const winner=o.allRows[0],name=winner?.[1]||'該当する記録はありません',value=winner?Number(winner[metric]).toLocaleString()+resultUnit:'';
    text((streak?'最長記録':'最多記録')+'　'+name,left+15,227,20,ink,true,1060);right(value,1260,225,26,accent);
    right((pageIndex+1)+' / '+pages.length+'枚',1685,230,19,muted);
   }
@@ -38,7 +38,7 @@
    // Rank crosses only the lower-right edge; the count occupies the left gap.
    const rankSize=compact?(rank<10?84:72):(rank<10?100:84),rightEdge=x+imageSize+4,bottom=y+imageSize+(compact?45:54);
    ctx.save();ctx.globalAlpha=.84;ctx.fillStyle=rankColor;ctx.font=`italic 900 ${rankSize}px Impact,"Arial Narrow",Arial,sans-serif`;ctx.textAlign='right';ctx.textBaseline='alphabetic';ctx.fillText(String(rank),rightEdge,bottom);ctx.restore();ctx.textBaseline='top';ctx.textAlign='left';
-   ctx.font=`700 ${compact?29:33}px Arial`;ctx.fillStyle=color;const number=value.toLocaleString();ctx.fillText(number,x,y+imageSize+14);const numberW=ctx.measureText(number).width;text(streak?'週':'回',x+numberW+5,y+imageSize+26,compact?17:19,color,true,32);
+   ctx.font=`700 ${compact?29:33}px Arial`;ctx.fillStyle=color;const number=value.toLocaleString();ctx.fillText(number,x,y+imageSize+14);const numberW=ctx.measureText(number).width;text(resultUnit,x+numberW+5,y+imageSize+26,compact?17:19,color,true,32);
    let name=String(r[1]||'');if(!annual&&name.startsWith('Yes! 東京 (feat.'))name='Yes! 東京';if(!annual&&name==='罪と罰と雨とキス (佐野勇斗&吉田仁人)')name='罪と罰と雨とキス';
    const titleY=y+imageSize+(compact?63:60),labelY=y+imageSize+(compact?94:92);
    text(name,x,titleY,titleSize,ink,true,imageSize);
@@ -50,7 +50,7 @@
   canvas.dataset.cardBounds=JSON.stringify(bounds);
   ctx.strokeStyle='#d2d2d7';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,2230);ctx.lineTo(W-left,2230);ctx.stroke();
   text(context,left,2252,18,muted,false,1608);
-  text(streak?'背景・枠線付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景・枠線付き：'+String(model.latest).slice(0,4)+'年の記録。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
+  text(streak?'背景・枠線付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景・枠線付き：'+String(model.latest).slice(0,4)+'年の記録。':resultUnit==='週'?'楽曲ごとにランクインした週を合計。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
   text('出典：Billboard JAPAN',left,2330,20,muted,false,1608);
   if(!rows.length)text('該当する記録はありません',left,start+70,30,muted);
  }

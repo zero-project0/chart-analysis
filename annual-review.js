@@ -2,7 +2,6 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const norm = value => String(value).normalize('NFKC').toLowerCase().replace(/[〜～]/g, '~').replace(/\s/g, '');
-  const scopeNames = {boys: '国内ボーイズ', girls: '国内ガールズ', korean: 'K-POP'};
   const chartCodes = ['hot100', 'stsongs'];
   const photos = new Map((window.ARTIST_PHOTOS || []).map(item => [norm(item.artist), item.image]));
   const jackets = new Map((window.SONG_JACKETS || []).filter(item => item.album)
@@ -15,7 +14,6 @@
   const ctx = canvas.getContext('2d');
   let groups = [], calendar, selected, pages = [], listLimit = 40, revision = 0;
   $('reviewYear').value = params.get('year') === '2025' ? '2025' : '2026';
-  $('reviewScope').value = scopeNames[params.get('scope')] ? params.get('scope') : '';
 
   async function json(path) {
     const response = await fetch(path, {cache: 'no-cache'});
@@ -66,8 +64,7 @@
 
   function renderList() {
     const query = norm($('reviewSearch').value);
-    const scope = $('reviewScope').value;
-    const matches = groups.filter(group => (!scope || group.scope === scope) && group.keys.some(key => key.includes(query)));
+    const matches = groups.filter(group => group.keys.some(key => key.includes(query)));
     $('reviewMatchCount').textContent = matches.length + '組';
     $('reviewGroups').replaceChildren(...matches.slice(0, listLimit).map(group => {
       const li = document.createElement('li');
@@ -311,7 +308,7 @@
     $('reviewResult').hidden = false;
   }
 
-  $('reviewSearch').oninput = $('reviewScope').onchange = () => {
+  $('reviewSearch').oninput = () => {
     listLimit = 40;
     $('reviewDirectory').open = true;
     renderList();
@@ -335,18 +332,18 @@
   $('reviewStatus').textContent = 'グループ一覧を読み込み中…';
   Promise.all([json('artists-registry.json'), json('release-calendar-data.json')]).then(([registry, releases]) => {
     calendar = releases;
-    groups = Object.keys(scopeNames).flatMap(scope => registry.site[scope].artists
-      .filter(name => !/^\d{4}年(?:\d{1,2}月(?:\d{1,2}日)?)?$/.test(name))
-      .map(name => ({name, scope, keys: [norm(name), ...(registry.site[scope].aliases[name] || []).map(norm)]})))
+    const {artists, aliases} = registry.site.boys;
+    groups = artists.map(name => ({name, scope: 'boys', keys: [norm(name), ...(aliases[name] || []).map(norm)]}))
       .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
     $('reviewStatus').textContent = '';
     renderList();
     const artist = params.get('artist');
-    const group = artist && (groups.find(item => item.scope === params.get('scope') && item.keys.includes(norm(artist)))
-      || groups.find(item => item.keys.includes(norm(artist))));
+    const group = artist && groups.find(item => item.keys.includes(norm(artist)));
     if (group) {
       $('reviewDirectory').open = false;
       selectGroup(group);
+    } else if (artist) {
+      $('reviewStatus').textContent = '年間まとめの対象は国内ボーイズグループです。';
     }
   }).catch(error => {
     $('reviewStatus').textContent = 'グループ一覧を読み込めませんでした。ページを開き直してください。';
