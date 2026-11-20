@@ -3,6 +3,8 @@ import argparse,datetime,json,pathlib
 
 def build(source):
     data=json.loads(source.read_text(encoding='utf-8'))
+    override_file=pathlib.Path(__file__).with_name('release-date-overrides.json')
+    overrides={r['id']:r for r in json.loads(override_file.read_text(encoding='utf-8'))['entries']} if override_file.exists() else {}
     rows=[]
     for r in data['releases']:
         date=datetime.date.fromisoformat(r['release_date'])
@@ -12,10 +14,14 @@ def build(source):
         for v in r['versions']:
             versions.append({'id':v['uri'],'url':v['url'],'trackCount':v['track_count'],'complete':v['tracklist_complete'],'tracks':[{'title':t['title'],'unannounced':t.get('is_placeholder',False)} for t in v['tracks']]})
         rows.append({'id':versions[0]['id'],'date':r['release_date'],'title':r['title'],'type':r['type'],'groups':r['groups'],'trackCount':r['track_count'],'url':r['url'],'cover':r['cover_url'],'prereleaseAtCheck':r['is_prerelease'],'versions':versions})
+        override=next((overrides[v['id']] for v in versions if v['id'] in overrides),None)
+        if override:
+            datetime.date.fromisoformat(override['date'])
+            rows[-1].update(date=override['date'],spotifyDate=r['release_date'],dateSource=override['source'],dateSourceUrl=override['sourceUrl'])
     if len({r['id'] for r in rows})!=len(rows):raise ValueError('Duplicate release ID')
     m=data['metadata'];coverage=source.parent/'coverage.json'
     artists=[{'name':r['artist'],'idConfirmed':bool(r['spotify_uri'])} for r in json.loads(coverage.read_text(encoding='utf-8'))] if coverage.exists() else [{'name':n,'idConfirmed':True} for n in sorted({n for r in rows for n in r['groups']})]
-    return {'meta':{'checkedAt':m['collected_at'],'firstMonth':'2025-01','lastMonth':'2026-12','scope':'国内ボーイズグループ','registeredGroups':m['registry_groups'],'identifiedGroups':m['identified_groups'],'groupsWithReleases':m['groups_with_releases'],'releaseCount':len(rows),'source':'Spotify','dateMeaning':'Spotify上の作品リリース日。初回配信開始日とは限りません。再発・特別版・ライブ盤などを含みます。','coverageNote':'検索・公開ページの表示上限があり、全作品の網羅は未確認です。未収集をリリースなしとは判定していません。'},'artists':artists,'releases':rows}
+    return {'meta':{'checkedAt':m['collected_at'],'firstMonth':'2025-01','lastMonth':'2026-12','scope':'国内ボーイズグループ','registeredGroups':m['registry_groups'],'identifiedGroups':m['identified_groups'],'groupsWithReleases':m['groups_with_releases'],'releaseCount':len(rows),'source':'Spotify','dateMeaning':'Spotify上の作品リリース日を基本とし、公式の国内配信日が確認できる場合はそちらを優先します。初回配信日と異なる再発・特別版・ライブ盤なども含みます。','coverageNote':'検索・公開ページの表示上限があり、全作品の網羅は未確認です。未収集をリリースなしとは判定していません。'},'artists':artists,'releases':rows}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=pathlib.Path,required=True);p.add_argument('--output',type=pathlib.Path,default=pathlib.Path(__file__).parent/'release-calendar-data.json');a=p.parse_args()
