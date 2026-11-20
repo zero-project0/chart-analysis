@@ -1,0 +1,16 @@
+.review-content { padding-bottom: 36px; }
+.review-controls, .review-toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
+.review-controls label:first-child { flex: 1 1 230px; }
+.review-content label { display: grid; gap: 4px; font-size: .86rem; font-weight: 600; }
+.review-content :is(input, select, button) { font: inherit; min-height: 42px; padding: 8px 12px; color: var(--ink); border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+.review-content :is(button, summary) { cursor: pointer; }
+.review-content button[aria-pressed="true"], #reviewSave { background: var(--acid); color: var(--ink); border-color: var(--acid); font-weight: 700; }
+#reviewDirectory, #reviewReleases { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+#reviewGroups { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+#reviewMatchCount, #reviewStatus { color: var(--muted); }
+#reviewMatchCount { font-size: .84em; }
+.review-toolbar { align-items: center; margin: 16px 0 12px; }
+.review-toolbar h2 { margin: 0 auto 0 0; font-size: 1.2rem; }
+.review-toolbar h2 a { color: inherit; text-underline-offset: .2em; }
+#reviewCanvas { display: block; width: 100%; max-width: 900px; margin-inline: auto; height: auto; }
+.review-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

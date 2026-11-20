@@ -13,4 +13,23 @@
     if(location.hash==='#statistics')location.replace('records.html'+location.search+'#'+new URLSearchParams({scope:scopeCode,chart:chartCode,kpop:window.chartIncludeKpop?.()?'1':'0'}));
   }
   const releases=document.createElement('a');releases.href='releases.html';releases.id='releasesPageLink';releases.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18"/></svg>配信カレンダー';nav.append(releases);
+  const groups=document.createElement('a');groups.href='annual-review.html';
+  groups.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 19v-2a6 6 0 0 1 12 0v2m2-14a3 3 0 0 1 0 6m4 8v-2a5 5 0 0 0-4-5"/></svg>グループ一覧';
+  nav.append(groups);
+  const detailLink=document.createElement('a');
+  detailLink.className='share-x';detailLink.href='annual-review.html';detailLink.textContent='年間まとめ';
+  const detailTitle=document.getElementById('detailName');
+  const shareKind=document.getElementById('shareKind');
+  const shareLink=document.createElement('a');
+  shareLink.className='share-action';shareLink.textContent='年間まとめ';shareLink.hidden=true;
+  document.getElementById('copyShareLink').before(shareLink);
+  const syncAnnualLinks=()=>{
+    detailLink.href='annual-review.html?'+new URLSearchParams({artist:detailTitle.textContent});
+    shareLink.href=detailLink.href;
+    shareLink.hidden=shareKind.textContent!=='SHARE ARTIST';
+  };
+  const observer=new MutationObserver(syncAnnualLinks);
+  observer.observe(detailTitle,{childList:true,characterData:true,subtree:true});
+  observer.observe(shareKind,{childList:true,characterData:true,subtree:true});
+  document.getElementById('openShare').before(detailLink);
 })();
