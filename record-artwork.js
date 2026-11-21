@@ -3,8 +3,12 @@
   'use strict';
   const norm=v=>String(v||'').normalize('NFKC').replace(/\s/g,'').toLowerCase();
   const photos=new Map((window.ARTIST_PHOTOS||[]).map(item=>[norm(item.artist),item]));
+  const songKey=(artist,title)=>norm(artist)+'\u0000'+norm(title);
+  const recordSongs=new Map((window.RECORD_SONG_ARTWORK||[]).map(item=>[
+    songKey(item.artist,item.title),{...item,uri:'record-cover:'+item.image}
+  ]));
   const artist=name=>photos.get(norm(name));
-  const song=(name,title)=>window.SongJackets?.get(name,title);
+  const song=(name,title)=>window.SongJackets?.get(name,title)||recordSongs.get(songKey(name,title));
   const ready=window.SongJackets?.ready;
   const ensure=items=>window.SongJackets?.ensure(items);
   const shortUrl=item=>'open.spotify.com/'+(item.uri.includes(':artist:')?'artist/':'track/')+item.uri.split(':').at(-1);
@@ -22,8 +26,14 @@
       button.before(layout);layout.append(img,copy);copy.append(button);
       if(subtitle)copy.append(subtitle);
       if(!item.url)return;
-      const link=document.createElement('a');link.className='record-artwork-source';link.href=item.url;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',item.artist+'をSpotifyで開く');
-      const logo=document.createElement('img');logo.src='jacket-assets/spotify-logo.svg';logo.alt='Spotify';link.append(logo,document.createTextNode('で開く'));copy.append(link);
+      const link=document.createElement('a');link.className='record-artwork-source';link.href=item.url;link.target='_blank';link.rel='noopener';
+      if(item.uri.startsWith('spotify:')){
+        link.setAttribute('aria-label',item.artist+'をSpotifyで開く');
+        const logo=document.createElement('img');logo.src='jacket-assets/spotify-logo.svg';logo.alt='Spotify';link.append(logo,document.createTextNode('で開く'));
+      }else{
+        link.textContent=item.source+' ↗';
+      }
+      copy.append(link);
     });
   }
   window.RecordArtwork={artist,song,ready,ensure,paint,shortUrl,decorate};
