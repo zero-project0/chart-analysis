@@ -125,7 +125,8 @@
         "7ORDER",
         "ふぉ～ゆ～",
         "MATSURI",
-        "EBiDAN"
+        "EBiDAN",
+        "8LOOM"
       ],
       "aliases": {
         "とんねるず": [
@@ -505,6 +506,9 @@
         ],
         "EBiDAN": [
           "EBiDAN"
+        ],
+        "8LOOM": [
+          "8LOOM"
         ]
       }
     },
