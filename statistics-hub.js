@@ -231,6 +231,7 @@
       }
       const footer=box?H-140:H-160;ctx.strokeStyle='#d2d2d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(96,footer-20);ctx.lineTo(W-96,footer-20);ctx.stroke();text(context,99,footer+4,21,'#6e6e73',false,1600);text(streak?'連続判定は収録済みの公開週順。最新週までの記録のみ「継続中」。':songTotal?'楽曲ごとにランクインした週を合計。':'1曲×1週＝1回。同週に複数曲が入った場合は別々に加算。',99,footer+44,22,'#6e6e73',false,1600);text('出典：Billboard JAPAN',99,footer+84,21,'#6e6e73',false,1600);
       if(!box&&liveLayout==='grid')window.RecordJacketGrid?.draw({canvas,rows,allRows,ranks,metric,annual,streak,liveEntity,liveYear,liveScope,scope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork,liveRun,resultUnit});
+      window.drawImageSignature(ctx,{right:96,bottom:50,size:26});
       canvas.dataset.artworkCount=String(box?boxCards.filter(b=>artwork?.artist(b.name)).length:rows.filter(r=>rowArtwork(r)).length);
       if(token!==revision||view!=='linked')return;
       const src=canvas.toDataURL('image/png'),filename=`billboard-${liveScope}-${liveChart}-${liveTab}${totalsTop10?'-top10':''}-${streak?'all':boxMode==='years'&&box?'selected-years':liveYear}-${model.latest}${pages.length>1?'-'+(pageIndex+1):''}.png`;

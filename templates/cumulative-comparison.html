@@ -20,6 +20,7 @@
 </div>
 </main>
 <script src="data/manifest.js"></script>
+<script src="image-signature.js?v=1"></script>
 <script>
 'use strict';
 const charts=['hot100','stsongs','dlsongs'],labels={hot100:'Hot100',stsongs:'ストリーミング',dlsongs:'ダウンロード'},datasets=new Map(),indexes=new Map(),queues={artist:[],song:[]};
@@ -60,6 +61,7 @@ async function prepareTableShare(){
  context.fillStyle='#171715';context.fillRect(30,130,1060,38);context.fillStyle='#fff';context.font='700 13px '+font;context.textAlign='left';context.fillText(kind==='artist'?'アーティスト':'楽曲',42,154);const right=[516,694,884,1078];['集計年度',...charts.map(chart=>labels[chart])].forEach((label,i)=>{context.textAlign='right';context.fillText(label,right[i],154)});
  let y=168;for(const row of group){context.fillStyle='#fff';context.fillRect(30,y,1060,row.height);context.fillStyle='#171715';context.textAlign='left';context.font='700 16px '+font;row.lines.forEach((line,i)=>context.fillText(line,42,y+25+i*22));context.textAlign='right';context.font='16px '+font;[row.year,...row.values].forEach((value,i)=>context.fillText(value,right[i],y+row.height/2+6));context.strokeStyle='#dcdcd3';context.beginPath();context.moveTo(30,y+row.height);context.lineTo(1090,y+row.height);context.stroke();y+=row.height}
  context.textAlign='left';context.fillStyle='#65655d';context.font='11px '+font;context.fillText(note,30,y+24);context.fillText('1〜12月の公開日で集計。進行中の年は最終収録日まで。0回は収録データに登場なし。',30,y+43);context.fillText('最終収録日　'+dates,30,y+64);
+ window.drawImageSignature(context,{right:30,bottom:16});
  const blob=await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('画像を作成できませんでした')),'image/png'));
  if(version!==shareVersion)return;
  const filename='chart-comparison-'+(index+1)+'.png',file=new File([blob],filename,{type:'image/png'}),url=URL.createObjectURL(blob);shareFiles.push(file);shareUrls.push(url);const figure=document.createElement('figure'),image=document.createElement('img'),link=document.createElement('a');image.src=url;image.alt=title+'（'+(index+1)+'枚目）';link.href=url;link.download=filename;link.textContent=pages.length>1?`画像を保存（${index+1} / ${pages.length}）`:'画像を保存';figure.append(image,link);el('shareImages').append(figure);

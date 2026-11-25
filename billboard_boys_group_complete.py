@@ -2453,7 +2453,7 @@ def write_cumulative_comparison_pages():
     document = template.read_bytes()
     for directory in {PREVIEW_FILE.parent, SITE_FILE.parent}:
         (directory / "cumulative-comparison.html").write_bytes(document)
-        for script_name in ("share-period.js", "comparison-period.js"):
+        for script_name in ("share-period.js", "comparison-period.js", "image-signature.js"):
             (directory / script_name).write_bytes((PROJECT_DIRECTORY / script_name).read_bytes())
 
 

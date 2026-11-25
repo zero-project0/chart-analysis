@@ -32,11 +32,15 @@
   window.paintChosenArtistShare=function(...args){const token={};jobs.set(args[0],token);shareArtwork=artistArt(args[1],args[2]);const render=()=>paintArtist(...args);render();api.ensure(shareArtwork).then(()=>{if(jobs.get(args[0])===token&&currentShareTarget?.type==='artist')render();});};
   const originalComparison=buildComparisonShareImage;
   buildComparisonShareImage=function(){
-    const base=originalComparison();if(compareType!=='song')return base;
-    const items=compareItems.song;if(!items.some(i=>api.get(i.artist,i.title)))return base;
+    const base=originalComparison(),items=compareItems.song;
+    if(compareType!=='song'||!items.some(i=>api.get(i.artist,i.title))){
+      window.drawImageSignature(base.getContext('2d'));
+      return base;
+    }
     const pending=comparisonArt().filter(item=>!images.has(item.uri));if(pending.length){const key=comparisonKey();api.ensure(pending).then(()=>{if(comparisonKey()===key)repaintComparison();});}
     const source=document.getElementById('compareCanvas'),bottom=142+Math.round(1104*source.height/source.width)+18,rows=Math.ceil(items.length/2),out=document.createElement('canvas');out.width=1200;out.height=bottom+rows*104+72;const ctx=out.getContext('2d');ctx.fillStyle='#fffdf8';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(base,0,0,1200,bottom,0,0,1200,bottom);ctx.textBaseline='top';
     items.forEach((item,i)=>{const x=52+(i%2)*550,y=bottom+12+Math.floor(i/2)*104,art=api.get(item.artist,item.title);if(art)api.paint(ctx,art,x,y,64);else{ctx.fillStyle='#edf0ed';ctx.fillRect(x,y,64,64);}ctx.strokeStyle=compareColors[i];ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(x+80,y+7);ctx.lineTo(x+110,y+7);ctx.stroke();ctx.fillStyle='#24211d';ctx.font='bold 21px Meiryo,sans-serif';ctx.fillText(item.title,x+122,y-4,380);ctx.fillStyle='#697168';ctx.font='16px Meiryo,sans-serif';ctx.fillText(item.artist+' / '+chartLabel(item.chart||compareChart),x+80,y+30,440);});
+    window.drawImageSignature(ctx);
     out.dataset.jacketCount=String(items.filter(i=>api.get(i.artist,i.title)).length);return out;
   };
   const originalCanvasBlob=canvasBlob;
