@@ -721,6 +721,12 @@
       "uri": "spotify:artist:4FqmqIspLaUGtxAFFLsZxc",
       "status": "confirmed",
       "source": "Spotify artist profile and official release credits"
+    },
+    {
+      "artist": "8LOOM",
+      "uri": "spotify:artist:0EmfXhT2Bhc53cyK3hrZM5",
+      "status": "confirmed",
+      "source": "Verified Spotify artist profile"
     }
   ]
 }

@@ -2,9 +2,9 @@
   "hot100": {
     "code": "hot100",
     "first": "2008-01-16",
-    "last": "2026-11-18",
-    "issues": 977,
-    "songs": 4408,
+    "last": "2026-11-25",
+    "issues": 978,
+    "songs": 4412,
     "displayed": [
       {
         "title": "Lemon",
@@ -272,8 +272,8 @@
   "stsongs": {
     "code": "stsongs",
     "first": "2017-10-04",
-    "last": "2026-11-18",
-    "issues": 477,
+    "last": "2026-11-25",
+    "issues": 478,
     "songs": 480,
     "displayed": [
       {
@@ -433,6 +433,19 @@
         "rank": 12
       },
       {
+        "title": "好きすぎて滅!",
+        "artist": "M!LK",
+        "weeks": 49,
+        "start": "2025-12-24",
+        "end": "2026-11-25",
+        "ongoing": true,
+        "begins_at_chart_start": false,
+        "total_top10_weeks": 52,
+        "best_rank_in_streak": 2,
+        "runs": 3,
+        "rank": 13
+      },
+      {
         "title": "宿命",
         "artist": "Official髭男dism",
         "weeks": 48,
@@ -443,20 +456,7 @@
         "total_top10_weeks": 48,
         "best_rank_in_streak": 2,
         "runs": 1,
-        "rank": 13
-      },
-      {
-        "title": "好きすぎて滅!",
-        "artist": "M!LK",
-        "weeks": 48,
-        "start": "2025-12-24",
-        "end": "2026-11-18",
-        "ongoing": true,
-        "begins_at_chart_start": false,
-        "total_top10_weeks": 51,
-        "best_rank_in_streak": 2,
-        "runs": 3,
-        "rank": 13
+        "rank": 14
       },
       {
         "title": "Blue Jeans",
@@ -542,9 +542,9 @@
   "dlsongs": {
     "code": "dlsongs",
     "first": "2017-10-04",
-    "last": "2026-11-18",
-    "issues": 477,
-    "songs": 1938,
+    "last": "2026-11-25",
+    "issues": 478,
+    "songs": 1944,
     "displayed": [
       {
         "title": "Lemon",

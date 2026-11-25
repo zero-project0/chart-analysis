@@ -12,7 +12,13 @@
     else frame.classList.add('jacket-unavailable');
     return frame;
   }
-  function credit(item){const link=document.createElement('a');link.className='jacket-credit';link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.append(logo());const text=document.createElement('span');text.textContent='で開く';link.append(text);link.addEventListener('click',e=>e.stopPropagation());return link;}
+  const artworkSource=item=>item.source||'Spotify';
+  function credit(item){
+    const link=document.createElement('a');link.className='jacket-credit';link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';
+    if(artworkSource(item)==='Spotify')link.append(logo(),document.createTextNode('で開く'));
+    else link.textContent=artworkSource(item)+'で確認 ↗';
+    link.addEventListener('click',e=>e.stopPropagation());return link;
+  }
   function decorateRows(){
     document.querySelectorAll('#songRows tr[data-song-title]').forEach(row=>{
       if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';const cell=row.children[1],item=lookup(row.dataset.songArtist,row.dataset.songTitle),text=document.createElement('span');text.className='jacket-title-copy';const originalContent=document.createElement('span');originalContent.className='jacket-original-title';originalContent.append(...cell.childNodes);text.append(originalContent);const wrap=document.createElement('span');wrap.className='jacket-song-cell';wrap.append(cover(item),text);cell.append(wrap);if(item)text.append(credit(item));
@@ -20,7 +26,7 @@
   }
   function decorateLatest(){
     document.querySelectorAll('#latestGrid .latest-song').forEach(row=>{if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';row.classList.add('jacket-latest');const item=lookup(row.dataset.songArtist,row.dataset.songTitle);if(item){row.classList.add('jacket-latest-cover');row.querySelector('.latest-rank')?.after(cover(item));}row.title=row.dataset.songTitle+' / '+row.dataset.songArtist;});
-    const grid=document.getElementById('latestViewport');if(grid&&!document.getElementById('jacketAttribution')){const note=document.createElement('div');note.id='jacketAttribution';note.className='jacket-attribution';note.append(logo(),document.createTextNode('ジャケット：Spotify'));(grid.closest('.latest-carousel')||grid).after(note);}
+    const grid=document.getElementById('latestViewport');if(grid&&!document.getElementById('jacketAttribution')){const note=document.createElement('div');note.id='jacketAttribution';note.className='jacket-attribution';note.textContent='ジャケット：Spotify / Billboard JAPAN';(grid.closest('.latest-carousel')||grid).after(note);}
   }
   function decorateSearch(){document.querySelectorAll('#searchResults [data-song-title]').forEach(row=>{if(row.dataset.jacketReady)return;row.dataset.jacketReady='1';row.classList.add('jacket-search');row.prepend(cover(lookup(row.dataset.songArtist,row.dataset.songTitle)));});}
   function decorateDetail(artist,title){
@@ -28,7 +34,7 @@
     document.getElementById('jacketDetailBlock')?.remove();head.classList.remove('has-song-jacket');
     const item=lookup(artist,title);if(!item)return;
     const block=document.createElement('div');block.id='jacketDetailBlock';block.className='jacket-detail-block';
-    const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',item.title+'をSpotifyで開く');const image=cover(item);image.removeAttribute('aria-hidden');image.querySelector('img').alt=item.album+'のジャケット';link.append(image);block.append(link,credit(item));head.prepend(block);head.classList.add('has-song-jacket');
+    const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',item.title+'を'+artworkSource(item)+'で確認');const image=cover(item);image.removeAttribute('aria-hidden');image.querySelector('img').alt=item.album+'のジャケット';link.append(image);block.append(link,credit(item));head.prepend(block);head.classList.add('has-song-jacket');
   }
   const originalSongs=renderSongs;renderSongs=function(...args){const result=originalSongs.apply(this,args);decorateRows();return result;};
   const originalLatest=renderLatest;renderLatest=function(...args){const result=originalLatest.apply(this,args);decorateLatest();return result;};

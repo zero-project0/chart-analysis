@@ -7251,6 +7251,22 @@
       "source": "user-provided",
       "verifiedAt": "2026-11-16",
       "verification": "Image explicitly selected and supplied by user; original bytes preserved."
+    },
+    {
+      "artist": "8LOOM",
+      "spotifyName": "8LOOM",
+      "uri": "spotify:artist:0EmfXhT2Bhc53cyK3hrZM5",
+      "url": "https://open.spotify.com/artist/0EmfXhT2Bhc53cyK3hrZM5",
+      "image": "jacket-assets/artists/0EmfXhT2Bhc53cyK3hrZM5.jpg",
+      "size": [
+        640,
+        640
+      ],
+      "scopes": [
+        "boys"
+      ],
+      "sourceImage": "https://i.scdn.co/image/ab6761610000e5ebd64613afd5e57fbca7d6e512",
+      "verification": "Verified 8LOOM public artist profile avatar"
     }
   ]
 }
