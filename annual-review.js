@@ -271,7 +271,7 @@
     label((cutoff ? 'チャート：' + chartDates[0] + '〜' + cutoff : '') +
       (coverage ? '   リリース確認日：' + calendar.meta.checkedAt.slice(0, 10) : ''), 48, 1505, 16, muted);
     if (coverage) label('作品日付はSpotify上の情報を基本とし、確認できた国内配信日を優先しています。', 48, 1532, 15, muted);
-    window.drawImageSignature(ctx,{right:48,bottom:44});
+    window.drawImageSignature(ctx,{right:48,bottom:68,font:'400 15px Meiryo, Arial, sans-serif',color:muted});
     return totals;
   }
 

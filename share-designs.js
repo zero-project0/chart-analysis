@@ -81,7 +81,7 @@
       text(recent?String(Number(year)-2)+'・'+String(Number(year)-1)+'年：年間集計 / '+year+'年：'+source.latestDate.replaceAll('-','.')+' 公開分まで':'1曲×1週＝1回。同じ週の複数曲は別々に加算。',48,580,18,'#64665f',false,1104);
     }
     line(48,611,1152,611,'#e1e4de',1);const range=selectedDates.length?selectedDates[0].replaceAll('-','.')+' — '+selectedDates.at(-1).replaceAll('-','.')+' 公開分':'対象期間に記録なし';text(range,48,632,18,'#64665f',false,620);text('出典：Billboard JAPAN',962,632,17,'#64665f',false,270,'right');
-    window.drawImageSignature(ctx,{right:48,bottom:26});
+    window.drawImageSignature(ctx,{right:48,bottom:43,font:'400 17px '+font,color:'#64665f'});
     canvas.dataset.shareDesign=view==='summary'?'artist-summary-apple-design':'artist-graph-apple-design';canvas.dataset.artistPhoto=photo?.uri||'';canvas.dataset.jacketCount=String(view==='summary'?topSongs.filter(song=>api?.get(artist.artist,song.title)).length:0);canvas.dataset.shareTopSongs=JSON.stringify(topSongs.map(song=>({title:song.title,count:song.appearances})));canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:selected.appearances,weeks:selected.weeks,songs:selected.songs.length,top10:selected.top10,series:series.map(s=>({year:s.year,total:s.points.at(-1)?.value||0}))});
   };
   window.paintChosenSongShare=(canvas,song,source,period,view)=>{
@@ -100,7 +100,7 @@
       line(60,439,1140,439,'#e5e5e8');[['初登場',history[0]?.date],['最終登場',history.at(-1)?.date]].forEach(([name,value],i)=>{const x=60+i*580;text(name,x,475,22,'#64665f');text(value?value.replaceAll('-','.'):'—',x,514,32,'#171915',true,500);});
     }
     line(60,597,1140,597,'#e5e5e8');const range=history.length?history[0].date.replaceAll('-','.')+' — '+history.at(-1).date.replaceAll('-','.'):'対象期間に記録なし';text(source.chartName+' / '+label+' / '+range,60,620,19,'#64665f',false,625);text('出典：Billboard JAPAN',950,620,19,'#64665f',false,250,'right');
-    window.drawImageSignature(ctx,{right:60,bottom:36});
+    window.drawImageSignature(ctx,{right:60,bottom:55,font:'400 17px '+font,color:'#64665f'});
     if(jacket)window.SongJackets.paintCredit(ctx,jacket,825,555,315);canvas.dataset.shareDesign='song-C';canvas.dataset.jacketUri=jacket?.uri||'';canvas.dataset.shareMetrics=JSON.stringify({chart:source.chartName,period,total:song.appearances,latest:song.latestRank,best:song.best,top10:song.top10});
   };
 })();

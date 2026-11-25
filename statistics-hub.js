@@ -229,9 +229,12 @@
           const barHeight=rowHeight<72?20:24,barY=y+(rowHeight-barHeight)/2;round(barX,barY,barW,barHeight,'#e7e7ec',12);round(barX,barY,Math.max(2,barW*value/axis),barHeight,highlight?accent:'#acb1b5',12);rightText(value.toLocaleString(),1660,y+(rowHeight-46)/2,42,highlight?accent:'#1d1d1f',true);rightText(resultUnit,1692,y+(rowHeight-22)/2,18,'#6e6e73');
         });
       }
-      const footer=box?H-140:H-160;ctx.strokeStyle='#d2d2d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(96,footer-20);ctx.lineTo(W-96,footer-20);ctx.stroke();text(context,99,footer+4,21,'#6e6e73',false,1600);text(streak?'連続判定は収録済みの公開週順。最新週までの記録のみ「継続中」。':songTotal?'楽曲ごとにランクインした週を合計。':'1曲×1週＝1回。同週に複数曲が入った場合は別々に加算。',99,footer+44,22,'#6e6e73',false,1600);text('出典：Billboard JAPAN',99,footer+84,21,'#6e6e73',false,1600);
-      if(!box&&liveLayout==='grid')window.RecordJacketGrid?.draw({canvas,rows,allRows,ranks,metric,annual,streak,liveEntity,liveYear,liveScope,scope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork,liveRun,resultUnit});
-      window.drawImageSignature(ctx,{right:96,bottom:50,size:26});
+      const footer=box?H-140:H-160,sourceY=footer+(box?84:74);ctx.strokeStyle='#d2d2d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(96,footer-20);ctx.lineTo(W-96,footer-20);ctx.stroke();text(context,99,footer+4,21,'#6e6e73',false,1600);text(streak?'連続判定は収録済みの公開週順。最新週までの記録のみ「継続中」。':songTotal?'楽曲ごとにランクインした週を合計。':'1曲×1週＝1回。同週に複数曲が入った場合は別々に加算。',99,footer+44,22,'#6e6e73',false,1600);text('出典：Billboard JAPAN',99,sourceY,21,'#6e6e73',false,1600);
+      if(!box&&liveLayout==='grid'&&window.RecordJacketGrid){
+        window.RecordJacketGrid.draw({canvas,rows,allRows,ranks,metric,annual,streak,liveEntity,liveYear,liveScope,scope,chart,title,model,context,accent,pageIndex,pages,rowArtwork,artwork,liveRun,resultUnit});
+      }else{
+        window.drawImageSignature(ctx,{right:96,bottom:H-sourceY,font:'400 20px '+font,color:'#6e6e73'});
+      }
       canvas.dataset.artworkCount=String(box?boxCards.filter(b=>artwork?.artist(b.name)).length:rows.filter(r=>rowArtwork(r)).length);
       if(token!==revision||view!=='linked')return;
       const src=canvas.toDataURL('image/png'),filename=`billboard-${liveScope}-${liveChart}-${liveTab}${totalsTop10?'-top10':''}-${streak?'all':boxMode==='years'&&box?'selected-years':liveYear}-${model.latest}${pages.length>1?'-'+(pageIndex+1):''}.png`;

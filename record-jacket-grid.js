@@ -51,7 +51,8 @@
   ctx.strokeStyle='#d2d2d7';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,2230);ctx.lineTo(W-left,2230);ctx.stroke();
   text(context,left,2252,18,muted,false,1608);
   text(streak?'背景・枠線付き：最新週まで継続中の記録。':annual&&liveYear==='all'?'背景・枠線付き：'+String(model.latest).slice(0,4)+'年の記録。':resultUnit==='週'?'楽曲ごとにランクインした週を合計。':'1曲×1週＝1回。同週の複数曲は別々に加算。',left,2292,20,muted,false,1608);
-  text('出典：Billboard JAPAN',left,2330,20,muted,false,1608);
+  text('出典：Billboard JAPAN',left,2318,20,muted,false,1608);
+  window.drawImageSignature(ctx,{right:left,bottom:82,font:'400 20px '+font,color:muted});
   if(!rows.length)text('該当する記録はありません',left,start+70,30,muted);
  }
  window.RecordJacketGrid={draw};

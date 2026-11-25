@@ -1,12 +1,14 @@
 (() => {
   'use strict';
 
-  window.drawImageSignature = (ctx, {right = 52, bottom = 22, size = 20} = {}) => {
+  window.drawImageSignature = (ctx, {
+    right = 52, bottom = 39, font = '400 16px Arial,"Yu Gothic UI",sans-serif', color = '#666'
+  } = {}) => {
     ctx.save();
-    ctx.fillStyle = '#64665f';
-    ctx.font = `600 ${size}px Arial, sans-serif`;
+    ctx.fillStyle = color;
+    ctx.font = font;
     ctx.textAlign = 'right';
-    ctx.textBaseline = 'alphabetic';
+    ctx.textBaseline = 'top';
     ctx.fillText('@zero379198', ctx.canvas.width - right, ctx.canvas.height - bottom);
     ctx.restore();
   };
